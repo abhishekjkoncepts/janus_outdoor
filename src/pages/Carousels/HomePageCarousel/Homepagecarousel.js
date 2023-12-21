@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import "./Homepagecarousel.css"
 
 // IMAGES
-import sample from "../../assets/images/Sample.jpg"
+import sample from "../../../assets/images/Sample.jpg"
 
 
 const Homepagecarousel = () => {
@@ -24,17 +24,17 @@ const Homepagecarousel = () => {
           item
           xs={12}
           sm={12}
-          md={0.4}
-          lg={0.4}
-          //   sx={{ backgroundColor: "red" }}
+          md={0.5}
+          lg={0.5}
+            // sx={{ backgroundColor: "red" }}
         ></Grid>
         <Grid
           item
           xs={12}
           sm={12}
-          md={11.1}
-          lg={11.1}
-          //   sx={{ backgroundColor: "green" }}
+          md={11}
+          lg={11}
+            // sx={{ backgroundColor: "green" }}
         >
           <Box
             sx={{
@@ -468,7 +468,7 @@ const Homepagecarousel = () => {
           sm={12}
           md={0.5}
           lg={0.5}
-          //   sx={{ backgroundColor: "yellow" }}
+            // sx={{ backgroundColor: "yellow" }}
         ></Grid>
       </Grid>
     </>

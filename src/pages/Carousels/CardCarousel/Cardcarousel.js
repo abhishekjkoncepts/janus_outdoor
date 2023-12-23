@@ -27,7 +27,7 @@ import { CardActionArea } from "@mui/material";
 
 const Cardcarousel = () => {
   return (
-    <Grid container sx={{ marginTop: "20px", backgroundColor: "grey" }}>
+    <Grid container sx={{backgroundColor: "#F5F5F5" }}>
       <Grid
         item
         xs={12}
@@ -61,15 +61,23 @@ const Cardcarousel = () => {
             style={{ padding: "10px" }}
           >
             <Carousel.Item>
-              <Card sx={{ maxWidth: 360, maxHeight: 800 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                  border: "1px solid #C02222",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add1}
                     alt="green iguana"
+                    sx={{ backgroundColor: "grey" }}
                   />
-                  <CardContent sx={{height:"180px"}}>
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
@@ -93,15 +101,22 @@ const Cardcarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item width="20%">
-              <Card sx={{ maxWidth: 360, maxHeight: 800 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                  border: "1px solid #C02222",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add2}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}} >
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
@@ -125,21 +140,27 @@ const Cardcarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item width="20%">
-              <Card sx={{ maxWidth: 360 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                  border: "1px solid #C02222",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add3}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}}>
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
                         fontSize: "16px",
                         fontWeight: "600",
-                        
                       }}
                     >
                       Above Harsha Show Room Towards Shivappa Nayaka Circle
@@ -159,15 +180,22 @@ const Cardcarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item width="20%">
-              <Card sx={{ maxWidth: 360 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                  border: "1px solid #C02222",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add4}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}} >
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
@@ -190,15 +218,21 @@ const Cardcarousel = () => {
               </Card>
             </Carousel.Item>
             <Carousel.Item>
-              <Card sx={{ maxWidth: 360, maxHeight: 800 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add1}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}}>
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
@@ -222,15 +256,21 @@ const Cardcarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item width="20%">
-              <Card sx={{ maxWidth: 360, maxHeight: 800 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add2}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}} >
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
@@ -254,21 +294,26 @@ const Cardcarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item width="20%">
-              <Card sx={{ maxWidth: 360 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add3}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}}>
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
                         fontSize: "16px",
                         fontWeight: "600",
-                        
                       }}
                     >
                       Above Harsha Show Room Towards Shivappa Nayaka Circle
@@ -288,15 +333,21 @@ const Cardcarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item width="20%">
-              <Card sx={{ maxWidth: 360 }}>
+              <Card
+                sx={{
+                  maxWidth: 360,
+                  maxHeight: 800,
+                  borderRadius: "150px 150px 0 0",
+                }}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={add4}
                     alt="green iguana"
                   />
-                  <CardContent sx={{height:"180px"}} >
+                  <CardContent sx={{ height: "180px" }}>
                     <Typography
                       sx={{
                         fontFamily: "Poppins, sans-serif",
@@ -318,8 +369,6 @@ const Cardcarousel = () => {
                 </CardActionArea>
               </Card>
             </Carousel.Item>
-          
-         
           </Carousel>
         </Box>
       </Grid>

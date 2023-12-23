@@ -508,8 +508,8 @@ function Header(props) {
       <AppBar
         component="nav"
         // style={{ backgroundColor: "#011e29" }}
-        style={{ backgroundColor: "#080808" }}
-        // style={{ backgroundColor: "#05445c" }}
+        sx={{backgroundColor: {xs:"rgb(8,8,8, 0.4)" , sm:"rgb(8,8,8, 0.4)" , md:"rgb(8,8,8, 0.4)" , lg:"rgb(8,8,8, 0.4)"}  }}
+        // sx={{ backgroundColor: "#05445c" }}
         elevation={0}
       >
         <Toolbar>
@@ -561,6 +561,8 @@ function Header(props) {
                 flexDirection: "row",
                 // marginRight: "50px",
                 marginRight: "44px",
+                justifyContent:"space-between",
+                marginTop:"30px"
               }}
             >
               <Button component={Link} to="">
@@ -576,7 +578,7 @@ function Header(props) {
                 </Typography>
               </Button>
 
-              <Box sx={{ paddingLeft: "10px" }}>
+              <Box sx={{ paddingLeft: "30px" }}>
                 <Button component={Link} to="/aboutus">
                   <Typography
                     sx={{
@@ -592,7 +594,7 @@ function Header(props) {
               </Box>
 
               {/* Dropdown */}
-              <Box sx={{ paddingLeft: "10px", marginTop: "6px" }}>
+              <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
                 <Typography
                   aria-controls="simple-menu"
                   aria-haspopup="true"
@@ -873,7 +875,7 @@ function Header(props) {
               </Box>
 
               {/* Dropdown  ends*/}
-              <Box sx={{ paddingLeft: "10px" }}>
+              <Box sx={{ paddingLeft: "30px" }}>
                 <Button component={Link} to="/contactus">
                   <Typography
                     sx={{

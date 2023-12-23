@@ -28,7 +28,8 @@ import Video from "../HomePageComponents/Video/Video";
 
 const Home = () => {
   return (
-    <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "62px", lg: "62px" } }}>
+    // <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "62px", lg: "62px" } }}>
+    <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" } }}>
       {/* <Gif /> */}
    
    <Video/>

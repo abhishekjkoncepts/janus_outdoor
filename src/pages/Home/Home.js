@@ -241,7 +241,7 @@ const Home = () => {
       </Box>
 
       {/* <Categories /> */}
-
+{/* c */}
 
 
       <Grid container sx={{ backgroundColor: "#000" }}>

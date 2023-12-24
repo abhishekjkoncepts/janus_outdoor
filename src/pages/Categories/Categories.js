@@ -52,19 +52,19 @@ const Categories = () => {
                 fontSize: {
                   xs: "19px",
                   sm: "19px",
-                  md: "35px",
-                  lg: "35px",
+                  md: "36px",
+                  lg: "36px",
                 },
                 color: "#000",
                 marginTop: "20px",
-                fontSize: "50px",
+                // fontSize: "50px",
                 fontWeight: "600",
                 fontFamily: "Poppins, sans-serif",
                 textAlign: "center",
                 
               }}
             >
-              CATEGORIES
+              OUR SERVICES
             </Typography>
             <Typography 
               sx={{
@@ -76,8 +76,7 @@ const Categories = () => {
                 textAlign:"center",
                 marginBottom:"10px"
               }}>
-                Why are we a creative ad agency ?.It is because we achieve more
-                than a simple online marketing agency can!
+              Elevate Your Brand with Our Unmatched Outdoor Media Solutions<br/>  – Impactful, Creative,& Results-Driven Advertising Excellence.
               </Typography>
             
           </Grid>

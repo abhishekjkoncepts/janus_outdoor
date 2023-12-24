@@ -13,8 +13,8 @@ import add_img1 from "../../assets/images/add_img1.jpeg";
 import advertisement from "../../assets/images/adverstising.png";
 import Gif from "../../pages/Gif/Gif";
 
-// TYPE-WRITER
-import { useTypewriter, Cursor, Typewriter } from "react-simple-typewriter";
+// TYPE-ANIMATION
+import { TypeAnimation } from "react-type-animation";
 
 // CSS
 import "./Home.css";
@@ -24,26 +24,6 @@ import "./Circle3.css";
 import "./Circle4.css";
 
 const Home = () => {
-  // TYPE-WRITER
-  const { text } = useTypewriter({
-    words: [
-      "have the mavrick minds who goes for only unusual.",
-      "see an ocean pf possibilities in the smallest of things.",
-    ],
-    loop: {},
-    typeSpeed: 100,
-    deleteSpeed: 40,
-  });
-
-  // const handleType = (count: number) => {
-  //   // access word count number
-  //   console.log(count)}
-  // }
-
-  const handleDone = () => {
-    console.log(`Done after 5 loops!`)
-  }
-
   return (
     // <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "62px", lg: "62px" } }}>
     <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" } }}>
@@ -83,11 +63,9 @@ const Home = () => {
             sm={12}
             md={6}
             lg={6}
-            sx={
-              {
-                // backgroundColor: "purple"
-              }
-            }
+            sx={{
+              // backgroundColor: "purple",
+            }}
           >
             <Box
               sx={{
@@ -113,7 +91,6 @@ const Home = () => {
                     fontWeight: "600",
                     wordSpacing: "5px",
                     letterSpacing: "-1px",
-                    // color: "#333333",
                     color: "#000",
                     fontFamily: "Poppins, sans-serif",
                     justifyContent: {
@@ -125,8 +102,8 @@ const Home = () => {
                     fontSize: {
                       xs: "21px",
                       sm: "21px",
-                      md: "32px",
-                      lg: "32px",
+                      md: "36px",
+                      lg: "36px",
                     },
                   }}
                 >
@@ -134,20 +111,32 @@ const Home = () => {
                 </Typography>
               </Box>
               <Box>
-                {/* <Typography sx={{ color: "#000" }}> */}
-                  <Typewriter
-                    words={[  "have the mavrick minds who goes for only unusual.",
-                    "see an ocean of possibilities in the smallest of things.",]}
-                    loop={1}
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={70}
-                    deleteSpeed={100}
-                    delaySpeed={1000}
-                    onLoopDone={handleDone}
-                    // onType={handleType}
-                  />
-                {/* </Typography> */}
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "We have the maverick minds who goes for only unusual",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    "We see an ocean of possibilities in the smallest of things",
+                    1000,
+                    // "We produce food for Guinea Pigs",
+                    1000,
+                    // "We produce food for Chinchillas",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  deletionSpeed={70}
+                  style={{
+                    // fontSize: "2em",
+                    display: "inline-block",
+                    color: "#000",
+                    // marginTop: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                  repeat={Infinity}
+                />
               </Box>
 
               <Box
@@ -155,14 +144,14 @@ const Home = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  marginTop: { xs: "10px", sm: "10px", md: "70px", lg: "70px" },
+                  marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
                 }}
               >
                 <Typography
                   sx={{
-                    fontSize: "13px",
+                    fontSize: "16px",
                     fontWeight: "400",
-                    lineHeight: "24px",
+                    lineHeight: "20px",
                     justifyContent: {
                       xs: "center",
                       md: "center",
@@ -186,14 +175,21 @@ const Home = () => {
                     color: "#333333",
                   }}
                 >
-                  JanusAlive is an INS accredited full-service agency that leads
-                  in providing branding and advertising solutions for all your
-                  marketing communication needs. It started operations in 2011
-                  with a young and dynamic team of Creative Minds and Media
-                  Strategists. Adworth Media was recently awarded Best 360
-                  Degree Advertising Agency by a renowned Media Group. We have a
-                  portfolio of more than 300 Clients which comprises of
-                  Corporates, Government, Public Sector, MSME Clients.
+                  Welcome to JanusAlive, India's foremost outdoor hoarding media
+                  agency established in 2002. With two decades of expertise,
+                  we've become the nation's largest network in this dynamic
+                  industry. Our commitment to excellence and creativity has
+                  propelled us to the forefront, providing tailored media
+                  solutions for businesses of all sizes. Boasting a 200+ client
+                  portfolio, JanusAlive is dedicated to crafting impactful
+                  outdoor advertising campaigns that leave a lasting impression.
+                  <br />
+                  <br />
+                  Our experienced team merges creativity with strategic
+                  thinking, ensuring your brand stands out in the ever-evolving
+                  advertising landscape. Join JanusAlive for an unparalleled
+                  outdoor advertising journey, making your message resonate with
+                  the world.
                 </Typography>
               </Box>
 
@@ -207,14 +203,14 @@ const Home = () => {
                     lg: "flex-start",
                   },
                   alignItems: "center",
-                  marginTop: { xs: "10px", sm: "10px", md: "50px", lg: "50px" },
+                  marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
                 }}
               >
                 <Box
                   sx={{
                     backgroundColor: "#C02222",
-                    height: "50px",
-                    width: "160px",
+                    height: "40px",
+                    width: "120px",
                     borderRadius: "30px",
                     display: "flex",
                     justifyContent: "center",
@@ -228,8 +224,8 @@ const Home = () => {
                     marginTop: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "5px",
+                      lg: "5px",
                     },
                   }}
                 >
@@ -252,8 +248,8 @@ const Home = () => {
             sx={{
               // backgroundColor: "orange",
               display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              justifyContent: "flex-end",
+              // alignItems: "center",
             }}
           >
             <Box>
@@ -263,25 +259,25 @@ const Home = () => {
                   width: {
                     xs: "300px",
                     sm: "300px",
-                    md: "300px",
-                    lg: "300px",
+                    md: "400px",
+                    lg: "400px",
                   },
                   height: {
                     xs: "300px",
                     sm: "300px",
-                    md: "400px",
-                    lg: "400px",
+                    md: "450px",
+                    lg: "450px",
                   },
                   marginLeft: {
                     // xs: "65px",
                     // sm: "65px",
-                    md: "54px",
-                    lg: "54px",
+                    // md: "54px",
+                    // lg: "54px",
                   },
-                  marginTop: { xs: "5px", sm: "5px", md: "7px", lg: "7px" },
+                  marginTop: { xs: "5px", sm: "5px", md: "40px", lg: "40px" },
                   display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  // alignItems: "center",
                 }}
                 alt="add_img1"
                 src={add_img1}
@@ -324,7 +320,7 @@ const Home = () => {
               sx={{
                 color: "#fff",
                 marginTop: "20px",
-                fontSize: "50px",
+                fontSize: "36px",
                 fontWeight: "600",
                 fontFamily: "Poppins, sans-serif",
                 textAlign: "center",
@@ -344,8 +340,8 @@ const Home = () => {
                   textAlign: "center",
                 }}
               >
-                Why are we a creative ad agency ?.It is because we achieve more
-                than a simple online marketing agency can!
+                Why are we a creative ad agency ?.It is because we achieve
+                <br /> more than a simple online marketing agency can!
               </Typography>
             </Box>
           </Box>
@@ -406,7 +402,6 @@ const Home = () => {
                 </Typography>
               </Box>
             </Grid>
-
             {/* CIRCLE 2 */}
             <Grid
               item
@@ -442,7 +437,6 @@ const Home = () => {
                 </Typography>
               </Box>
             </Grid>
-
             {/* CIRCLE 3 */}
             <Grid
               item
@@ -477,7 +471,6 @@ const Home = () => {
                 </Typography>
               </Box>
             </Grid>
-
             CIRCLE 4
             {/* <Grid
               item

@@ -3,6 +3,12 @@ import React from "react";
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
 
+// IMAGES
+import facebook from "../../assets/images/FooterIcons/facebook.png";
+import instagram from "../../assets/images/FooterIcons/instagram.png";
+import youtube from "../../assets/images/FooterIcons/youtube.png";
+import whatsapp from "../../assets/images/FooterIcons/whatsapp.png";
+
 // CSS
 import "./Footer.css";
 
@@ -34,7 +40,7 @@ const Footer = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              marginTop:"20px"
+              marginTop: "20px",
             }}
           >
             <Box>
@@ -65,7 +71,7 @@ const Footer = () => {
               </Typography>
             </Box>
 
-            <Box sx={{marginTop:{xs:"" , sm:"" , md:"15px" , lg:"15px"}}}>
+            <Box sx={{ marginTop: { xs: "", sm: "", md: "15px", lg: "15px" } }}>
               <Typography
                 sx={{
                   fontSize: "14px",
@@ -135,6 +141,145 @@ const Footer = () => {
                 >
                   CONTACT US
                 </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+      {/* Copyright */}
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{ backgroundColor: "#000" }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              // flexDirection:"flex"
+              justifyContent: "flex-start",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "11px",
+                fontWeight: "300",
+                color: "#fff",
+                fontFamily: "Poppins, sans-serif",
+              }}
+            >
+              © 2023 JanusAlive | All Rights Reserved 2023
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{ backgroundColor: "#000" , display:"flex" ,justifyContent:"flex-end"}}
+        >
+          <Box sx={{ width: "120px" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-evenly",
+              }}
+            >
+              {/* Facebook  */}
+              <Box>
+                <Box
+                  component="img"
+                  sx={{
+                    width: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    height: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                  }}
+                  alt="facebook"
+                  src={facebook}
+                />
+              </Box>
+              {/* Instagram */}
+              <Box>
+                <Box
+                  component="img"
+                  sx={{
+                    width: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    height: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                  }}
+                  alt="instagram"
+                  src={instagram}
+                />
+              </Box>
+              {/* youtube */}
+              <Box>
+                <Box
+                  component="img"
+                  sx={{
+                    width: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    height: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                  }}
+                  alt="youtube"
+                  src={youtube}
+                />
+              </Box>
+              {/* whatsapp */}
+              <Box>
+                <Box
+                  component="img"
+                  sx={{
+                    width: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    height: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                  }}
+                  alt="whatsapp"
+                  src={whatsapp}
+                />
               </Box>
             </Box>
           </Box>

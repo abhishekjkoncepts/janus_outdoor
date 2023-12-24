@@ -13,7 +13,8 @@ import add_img1 from "../../assets/images/add_img1.jpeg";
 import advertisement from "../../assets/images/adverstising.png";
 import Gif from "../../pages/Gif/Gif";
 
-// VIDEO
+// TYPE-WRITER
+import { useTypewriter, Cursor, Typewriter } from "react-simple-typewriter";
 
 // CSS
 import "./Home.css";
@@ -22,23 +23,52 @@ import "./Circle2.css";
 import "./Circle3.css";
 import "./Circle4.css";
 
-// BOOTSTRAP
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Video from "../HomePageComponents/Video/Video";
-
 const Home = () => {
+  // TYPE-WRITER
+  const { text } = useTypewriter({
+    words: [
+      "have the mavrick minds who goes for only unusual.",
+      "see an ocean pf possibilities in the smallest of things.",
+    ],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
+
+  // const handleType = (count: number) => {
+  //   // access word count number
+  //   console.log(count)}
+  // }
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`)
+  }
+
   return (
     // <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "62px", lg: "62px" } }}>
     <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" } }}>
-      {/* <Gif /> */}
-   
-   <Video/>
+      {/* VIDEO */}
+      <Grid container>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          {
+            <Box>
+              <video autoPlay muted width="100%" controls={false} loop={true}>
+                <source
+                  src={require("../../assets/video/VideoWithText.mp4")}
+                  //   style={{ width: "600px" }}
+                />
+              </video>
+            </Box>
+          }
+        </Grid>
+      </Grid>
 
+      {/* HOME-PAGE-CAROUSEL */}
       {/* <Homepagecarousel /> */}
 
+      {/* WE SEE THINGS DIFFERENTLY */}
       <Box>
-        {/* WE SEE THINGS DIFFERNTLY */}
-        <Grid container sx={{ marginBottom: "30px" }}>
+        <Grid container>
           <Grid
             item
             xs={12}
@@ -53,7 +83,11 @@ const Home = () => {
             sm={12}
             md={6}
             lg={6}
-            // sx={{ backgroundColor: "#fff" }}
+            sx={
+              {
+                // backgroundColor: "purple"
+              }
+            }
           >
             <Box
               sx={{
@@ -62,35 +96,58 @@ const Home = () => {
                 marginTop: { xs: "10px", sm: "10px", md: "50px", lg: "50px" },
               }}
             >
-              <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    sm: "center",
+                    md: "flex-start",
+                    lg: "flex-start",
+                  },
+                }}
+              >
                 <Typography
                   sx={{
-                    fontSize: {
-                      xs: "19px",
-                      sm: "19px",
-                      md: "32px",
-                      lg: "32px",
-                    },
+                    display: "flex",
                     fontWeight: "600",
                     wordSpacing: "5px",
                     letterSpacing: "-1px",
+                    // color: "#333333",
                     color: "#000",
-                    // alignItems:{xs:"center" , md:"center" , sm:"center" , lg:"center"},
-                    display: "flex",
+                    fontFamily: "Poppins, sans-serif",
                     justifyContent: {
                       xs: "center",
                       md: "center",
                       sm: "flex-start",
                       lg: "flex-start",
                     },
-                    fontFamily: "Poppins, sans-serif",
+                    fontSize: {
+                      xs: "21px",
+                      sm: "21px",
+                      md: "32px",
+                      lg: "32px",
+                    },
                   }}
                 >
                   WE SEE THINGS DIFFERENTLY.
                 </Typography>
               </Box>
               <Box>
-                <Typography>We see an ocean of possiblities</Typography>
+                {/* <Typography sx={{ color: "#000" }}> */}
+                  <Typewriter
+                    words={[  "have the mavrick minds who goes for only unusual.",
+                    "see an ocean of possibilities in the smallest of things.",]}
+                    loop={1}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={100}
+                    delaySpeed={1000}
+                    onLoopDone={handleDone}
+                    // onType={handleType}
+                  />
+                {/* </Typography> */}
               </Box>
 
               <Box
@@ -103,9 +160,9 @@ const Home = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: "13px",
                     fontWeight: "400",
-                    lineHeight: "23px",
+                    lineHeight: "24px",
                     justifyContent: {
                       xs: "center",
                       md: "center",
@@ -126,12 +183,13 @@ const Home = () => {
                       lg: "0px",
                     },
                     fontFamily: "Poppins, sans-serif",
+                    color: "#333333",
                   }}
                 >
-                  Adworth Media is an INS accredited full-service agency that
-                  leads in providing branding and advertising solutions for all
-                  your marketing communication needs. It started operations in
-                  2011 with a young and dynamic team of Creative Minds and Media
+                  JanusAlive is an INS accredited full-service agency that leads
+                  in providing branding and advertising solutions for all your
+                  marketing communication needs. It started operations in 2011
+                  with a young and dynamic team of Creative Minds and Media
                   Strategists. Adworth Media was recently awarded Best 360
                   Degree Advertising Agency by a renowned Media Group. We have a
                   portfolio of more than 300 Clients which comprises of
@@ -184,6 +242,7 @@ const Home = () => {
               </Box>
             </Box>
           </Grid>
+
           <Grid
             item
             xs={12}
@@ -204,14 +263,14 @@ const Home = () => {
                   width: {
                     xs: "300px",
                     sm: "300px",
-                    md: "430px",
-                    lg: "430px",
+                    md: "300px",
+                    lg: "300px",
                   },
                   height: {
-                    xs: "380px",
-                    sm: "380px",
-                    md: "450px",
-                    lg: "450px",
+                    xs: "300px",
+                    sm: "300px",
+                    md: "400px",
+                    lg: "400px",
                   },
                   marginLeft: {
                     // xs: "65px",
@@ -242,8 +301,7 @@ const Home = () => {
       </Box>
 
       {/* <Categories /> */}
-{/* c */}
-
+      {/* c */}
 
       <Grid container sx={{ backgroundColor: "#000" }}>
         <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
@@ -261,35 +319,36 @@ const Home = () => {
           }}
         >
           {/* <Box> */}
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <Typography
+              sx={{
+                color: "#fff",
+                marginTop: "20px",
+                fontSize: "50px",
+                fontWeight: "600",
+                fontFamily: "Poppins, sans-serif",
+                textAlign: "center",
+              }}
+            >
+              EXPERIENCE
+            </Typography>
+
+            <Box>
               <Typography
                 sx={{
                   color: "#fff",
-                  marginTop: "20px",
-                  fontSize: "50px",
-                  fontWeight: "600",
+                  // marginTop: "20px",
+                  fontSize: "15px",
+                  fontWeight: "400",
                   fontFamily: "Poppins, sans-serif",
-                  textAlign:"center"
+                  textAlign: "center",
                 }}
               >
-                EXPERIENCE
-              </Typography>
-            
-            <Box>
-              <Typography 
-              sx={{
-                color: "#fff",
-                // marginTop: "20px",
-                fontSize: "15px",
-                fontWeight: "400",
-                fontFamily: "Poppins, sans-serif",
-                textAlign:"center"
-              }}>
                 Why are we a creative ad agency ?.It is because we achieve more
                 than a simple online marketing agency can!
               </Typography>
             </Box>
-            </Box>
+          </Box>
           {/* </Box> */}
         </Grid>
         <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
@@ -318,8 +377,8 @@ const Home = () => {
               item
               xs={12}
               sm={12}
-              md={3}
-              lg={3}
+              md={4}
+              lg={4}
               sx={{
                 backgroundColor: "#000",
                 display: "flex",
@@ -353,8 +412,8 @@ const Home = () => {
               item
               xs={12}
               sm={12}
-              md={3}
-              lg={3}
+              md={4}
+              lg={4}
               sx={{
                 backgroundColor: "#000",
                 display: "flex",
@@ -389,8 +448,8 @@ const Home = () => {
               item
               xs={12}
               sm={12}
-              md={3}
-              lg={3}
+              md={4}
+              lg={4}
               sx={{
                 backgroundColor: "#000",
                 display: "flex",
@@ -419,8 +478,8 @@ const Home = () => {
               </Box>
             </Grid>
 
-            {/* CIRCLE 4 */}
-            <Grid
+            CIRCLE 4
+            {/* <Grid
               item
               xs={12}
               sm={12}
@@ -452,7 +511,7 @@ const Home = () => {
                   Customers
                 </Typography>
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
 

@@ -17,6 +17,13 @@ import add2 from "../../assets/images/add2.webp";
 import add3 from "../../assets/images/add3.webp";
 import add4 from "../../assets/images/add4.webp";
 
+import delhi from "../../assets/images/states2/indiagate.jpg";
+import tajhotel from "../../assets/images/states2/tajhotel.jpg";
+import banglore from "../../assets/images/states2/banglore.jpg";
+import chennai from "../../assets/images/states2/chennai.jpg";
+import hyderabad from "../../assets/images/states2/hyderabad.jpg";
+import pune from "../../assets/images/states2/pune.jpg";
+
 import Delhi from "../../assets/images/States/DelhiIndiagate.jpg";
 import Mumbai from "../../assets/images/States/MumbaiTajHotel.jpg";
 import Banglore from "../../assets/images/States/bangloreMonument.jpeg";
@@ -48,6 +55,7 @@ import "./Circle1.css";
 import "./Circle2.css";
 import "./Circle3.css";
 import "./Circle4.css";
+import { Directions } from "@mui/icons-material";
 
 const Home = () => {
   return (
@@ -158,7 +166,7 @@ const Home = () => {
                     fontSize: "16px",
                     fontWeight: "600",
                     fontFamily: "Poppins, sans-serif",
-                    color: "#fff600",
+                    color: "#C02222",
                   }}
                   repeat={Infinity}
                 />
@@ -329,332 +337,404 @@ const Home = () => {
           container
           sx={{
             backgroundColor: "#F5F5F5",
-            // backgroundColor: "grey"
           }}
         >
           <Grid
             item
             xs={12}
             sm={12}
-            md={12}
-            lg={12}
-            sx={{
-              display: "flex",
-              justifyContent: {
-                xs: "center",
-                md: "center",
-                sm: "center",
-                lg: "center",
-              },
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "19px",
-                  sm: "19px",
-                  md: "36px",
-                  lg: "36px",
-                },
-                color: "#000",
-                marginTop: {
-                  xs: "19px",
-                  sm: "19px",
-                  md: "20px",
-                  lg: "20px",
-                },
-                fontWeight: "600",
-                fontFamily: "Poppins, sans-serif",
-                textAlign: "center",
-              }}
-            >
-              OUR SERVICES
-            </Typography>
-
-            <Typography
-              sx={{
-                color: "#000",
-                // marginTop: "20px",
-                fontSize: "15px",
-                fontWeight: "400",
-                fontFamily: "Poppins, sans-serif",
-                textAlign: "center",
-                marginBottom: "10px",
-              }}
-            >
-              Elevate Your Brand with Our Unmatched Outdoor Media Solutions
-              <br /> – Impactful, Creative,& Results-Driven Advertising
-              Excellence.
-            </Typography>
-          </Grid>
-        </Grid>
-
-        <Grid
-          container
-          sx={{
-            //   backgroundColor: "#C02222",
-            backgroundColor: "#F5F5F5",
-            // height: { xs: "200px", sm: "200px", md: "400px", lg: "400px" },
-          }}
-        >
-          <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
           <Grid
             item
             xs={12}
             sm={12}
             md={10.6}
             lg={10.6}
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-              marginBottom: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-            }}
+            // sx={{ backgroundColor: "pink" }}
           >
-            <Box sx={{}}>
-              <Card
-                sx={{
-                  maxWidth: "250px",
-                  maxHeight: 800,
-                  borderRadius: "150px 150px 0 0",
-                  border: "1px solid #000",
-                  background: "linear-gradient(to bottom, #C02222 85%, #000)",
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="250"
-                    image={add1}
-                    alt="green iguana"
-                    sx={{
-                      overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                      transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                      "&:hover": {
-                        transform: "scale(1.1)", // Scale the card by 10% when hovered
-                      },
-                    }}
-                  />
-                  <CardContent sx={{ height: "60px" }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "Poppins, sans-serif",
-                        fontSize: "21px",
-                        fontWeight: "600",
-                        textAlign: "center",
-                        color: "#fff",
-                      }}
-                    >
-                      OUTDOOR
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Box>
+            <Box
+              sx={{
+                marginTop: { xs: "10", sm: "10", md: "10px", lg: "10px" },
+                marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+              }}
+            >
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "19px",
+                      sm: "19px",
+                      md: "36px",
+                      lg: "36px",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    color: "#000",
+                  }}
+                >
+                  OUR SERVICES
+                </Typography>
+              </Box>
 
-            <Box>
-              <Card
-                sx={{
-                  maxWidth: "250px",
-                  maxHeight: 800,
-                  borderRadius: "150px 150px 0 0",
-                  border: "1px solid #000",
-                  background: "linear-gradient(to bottom, #C02222 85%, #000)",
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="250"
-                    image={add2}
-                    alt="green iguana"
-                    sx={{
-                      overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                      transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                      "&:hover": {
-                        transform: "scale(1.1)", // Scale the card by 10% when hovered
-                      },
-                    }}
-                  />
-                  <CardContent sx={{ height: "60px" }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "Poppins, sans-serif",
-                        fontSize: "21px",
-                        fontWeight: "600",
-                        textAlign: "center",
-                        color: "#fff",
-                      }}
-                    >
-                      CINEMA
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Box>
-
-            <Box>
-              <Card
-                sx={{
-                  maxWidth: "250px",
-                  maxHeight: 800,
-                  borderRadius: "150px 150px 0 0",
-                  border: "1px solid #000",
-                  background: "linear-gradient(to bottom, #C02222 85%, #000)",
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="250"
-                    image={add3}
-                    alt="green iguana"
-                    sx={{
-                      overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                      transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                      "&:hover": {
-                        transform: "scale(1.1)", // Scale the card by 10% when hovered
-                      },
-                    }}
-                  />
-                  <CardContent sx={{ height: "60px", width: "100%" }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "Poppins, sans-serif",
-                        fontSize: "21px",
-                        fontWeight: "600",
-                        textAlign: "center",
-                        color: "#fff",
-                      }}
-                    >
-                      AIRPORT BRANDING
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Box>
-
-            <Box>
-              <Card
-                sx={{
-                  maxWidth: "250px",
-                  maxHeight: 800,
-                  borderRadius: "150px 150px 0 0",
-                  border: "1px solid #000",
-                  background: "linear-gradient(to bottom, #C02222 85%, #000)",
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="250px"
-                    image={add4}
-                    alt="green iguana"
-                    sx={{
-                      overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                      transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                      "&:hover": {
-                        transform: "scale(1.1)", // Scale the card by 10% when hovered
-                      },
-                    }}
-                  />
-                  <CardContent sx={{ height: "60px" }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "Poppins, sans-serif",
-                        fontSize: "21px",
-                        fontWeight: "600",
-                        textAlign: "center",
-                        color: "#fff",
-                      }}
-                    >
-                      SIGNAGE
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+              <Box>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                  }}
+                >
+                  Elevate Your Brand with Our Unmatched Outdoor Media Solutions
+                  <br /> – Impactful, Creative,& Results-Driven Advertising
+                  Excellence.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
-        </Grid>
-      </Box>
-
-      {/* Explore */}
-      <Box>
-        <Grid
-          container
-          sx={{
-            // backgroundColor: "#F5F5F5",
-            backgroundColor: "#fff",
-          }}
-        >
           <Grid
             item
             xs={12}
             sm={12}
-            md={12}
-            lg={12}
-            sx={{
-              display: "flex",
-              justifyContent: {
-                xs: "center",
-                md: "center",
-                sm: "center",
-                lg: "center",
-              },
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "19px",
-                  sm: "19px",
-                  md: "36px",
-                  lg: "36px",
-                },
-                color: "#000",
-                marginTop: {
-                  xs: "19px",
-                  sm: "19px",
-                  md: "20px",
-                  lg: "20px",
-                },
-                fontWeight: "600",
-                fontFamily: "Poppins, sans-serif",
-                textAlign: "center",
-              }}
-            >
-              Explore your City Listings
-            </Typography>
-
-            <Typography
-              sx={{
-                color: "#000",
-                // marginTop: "20px",
-                fontSize: "15px",
-                fontWeight: "400",
-                fontFamily: "Poppins, sans-serif",
-                textAlign: "center",
-                marginBottom: "10px",
-              }}
-            >
-              Explore some of the best business from around the
-              <br />
-              world from our partners and friends.
-            </Typography>
-          </Grid>
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
         </Grid>
 
-        {/* state 1 container */}
+        <Grid container sx={{ backgroundColor: "#F5F5F5" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.5}
+            lg={0.5}
+            // sx={{ backgroundColor: "orange" }}
+          ></Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={11}
+            lg={11}
+            sx={{
+              display: "flex",
+            }}
+          >
+            <Grid
+              container
+              sx={
+                {
+                  //  backgroundColor: "red"
+                }
+              }
+            >
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                    marginBottom: {
+                      xs: "0px",
+                      sm: "0px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}
+                >
+                  <Card
+                    sx={{
+                      maxWidth: "245px",
+                      maxHeight: 800,
+                      borderRadius: "150px 150px 0 0",
+                      border: "1px solid #000",
+                      background:
+                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                    }}
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="250"
+                        image={add1}
+                        alt="green iguana"
+                        sx={{
+                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                          "&:hover": {
+                            transform: "scale(1.1)", // Scale the card by 10% when hovered
+                          },
+                        }}
+                      />
+                      <CardContent sx={{ height: "60px" }}>
+                        <Typography
+                          sx={{
+                            fontFamily: "Poppins, sans-serif",
+                            fontSize: "21px",
+                            fontWeight: "600",
+                            textAlign: "center",
+                            color: "#fff",
+                          }}
+                        >
+                          OUTDOOR
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  // backgroundColor: "blue",
+                  display: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                    marginBottom: {
+                      xs: "0px",
+                      sm: "0px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}
+                >
+                  <Card
+                    sx={{
+                      maxWidth: "245px",
+                      maxHeight: 800,
+                      borderRadius: "150px 150px 0 0",
+                      border: "1px solid #000",
+                      background:
+                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                    }}
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="250"
+                        image={add2}
+                        alt="green iguana"
+                        sx={{
+                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                          "&:hover": {
+                            transform: "scale(1.1)", // Scale the card by 10% when hovered
+                          },
+                        }}
+                      />
+                      <CardContent sx={{ height: "60px" }}>
+                        <Typography
+                          sx={{
+                            fontFamily: "Poppins, sans-serif",
+                            fontSize: "21px",
+                            fontWeight: "600",
+                            textAlign: "center",
+                            color: "#fff",
+                          }}
+                        >
+                          CINEMA
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  // backgroundColor: "green",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                    marginBottom: {
+                      xs: "0px",
+                      sm: "0px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}
+                >
+                  <Card
+                    sx={{
+                      maxWidth: "245px",
+                      maxHeight: 800,
+                      borderRadius: "150px 150px 0 0",
+                      border: "1px solid #000",
+                      background:
+                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                    }}
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="250"
+                        image={add3}
+                        alt="green iguana"
+                        sx={{
+                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                          "&:hover": {
+                            transform: "scale(1.1)", // Scale the card by 10% when hovered
+                          },
+                        }}
+                      />
+                      <CardContent sx={{ height: "60px", width: "100%" }}>
+                        <Typography
+                          sx={{
+                            fontFamily: "Poppins, sans-serif",
+                            fontSize: "21px",
+                            fontWeight: "600",
+                            textAlign: "center",
+                            color: "#fff",
+                          }}
+                        >
+                          AIRPORT BRANDING
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  // backgroundColor: "yellow",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                    marginBottom: {
+                      xs: "0px",
+                      sm: "0px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}
+                >
+                  <Card
+                    sx={{
+                      maxWidth: "245px",
+                      maxHeight: 800,
+                      borderRadius: "150px 150px 0 0",
+                      border: "1px solid #000",
+                      background:
+                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                    }}
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="250px"
+                        image={add4}
+                        alt="green iguana"
+                        sx={{
+                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                          "&:hover": {
+                            transform: "scale(1.1)", // Scale the card by 10% when hovered
+                          },
+                        }}
+                      />
+                      <CardContent sx={{ height: "60px" }}>
+                        <Typography
+                          sx={{
+                            fontFamily: "Poppins, sans-serif",
+                            fontSize: "21px",
+                            fontWeight: "600",
+                            textAlign: "center",
+                            color: "#fff",
+                          }}
+                        >
+                          SIGNAGE
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Box>
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.5}
+            lg={0.5}
+            // sx={{ backgroundColor: "orange" }}
+          ></Grid>
+        </Grid>
+      </Box>
+
+      {/* EXPLORE */}
+      <Box>
+        {/* ex */}
         <Grid
           container
           sx={{
-            //  backgroundColor: "#F5F5F5"
             backgroundColor: "#fff",
           }}
         >
@@ -664,7 +744,7 @@ const Home = () => {
             sm={12}
             md={0.7}
             lg={0.7}
-            sx={{ backgroundcolor: "red" }}
+            // sx={{ backgroundColor: "purple" }}
           ></Grid>
           <Grid
             item
@@ -672,7 +752,77 @@ const Home = () => {
             sm={12}
             md={10.6}
             lg={10.6}
-            sx={{ backgroundcolor: "green" }}
+            // sx={{ backgroundColor: "pink" }}
+          >
+            <Box
+              sx={{
+                marginTop: { xs: "10", sm: "10", md: "10px", lg: "10px" },
+                marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+              }}
+            >
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "19px",
+                      sm: "19px",
+                      md: "36px",
+                      lg: "36px",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    color: "#000",
+                  }}
+                >
+                  Explore your City Listings
+                </Typography>
+              </Box>
+
+              <Box>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                  }}
+                >
+                  Elevate Your Brand with Our Unmatched Outdoor Media Solutions
+                  <br /> – Impactful, Creative,& Results-Driven Advertising
+                  Excellence.
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "red" }}
+          ></Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            // sx={{ backgroundColor: "yellow" }}
           >
             <Grid container>
               <Grid
@@ -682,35 +832,106 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "#7FFFD4",
+                  // backgroundColor: "orange",
                   display: "flex",
                   justifyContent: "flex-start",
                   alignItems: "center",
                 }}
               >
                 <Box
-                  component="img"
                   sx={{
-                    width: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "300px",
-                      lg: "300px",
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "10px",
+                      lg: "10px",
                     },
-                    height: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "190px",
-                      lg: "190px",
-                    },
-                    transition: "transform 0.3s ease-in-out", // Add smooth transition
-                    "&:hover": {
-                      transform: "scale(1.1)", // Zoom effect on hover
+                    marginBottom: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "20px",
+                      lg: "20px",
                     },
                   }}
-                  alt="add_img1"
-                  src={Delhi}
-                />
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      height: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      borderRadius: "10px",
+                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      "&:hover": {
+                        transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
+                      },
+                    }}
+                    alt="janusLogo"
+                    src={delhi}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "1%",
+                      left: "5%",
+                      bottom: "5%",
+                      display: "flex",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", flexDirection: "column" }}>
+                      <Typography
+                        sx={{
+                          color: "#fff",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        Delhi
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontSize: "22px",
+                            fontWeight: "900",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          2493+
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            marginTop: "2px",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          medias
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
 
               <Grid
@@ -720,35 +941,108 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "#8A2BE2",
+                  // backgroundColor: "green",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
               >
                 <Box
-                  component="img"
                   sx={{
-                    width: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "300px",
-                      lg: "300px",
-                    },
-                    height: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "190px",
-                      lg: "190px",
-                    },
-                    transition: "transform 0.3s ease-in-out", // Add smooth transition
-                    "&:hover": {
-                      transform: "scale(1.1)", // Zoom effect on hover
-                    },
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+
+                    //  paddingTop:"20px", paddingRight:"20px", paddingBottom:"20px"
                   }}
-                  alt="add_img1"
-                  src={Banglore}
-                />
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      height: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      borderRadius: "10px",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      "&:hover": {
+                        transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
+                      },
+                    }}
+                    alt="janusLogo"
+                    src={tajhotel}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "1%",
+                      left: "10%",
+                      bottom: "15%",
+                      display: "flex",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", flexDirection: "column" }}>
+                      <Typography
+                        sx={{
+                          color: "#fff",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        Mumbai
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontSize: "22px",
+                            fontWeight: "900",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          1716+{" "}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            marginTop: "2px",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          medias
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
 
               <Grid
@@ -758,73 +1052,138 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "#FF7F50",
+                  // backgroundColor: "cyan",
                   display: "flex",
                   justifyContent: "flex-end",
                   alignItems: "center",
                 }}
               >
                 <Box
-                  component="img"
                   sx={{
-                    width: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "300px",
-                      lg: "300px",
-                    },
-                    height: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "190px",
-                      lg: "190px",
-                    },
-                    transition: "transform 0.3s ease-in-out", // Add smooth transition
-                    "&:hover": {
-                      transform: "scale(1.1)", // Zoom effect on hover
-                    },
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
                   }}
-                  alt="add_img1"
-                  src={Mumbai}
-                />{" "}
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      height: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      borderRadius: "10px",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      "&:hover": {
+                        transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
+                      },
+                    }}
+                    alt="janusLogo"
+                    src={banglore}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "1%",
+                      left: "15%",
+                      bottom: "15%",
+                      display: "flex",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", flexDirection: "column" }}>
+                      <Typography
+                        sx={{
+                          color: "#fff",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        Banglore
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontSize: "22px",
+                            fontWeight: "900",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          960+{" "}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            marginTop: "2px",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          medias
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
             </Grid>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.7}
-            lg={0.7}
-            sx={{ backgroundcolor: "red" }}
-          ></Grid>
-        </Grid>
 
-        {/* state 2 container */}
-        <Grid
-          container
-          sx={{
-            // backgroundColor: "#F5F5F5"
-            backgroundColor: "#fff",
-          }}
-        >
           <Grid
             item
             xs={12}
             sm={12}
             md={0.7}
             lg={0.7}
-            sx={{ backgroundcolor: "red" }}
+            // sx={{ backgroundColor: "blue" }}
           ></Grid>
+
+          {/* container 2 */}
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "red" }}
+          ></Grid>
+
           <Grid
             item
             xs={12}
             sm={12}
             md={10.6}
             lg={10.6}
-            sx={{ backgroundcolor: "green" }}
+            // sx={{ backgroundColor: "yellow" }}
           >
-            <Grid container sx={{ marginTop: "55px", marginBottom: "20px" }}>
+            <Grid container>
               <Grid
                 item
                 xs={12}
@@ -832,35 +1191,106 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "#006400",
+                  // backgroundColor: "orange",
                   display: "flex",
                   justifyContent: "flex-start",
                   alignItems: "center",
                 }}
               >
                 <Box
-                  component="img"
                   sx={{
-                    width: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "300px",
-                      lg: "300px",
-                    },
-                    height: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "190px",
-                      lg: "190px",
-                    },
-                    transition: "transform 0.3s ease-in-out", // Add smooth transition
-                    "&:hover": {
-                      transform: "scale(1.1)", // Zoom effect on hover
-                    },
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
                   }}
-                  alt="add_img1"
-                  src={Hyderabad}
-                />
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      height: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      borderRadius: "10px",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      "&:hover": {
+                        transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
+                      },
+                    }}
+                    alt="janusLogo"
+                    src={pune}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "1%",
+                      left: "5%",
+                      bottom: "10%",
+                      display: "flex",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", flexDirection: "column" }}>
+                      <Typography
+                        sx={{
+                          color: "#fff",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        Pune
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontSize: "22px",
+                            fontWeight: "900",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          429+{" "}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            marginTop: "2px",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          medias
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
 
               <Grid
@@ -870,35 +1300,106 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "#483D8B",
+                  // backgroundColor: "green" ,
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
               >
                 <Box
-                  component="img"
                   sx={{
-                    width: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "300px",
-                      lg: "300px",
-                    },
-                    height: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "190px",
-                      lg: "190px",
-                    },
-                    transition: "transform 0.3s ease-in-out", // Add smooth transition
-                    "&:hover": {
-                      transform: "scale(1.1)", // Zoom effect on hover
-                    },
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
-                  alt="add_img1"
-                  src={Pune}
-                />
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      height: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      borderRadius: "10px",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      "&:hover": {
+                        transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
+                      },
+                    }}
+                    alt="janusLogo"
+                    src={hyderabad}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "1%",
+                      left: "10%",
+                      bottom: "10%",
+                      display: "flex",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", flexDirection: "column" }}>
+                      <Typography
+                        sx={{
+                          color: "#fff",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        Hyderabad
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontSize: "22px",
+                            fontWeight: "900",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          897+{" "}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            marginTop: "2px",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          medias
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
 
               <Grid
@@ -908,45 +1409,117 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "#9400D3",
+                  // backgroundColor: "cyan",
                   display: "flex",
                   justifyContent: "flex-end",
                   alignItems: "center",
                 }}
               >
                 <Box
-                  component="img"
                   sx={{
-                    width: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "300px",
-                      lg: "300px",
-                    },
-                    height: {
-                      xs: "300px",
-                      sm: "300px",
-                      md: "190px",
-                      lg: "190px",
-                    },
-                    transition: "transform 0.3s ease-in-out", // Add smooth transition
-                    "&:hover": {
-                      transform: "scale(1.1)", // Zoom effect on hover
-                    },
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
                   }}
-                  alt="add_img1"
-                  src={Chennai}
-                />
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      height: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "90%",
+                        lg: "90%",
+                      },
+                      borderRadius: "10px",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      "&:hover": {
+                        transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
+                      },
+                    }}
+                    alt="janusLogo"
+                    src={chennai}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "1%",
+                      left: "15%",
+                      bottom: "10%",
+                      display: "flex",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", flexDirection: "column" }}>
+                      <Typography
+                        sx={{
+                          color: "#fff",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        Chennai
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontSize: "22px",
+                            fontWeight: "900",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          482+{" "}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            marginTop: "2px",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          medias
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
             </Grid>
           </Grid>
+
           <Grid
             item
             xs={12}
             sm={12}
             md={0.7}
             lg={0.7}
-            sx={{ backgroundcolor: "red" }}
+            // sx={{ backgroundColor: "blue" }}
           ></Grid>
         </Grid>
       </Box>
@@ -1177,7 +1750,7 @@ const Home = () => {
 
       {/* CLIENTS */}
       <Box>
-      <Grid container sx={{ backgroundColor: "#fff" }}>
+        <Grid container sx={{ backgroundColor: "#fff" }}>
           <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
           <Grid
             item
@@ -1276,8 +1849,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={avana}
@@ -1314,8 +1887,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={hindustanTimes}
@@ -1352,8 +1925,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={hindware}
@@ -1390,8 +1963,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={micromax}
@@ -1431,7 +2004,6 @@ const Home = () => {
           ></Grid>
 
           <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
-
             <Grid container>
               <Grid
                 item
@@ -1462,8 +2034,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={moonbow}
@@ -1500,8 +2072,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={renault}
@@ -1538,8 +2110,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={unique}
@@ -1576,8 +2148,8 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:"40px",
-                      marginBottom:"40px"
+                      marginTop: "40px",
+                      marginBottom: "40px",
                     }}
                     alt="add_img1"
                     src={philips}

@@ -204,7 +204,7 @@ const Footer = () => {
             justifyContent: "flex-end",
           }}
         >
-          <Box sx={{ width: "120px" , marginTop:"2px"}}>
+          <Box sx={{ width: "120px" , marginTop:"3px"}}>
             <Box
               sx={{
                 display: "flex",

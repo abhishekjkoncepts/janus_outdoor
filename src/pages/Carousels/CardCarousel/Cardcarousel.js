@@ -28,50 +28,78 @@ import { CardActionArea } from "@mui/material";
 const Cardcarousel = () => {
   return (
   <>
-    <Grid container  sx={{backgroundColor: "#F5F5F5" }}>
-      <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
-      <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
-      <Typography
+   <Grid
+          container
+          sx={{
+            backgroundColor: "#F5F5F5",
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            // sx={{ backgroundColor: "pink" }}
+          >
+            <Box
               sx={{
-                fontSize: {
-                  xs: "19px",
-                  sm: "19px",
-                  md: "36px",
-                  lg: "36px",
-                },
-                color: "#000",
-                marginTop: {
-                  xs: "19px",
-                  sm: "19px",
-                  md: "20px",
-                  lg: "20px",
-                },
-                fontWeight: "600",
-                fontFamily: "Poppins, sans-serif",
-                textAlign: "center",
+                marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
+                marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
               }}
             >
-              OUR TOP SITES
-            </Typography>
-            <Typography
-              sx={{
-                color: "#000",
-                // marginTop: "20px",
-                fontSize: "15px",
-                fontWeight: "400",
-                fontFamily: "Poppins, sans-serif",
-                textAlign: "center",
-                marginBottom: "10px",
-              }}
-            >
-              Explore some of the best business from around the
-              <br />
-              world from our partners and friends.
-            </Typography>
-      </Grid>
-      <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "19px",
+                      sm: "19px",
+                      md: "36px",
+                      lg: "36px",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    color: "#000",
+                  }}
+                >
+                  OUR TOP SITES
+                </Typography>
+              </Box>
 
-      </Grid>
+              <Box>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                  }}
+                >
+                  Explore some of the best business from around the
+world from our partners and friends.
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
+        </Grid>
 
 
     <Grid container sx={{backgroundColor: "#F5F5F5" }}>
@@ -94,7 +122,7 @@ const Cardcarousel = () => {
         <Box
           sx={{
             marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-            marginBottom: { xs: "20px", sm: "20px", md: "20px", lg: "20px" },
+            marginBottom: { xs: "20px", sm: "20px", md: "60px", lg: "60px" },
           }}
         >
           <Carousel

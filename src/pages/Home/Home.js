@@ -300,8 +300,8 @@ const Home = () => {
                   height: {
                     xs: "300px",
                     sm: "300px",
-                    md: "488px",
-                    lg: "488px",
+                    md: "460px",
+                    lg: "460px",
                   },
                   marginLeft: {
                     // xs: "65px",
@@ -357,7 +357,7 @@ const Home = () => {
           >
             <Box
               sx={{
-                marginTop: { xs: "10", sm: "10", md: "10px", lg: "10px" },
+                marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
                 marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
               }}
             >
@@ -457,8 +457,8 @@ const Home = () => {
                     marginBottom: {
                       xs: "0px",
                       sm: "0px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "60px",
+                      lg: "60px",
                     },
                   }}
                 >
@@ -528,8 +528,8 @@ const Home = () => {
                     marginBottom: {
                       xs: "0px",
                       sm: "0px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "60px",
+                      lg: "60px",
                     },
                   }}
                 >
@@ -599,8 +599,8 @@ const Home = () => {
                     marginBottom: {
                       xs: "0px",
                       sm: "0px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "60px",
+                      lg: "60px",
                     },
                   }}
                 >
@@ -669,8 +669,8 @@ const Home = () => {
                     marginBottom: {
                       xs: "0px",
                       sm: "0px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "60px",
+                      lg: "60px",
                     },
                   }}
                 >
@@ -756,7 +756,7 @@ const Home = () => {
           >
             <Box
               sx={{
-                marginTop: { xs: "10", sm: "10", md: "10px", lg: "10px" },
+                marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
                 marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
               }}
             >
@@ -1230,8 +1230,8 @@ const Home = () => {
                       marginBottom: {
                         xs: "10px",
                         sm: "10px",
-                        md: "10px",
-                        lg: "10px",
+                        md: "60px",
+                        lg: "60px",
                       },
                       transition: "transform 0.3s", // Add a transition for a smoother effect
                       "&:hover": {
@@ -1247,7 +1247,7 @@ const Home = () => {
                       position: "absolute",
                       right: "1%",
                       left: "5%",
-                      bottom: "10%",
+                      bottom: "27%",
                       display: "flex",
                     }}
                   >
@@ -1339,8 +1339,8 @@ const Home = () => {
                       marginBottom: {
                         xs: "10px",
                         sm: "10px",
-                        md: "10px",
-                        lg: "10px",
+                        md: "60px",
+                        lg: "60px",
                       },
                       transition: "transform 0.3s", // Add a transition for a smoother effect
                       "&:hover": {
@@ -1356,7 +1356,7 @@ const Home = () => {
                       position: "absolute",
                       right: "1%",
                       left: "10%",
-                      bottom: "10%",
+                      bottom: "27%",
                       display: "flex",
                     }}
                   >
@@ -1448,8 +1448,8 @@ const Home = () => {
                       marginBottom: {
                         xs: "10px",
                         sm: "10px",
-                        md: "10px",
-                        lg: "10px",
+                        md: "60px",
+                        lg: "60px",
                       },
                       transition: "transform 0.3s", // Add a transition for a smoother effect
                       "&:hover": {
@@ -1465,7 +1465,7 @@ const Home = () => {
                       position: "absolute",
                       right: "1%",
                       left: "15%",
-                      bottom: "10%",
+                      bottom: "27%",
                       display: "flex",
                     }}
                   >
@@ -1528,55 +1528,77 @@ const Home = () => {
 
       {/* EXPERIENCE */}
       <Box>
-        <Grid container sx={{ backgroundColor: "#000" }}>
-          <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
+      <Grid
+          container
+          sx={{
+            backgroundColor: "#000",
+          }}
+        >
           <Grid
             item
             xs={12}
             sm={12}
-            md={10}
-            lg={10}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              // backgroundColor:"green"
-            }}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            // sx={{ backgroundColor: "pink" }}
           >
-            {/* <Box> */}
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Typography
-                sx={{
-                  color: "#fff",
-                  marginTop: "20px",
-                  fontSize: "36px",
-                  fontWeight: "600",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
-                }}
-              >
-                EXPERIENCE
-              </Typography>
+            <Box
+              sx={{
+                marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
+                marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+              }}
+            >
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "19px",
+                      sm: "19px",
+                      md: "36px",
+                      lg: "36px",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    color: "#fff",
+                  }}
+                >
+                  EXPERIENCE
+                </Typography>
+              </Box>
 
               <Box>
                 <Typography
                   sx={{
                     color: "#fff",
-                    // marginTop: "20px",
                     fontSize: "15px",
                     fontWeight: "400",
                     fontFamily: "Poppins, sans-serif",
                     textAlign: "center",
                   }}
                 >
-                  Why are we a creative ad agency ?.It is because we achieve
-                  <br /> more than a simple online marketing agency can!
+                 Why are we a creative ad agency ?.It is because we achieve <br/>
+more than a simple online marketing agency can!
                 </Typography>
               </Box>
             </Box>
-            {/* </Box> */}
           </Grid>
-          <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
         </Grid>
 
         <Grid container sx={{ backgroundColor: "black" }}>
@@ -1608,8 +1630,8 @@ const Home = () => {
                   backgroundColor: "#000",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  // justifyContent: "center",
+                  // alignItems: "center",
                 }}
               >
                 <Box className="main-bg">
@@ -1621,8 +1643,9 @@ const Home = () => {
                   <Typography
                     sx={{
                       color: "#fff",
-                      marginTop: "20px",
+                      marginTop: "70px",
                       fontSize: "22px",
+                      marginLeft:"170px",
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
                     }}
@@ -1691,6 +1714,7 @@ const Home = () => {
                     sx={{
                       color: "#fff",
                       marginTop: "20px",
+                      marginRight:"100px",
                       fontSize: "22px",
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
@@ -1700,40 +1724,6 @@ const Home = () => {
                   </Typography>
                 </Box>
               </Grid>
-              {/* CIRCLE 4 */}
-              {/* <Grid
-              item
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
-              sx={{
-                backgroundColor: "#000",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box className="main-bg">
-                <Box className="circle4">
-                  <h1>∞</h1>
-                </Box>
-              </Box>
-              <Box>
-                <Typography
-                  sx={{
-                    color: "#fff",
-                    marginTop: "20px",
-                    fontSize: "22px",
-                    fontWeight: "500",
-                    fontFamily: "Poppins, sans-serif",
-                  }}
-                >
-                  Customers
-                </Typography>
-              </Box>
-            </Grid> */}
             </Grid>
           </Grid>
 
@@ -1770,7 +1760,7 @@ const Home = () => {
               <Typography
                 sx={{
                   color: "#000",
-                  marginTop: "20px",
+                  marginTop: "40px",
                   fontSize: "36px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -2035,7 +2025,7 @@ const Home = () => {
                         lg: "90px",
                       },
                       marginTop: "40px",
-                      marginBottom: "40px",
+                      marginBottom: "60px",
                     }}
                     alt="add_img1"
                     src={moonbow}
@@ -2073,7 +2063,7 @@ const Home = () => {
                         lg: "90px",
                       },
                       marginTop: "40px",
-                      marginBottom: "40px",
+                      marginBottom: "60px",
                     }}
                     alt="add_img1"
                     src={renault}
@@ -2111,7 +2101,7 @@ const Home = () => {
                         lg: "90px",
                       },
                       marginTop: "40px",
-                      marginBottom: "40px",
+                      marginBottom: "60px",
                     }}
                     alt="add_img1"
                     src={unique}
@@ -2149,7 +2139,7 @@ const Home = () => {
                         lg: "90px",
                       },
                       marginTop: "40px",
-                      marginBottom: "40px",
+                      marginBottom: "60px",
                     }}
                     alt="add_img1"
                     src={philips}

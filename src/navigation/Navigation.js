@@ -12,6 +12,7 @@ import Aboutus from "../pages/AboutUs/Aboutus";
 import Contactus from "../pages/ContactUs/Contactus";
 import Hoardings from "../pages/Hoardings/Hoardings";
 import Ourservices from "../pages/OurServices/Ourservices";
+import Blogs from "../pages/Blogs/Blogs";
 
 // SUB-PAGES
 import Airportbranding from "../pages/SubPages/AirportBranding/Airportbranding";
@@ -38,6 +39,7 @@ const Navigation = () => {
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/hoardings" element={<Hoardings />} />
         <Route path="/our-services" element={<Ourservices />} />
+        <Route path="/blogs" element={<Blogs/>} />
 
         {/* SUB-PAGES */}
         <Route path="/billboard" element={<Billboard />} />

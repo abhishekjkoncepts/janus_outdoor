@@ -147,14 +147,28 @@ const Footer = () => {
         </Grid>
       </Grid>
       {/* Copyright */}
+
       <Grid container>
         <Grid
           item
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
-          sx={{ backgroundColor: "#000" }}
+          md={0.7}
+          lg={0.7}
+          sx={{ backgroundColor: "black" }}
+        ></Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={5.3}
+          lg={5.3}
+          sx={{
+            backgroundColor: "#000",
+            display: "center",
+            // justifyContent: "center",
+            // alignItems:"center"
+          }}
         >
           <Box
             sx={{
@@ -177,15 +191,20 @@ const Footer = () => {
             </Typography>
           </Box>
         </Grid>
+
         <Grid
           item
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
-          sx={{ backgroundColor: "#000" , display:"flex" ,justifyContent:"flex-end"}}
+          md={5.3}
+          lg={5.3}
+          sx={{
+            backgroundColor: "#000",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
         >
-          <Box sx={{ width: "120px" }}>
+          <Box sx={{ width: "120px" , marginTop:"2px"}}>
             <Box
               sx={{
                 display: "flex",
@@ -284,6 +303,14 @@ const Footer = () => {
             </Box>
           </Box>
         </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={0.7}
+          lg={0.7}
+          sx={{ backgroundColor: "black" }}
+        ></Grid>
       </Grid>
     </Box>
   );

@@ -24,6 +24,15 @@ import Chennai from "../../assets/images/States/ChennaiTemple.jpg";
 import Hyderabad from "../../assets/images/States/HyderabadCharMinar.jpg";
 import Pune from "../../assets/images/States/puneMonument.jpg";
 
+import avana from "../../assets/images/clients/avana.jpg";
+import hindustanTimes from "../../assets/images/clients/hindustantimes.jpg";
+import hindware from "../../assets/images/clients/hindware.jpg";
+import micromax from "../../assets/images/clients/micromax.jpg";
+import moonbow from "../../assets/images/clients/moonbow.png";
+import renault from "../../assets/images/clients/renault.jpg";
+import unique from "../../assets/images/clients/unique.jpg";
+import philips from "../../assets/images/clients/philips.jpg";
+
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
 
@@ -146,9 +155,10 @@ const Home = () => {
                     display: "inline-block",
                     color: "#000",
                     // marginTop: "20px",
-                    fontSize: "13px",
+                    fontSize: "16px",
                     fontWeight: "600",
                     fontFamily: "Poppins, sans-serif",
+                    color: "#fff600",
                   }}
                   repeat={Infinity}
                 />
@@ -188,6 +198,7 @@ const Home = () => {
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#333333",
+
                     // lineHeight:"26px"
                   }}
                 >
@@ -281,8 +292,8 @@ const Home = () => {
                   height: {
                     xs: "300px",
                     sm: "300px",
-                    md: "450px",
-                    lg: "450px",
+                    md: "488px",
+                    lg: "488px",
                   },
                   marginLeft: {
                     // xs: "65px",
@@ -290,7 +301,7 @@ const Home = () => {
                     // md: "54px",
                     // lg: "54px",
                   },
-                  marginTop: { xs: "5px", sm: "5px", md: "40px", lg: "40px" },
+                  marginTop: { xs: "5px", sm: "5px", md: "64px", lg: "64px" },
                   display: "flex",
                   justifyContent: "flex-end",
                   // alignItems: "center",
@@ -576,8 +587,8 @@ const Home = () => {
         <Grid
           container
           sx={{
-            backgroundColor: "#F5F5F5",
-            // backgroundColor: "grey"
+            // backgroundColor: "#F5F5F5",
+            backgroundColor: "#fff",
           }}
         >
           <Grid
@@ -640,7 +651,13 @@ const Home = () => {
         </Grid>
 
         {/* state 1 container */}
-        <Grid container sx={{ backgroundColor: "#F5F5F5" }}>
+        <Grid
+          container
+          sx={{
+            //  backgroundColor: "#F5F5F5"
+            backgroundColor: "#fff",
+          }}
+        >
           <Grid
             item
             xs={12}
@@ -784,7 +801,13 @@ const Home = () => {
         </Grid>
 
         {/* state 2 container */}
-        <Grid container sx={{ backgroundColor: "#F5F5F5" }}>
+        <Grid
+          container
+          sx={{
+            // backgroundColor: "#F5F5F5"
+            backgroundColor: "#fff",
+          }}
+        >
           <Grid
             item
             xs={12}
@@ -1000,7 +1023,7 @@ const Home = () => {
             lg={10.6}
             // sx={{ backgroundColor: "green" }}
           >
-            <Grid container sx={{ height: "400px", backgroundcolor: "black" }}>
+            <Grid container sx={{ height: "300px", backgroundcolor: "black" }}>
               {/* CIRCLE 1 */}
               <Grid
                 item
@@ -1104,7 +1127,7 @@ const Home = () => {
                   </Typography>
                 </Box>
               </Grid>
-              CIRCLE 4
+              {/* CIRCLE 4 */}
               {/* <Grid
               item
               xs={12}
@@ -1148,6 +1171,437 @@ const Home = () => {
             md={0.7}
             lg={0.7}
             // sx={{ backgroundColor: "blue" }}
+          ></Grid>
+        </Grid>
+      </Box>
+
+      {/* CLIENTS */}
+      <Box>
+      <Grid container sx={{ backgroundColor: "#fff" }}>
+          <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10}
+            lg={10}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              // backgroundColor:"green"
+            }}
+          >
+            {/* <Box> */}
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  marginTop: "20px",
+                  fontSize: "36px",
+                  fontWeight: "600",
+                  fontFamily: "Poppins, sans-serif",
+                  textAlign: "center",
+                }}
+              >
+                CLIENTS
+              </Typography>
+
+              <Box>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    // marginTop: "20px",
+                    fontSize: "15px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                  }}
+                >
+                  Why are we a creative ad agency ?.It is because we achieve
+                  <br /> more than a simple online marketing agency can!
+                </Typography>
+              </Box>
+            </Box>
+            {/* </Box> */}
+          </Grid>
+          <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
+        </Grid>
+
+        {/* Container 1 */}
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            sx={{ backgroundColor: "#fff" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            sx={{ backgroundColor: "#fff" }}
+          >
+            <Grid container>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={avana}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={hindustanTimes}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={hindware}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={micromax}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{ backgroundColor: "#fff" }}
+              ></Grid>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            sx={{ backgroundColor: "#fff" }}
+          ></Grid>
+        </Grid>
+
+        {/* container 2 */}
+        <Grid container sx={{ backgroundcolor: "#fff" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            sx={{ backgroundColor: "#fff" }}
+          ></Grid>
+
+          <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
+
+            <Grid container>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={moonbow}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={renault}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={unique}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{
+                  backgroundColor: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "300px",
+                        sm: "300px",
+                        md: "90px",
+                        lg: "90px",
+                      },
+                      marginTop:"40px",
+                      marginBottom:"40px"
+                    }}
+                    alt="add_img1"
+                    src={philips}
+                  />
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={3}
+                lg={3}
+                sx={{ backgroundColor: "#fff" }}
+              ></Grid>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            sx={{ backgroundColor: "#fff" }}
           ></Grid>
         </Grid>
       </Box>

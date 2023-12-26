@@ -27,6 +27,53 @@ import { CardActionArea } from "@mui/material";
 
 const Cardcarousel = () => {
   return (
+  <>
+    <Grid container  sx={{backgroundColor: "#F5F5F5" }}>
+      <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
+      <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
+      <Typography
+              sx={{
+                fontSize: {
+                  xs: "19px",
+                  sm: "19px",
+                  md: "36px",
+                  lg: "36px",
+                },
+                color: "#000",
+                marginTop: {
+                  xs: "19px",
+                  sm: "19px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                fontWeight: "600",
+                fontFamily: "Poppins, sans-serif",
+                textAlign: "center",
+              }}
+            >
+              OUR TOP SITES
+            </Typography>
+            <Typography
+              sx={{
+                color: "#000",
+                // marginTop: "20px",
+                fontSize: "15px",
+                fontWeight: "400",
+                fontFamily: "Poppins, sans-serif",
+                textAlign: "center",
+                marginBottom: "10px",
+              }}
+            >
+              Explore some of the best business from around the
+              <br />
+              world from our partners and friends.
+            </Typography>
+      </Grid>
+      <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
+
+      </Grid>
+
+
     <Grid container sx={{backgroundColor: "#F5F5F5" }}>
       <Grid
         item
@@ -381,6 +428,7 @@ const Cardcarousel = () => {
         // sx={{ backgroundColor: "yellow" }}
       ></Grid>
     </Grid>
+    </>
   );
 };
 

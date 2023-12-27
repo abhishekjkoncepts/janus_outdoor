@@ -145,7 +145,7 @@ export default function Outdoor() {
         </Box>
       </Box>
 
-      <Grid container>
+      {/* <Grid container>
         <Grid
           item
           xs={12}
@@ -175,7 +175,7 @@ export default function Outdoor() {
           lg={0.7}
           sx={{ backgroundColor: "green" }}
         ></Grid>
-      </Grid>
+      </Grid> */}
     </>
   );
 }

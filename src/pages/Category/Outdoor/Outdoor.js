@@ -142,6 +142,7 @@ export default function Outdoor() {
               <MenuItem value={30}>type 3</MenuItem>
             </Select>
           </FormControl>
+          <Button variant="contained" sx={{height:"55px" , marginTop:"8px" ,marginLeft:"10px" , backgroundColor:"#fafafa" , color:"#000"}}>SUBMIT</Button>
         </Box>
       </Box>
 

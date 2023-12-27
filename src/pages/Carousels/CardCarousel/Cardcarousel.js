@@ -85,7 +85,7 @@ const Cardcarousel = () => {
                     textAlign: "center",
                   }}
                 >
-                  Explore some of the best business from around the
+                  Explore some of the best business from around the<br/>
 world from our partners and friends.
                 </Typography>
               </Box>

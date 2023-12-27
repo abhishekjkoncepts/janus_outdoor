@@ -3,6 +3,9 @@ import React from "react";
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
 
+// REACT-ROUTER-DOM
+import {Link} from "react-router-dom"
+
 // PAGES
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
 import Cardcarousel from "../Carousels/CardCarousel/Cardcarousel";
@@ -446,6 +449,7 @@ const Home = () => {
                   justifyContent: "center",
                 }}
               >
+                <Link to="/outdoor" style={{textDecoration:"none"}}>
                 <Box
                   sx={{
                     marginTop: {
@@ -502,6 +506,8 @@ const Home = () => {
                     </CardActionArea>
                   </Card>
                 </Box>
+                </Link>
+
               </Grid>
 
               <Grid
@@ -715,6 +721,7 @@ const Home = () => {
                   </Card>
                 </Box>
               </Grid>
+
             </Grid>
           </Grid>
 
@@ -731,7 +738,6 @@ const Home = () => {
 
       {/* EXPLORE */}
       <Box>
-        {/* ex */}
         <Grid
           container
           sx={{

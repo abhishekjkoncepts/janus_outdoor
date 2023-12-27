@@ -11,7 +11,6 @@ import Home from "../pages/Home/Home";
 import Aboutus from "../pages/AboutUs/Aboutus";
 import Contactus from "../pages/ContactUs/Contactus";
 import Hoardings from "../pages/Hoardings/Hoardings";
-import Ourservices from "../pages/OurServices/Ourservices";
 import Blogs from "../pages/Blogs/Blogs";
 
 // SUB-PAGES
@@ -27,6 +26,10 @@ import Transitmedia from "../pages/SubPages/TransitMedia/Transitmedia";
 // HEADER
 import Header from "../components/Header/Header";
 
+// OUR-SERVICES
+
+import Outdoor from "../pages/OurServices/Outdoor/Outdoor";
+
 const Navigation = () => {
   return (
     <BrowserRouter>
@@ -38,7 +41,6 @@ const Navigation = () => {
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/hoardings" element={<Hoardings />} />
-        <Route path="/our-services" element={<Ourservices />} />
         <Route path="/blogs" element={<Blogs/>} />
 
         {/* SUB-PAGES */}
@@ -50,6 +52,10 @@ const Navigation = () => {
         <Route path="/lift-branding" element={<Liftbranding />} />
         <Route path="/airport-branding" element={<Airportbranding />} />
         <Route path="/dooh" element={<Dooh />} />
+
+        {/* OUR-SERVIES */}
+        <Route path="/outdoor" element={<Outdoor/>} />
+
       </Routes>
     </BrowserRouter>
   );

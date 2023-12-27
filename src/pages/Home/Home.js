@@ -9,12 +9,10 @@ import {Link} from "react-router-dom"
 // PAGES
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
 import Cardcarousel from "../Carousels/CardCarousel/Cardcarousel";
-import Categories from "../Categories/Categories";
 
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
 import advertisement from "../../assets/images/adverstising.png";
-import Gif from "../../pages/Gif/Gif";
 import add1 from "../../assets/images/add1.webp";
 import add2 from "../../assets/images/add2.webp";
 import add3 from "../../assets/images/add3.webp";
@@ -26,13 +24,6 @@ import banglore from "../../assets/images/states2/banglore.jpg";
 import chennai from "../../assets/images/states2/chennai.jpg";
 import hyderabad from "../../assets/images/states2/hyderabad.jpg";
 import pune from "../../assets/images/states2/pune.jpg";
-
-import Delhi from "../../assets/images/States/DelhiIndiagate.jpg";
-import Mumbai from "../../assets/images/States/MumbaiTajHotel.jpg";
-import Banglore from "../../assets/images/States/bangloreMonument.jpeg";
-import Chennai from "../../assets/images/States/ChennaiTemple.jpg";
-import Hyderabad from "../../assets/images/States/HyderabadCharMinar.jpg";
-import Pune from "../../assets/images/States/puneMonument.jpg";
 
 import avana from "../../assets/images/clients/avana.jpg";
 import hindustanTimes from "../../assets/images/clients/hindustantimes.jpg";
@@ -57,8 +48,6 @@ import "./Home.css";
 import "./Circle1.css";
 import "./Circle2.css";
 import "./Circle3.css";
-import "./Circle4.css";
-import { Directions } from "@mui/icons-material";
 
 const Home = () => {
   return (
@@ -334,7 +323,7 @@ const Home = () => {
         </Grid>
       </Box>
 
-      {/* OUR SERVICES */}
+      {/* OUR SERVICES - CATEGORIES */}
       <Box>
         <Grid
           container
@@ -1530,6 +1519,7 @@ const Home = () => {
         </Grid>
       </Box>
 
+      {/* CARD CAROUSEL */}
       <Cardcarousel />
 
       {/* EXPERIENCE */}

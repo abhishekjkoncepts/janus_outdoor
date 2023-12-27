@@ -28,7 +28,7 @@ import Header from "../components/Header/Header";
 
 // OUR-SERVICES
 
-import Outdoor from "../pages/OurServices/Outdoor/Outdoor";
+import Outdoor from "../pages/Category/Outdoor/Outdoor";
 
 const Navigation = () => {
   return (
@@ -53,7 +53,7 @@ const Navigation = () => {
         <Route path="/airport-branding" element={<Airportbranding />} />
         <Route path="/dooh" element={<Dooh />} />
 
-        {/* OUR-SERVIES */}
+        {/* CATEGORy */}
         <Route path="/outdoor" element={<Outdoor/>} />
 
       </Routes>

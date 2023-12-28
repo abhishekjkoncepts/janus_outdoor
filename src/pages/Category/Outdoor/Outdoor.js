@@ -1,23 +1,29 @@
 import * as React from "react";
-import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Chip from "@mui/material/Chip";
-import { Grid, Typography, Button } from "@mui/material";
+import { Grid, Button, Typography } from "@mui/material";
 
 import "./Outdoor.css";
 
 // CARD
-import Card from "../../Card/Cards";
+import Cards from "../../Card/Cards";
+
+// REDUX
+import { useSelector } from "react-redux";
+import { getProducts } from "../../../redux/actions/Outdoor";
+import { useNavigate } from "react-router-dom";
 
 export default function Outdoor() {
   const [state, setState] = React.useState("");
   const [city, setCity] = React.useState("");
   const [type, setType] = React.useState("");
+
+  const { products } = useSelector((state) => state.OutdoorReducer);
+
+  const navigate=useNavigate();
 
   const handleChange = (event) => {
     setState(event.target.value);
@@ -30,12 +36,18 @@ export default function Outdoor() {
     setType(event.target.value);
   };
 
+  React.useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <>
       {/* VIDEO */}
       <Grid container>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Box className="App">
+          <Box 
+          sx={{position:"absolute" , }}
+          >
             <video autoPlay muted width="100%" controls={false} loop={true}>
               <source
                 src={require("../../../assets/video/VideoWithoutText.mp4")}
@@ -51,14 +63,14 @@ export default function Outdoor() {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: "600px",
+          marginTop: "300px",
         }}
       >
         <Box>
           <FormControl
             sx={{
               m: 1,
-              minWidth: 200,
+              minWidth: 400,
               backgroundColor: "#fff",
               borderRadius: "5px",
             }}
@@ -90,7 +102,7 @@ export default function Outdoor() {
           <FormControl
             sx={{
               m: 1,
-              minWidth: 120,
+              minWidth: 300,
               backgroundColor: "#fff",
               borderRadius: "5px",
             }}
@@ -119,7 +131,7 @@ export default function Outdoor() {
           <FormControl
             sx={{
               m: 1,
-              minWidth: 120,
+              minWidth: 300,
               backgroundColor: "#fff",
               borderRadius: "5px",
             }}
@@ -142,18 +154,29 @@ export default function Outdoor() {
               <MenuItem value={30}>type 3</MenuItem>
             </Select>
           </FormControl>
-          <Button variant="contained" sx={{height:"55px" , marginTop:"8px" ,marginLeft:"10px" , backgroundColor:"#fafafa" , color:"#000"}}>SUBMIT</Button>
+          <Button
+            variant="contained"
+            sx={{
+              height: "55px",
+              marginTop: "8px",
+              marginLeft: "10px",
+              backgroundColor: "#fafafa",
+              color: "#000",
+            }}
+          >
+            SUBMIT
+          </Button>
         </Box>
       </Box>
 
-      {/* <Grid container>
+      <Grid container sx={{marginTop:"370px" , marginBottom:"50px"}}>
         <Grid
           item
           xs={12}
           sm={12}
           md={0.7}
           lg={0.7}
-          sx={{ backgroundColor: "red" }}
+          // sx={{ backgroundColor: "red" }}
         ></Grid>
         <Grid
           item
@@ -161,12 +184,22 @@ export default function Outdoor() {
           sm={12}
           md={10.6}
           lg={10.6}
-          sx={{ backgroundColor: "blue" }}
+          // sx={{ backgroundColor: "yellow" }}
         >
-         <Grid container spacing={1}>
-<Card/>
-
-         </Grid>
+          <Grid container spacing={2}>
+            {products &&
+              products.map((item) => {
+                return (
+                  <Cards
+                    data={item}
+                    onClick={() => {
+                      navigate("/full-card");
+                      console.log("hello world");
+                    }}
+                  />
+                );
+              })}
+          </Grid>
         </Grid>
         <Grid
           item
@@ -174,9 +207,9 @@ export default function Outdoor() {
           sm={12}
           md={0.7}
           lg={0.7}
-          sx={{ backgroundColor: "green" }}
+          // sx={{ backgroundColor: "green" }}
         ></Grid>
-      </Grid> */}
+      </Grid>
     </>
   );
 }

@@ -4,7 +4,7 @@ import React from "react";
 import { Grid, Typography, Button, Box } from "@mui/material";
 
 // REACT-ROUTER-DOM
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 // PAGES
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
@@ -48,6 +48,7 @@ import "./Home.css";
 import "./Circle1.css";
 import "./Circle2.css";
 import "./Circle3.css";
+import { getProducts } from "../../redux/actions/Outdoor";
 
 const Home = () => {
   return (
@@ -438,65 +439,64 @@ const Home = () => {
                   justifyContent: "center",
                 }}
               >
-                <Link to="/outdoor" style={{textDecoration:"none"}}>
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  <Card
+                <Link to="/outdoor" style={{ textDecoration: "none" }}>
+                  <Box
                     sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "1px solid #000",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      marginBottom: {
+                        xs: "0px",
+                        sm: "0px",
+                        md: "60px",
+                        lg: "60px",
+                      },
                     }}
                   >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add1}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
+                    <Card
+                      sx={{
+                        maxWidth: "245px",
+                        maxHeight: 800,
+                        borderRadius: "150px 150px 0 0",
+                        border: "1px solid #000",
+                        background:
+                          "linear-gradient(to bottom, #C02222 85%, #000)",
+                      }}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="250"
+                          image={add1}
+                          alt="green iguana"
                           sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
+                            overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                            transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                            "&:hover": {
+                              transform: "scale(1.1)", // Scale the card by 10% when hovered
+                            },
                           }}
-                        >
-                          OUTDOOR
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Box>
+                        />
+                        <CardContent sx={{ height: "60px" }}>
+                          <Typography
+                            sx={{
+                              fontFamily: "Poppins, sans-serif",
+                              fontSize: "21px",
+                              fontWeight: "600",
+                              textAlign: "center",
+                              color: "#fff",
+                            }}
+                          >
+                            OUTDOOR
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Box>
                 </Link>
-
               </Grid>
 
               <Grid
@@ -710,7 +710,6 @@ const Home = () => {
                   </Card>
                 </Box>
               </Grid>
-
             </Grid>
           </Grid>
 
@@ -1524,7 +1523,7 @@ const Home = () => {
 
       {/* EXPERIENCE */}
       <Box>
-      <Grid
+        <Grid
           container
           sx={{
             backgroundColor: "#000",
@@ -1581,8 +1580,9 @@ const Home = () => {
                     textAlign: "center",
                   }}
                 >
-                 Why are we a creative ad agency ?.It is because we achieve <br/>
-more than a simple online marketing agency can!
+                  Why are we a creative ad agency ?.It is because we achieve{" "}
+                  <br />
+                  more than a simple online marketing agency can!
                 </Typography>
               </Box>
             </Box>
@@ -1641,7 +1641,7 @@ more than a simple online marketing agency can!
                       color: "#fff",
                       marginTop: "70px",
                       fontSize: "22px",
-                      marginLeft:"170px",
+                      marginLeft: "170px",
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
                     }}
@@ -1710,7 +1710,7 @@ more than a simple online marketing agency can!
                     sx={{
                       color: "#fff",
                       marginTop: "20px",
-                      marginRight:"100px",
+                      marginRight: "100px",
                       fontSize: "22px",
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
@@ -2163,6 +2163,27 @@ more than a simple online marketing agency can!
           ></Grid>
         </Grid>
       </Box>
+
+      {/* <Button
+        onClick={() => {
+          console.log("Hello World");
+          get_products()
+            .then((res) => {return res.json()})
+            .then((resjson) => {
+              console.log(resjson);
+            });
+        }}
+      >
+        CLICK ME!
+      </Button> */}
+      <Button
+        onClick={() => {
+          console.log("Hello World");
+         getProducts()
+        }}
+      >
+        CLICK ME!
+      </Button>
     </Box>
   );
 };

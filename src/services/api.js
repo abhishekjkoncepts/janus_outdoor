@@ -22,7 +22,7 @@ export async function request(url, method, data, headers) {
             url: url,
             method: method,
             data: data,
-            headers: h,
+            // headers: h,
         };
         axios(config)
             .then(response => {

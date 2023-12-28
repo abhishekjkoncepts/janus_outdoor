@@ -27,8 +27,10 @@ import Transitmedia from "../pages/SubPages/TransitMedia/Transitmedia";
 import Header from "../components/Header/Header";
 
 // OUR-SERVICES
-
 import Outdoor from "../pages/Category/Outdoor/Outdoor";
+
+//FULL-CARD
+import Fullcard from "../pages/FullCard/Fullcard";
 
 const Navigation = () => {
   return (
@@ -55,6 +57,9 @@ const Navigation = () => {
 
         {/* CATEGORy */}
         <Route path="/outdoor" element={<Outdoor/>} />
+
+        {/* FULl CArd */}
+        <Route path="/full-card" element={<Fullcard/>} />
 
       </Routes>
     </BrowserRouter>

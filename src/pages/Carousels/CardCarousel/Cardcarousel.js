@@ -138,8 +138,8 @@ const Cardcarousel = () => {
             <Carousel.Item>
               <Card
                 sx={{
-                  maxWidth: 360,
-                  maxHeight: 800,
+                  // maxWidth: 360,
+                  // maxHeight: 800,
                   borderRadius: "150px 150px 0 0",
                   border: "1px solid #C02222",
                 }}

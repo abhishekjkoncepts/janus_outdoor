@@ -878,6 +878,22 @@ function Header(props) {
                 </Menu>
               </Box>
 
+               {/* BLOGS */}
+               <Box sx={{ paddingLeft: "30px" }}>
+                <Button component={Link} to="/blogs">
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    BLOGS
+                  </Typography>
+                </Button>
+              </Box>  
+
               {/* Dropdown  ends*/}
               <Box sx={{ paddingLeft: "30px" }}>
                 <Button component={Link} to="/contactus">
@@ -893,21 +909,7 @@ function Header(props) {
                   </Typography>
                 </Button>
               </Box>
-              {/* BLOGS */}
-              <Box sx={{ paddingLeft: "30px" }}>
-                <Button component={Link} to="/blogs">
-                  <Typography
-                    sx={{
-                      color: "#fff",
-                      fontSize: "16px",
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    BLOGS
-                  </Typography>
-                </Button>
-              </Box>
+             
             </Box>
           </Box>
         </Toolbar>

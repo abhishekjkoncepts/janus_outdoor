@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
 
-// import { HomeReducer } from "./Home";
-
+import { OutdoorReducer } from "./Outdoor";
 
 const rootReducer = combineReducers({
-    // HomeReducer,
+  OutdoorReducer,
 });
 
-export default rootReducer
+export default rootReducer;

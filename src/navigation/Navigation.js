@@ -32,36 +32,39 @@ import Outdoor from "../pages/Category/Outdoor/Outdoor";
 //FULL-CARD
 import Fullcard from "../pages/FullCard/Fullcard";
 
+// SCROLL-TO-TOP
+import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
+
 const Navigation = () => {
   return (
     <BrowserRouter>
       <Header />
+      <Scrolltotop>
+        {/* PARENT-PAGES */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/hoardings" element={<Hoardings />} />
+          <Route path="/blogs" element={<Blogs />} />
 
-      {/* PARENT-PAGES */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/contactus" element={<Contactus />} />
-        <Route path="/hoardings" element={<Hoardings />} />
-        <Route path="/blogs" element={<Blogs/>} />
+          {/* SUB-PAGES */}
+          <Route path="/billboard" element={<Billboard />} />
+          <Route path="/transitmedia" element={<Transitmedia />} />
+          <Route path="/digital-billboard" element={<Digitalbillboard />} />
+          <Route path="/mallmedia" element={<Mallmedia />} />
+          <Route path="/inflight-branding" element={<Inflightbranding />} />
+          <Route path="/lift-branding" element={<Liftbranding />} />
+          <Route path="/airport-branding" element={<Airportbranding />} />
+          <Route path="/dooh" element={<Dooh />} />
 
-        {/* SUB-PAGES */}
-        <Route path="/billboard" element={<Billboard />} />
-        <Route path="/transitmedia" element={<Transitmedia />} />
-        <Route path="/digital-billboard" element={<Digitalbillboard />} />
-        <Route path="/mallmedia" element={<Mallmedia />} />
-        <Route path="/inflight-branding" element={<Inflightbranding />} />
-        <Route path="/lift-branding" element={<Liftbranding />} />
-        <Route path="/airport-branding" element={<Airportbranding />} />
-        <Route path="/dooh" element={<Dooh />} />
+          {/* CATEGORy */}
+          <Route path="/outdoor" element={<Outdoor />} />
 
-        {/* CATEGORy */}
-        <Route path="/outdoor" element={<Outdoor/>} />
-
-        {/* FULl CArd */}
-        <Route path="/full-card" element={<Fullcard/>} />
-
-      </Routes>
+          {/* FULl CArd */}
+          <Route path="/full-card" element={<Fullcard />} />
+        </Routes>
+      </Scrolltotop>
     </BrowserRouter>
   );
 };

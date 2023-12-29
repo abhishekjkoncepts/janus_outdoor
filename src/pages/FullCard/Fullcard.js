@@ -98,8 +98,8 @@ const Fullcard = () => {
                       fontSize: {
                         xs: "20px",
                         sm: "20px",
-                        md: "32px",
-                        lg: "32px",
+                        md: "30px",
+                        lg: "30px",
                       },
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: "600",
@@ -122,6 +122,7 @@ const Fullcard = () => {
                         md: "flex-start",
                         lg: "flex-start",
                       },
+                      lineHeight:"34px"
                     }}
                   >
                     Seelampur Flyover GT Road towards Shahdara

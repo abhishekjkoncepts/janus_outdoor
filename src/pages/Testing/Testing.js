@@ -1,67 +1,34 @@
 import React from "react";
+import "./Testing.css";
 
-import { Grid, Button, Typography, Box } from "@mui/material";
-
-import Cardii from "./Cardii";
-
-// REDUX
-import { useSelector } from "react-redux";
-import { getProducts } from "../../redux/actions/Outdoor";
-// import { useNavigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
+import video from "../../assets/video/VideoWithoutText.mp4";
+import img from "../../assets/images/Sample.jpg";
+import { Typography } from "@mui/material";
 
 const Testing = () => {
-  const { products } = useSelector((state) => state.OutdoorReducer);
-  const navigate = useNavigate();
-
-  React.useEffect(() => {
-    getProducts();
-  }, []);
-
   return (
     <>
-      <Grid container>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          sx={{ backgroundColor: "red" }}
-        ></Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={10.6}
-          lg={10.6}
-          sx={{ backgroundColor: "yellow" }}
-        >
-          <Grid container>
-            {products &&
-              products.map((item) => {
-                return (
-                  <Cardii
-                    data={item}
-                    onClick={() => {
-                      navigate("full-card");
-                      console.log("hello world");
-                    }}
-                  />
-                );
-              })}
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          sx={{ backgroundColor: "green" }}
-        ></Grid>
-      </Grid>
+      <section className="home">
+        <video
+          src={video}
+          muted
+          autoPlay
+          controls={false}
+          loop={true}
+          type="video/mp4"
+        ></video>
+
+        <div className="homeContent container">
+          <Typography
+            sx={{
+              fontSize: { xs: "30px", sm: "30px", md: "70px", lg: "70px" },
+              fontWeight: { xs: "500", sm: "500", md: "700", lg: "700" },
+            }}
+          >
+            Best Hoardings in Delhi
+          </Typography>
+        </div>
+      </section>
     </>
   );
 };

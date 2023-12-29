@@ -2176,14 +2176,14 @@ const Home = () => {
       >
         CLICK ME!
       </Button> */}
-      <Button
+      {/* <Button
         onClick={() => {
           console.log("Hello World");
          getProducts()
         }}
       >
         CLICK ME!
-      </Button>
+      </Button> */}
     </Box>
   );
 };

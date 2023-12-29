@@ -58,7 +58,12 @@ const Home = () => {
       <Grid container>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           {
-            <Box>
+            <Box
+              sx={{
+                marginTop: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
+              }}
+            >
               <video autoPlay muted width="100%" controls={false} loop={true}>
                 <source
                   src={require("../../assets/video/VideoWithText.mp4")}

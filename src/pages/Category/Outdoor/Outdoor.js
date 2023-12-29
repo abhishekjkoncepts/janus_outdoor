@@ -293,7 +293,7 @@ export default function Outdoor() {
 
       
       </section>
-      {/* <Box 
+      <Box 
       sx={{zIndex:"100"}}
       >
           <Grid container sx={{}}>
@@ -324,7 +324,7 @@ export default function Outdoor() {
               sx={{ backgroundColor: "green" }}
             ></Grid>
           </Grid>
-        </Box> */}
+        </Box>
      
       
 

@@ -277,7 +277,8 @@ export default function Outdoor() {
           loop={true}
           type="video/mp4"
         ></video>
-         <div className="homeContent container">
+      </section>
+      <div className="homeContent container">
           <Typography
             sx={{
               fontSize: { xs: "30px", sm: "30px", md: "70px", lg: "70px" },
@@ -288,11 +289,6 @@ export default function Outdoor() {
           </Typography>
 
         </div>
-      
-      
-
-      
-      </section>
       <Box 
       sx={{zIndex:"100"}}
       >

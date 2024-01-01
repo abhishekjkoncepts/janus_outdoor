@@ -145,6 +145,7 @@ const Home = () => {
                 </Typography>
               </Box>
               <Box>
+                
                 <TypeAnimation
                   sequence={[
                     "We have the maverick minds who goes for only unusual",
@@ -517,6 +518,7 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
+                 <Link to="/cinema" style={{ textDecoration: "none" }}>
                 <Box
                   sx={{
                     marginTop: {
@@ -573,6 +575,7 @@ const Home = () => {
                     </CardActionArea>
                   </Card>
                 </Box>
+                </Link>
               </Grid>
 
               <Grid
@@ -588,6 +591,7 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
+                 <Link to="/airportbranding" style={{ textDecoration: "none" }}>
                 <Box
                   sx={{
                     marginTop: {
@@ -644,6 +648,7 @@ const Home = () => {
                     </CardActionArea>
                   </Card>
                 </Box>
+                </Link>
               </Grid>
 
               <Grid
@@ -658,6 +663,7 @@ const Home = () => {
                   justifyContent: "center",
                 }}
               >
+                 <Link to="/signage" style={{ textDecoration: "none" }}>
                 <Box
                   sx={{
                     marginTop: {
@@ -714,6 +720,7 @@ const Home = () => {
                     </CardActionArea>
                   </Card>
                 </Box>
+                </Link>
               </Grid>
             </Grid>
           </Grid>

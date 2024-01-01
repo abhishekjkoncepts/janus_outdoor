@@ -19,7 +19,7 @@ const Footer = () => {
         container
         sx={{
           backgroundColor: "#C02222",
-          height: { xs: "200px", sm: "200px", md: "530px", lg: "530px" },
+          height: { xs: "200px", sm: "200px", md: "500px", lg: "500px" },
         }}
       >
         <Grid
@@ -40,7 +40,7 @@ const Footer = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: "20px",
+              marginTop: "50px",
             }}
           >
             <Box>

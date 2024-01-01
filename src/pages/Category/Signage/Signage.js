@@ -6,10 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Grid, Button, Typography } from "@mui/material";
 
-// TYPE-ANIMATION
-import { TypeAnimation } from "react-type-animation";
-
-import "./Outdoor.css";
+import "./Signage.css";
 
 // CARD
 import Cards from "../../Card/Cards";
@@ -19,7 +16,7 @@ import { useSelector } from "react-redux";
 import { getProducts } from "../../../redux/actions/Outdoor";
 import { useNavigate } from "react-router-dom";
 
-export default function Outdoor() {
+export default function Signage() {
   const [state, setState] = React.useState("");
   const [city, setCity] = React.useState("");
   const [type, setType] = React.useState("");
@@ -108,73 +105,6 @@ export default function Outdoor() {
             <Box
             // sx={{width: { xs: "0%", sm: "0%", md: "100%", lg: "100%" },}}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Box>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    fontSize: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "80px",
-                      lg: "80px",
-                    },
-                    fontWeight: {
-                      xs: "400",
-                      sm: "400",
-                      md: "600",
-                      lg: "600",
-                    },
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#fff",
-                    // position: "sticky",
-                  }}
-                >
-                  Hoardings In Delhi
-                </Typography>
-                </Box>
-                
-                {/* <Box sx={{marginLeft:"550px"}}>
-                <TypeAnimation
-                  sequence={[
-                    "Delhi",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    "Mumbai",
-                    1000,
-                    "Banglore",
-                    1000,
-                    "Pune",
-                    1000,
-                    "Hyderabad",
-                    1000,
-                    "Chennai",
-                    1000,
-                  ]}
-                  wrapper="span"
-                  cursor={true}
-                  speed={50}
-                  deletionSpeed={70}
-                  style={{
-                    // fontSize: "2em",
-                    display: "inline-block",
-                    color: "#fff",
-                    // marginTop: "20px",
-                    fontSize: "80px",
-                    fontWeight: "600",
-                    color: "#fff",
-                    fontFamily: "Poppins, sans-serif",
-                  }}
-                  repeat={Infinity}
-                />
-                </Box> */}
-              </Box>
               <Typography
                 sx={{
                   display: "flex",
@@ -193,21 +123,58 @@ export default function Outdoor() {
                   fontSize: {
                     xs: "0px",
                     sm: "0px",
-                    md: "20px",
-                    lg: "20px",
+                    md: "80px",
+                    lg: "80px",
                   },
                   fontWeight: {
                     xs: "400",
                     sm: "400",
-                    md: "500",
-                    lg: "500",
+                    md: "600",
+                    lg: "600",
                   },
                   fontFamily: "Poppins, sans-serif",
-                  color: "#fff",
-                  marginTop: "-5px",
+                  color: "red",
                 }}
               >
-               Outdoor Advertising Company
+                Best Hoarding In
+                <span style={{ color: "blue", fontSize: "120px" }}>
+                  &nbsp; Delhi
+                </span>
+              </Typography>
+              <Typography
+                sx={{
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    sm: "center",
+                    md: "center",
+                    lg: "center",
+                  },
+                  alignItems: {
+                    xs: "center",
+                    sm: "center",
+                    md: "center",
+                    lg: "center",
+                  },
+                  fontSize: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "30px",
+                    lg: "30px",
+                  },
+                  fontWeight: {
+                    xs: "400",
+                    sm: "400",
+                    md: "300",
+                    lg: "300",
+                  },
+                  fontFamily: "Poppins, sans-serif",
+                  color: "red",
+                  marginTop: "-20px",
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod
               </Typography>
             </Box>
           </Grid>
@@ -550,7 +517,7 @@ export default function Outdoor() {
           sm={12}
           md={3}
           lg={3}
-          sx={{ backgroundColor: "orange" }}
+        //   sx={{ backgroundColor: "orange" }}
         >
           <Box
             sx={{
@@ -581,7 +548,7 @@ export default function Outdoor() {
       <Grid
         container
         sx={{
-          marginTop: { xs: "70px", sm: "70px", md: "300px", lg: "300px" },
+          marginTop: { xs: "70px", sm: "70px", md: "200px", lg: "200px" },
           marginBottom: "50px",
         }}
       >
@@ -601,10 +568,24 @@ export default function Outdoor() {
           lg={10.6}
           // sx={{ backgroundColor: "yellow" }}
         >
+          {/* <Grid container spacing={2}>
+            {products &&
+              products.map((item) => {
+                return (
+                  <Cards
+                    data={item}
+                    onClick={() => {
+                      navigate("/full-card");
+                      console.log("hello world");
+                    }}
+                  />
+                );
+              })}
+          </Grid> */}
           <Grid container spacing={2}>
             {products &&
               products
-                .filter((item) => item.category === "Outdoor") // Assuming there's a 'category' property indicating the product category
+                .filter((item) => item.category === "Cinema") // Assuming there's a 'category' property indicating the product category
                 .map((item) => (
                   <Cards
                     key={item.id} // Add a unique key for each mapped element

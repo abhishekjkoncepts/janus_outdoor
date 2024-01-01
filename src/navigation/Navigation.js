@@ -14,7 +14,6 @@ import Hoardings from "../pages/Hoardings/Hoardings";
 import Blogs from "../pages/Blogs/Blogs";
 
 // SUB-PAGES
-import Airportbranding from "../pages/SubPages/AirportBranding/Airportbranding";
 import Billboard from "../pages/SubPages/BillBoard/Billboard";
 import Digitalbillboard from "../pages/SubPages/DigitalBillboard/Digitalbillboard";
 import Dooh from "../pages/SubPages/Dooh/Dooh";
@@ -23,11 +22,15 @@ import Liftbranding from "../pages/SubPages/LiftBranding/Liftbranding";
 import Mallmedia from "../pages/SubPages/MallMedia/Mallmedia";
 import Transitmedia from "../pages/SubPages/TransitMedia/Transitmedia";
 
+
 // HEADER
 import Header from "../components/Header/Header";
 
 // OUR-SERVICES
 import Outdoor from "../pages/Category/Outdoor/Outdoor";
+import Cinema from "../pages/Category/Cinema/Cinema";
+import Airportbranding from "../pages/Category/AirportBranding/Airportbranding";
+import Signage from "../pages/Category/Signage/Signage";
 
 //FULL-CARD
 import Fullcard from "../pages/FullCard/Fullcard";
@@ -58,8 +61,11 @@ const Navigation = () => {
           <Route path="/airport-branding" element={<Airportbranding />} />
           <Route path="/dooh" element={<Dooh />} />
 
-          {/* CATEGORy */}
+          {/* CATEGORY*/}
           <Route path="/outdoor" element={<Outdoor />} />
+          <Route path="/cinema" element={<Cinema />} />
+          <Route path="/airportbranding" element={<Airportbranding />} />
+          <Route path="/signage" element={<Signage/>} />
 
           {/* FULl CArd */}
           <Route path="/full-card" element={<Fullcard />} />

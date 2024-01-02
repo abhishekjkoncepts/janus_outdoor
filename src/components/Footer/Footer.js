@@ -171,15 +171,20 @@ const Footer = () => {
             },
           }}
         >
-          <Box sx={{
-            marginTop:{
-              xs:"5px" , sm:"5px" , md:"5px" , lg:"5px"
-            }
-          }}>
+          <Box
+            sx={{
+              marginTop: {
+                xs: "5px",
+                sm: "5px",
+                md: "6px",
+                lg: "6px",
+              },
+            }}
+          >
             <Typography
               sx={{
                 fontSize: "11px",
-                fontWeight: "300",
+                fontWeight: "500",
                 color: "#fff",
                 fontFamily: "Poppins, sans-serif",
               }}
@@ -199,11 +204,20 @@ const Footer = () => {
             backgroundColor: "#000",
             display: "flex",
             justifyContent: {
-              xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"
+              xs: "center",
+              sm: "center",
+              md: "flex-end",
+              lg: "flex-end",
             },
           }}
         >
-          <Box sx={{ width: "120px", marginTop: "3px" }}>
+          <Box
+            sx={{
+              width: "120px",
+              marginTop: {xs:"4px" , sm:"4px" , md:"4px" , lg:"4px"},
+              marginBottom:  {xs:"4px" , sm:"4px" , md:"3px" , lg:"3px"},
+            }}
+          >
             <Box
               sx={{
                 display: "flex",

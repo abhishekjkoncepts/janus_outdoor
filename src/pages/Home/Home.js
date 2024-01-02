@@ -95,9 +95,11 @@ const Home = () => {
             sm={12}
             md={6}
             lg={6}
-            sx={{
-              // backgroundColor: "purple",
-            }}
+            sx={
+              {
+                // backgroundColor: "purple",
+              }
+            }
           >
             <Box
               sx={{
@@ -292,7 +294,6 @@ const Home = () => {
                       md: "50px",
                       lg: "50px",
                     },
-                  
                   }}
                 >
                   <Typography
@@ -313,7 +314,12 @@ const Home = () => {
             lg={4.6}
             sx={{
               display: "flex",
-              justifyContent:{xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
+              justifyContent: {
+                xs: "center",
+                sm: "center",
+                md: "flex-end",
+                lg: "flex-end",
+              },
               alignItems: "center",
             }}
           >
@@ -404,7 +410,12 @@ const Home = () => {
                 <Typography
                   sx={{
                     color: "#000",
-                    fontSize: {xs:"14px", sm:"14px" , md:"16px" , lg:"16px"},
+                    fontSize: {
+                      xs: "14px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "16px",
+                    },
                     fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
                     textAlign: "center",
@@ -808,13 +819,17 @@ const Home = () => {
 
               <Box>
                 <Typography
-               
-                    sx={{
-                      color: "#000",
-                      fontSize: {xs:"14px", sm:"14px" , md:"16px" , lg:"16px"},
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
+                  sx={{
+                    color: "#000",
+                    fontSize: {
+                      xs: "14px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "16px",
+                    },
+                    fontWeight: "500",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
                   }}
                 >
                   Elevate Your Brand with Our Unmatched Outdoor Media Solutions
@@ -860,14 +875,19 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  backgroundcolor:"red",
+                  backgroundcolor: "red",
                 }}
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-start",
+                      lg: "flex-start",
+                    },
                     alignItems: "center",
                     marginTop: {
                       xs: "10px",
@@ -911,8 +931,9 @@ const Home = () => {
                   <Box
                     sx={{
                       position: "absolute",
-                      right: "1%",
-                      left: "5%",
+                      // right: "1%",
+                      right: { xs: "", sm: "", md: "", lg: "" },
+                      left: { xs: "10%", sm: "10%", md: "5%", lg: "5%" },
                       bottom: "5%",
                       display: "flex",
                     }}
@@ -937,12 +958,12 @@ const Home = () => {
                         <Typography
                           sx={{
                             color: "#fff",
-                            fontSize: "22px",
-                            fontWeight: "900",
+                            fontSize: "20px",
+                            fontWeight: "700",
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          2493+
+                          2493 +
                         </Typography>
                         <Typography
                           sx={{
@@ -965,9 +986,11 @@ const Home = () => {
                 sm={12}
                 md={4}
                 lg={4}
-                sx={{
-                  // backgroundColor: "green"
-                }}
+                sx={
+                  {
+                    // backgroundColor: "green"
+                  }
+                }
               >
                 <Box
                   sx={{
@@ -1019,7 +1042,8 @@ const Home = () => {
                   <Box
                     sx={{
                       position: "absolute",
-                      right: "1%",
+                      // right: "1%",
+                      right: { xs: "", sm: "", md: "1%", lg: "1%" },
                       left: "10%",
                       bottom: "15%",
                       display: "flex",
@@ -1073,15 +1097,22 @@ const Home = () => {
                 sm={12}
                 md={4}
                 lg={4}
-                sx={{
-                  // backgroundColor: "cyan",
-                }}
+                sx={
+                  {
+                    // backgroundColor: "cyan",
+                  }
+                }
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-end",
+                      lg: "flex-end",
+                    },
                   }}
                 >
                   <Box
@@ -1208,15 +1239,22 @@ const Home = () => {
                 sm={12}
                 md={4}
                 lg={4}
-                sx={{
-                  // backgroundColor: "orange",
-                }}
+                sx={
+                  {
+                    // backgroundColor: "orange",
+                  }
+                }
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-start",
+                      lg: "flex-start",
+                    },
                   }}
                 >
                   <Box
@@ -1313,9 +1351,11 @@ const Home = () => {
                 sm={12}
                 md={4}
                 lg={4}
-                sx={{
-                  // backgroundColor: "green" ,
-                }}
+                sx={
+                  {
+                    // backgroundColor: "green" ,
+                  }
+                }
               >
                 <Box
                   sx={{
@@ -1419,16 +1459,23 @@ const Home = () => {
                 sm={12}
                 md={4}
                 lg={4}
-                sx={{
-                  // backgroundColor: "cyan",
-                }}
+                sx={
+                  {
+                    // backgroundColor: "cyan",
+                  }
+                }
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
                     justifyContent: "flex-end",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-end",
+                      lg: "flex-end",
+                    },
                     alignItems: "center",
                   }}
                 >

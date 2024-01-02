@@ -487,8 +487,8 @@ const Home = () => {
                       sx={{
                         maxWidth: "245px",
                         maxHeight: 800,
-                        borderRadius: "150px 150px 0 0",
-                        border: "1px solid #000",
+                        // borderRadius: "150px 150px 0 0",
+                        border: "2px solid #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
                       }}
@@ -560,8 +560,8 @@ const Home = () => {
                       sx={{
                         maxWidth: "245px",
                         maxHeight: 800,
-                        borderRadius: "150px 150px 0 0",
-                        border: "1px solid #000",
+                        // borderRadius: "150px 150px 0 0",
+                        border: "2px solid #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
                       }}

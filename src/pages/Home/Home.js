@@ -197,8 +197,8 @@ const Home = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "13px",
-                      sm: "13px",
+                      xs: "14px",
+                      sm: "14px",
                       md: "16px",
                       lg: "16px",
                     },
@@ -404,7 +404,7 @@ const Home = () => {
                 <Typography
                   sx={{
                     color: "#000",
-                    fontSize: {xs:"12px", sm:"12px" , md:"15px" , lg:"15px"},
+                    fontSize: {xs:"14px", sm:"14px" , md:"16px" , lg:"16px"},
                     fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
                     textAlign: "center",
@@ -470,8 +470,8 @@ const Home = () => {
                   <Box
                     sx={{
                       marginTop: {
-                        xs: "10px",
-                        sm: "10px",
+                        xs: "20px",
+                        sm: "20px",
                         md: "10px",
                         lg: "10px",
                       },
@@ -487,7 +487,7 @@ const Home = () => {
                       sx={{
                         maxWidth: "245px",
                         maxHeight: 800,
-                        // borderRadius: "150px 150px 0 0",
+                        borderRadius: "150px 150px 0 0",
                         border: "2px solid #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
@@ -543,8 +543,8 @@ const Home = () => {
                   <Box
                     sx={{
                       marginTop: {
-                        xs: "10px",
-                        sm: "10px",
+                        xs: "20px",
+                        sm: "20px",
                         md: "10px",
                         lg: "10px",
                       },
@@ -560,7 +560,7 @@ const Home = () => {
                       sx={{
                         maxWidth: "245px",
                         maxHeight: 800,
-                        // borderRadius: "150px 150px 0 0",
+                        borderRadius: "150px 150px 0 0",
                         border: "2px solid #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
@@ -616,8 +616,8 @@ const Home = () => {
                   <Box
                     sx={{
                       marginTop: {
-                        xs: "10px",
-                        sm: "10px",
+                        xs: "20px",
+                        sm: "20px",
                         md: "10px",
                         lg: "10px",
                       },
@@ -634,7 +634,7 @@ const Home = () => {
                         maxWidth: "245px",
                         maxHeight: 800,
                         borderRadius: "150px 150px 0 0",
-                        border: "1px solid #000",
+                        border: "2px solid  #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
                       }}
@@ -688,14 +688,14 @@ const Home = () => {
                   <Box
                     sx={{
                       marginTop: {
-                        xs: "10px",
-                        sm: "10px",
+                        xs: "20px",
+                        sm: "20px",
                         md: "10px",
                         lg: "10px",
                       },
                       marginBottom: {
-                        xs: "0px",
-                        sm: "0px",
+                        xs: "40px",
+                        sm: "40px",
                         md: "60px",
                         lg: "60px",
                       },
@@ -706,7 +706,7 @@ const Home = () => {
                         maxWidth: "245px",
                         maxHeight: 800,
                         borderRadius: "150px 150px 0 0",
-                        border: "1px solid #000",
+                        border: "2px solid #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
                       }}

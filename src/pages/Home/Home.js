@@ -783,7 +783,7 @@ const Home = () => {
           >
             <Box
               sx={{
-                marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
+                marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
                 marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
               }}
             >
@@ -791,8 +791,8 @@ const Home = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "19px",
-                      sm: "19px",
+                      xs: "21px",
+                      sm: "21px",
                       md: "36px",
                       lg: "36px",
                     },
@@ -808,12 +808,13 @@ const Home = () => {
 
               <Box>
                 <Typography
-                  sx={{
-                    color: "#000",
-                    fontSize: "15px",
-                    fontWeight: "400",
-                    fontFamily: "Poppins, sans-serif",
-                    textAlign: "center",
+               
+                    sx={{
+                      color: "#000",
+                      fontSize: {xs:"14px", sm:"14px" , md:"16px" , lg:"16px"},
+                      fontWeight: "500",
+                      fontFamily: "Poppins, sans-serif",
+                      textAlign: "center",
                   }}
                 >
                   Elevate Your Brand with Our Unmatched Outdoor Media Solutions
@@ -859,17 +860,14 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "orange",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
+                  backgroundcolor:"red",
                 }}
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
-                    justifyContent: "flex-start",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
                     alignItems: "center",
                     marginTop: {
                       xs: "10px",
@@ -889,19 +887,19 @@ const Home = () => {
                     component="img"
                     sx={{
                       width: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       height: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       borderRadius: "10px",
-                      transition: "transform 0.3s", // Add a transition for a smoother effect
+                      transition: "transform 0.1s", // Add a transition for a smoother effect
                       "&:hover": {
                         transform: "scale(1.1)", // Adjust the scale factor as needed (1.2 means 120% zoom)
                       },
@@ -968,10 +966,7 @@ const Home = () => {
                 md={4}
                 lg={4}
                 sx={{
-                  // backgroundColor: "green",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  // backgroundColor: "green"
                 }}
               >
                 <Box
@@ -988,14 +983,14 @@ const Home = () => {
                     component="img"
                     sx={{
                       width: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       height: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
@@ -1080,31 +1075,27 @@ const Home = () => {
                 lg={4}
                 sx={{
                   // backgroundColor: "cyan",
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
                 }}
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
                   }}
                 >
                   <Box
                     component="img"
                     sx={{
                       width: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       height: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
@@ -1208,7 +1199,7 @@ const Home = () => {
             sm={12}
             md={10.6}
             lg={10.6}
-            // sx={{ backgroundColor: "yellow" }}
+            // sx={{ backgroundColor: "red" }}
           >
             <Grid container>
               <Grid
@@ -1219,31 +1210,27 @@ const Home = () => {
                 lg={4}
                 sx={{
                   // backgroundColor: "orange",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
                 }}
               >
                 <Box
                   sx={{
                     position: "relative",
                     display: "flex",
-                    justifyContent: "flex-start",
-                    alignItems: "center",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
                   }}
                 >
                   <Box
                     component="img"
                     sx={{
                       width: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       height: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
@@ -1328,9 +1315,6 @@ const Home = () => {
                 lg={4}
                 sx={{
                   // backgroundColor: "green" ,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
                 }}
               >
                 <Box
@@ -1345,14 +1329,14 @@ const Home = () => {
                     component="img"
                     sx={{
                       width: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       height: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
@@ -1437,9 +1421,6 @@ const Home = () => {
                 lg={4}
                 sx={{
                   // backgroundColor: "cyan",
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
                 }}
               >
                 <Box
@@ -1447,6 +1428,7 @@ const Home = () => {
                     position: "relative",
                     display: "flex",
                     justifyContent: "flex-end",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
                     alignItems: "center",
                   }}
                 >
@@ -1454,14 +1436,14 @@ const Home = () => {
                     component="img"
                     sx={{
                       width: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },
                       height: {
-                        xs: "100%",
-                        sm: "100%",
+                        xs: "90%",
+                        sm: "90%",
                         md: "90%",
                         lg: "90%",
                       },

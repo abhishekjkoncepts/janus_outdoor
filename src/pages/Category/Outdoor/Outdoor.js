@@ -247,7 +247,7 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
-                      marginTop:{xs:"10px", sm:"10px" , md:"0px", lg:"0px"}
+                      marginTop:{xs:"50px", sm:"50px" , md:"0px", lg:"0px"}
                     }}
                   >
                     <FormControl

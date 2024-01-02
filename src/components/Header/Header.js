@@ -203,7 +203,7 @@ function Header(props) {
                   md: "50px",
                   lg: "50px",
                 },
-                marginLeft: { xs: "80px", sm: "80px", md: "43px", lg: "43px" },
+                marginLeft: { xs: "120px", sm: "120px", md: "43px", lg: "43px" },
                 marginTop: { xs: "5px", sm: "5px", md: "7px", lg: "7px" },
               }}
               alt="redTriangleArrow"

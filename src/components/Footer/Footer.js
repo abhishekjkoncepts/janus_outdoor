@@ -103,15 +103,15 @@ const Footer = () => {
               <Box
                 sx={{
                   backgroundColor: "#fff",
-                  height: {xs:"25px" , sm:"25px" , md:"50px" ,lg:"50px"},
-                  width:  {xs:"100px" , sm:"100px" , md:"160px" ,lg:"160px"},
+                  height: { xs: "25px", sm: "25px", md: "50px", lg: "50px" },
+                  width: { xs: "100px", sm: "100px", md: "160px", lg: "160px" },
                   borderRadius: "30px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   marginBottom: {
-                    xs: "50px",
-                    sm: "50px",
+                    xs: "30px",
+                    sm: "30px",
                     md: "50px",
                     lg: "50px",
                   },
@@ -125,7 +125,12 @@ const Footer = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: {xs:"12px" , sm:"12px" , md:"14px" , lg:"14px"},
+                    fontSize: {
+                      xs: "12px",
+                      sm: "12px",
+                      md: "14px",
+                      lg: "14px",
+                    },
                     fontWeight: "600",
                     color: "#000",
                     fontFamily: "Poppins, sans-serif",
@@ -157,20 +162,20 @@ const Footer = () => {
           lg={5.3}
           sx={{
             backgroundColor: "#000",
-            display: "center",
-            // justifyContent: "center",
-            // alignItems:"center"
+            display: "flex",
+            justifyContent: {
+              xs: "center",
+              sm: "center",
+              md: "flex-start",
+              lg: "flex-start",
+            },
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              // flexDirection:"flex"
-              justifyContent: "flex-start",
-              alignItems: "center",
-            }}
-          >
+          <Box sx={{
+            marginTop:{
+              xs:"5px" , sm:"5px" , md:"5px" , lg:"5px"
+            }
+          }}>
             <Typography
               sx={{
                 fontSize: "11px",
@@ -193,7 +198,9 @@ const Footer = () => {
           sx={{
             backgroundColor: "#000",
             display: "flex",
-            justifyContent: "flex-end",
+            justifyContent: {
+              xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"
+            },
           }}
         >
           <Box sx={{ width: "120px", marginTop: "3px" }}>

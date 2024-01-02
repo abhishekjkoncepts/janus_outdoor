@@ -95,11 +95,9 @@ const Home = () => {
             sm={12}
             md={6}
             lg={6}
-            sx={
-              {
-                // backgroundColor: "purple",
-              }
-            }
+            sx={{
+              // backgroundColor: "purple",
+            }}
           >
             <Box
               sx={{
@@ -144,15 +142,27 @@ const Home = () => {
                   WE SEE THINGS DIFFERENTLY.
                 </Typography>
               </Box>
-              <Box 
-              sx={{
-                display:"flex",
-                justifyContent:{xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
-                width:{xs:"100%" , sm:"100%" , md:"100%" , lg:"100%"},
-                height:{xs:"50%" , sm:"50%" , md:"00%" , lg:"0%"},
-                paddingLeft:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"},
-                paddingRight:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"}
-              }}>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    sm: "center",
+                    md: "flex-start",
+                    lg: "flex-start",
+                  },
+                  width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
+                  height: { xs: "50%", sm: "50%", md: "00%", lg: "0%" },
+                  paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+              >
                 <TypeAnimation
                   sequence={[
                     "We have the maverick minds who goes for only unusual",
@@ -186,17 +196,32 @@ const Home = () => {
               >
                 <Typography
                   sx={{
-                    fontSize:{xs:"12px" , sm:"12px" , md:"16px" , lg:"16px"},
+                    fontSize: {
+                      xs: "13px",
+                      sm: "13px",
+                      md: "16px",
+                      lg: "16px",
+                    },
                     fontWeight: "400",
-                    lineHeight:{xs:"13x" , sm:"13px" , md:"26px" , lg:"26px"},
-                    wordSpacing:{xs:"3px" , sm:"3px" , md:"0px" , lg:"0px"},
+                    lineHeight: {
+                      xs: "13x",
+                      sm: "13px",
+                      md: "26px",
+                      lg: "26px",
+                    },
+                    wordSpacing: { xs: "3px", sm: "3px", md: "0px", lg: "0px" },
                     justifyContent: {
                       xs: "center",
                       md: "center",
                       sm: "center",
                       lg: "center",
                     },
-                    textAlign:{xs:"0px" , sm:"0px" , md:"justify" , lg:"justify"},
+                    textAlign: {
+                      xs: "0px",
+                      sm: "0px",
+                      md: "justify",
+                      lg: "justify",
+                    },
                     marginLeft: {
                       xs: "10px",
                       sm: "20px",
@@ -255,18 +280,19 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    marginBottom: {
-                      xs: "30px",
-                      sm: "30px",
-                      md: "50px",
-                      lg: "50px",
-                    },
                     marginTop: {
-                      xs: "20px",
-                      sm: "20px",
+                      xs: "5px",
+                      sm: "5px",
                       md: "5px",
                       lg: "5px",
                     },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "50px",
+                      lg: "50px",
+                    },
+                  
                   }}
                 >
                   <Typography
@@ -286,43 +312,32 @@ const Home = () => {
             md={4.6}
             lg={4.6}
             sx={{
-              // backgroundColor: "orange",
               display: "flex",
-              justifyContent: "flex-end",
-              // alignItems: "center",
+              justifyContent:{xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
+              alignItems: "center",
             }}
           >
-            <Box>
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "300px",
-                    sm: "300px",
-                    md: "400px",
-                    lg: "400px",
-                  },
-                  height: {
-                    xs: "300px",
-                    sm: "300px",
-                    md: "460px",
-                    lg: "460px",
-                  },
-                  marginLeft: {
-                    // xs: "65px",
-                    // sm: "65px",
-                    // md: "54px",
-                    // lg: "54px",
-                  },
-                  marginTop: { xs: "5px", sm: "5px", md: "64px", lg: "64px" },
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  // alignItems: "center",
-                }}
-                alt="add_img1"
-                src={add_img1}
-              />
-            </Box>
+            <Box
+              component="img"
+              sx={{
+                width: {
+                  xs: "300px",
+                  sm: "300px",
+                  md: "400px",
+                  lg: "400px",
+                },
+                height: {
+                  xs: "300px",
+                  sm: "300px",
+                  md: "460px",
+                  lg: "460px",
+                },
+                marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
+                marginBottom: { xs: "20px", sm: "20px", md: "0px", lg: "0px" },
+              }}
+              alt="add_img1"
+              src={add_img1}
+            />
           </Grid>
 
           <Grid
@@ -362,7 +377,7 @@ const Home = () => {
           >
             <Box
               sx={{
-                marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
+                marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
                 marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
               }}
             >
@@ -370,8 +385,8 @@ const Home = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "19px",
-                      sm: "19px",
+                      xs: "21px",
+                      sm: "21px",
                       md: "36px",
                       lg: "36px",
                     },
@@ -389,14 +404,14 @@ const Home = () => {
                 <Typography
                   sx={{
                     color: "#000",
-                    fontSize: "15px",
-                    fontWeight: "400",
+                    fontSize: {xs:"12px", sm:"12px" , md:"15px" , lg:"15px"},
+                    fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
                     textAlign: "center",
                   }}
                 >
                   Elevate Your Brand with Our Unmatched Outdoor Media Solutions
-                  <br /> – Impactful, Creative,& Results-Driven Advertising
+                  <br /> – Impactful , Creative & Results-Driven Advertising
                   Excellence.
                 </Typography>
               </Box>
@@ -524,63 +539,63 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
-                 <Link to="/cinema" style={{ textDecoration: "none" }}>
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  <Card
+                <Link to="/cinema" style={{ textDecoration: "none" }}>
+                  <Box
                     sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "1px solid #000",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      marginBottom: {
+                        xs: "0px",
+                        sm: "0px",
+                        md: "60px",
+                        lg: "60px",
+                      },
                     }}
                   >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add2}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
+                    <Card
+                      sx={{
+                        maxWidth: "245px",
+                        maxHeight: 800,
+                        borderRadius: "150px 150px 0 0",
+                        border: "1px solid #000",
+                        background:
+                          "linear-gradient(to bottom, #C02222 85%, #000)",
+                      }}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="250"
+                          image={add2}
+                          alt="green iguana"
                           sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
+                            overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                            transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                            "&:hover": {
+                              transform: "scale(1.1)", // Scale the card by 10% when hovered
+                            },
                           }}
-                        >
-                          CINEMA
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Box>
+                        />
+                        <CardContent sx={{ height: "60px" }}>
+                          <Typography
+                            sx={{
+                              fontFamily: "Poppins, sans-serif",
+                              fontSize: "21px",
+                              fontWeight: "600",
+                              textAlign: "center",
+                              color: "#fff",
+                            }}
+                          >
+                            CINEMA
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Box>
                 </Link>
               </Grid>
 
@@ -597,63 +612,63 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
-                 <Link to="/airportbranding" style={{ textDecoration: "none" }}>
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  <Card
+                <Link to="/airportbranding" style={{ textDecoration: "none" }}>
+                  <Box
                     sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "1px solid #000",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      marginBottom: {
+                        xs: "0px",
+                        sm: "0px",
+                        md: "60px",
+                        lg: "60px",
+                      },
                     }}
                   >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add3}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px", width: "100%" }}>
-                        <Typography
+                    <Card
+                      sx={{
+                        maxWidth: "245px",
+                        maxHeight: 800,
+                        borderRadius: "150px 150px 0 0",
+                        border: "1px solid #000",
+                        background:
+                          "linear-gradient(to bottom, #C02222 85%, #000)",
+                      }}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="250"
+                          image={add3}
+                          alt="green iguana"
                           sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
+                            overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                            transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                            "&:hover": {
+                              transform: "scale(1.1)", // Scale the card by 10% when hovered
+                            },
                           }}
-                        >
-                          AIRPORT BRANDING
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Box>
+                        />
+                        <CardContent sx={{ height: "60px", width: "100%" }}>
+                          <Typography
+                            sx={{
+                              fontFamily: "Poppins, sans-serif",
+                              fontSize: "21px",
+                              fontWeight: "600",
+                              textAlign: "center",
+                              color: "#fff",
+                            }}
+                          >
+                            AIRPORT BRANDING
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Box>
                 </Link>
               </Grid>
 
@@ -669,63 +684,63 @@ const Home = () => {
                   justifyContent: "center",
                 }}
               >
-                 <Link to="/signage" style={{ textDecoration: "none" }}>
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  <Card
+                <Link to="/signage" style={{ textDecoration: "none" }}>
+                  <Box
                     sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "1px solid #000",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      marginBottom: {
+                        xs: "0px",
+                        sm: "0px",
+                        md: "60px",
+                        lg: "60px",
+                      },
                     }}
                   >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250px"
-                        image={add4}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
+                    <Card
+                      sx={{
+                        maxWidth: "245px",
+                        maxHeight: 800,
+                        borderRadius: "150px 150px 0 0",
+                        border: "1px solid #000",
+                        background:
+                          "linear-gradient(to bottom, #C02222 85%, #000)",
+                      }}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="250px"
+                          image={add4}
+                          alt="green iguana"
                           sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
+                            overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                            transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                            "&:hover": {
+                              transform: "scale(1.1)", // Scale the card by 10% when hovered
+                            },
                           }}
-                        >
-                          SIGNAGE
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Box>
+                        />
+                        <CardContent sx={{ height: "60px" }}>
+                          <Typography
+                            sx={{
+                              fontFamily: "Poppins, sans-serif",
+                              fontSize: "21px",
+                              fontWeight: "600",
+                              textAlign: "center",
+                              color: "#fff",
+                            }}
+                          >
+                            SIGNAGE
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Box>
                 </Link>
               </Grid>
             </Grid>

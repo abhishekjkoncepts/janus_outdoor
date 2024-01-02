@@ -1,7 +1,7 @@
 import store from "../store";
 import types from "../types";
 
-import { GET_PRODUCTS } from "../../services/urls";
+import { GET_PRODUCTS ,GET_PRODUCTS_BY_STATE } from "../../services/urls";
 import { apiGet } from "../../services/api";
 
 const { dispatch } = store;
@@ -22,4 +22,15 @@ export async function getProducts() {
       payload: res,
     });
   });
+}
+
+export async function getProductsByState(state, city){
+  return apiGet(`${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}`).then((res)=>{
+    console.log(res);
+    dispatch({
+      type: types.GET_PRODUCTS_BY_STATE,
+      payload:res,
+    })
+  })
+
 }

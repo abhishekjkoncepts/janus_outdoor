@@ -16,7 +16,7 @@ import Cards from "../../Card/Cards";
 
 // REDUX
 import { useSelector } from "react-redux";
-import { getProducts } from "../../../redux/actions/Outdoor";
+import { getProducts, getProductsByState } from "../../../redux/actions/Outdoor";
 import { useNavigate } from "react-router-dom";
 
 export default function Outdoor() {
@@ -29,10 +29,12 @@ export default function Outdoor() {
   const navigate = useNavigate();
 
   const handleChange = (event) => {
+    console.log(event.target.value);
     setState(event.target.value);
   };
 
   const handleChange2 = (event) => {
+    console.log(event.target.value);
     setCity(event.target.value);
   };
   const handleChange3 = (event) => {
@@ -417,8 +419,8 @@ export default function Outdoor() {
                         <MenuItem value={10} sx={{ color: "#000" }}>
                           Delhi
                         </MenuItem>
-                        <MenuItem value={20} sx={{ color: "#000" }}>
-                          Uttar Pradesh
+                        <MenuItem value={'Andra Pradesh'} sx={{ color: "#000" }}>
+                          Andhra Pradesh
                         </MenuItem>
                         <MenuItem value={30} sx={{ color: "#000" }}>
                           Goa
@@ -469,8 +471,8 @@ export default function Outdoor() {
                         label="state"
                         onChange={handleChange2}
                       >
-                        <MenuItem value={10} sx={{ color: "#000" }}>
-                          Delhi
+                        <MenuItem value={'Anantapur'} sx={{ color: "#000" }}>
+                          Anantapur
                         </MenuItem>
                         <MenuItem value={20} sx={{ color: "#000" }}>
                           Uttar Pradesh
@@ -571,6 +573,8 @@ export default function Outdoor() {
                 borderRadius: "30px",
                 width: "100px",
               }}
+              onClick={()=>{
+                getProductsByState(state, city)}}
             >
               SUBMIT
             </Button>

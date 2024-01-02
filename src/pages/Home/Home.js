@@ -868,6 +868,7 @@ const Home = () => {
             // sx={{ backgroundColor: "yellow" }}
           >
             <Grid container>
+              {/* DELHI------------------------------------------ */}
               <Grid
                 item
                 xs={12}
@@ -979,7 +980,7 @@ const Home = () => {
                   </Box>
                 </Box>
               </Grid>
-
+             {/* MUMBAI---------------------------- */}
               <Grid
                 item
                 xs={12}
@@ -1044,8 +1045,8 @@ const Home = () => {
                       position: "absolute",
                       // right: "1%",
                       right: { xs: "", sm: "", md: "1%", lg: "1%" },
-                      left: "10%",
-                      bottom: "15%",
+                      left: {xs:"10%" , sm:"10%" , md:"10%" , lg:"10%"},
+                      bottom: "10%",
                       display: "flex",
                     }}
                   >
@@ -1069,12 +1070,12 @@ const Home = () => {
                         <Typography
                           sx={{
                             color: "#fff",
-                            fontSize: "22px",
-                            fontWeight: "900",
+                            fontSize: "20px",
+                            fontWeight: "700",
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          1716+{" "}
+                          1716 +
                         </Typography>
                         <Typography
                           sx={{
@@ -1090,7 +1091,7 @@ const Home = () => {
                   </Box>
                 </Box>
               </Grid>
-
+             {/* BANGLORE-------------------------- */}
               <Grid
                 item
                 xs={12}
@@ -1157,7 +1158,8 @@ const Home = () => {
                       position: "absolute",
                       right: "1%",
                       left: "15%",
-                      bottom: "15%",
+                      left:{xs:"10%" , sm:"10%" , md:"15%" , lg:"15%"},
+                      bottom: {xs:"10%" , sm:"10%" , md:"10%" , lg:"10%"},
                       display: "flex",
                     }}
                   >
@@ -1181,12 +1183,12 @@ const Home = () => {
                         <Typography
                           sx={{
                             color: "#fff",
-                            fontSize: "22px",
-                            fontWeight: "900",
+                            fontSize: "20px",
+                            fontWeight: "700",
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          960+{" "}
+                          960 +
                         </Typography>
                         <Typography
                           sx={{

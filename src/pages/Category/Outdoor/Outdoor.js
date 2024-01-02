@@ -16,7 +16,10 @@ import Cards from "../../Card/Cards";
 
 // REDUX
 import { useSelector } from "react-redux";
-import { getProducts, getProductsByState } from "../../../redux/actions/Outdoor";
+import {
+  getProducts,
+  getProductsByState,
+} from "../../../redux/actions/Outdoor";
 import { useNavigate } from "react-router-dom";
 
 export default function Outdoor() {
@@ -53,12 +56,13 @@ export default function Outdoor() {
           marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" },
         }}
       >
-        <Grid container sx={{}}>
+        {/* VIDEO */}
+        <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Box
               sx={{
                 position: "absolute",
-                width: { xs: "0%", sm: "0%", md: "100%", lg: "100%" },
+                width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
               }}
             >
               <video autoPlay muted width="100%" controls={false} loop={true}>
@@ -71,7 +75,7 @@ export default function Outdoor() {
         </Grid>
       </Box>
 
-      {/* BEST HOARDING GRID for full width */}
+      {/* TEXT ON VIDEO */}
       <Box
         sx={{
           display: "flex",
@@ -83,8 +87,8 @@ export default function Outdoor() {
           sx={{
             zIndex: "100",
             marginTop: {
-              xs: "30px",
-              sm: "30px",
+              xs: "50px",
+              sm: "50px",
               md: "120px",
               lg: "120px",
             },
@@ -107,194 +111,77 @@ export default function Outdoor() {
             lg={10.6}
             // sx={{ backgroundColor: "red" }}
           >
-            <Box
-            // sx={{width: { xs: "0%", sm: "0%", md: "100%", lg: "100%" },}}
-            >
+            <Box>
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: "row",
+                  flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
               >
+                {/* TEXT 1 */}
                 <Box>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    fontSize: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "80px",
-                      lg: "80px",
-                    },
-                    fontWeight: {
-                      xs: "400",
-                      sm: "400",
-                      md: "600",
-                      lg: "600",
-                    },
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#fff",
-                    // position: "sticky",
-                  }}
-                >
-                  Hoardings In Delhi
-                </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      fontSize: {
+                        xs: "30px",
+                        sm: "30px",
+                        md: "70px",
+                        lg: "70px",
+                      },
+                      fontWeight: {
+                        xs: "500",
+                        sm: "500",
+                        md: "600",
+                        lg: "600",
+                      },
+                      fontFamily: "Poppins, sans-serif",
+                      color: "#fff",
+                    }}
+                  >
+                    Hoardings In Delhi
+                  </Typography>
                 </Box>
-                
-                {/* <Box sx={{marginLeft:"550px"}}>
-                <TypeAnimation
-                  sequence={[
-                    "Delhi",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    "Mumbai",
-                    1000,
-                    "Banglore",
-                    1000,
-                    "Pune",
-                    1000,
-                    "Hyderabad",
-                    1000,
-                    "Chennai",
-                    1000,
-                  ]}
-                  wrapper="span"
-                  cursor={true}
-                  speed={50}
-                  deletionSpeed={70}
-                  style={{
-                    // fontSize: "2em",
-                    display: "inline-block",
-                    color: "#fff",
-                    // marginTop: "20px",
-                    fontSize: "80px",
-                    fontWeight: "600",
-                    color: "#fff",
-                    fontFamily: "Poppins, sans-serif",
-                  }}
-                  repeat={Infinity}
-                />
-                </Box> */}
+                {/* TEXT 2 */}
+                <Box>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      justifyContent: {
+                        xs: "center",
+                        sm: "center",
+                        md: "center",
+                        lg: "center",
+                      },
+                      alignItems: {
+                        xs: "center",
+                        sm: "center",
+                        md: "center",
+                        lg: "center",
+                      },
+                      fontSize: {
+                        xs: "12px",
+                        sm: "12px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      fontWeight: {
+                        xs: "500",
+                        sm: "500",
+                        md: "500",
+                        lg: "500",
+                      },
+                      fontFamily: "Poppins, sans-serif",
+                      color: "#fff",
+                      marginTop: "-5px",
+                    }}
+                  >
+                    Outdoor Advertising Company
+                  </Typography>
+                </Box>
               </Box>
-              <Typography
-                sx={{
-                  display: "flex",
-                  justifyContent: {
-                    xs: "center",
-                    sm: "center",
-                    md: "center",
-                    lg: "center",
-                  },
-                  alignItems: {
-                    xs: "center",
-                    sm: "center",
-                    md: "center",
-                    lg: "center",
-                  },
-                  fontSize: {
-                    xs: "0px",
-                    sm: "0px",
-                    md: "20px",
-                    lg: "20px",
-                  },
-                  fontWeight: {
-                    xs: "400",
-                    sm: "400",
-                    md: "500",
-                    lg: "500",
-                  },
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#fff",
-                  marginTop: "-5px",
-                }}
-              >
-               Outdoor Advertising Company
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.7}
-            lg={0.7}
-            // sx={{ backgroundColor: "green" }}
-          ></Grid>
-        </Grid>
-      </Box>
-
-      {/* BEST HOARDING GRID for mobile width */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Grid
-          container
-          sx={{
-            marginTop: {
-              xs: "-25px",
-              sm: "-25px",
-              md: "0px",
-              lg: "0px",
-            },
-
-            backgroundColor: "#f5f5f5",
-          }}
-        >
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.7}
-            lg={0.7}
-            // sx={{ backgroundColor: "blue" }}
-          ></Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={10.6}
-            lg={10.6}
-            // sx={{ backgroundColor: "red" }}
-          >
-            <Box>
-              <Typography
-                sx={{
-                  display: "flex",
-                  justifyContent: {
-                    xs: "center",
-                    sm: "center",
-                    md: "center",
-                    lg: "center",
-                  },
-                  alignItems: {
-                    xs: "center",
-                    sm: "center",
-                    md: "center",
-                    lg: "center",
-                  },
-                  fontSize: {
-                    xs: "30px",
-                    sm: "30px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  fontWeight: {
-                    xs: "500",
-                    sm: "500",
-                    md: "600",
-                    lg: "600",
-                  },
-                  fontFamily: "Poppins, sans-serif",
-                  color: "red",
-                }}
-              >
-                India's Largest Outdoor Advertising Company
-              </Typography>
             </Box>
           </Grid>
 
@@ -310,19 +197,15 @@ export default function Outdoor() {
       </Box>
 
       {/* DROP-DOWN GRID */}
-      <Box
-        sx={{
-          marginTop: { xs: "0px", sm: "0px", md: "20px", lg: "20px" },
-          // backgroundColor: { xs: "red", sm: "red",},
+      <Box sx={{
+          marginTop: { xs: "80px", sm: "0px", md: "20px", lg: "20px" },
         }}
       >
         <Grid
           container
-          sx={
-            {
+          sx={{
               // backgroundColor: { xs: "red",sm: "red",},
-            }
-          }
+            }}
         >
           <Grid
             item
@@ -330,11 +213,9 @@ export default function Outdoor() {
             sm={12}
             md={3}
             lg={3}
-            sx={
-              {
+            sx={{
                 // backgroundColor: "orange",
-              }
-            }
+              }}
           ></Grid>
 
           <Grid
@@ -343,35 +224,22 @@ export default function Outdoor() {
             sm={12}
             md={6}
             lg={6}
-            sx={{
-              backgroundColor: {
-                xs: "#f5f5f5",
-                sm: "#f5f5f5",
-              },
-              // marginTop: {
-              //   xs: "20px",
-              //   sm: "20px",
-              // },
-            }}
           >
-            <Grid container sx={{ backgroundColor: "#f5f5f5" }}>
+            <Grid container >
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Box
                   sx={{
                     display: "flex",
                     flexDirection: {
-                      xs: "row",
-                      sm: "row",
+                      xs: "column",
+                      sm: "column",
                       md: "row",
                       lg: "row",
                     },
                     justifyContent: {
-                      xs: "space-around",
-                      sm: "space-around",
                       md: "space-between",
                       lg: "space-between",
                     },
-                    marginTop: "30px",
                   }}
                 >
                   <Box
@@ -379,14 +247,15 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
+                      marginTop:{xs:"10px", sm:"10px" , md:"0px", lg:"0px"}
                     }}
                   >
                     <FormControl
-                     color='success'
+                      color="success"
                       sx={{
                         width: {
-                          xs: "90px",
-                          sm: "90px",
+                          xs: "300px",
+                          sm: "300px",
                           md: "200px",
                           lg: "200px",
                         },
@@ -404,7 +273,7 @@ export default function Outdoor() {
                         sx={{
                           color: "#000",
                           // borderColor: "#fff",
-                          borderWidth: "2px solid #",
+                          borderWidth: "2px solid #000",
                           fontWeight: "300",
                         }}
                       >
@@ -420,7 +289,10 @@ export default function Outdoor() {
                         <MenuItem value={10} sx={{ color: "#000" }}>
                           Delhi
                         </MenuItem>
-                        <MenuItem value={'Andra Pradesh'} sx={{ color: "#000" }}>
+                        <MenuItem
+                          value={"Andra Pradesh"}
+                          sx={{ color: "#000" }}
+                        >
                           Andhra Pradesh
                         </MenuItem>
                         <MenuItem value={30} sx={{ color: "#000" }}>
@@ -435,13 +307,14 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
+                      marginTop:{xs:"70px", sm:"70px" , md:"0px", lg:"0px"}
                     }}
                   >
                     <FormControl
                       sx={{
                         width: {
-                          xs: "90px",
-                          sm: "90px",
+                          xs: "300px",
+                          sm: "300px",
                           md: "200px",
                           lg: "200px",
                         },
@@ -472,7 +345,7 @@ export default function Outdoor() {
                         label="state"
                         onChange={handleChange2}
                       >
-                        <MenuItem value={'Anantapur'} sx={{ color: "#000" }}>
+                        <MenuItem value={"Anantapur"} sx={{ color: "#000" }}>
                           Anantapur
                         </MenuItem>
                         <MenuItem value={20} sx={{ color: "#000" }}>
@@ -490,13 +363,14 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
+                      marginTop:{xs:"70px", sm:"70px" , md:"0px", lg:"0px"}
                     }}
                   >
                     <FormControl
                       sx={{
                         width: {
-                          xs: "90px",
-                          sm: "90px",
+                          xs: "300px",
+                          sm: "300px",
                           md: "200px",
                           lg: "200px",
                         },
@@ -539,6 +413,7 @@ export default function Outdoor() {
                       </Select>
                     </FormControl>
                   </Box>
+
                 </Box>
               </Grid>
             </Grid>
@@ -546,7 +421,7 @@ export default function Outdoor() {
         </Grid>
       </Box>
 
-      <Box>
+      {/* <Box>
         <Grid
           item
           xs={12}
@@ -574,19 +449,20 @@ export default function Outdoor() {
                 borderRadius: "30px",
                 width: "100px",
               }}
-              onClick={()=>{
-                getProductsByState(state, city)}}
+              onClick={() => {
+                getProductsByState(state, city);
+              }}
             >
               SUBMIT
             </Button>
           </Box>
         </Grid>
-      </Box>
+      </Box> */}
 
       <Grid
         container
         sx={{
-          marginTop: { xs: "70px", sm: "70px", md: "300px", lg: "300px" },
+          marginTop: { xs: "300px", sm: "190px", md: "300px", lg: "300px" },
           marginBottom: "50px",
         }}
       >

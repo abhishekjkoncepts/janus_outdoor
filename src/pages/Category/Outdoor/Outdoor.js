@@ -382,6 +382,7 @@ export default function Outdoor() {
                     }}
                   >
                     <FormControl
+                     color='success'
                       sx={{
                         width: {
                           xs: "90px",
@@ -395,7 +396,7 @@ export default function Outdoor() {
                           md: "55px",
                           lg: "55px",
                         },
-                        backgroundColor: "#fff",
+                        backgroundColor: "#F0F0F0",
                         borderRadius: "30px",
                       }}
                     >
@@ -403,7 +404,7 @@ export default function Outdoor() {
                         sx={{
                           color: "#000",
                           // borderColor: "#fff",
-                          borderWidth: "2px solid #fff",
+                          borderWidth: "2px solid #",
                           fontWeight: "300",
                         }}
                       >
@@ -450,7 +451,7 @@ export default function Outdoor() {
                           md: "55px",
                           lg: "55px",
                         },
-                        backgroundColor: "#fff",
+                        backgroundColor: "#F0F0F0",
                         borderRadius: "30px",
                       }}
                     >
@@ -505,7 +506,7 @@ export default function Outdoor() {
                           md: "55px",
                           lg: "55px",
                         },
-                        backgroundColor: "#fff",
+                        backgroundColor: "#F0F0F0",
                         borderRadius: "30px",
                       }}
                     >
@@ -552,7 +553,7 @@ export default function Outdoor() {
           sm={12}
           md={3}
           lg={3}
-          sx={{ backgroundColor: "orange" }}
+          // sx={{ backgroundColor: "orange" }}
         >
           <Box
             sx={{

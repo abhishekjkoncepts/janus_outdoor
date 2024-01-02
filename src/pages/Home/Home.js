@@ -144,8 +144,15 @@ const Home = () => {
                   WE SEE THINGS DIFFERENTLY.
                 </Typography>
               </Box>
-              <Box>
-                
+              <Box 
+              sx={{
+                display:"flex",
+                justifyContent:{xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                width:{xs:"100%" , sm:"100%" , md:"100%" , lg:"100%"},
+                height:{xs:"50%" , sm:"50%" , md:"00%" , lg:"0%"},
+                paddingLeft:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"},
+                paddingRight:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"}
+              }}>
                 <TypeAnimation
                   sequence={[
                     "We have the maverick minds who goes for only unusual",
@@ -158,10 +165,8 @@ const Home = () => {
                   speed={50}
                   deletionSpeed={70}
                   style={{
-                    // fontSize: "2em",
                     display: "inline-block",
                     color: "#000",
-                    // marginTop: "20px",
                     fontSize: "16px",
                     fontWeight: "600",
                     fontFamily: "Poppins, sans-serif",

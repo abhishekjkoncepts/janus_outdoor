@@ -186,16 +186,17 @@ const Home = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: "16px",
+                    fontSize:{xs:"12px" , sm:"12px" , md:"16px" , lg:"16px"},
                     fontWeight: "400",
-                    lineHeight: "26px",
+                    lineHeight:{xs:"13x" , sm:"13px" , md:"26px" , lg:"26px"},
+                    wordSpacing:{xs:"3px" , sm:"3px" , md:"0px" , lg:"0px"},
                     justifyContent: {
                       xs: "center",
                       md: "center",
                       sm: "center",
                       lg: "center",
                     },
-                    textAlign: "justify",
+                    textAlign:{xs:"0px" , sm:"0px" , md:"justify" , lg:"justify"},
                     marginLeft: {
                       xs: "10px",
                       sm: "20px",

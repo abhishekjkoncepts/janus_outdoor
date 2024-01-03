@@ -967,7 +967,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          2493 +
+                          {/* 2493 + */} Medias
                         </Typography>
                         <Typography
                           sx={{
@@ -976,7 +976,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          medias
+                          {/* Medias */}
                         </Typography>
                       </Box>
                     </Box>
@@ -1078,7 +1078,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          1716 +
+                          {/* 1716 + */} Medias
                         </Typography>
                         <Typography
                           sx={{
@@ -1087,7 +1087,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          medias
+                          {/* Medias */}
                         </Typography>
                       </Box>
                     </Box>
@@ -1191,7 +1191,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          960 +
+                          {/* 960 + */} Medias
                         </Typography>
                         <Typography
                           sx={{
@@ -1200,7 +1200,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          medias
+                          {/* Medias */}
                         </Typography>
                       </Box>
                     </Box>
@@ -1334,7 +1334,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          429 +
+                          {/* 429 + */} Medias
                         </Typography>
                         <Typography
                           sx={{
@@ -1343,7 +1343,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          medias
+                          {/* Medias */}
                         </Typography>
                       </Box>
                     </Box>
@@ -1442,7 +1442,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          897+{" "}
+                          {/* 897+{" "} */} Medias
                         </Typography>
                         <Typography
                           sx={{
@@ -1451,7 +1451,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          medias
+                          {/* Medias */}
                         </Typography>
                       </Box>
                     </Box>
@@ -1561,7 +1561,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          482+{" "}
+                          {/* 482+{" "} */} Medias
                         </Typography>
                         <Typography
                           sx={{
@@ -1570,7 +1570,7 @@ const Home = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          medias
+                          {/* Medias */}
                         </Typography>
                       </Box>
                     </Box>

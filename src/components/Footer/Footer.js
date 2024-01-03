@@ -72,7 +72,7 @@ const Footer = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Mobile : +91-98681 18573
+                Mobile : +91 96507-64004
               </Typography>
             </Box>
             <Box>
@@ -84,7 +84,7 @@ const Footer = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Email-id: info@januskoncepts.com
+                Email-id: birender@janusalive.com
               </Typography>
             </Box>
             <Box
@@ -189,7 +189,7 @@ const Footer = () => {
                 fontFamily: "Poppins, sans-serif",
               }}
             >
-              © 2023 JanusAlive | All Rights Reserved 2023
+              Copyright janusalive.com 2024
             </Typography>
           </Box>
         </Grid>

@@ -398,7 +398,7 @@ function Header(props) {
                       </Box>
 
                       {/* Billboard */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/billboard"}
                           style={{ textDecoration: "none" }}
@@ -421,10 +421,10 @@ function Header(props) {
                             BILLBOARD
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* Transit media */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/transitmedia"}
                           style={{ textDecoration: "none" }}
@@ -447,10 +447,10 @@ function Header(props) {
                             TRANSIT MEDIA
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* Digital -Billboard */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/digital-billboard"}
                           style={{ textDecoration: "none" }}
@@ -473,10 +473,10 @@ function Header(props) {
                             DIGITAL BILLBOARD
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* Mallmedia */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/mallmedia"}
                           style={{ textDecoration: "none" }}
@@ -499,10 +499,10 @@ function Header(props) {
                             MALL MEDIA
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* Inflight banding */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/inflight-branding"}
                           style={{ textDecoration: "none" }}
@@ -525,10 +525,10 @@ function Header(props) {
                             INFLIGHT BRANDING
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* Lift-branding */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/lift-branding"}
                           style={{ textDecoration: "none" }}
@@ -551,10 +551,10 @@ function Header(props) {
                             LIFT BRANDING
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* Airport branding */}
-                      <Box>
+                      {/* <Box>
                         <Link
                           to={"/airport-branding"}
                           style={{ textDecoration: "none" }}
@@ -577,10 +577,10 @@ function Header(props) {
                            AIRPORT BRANDING
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                       {/* DOOH */}
-                      <Box>
+                      {/* <Box>
                         <Link to={"/dooh"} style={{ textDecoration: "none" }}>
                           <Typography
                             sx={{
@@ -600,7 +600,7 @@ function Header(props) {
                             DOOH
                           </Typography>
                         </Link>
-                      </Box>
+                      </Box> */}
 
                     </Box>
                     {/* 

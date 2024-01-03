@@ -14,6 +14,9 @@ import "./Outdoor.css";
 // CARD
 import Cards from "../../Card/Cards";
 
+// JSON
+import { states, stateDistricts } from "../../../assets/json/statesCity";
+
 // REDUX
 import { useSelector } from "react-redux";
 import {
@@ -23,7 +26,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export default function Outdoor() {
-  const [state, setState] = React.useState("");
+  const [state, setState] = React.useState(null);
   const [city, setCity] = React.useState("");
   const [type, setType] = React.useState("");
 
@@ -89,8 +92,8 @@ export default function Outdoor() {
             marginTop: {
               xs: "50px",
               sm: "50px",
-              md: "120px",
-              lg: "120px",
+              md: "200px",
+              lg: "200px",
             },
           }}
         >
@@ -197,15 +200,18 @@ export default function Outdoor() {
       </Box>
 
       {/* DROP-DOWN GRID */}
-      <Box sx={{
+      <Box
+        sx={{
           marginTop: { xs: "80px", sm: "0px", md: "20px", lg: "20px" },
         }}
       >
         <Grid
           container
-          sx={{
+          sx={
+            {
               // backgroundColor: { xs: "red",sm: "red",},
-            }}
+            }
+          }
         >
           <Grid
             item
@@ -213,19 +219,15 @@ export default function Outdoor() {
             sm={12}
             md={3}
             lg={3}
-            sx={{
+            sx={
+              {
                 // backgroundColor: "orange",
-              }}
+              }
+            }
           ></Grid>
 
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={6}
-            lg={6}
-          >
-            <Grid container >
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Grid container>
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Box
                   sx={{
@@ -247,11 +249,15 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
-                      marginTop:{xs:"50px", sm:"50px" , md:"0px", lg:"0px"}
+                      marginTop: {
+                        xs: "50px",
+                        sm: "50px",
+                        md: "0px",
+                        lg: "0px",
+                      },
                     }}
                   >
                     <FormControl
-                      color="success"
                       sx={{
                         width: {
                           xs: "300px",
@@ -267,13 +273,14 @@ export default function Outdoor() {
                         },
                         backgroundColor: "#F0F0F0",
                         borderRadius: "30px",
+                        color: "secondary",
                       }}
                     >
                       <InputLabel
                         sx={{
                           color: "#000",
                           // borderColor: "#fff",
-                          borderWidth: "2px solid #000",
+                          borderWidth: "1px solid #000",
                           fontWeight: "300",
                         }}
                       >
@@ -286,18 +293,11 @@ export default function Outdoor() {
                         label="state"
                         onChange={handleChange}
                       >
-                        <MenuItem value={10} sx={{ color: "#000" }}>
-                          Delhi
-                        </MenuItem>
-                        <MenuItem
-                          value={"Andra Pradesh"}
-                          sx={{ color: "#000" }}
-                        >
-                          Andhra Pradesh
-                        </MenuItem>
-                        <MenuItem value={30} sx={{ color: "#000" }}>
-                          Goa
-                        </MenuItem>
+                        {states.map((item, index) => (
+                          <MenuItem value={item} sx={{ color: "#000" }}>
+                            {item}
+                          </MenuItem>
+                        ))}
                       </Select>
                     </FormControl>
                   </Box>
@@ -307,7 +307,12 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
-                      marginTop:{xs:"70px", sm:"70px" , md:"0px", lg:"0px"}
+                      marginTop: {
+                        xs: "70px",
+                        sm: "70px",
+                        md: "0px",
+                        lg: "0px",
+                      },
                     }}
                   >
                     <FormControl
@@ -341,19 +346,15 @@ export default function Outdoor() {
                       <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        value={state}
+                        value={city}
                         label="state"
                         onChange={handleChange2}
                       >
-                        <MenuItem value={"Anantapur"} sx={{ color: "#000" }}>
-                          Anantapur
-                        </MenuItem>
-                        <MenuItem value={20} sx={{ color: "#000" }}>
-                          Uttar Pradesh
-                        </MenuItem>
-                        <MenuItem value={30} sx={{ color: "#000" }}>
-                          Goa
-                        </MenuItem>
+                        {state && stateDistricts[state]?.map((item) => (
+                          <MenuItem value={item} sx={{ color: "#000" }}>
+                            {item}
+                          </MenuItem>
+                        ))}
                       </Select>
                     </FormControl>
                   </Box>
@@ -363,7 +364,12 @@ export default function Outdoor() {
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
                       alignItems: { xs: "center", sm: "center" },
-                      marginTop:{xs:"70px", sm:"70px" , md:"0px", lg:"0px"}
+                      marginTop: {
+                        xs: "70px",
+                        sm: "70px",
+                        md: "0px",
+                        lg: "0px",
+                      },
                     }}
                   >
                     <FormControl
@@ -413,7 +419,6 @@ export default function Outdoor() {
                       </Select>
                     </FormControl>
                   </Box>
-
                 </Box>
               </Grid>
             </Grid>
@@ -421,7 +426,7 @@ export default function Outdoor() {
         </Grid>
       </Box>
 
-      {/* <Box>
+      <Box>
         <Grid
           item
           xs={12}
@@ -457,12 +462,12 @@ export default function Outdoor() {
             </Button>
           </Box>
         </Grid>
-      </Box> */}
+      </Box>
 
       <Grid
         container
         sx={{
-          marginTop: { xs: "300px", sm: "190px", md: "300px", lg: "300px" },
+          marginTop: { xs: "300px", sm: "190px", md: "350px", lg: "350px" },
           marginBottom: "50px",
         }}
       >

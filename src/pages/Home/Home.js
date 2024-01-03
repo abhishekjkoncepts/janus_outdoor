@@ -43,6 +43,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
+// VIDEO
+import vid from "../../assets/video/VideoWithText.mp4"
+
 // CSS
 import "./Home.css";
 import "./Circle1.css";
@@ -55,7 +58,7 @@ const Home = () => {
     // <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "62px", lg: "62px" } }}>
     <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" } }}>
       {/* VIDEO */}
-      <Grid container>
+      {/* <Grid container>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           {
             <Box
@@ -72,6 +75,20 @@ const Home = () => {
               </video>
             </Box>
           }
+        </Grid>
+      </Grid> */}
+      <Grid container>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <video
+            autoPlay
+            muted
+            width="100%"
+            controls={false}
+            loop={true}
+            className="bclip"
+          >
+            <source src={vid} />
+          </video>
         </Grid>
       </Grid>
 
@@ -1591,8 +1608,6 @@ const Home = () => {
       {/* CARD CAROUSEL */}
       <Cardcarousel />
 
-    
-
       {/* CLIENTS */}
       <Box>
         <Grid container sx={{ backgroundColor: "#fff" }}>
@@ -1710,8 +1725,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={avana}
@@ -1748,8 +1773,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={hindustanTimes}
@@ -1786,8 +1821,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={hindware}
@@ -1824,8 +1869,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={micromax}
@@ -1895,8 +1950,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={moonbow}
@@ -1933,8 +1998,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={renault}
@@ -1971,8 +2046,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={unique}
@@ -2009,8 +2094,18 @@ const Home = () => {
                         md: "90px",
                         lg: "90px",
                       },
-                      marginTop:{xs:"20px" , sm:"20px" , md:"40px" , lg:"40px"},
-                      marginBottom:{xs:"10px" , sm:"10px" , md:"40px" , lg:"40px"},
+                      marginTop: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "40px",
+                        lg: "40px",
+                      },
                     }}
                     alt="add_img1"
                     src={philips}

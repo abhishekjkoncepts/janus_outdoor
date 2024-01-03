@@ -19,7 +19,7 @@ const Footer = () => {
         container
         sx={{
           backgroundColor: "#C02222",
-          height: { xs: "200px", sm: "200px", md: "500px", lg: "500px" },
+          height: { xs: "200px", sm: "200px", md: "498px", lg: "498px" },
         }}
       >
         <Grid

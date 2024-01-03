@@ -86,6 +86,8 @@ const Cards = ({ data, onClick }) => {
             sx={{
               borderTopLeftRadius: "150px",
               borderTopRightRadius: "150px",
+              borderRadius: "150px 150px 0 0",
+              border: "2px solid #C02222",
             }}
           >
             <CardActionArea

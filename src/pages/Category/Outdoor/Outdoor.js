@@ -24,6 +24,7 @@ import {
   getProductsByState,
 } from "../../../redux/actions/Outdoor";
 import { useNavigate } from "react-router-dom";
+import { Category } from "@mui/icons-material";
 
 export default function Outdoor() {
   const [state, setState] = React.useState(null);
@@ -44,6 +45,7 @@ export default function Outdoor() {
     setCity(event.target.value);
   };
   const handleChange3 = (event) => {
+    console.log(event.target.value);
     setType(event.target.value);
   };
 
@@ -350,11 +352,12 @@ export default function Outdoor() {
                         label="state"
                         onChange={handleChange2}
                       >
-                        {state && stateDistricts[state]?.map((item) => (
-                          <MenuItem value={item} sx={{ color: "#000" }}>
-                            {item}
-                          </MenuItem>
-                        ))}
+                        {state &&
+                          stateDistricts[state]?.map((item) => (
+                            <MenuItem value={item} sx={{ color: "#000" }}>
+                              {item}
+                            </MenuItem>
+                          ))}
                       </Select>
                     </FormControl>
                   </Box>
@@ -403,18 +406,18 @@ export default function Outdoor() {
                       <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        value={state}
+                        value={type}
                         label="state"
                         onChange={handleChange3}
                       >
-                        <MenuItem value={10} sx={{ color: "#000" }}>
-                          Delhi
+                        <MenuItem value={'Digital'} sx={{ color: "#000" }}>
+                          Digital
                         </MenuItem>
-                        <MenuItem value={20} sx={{ color: "#000" }}>
-                          Uttar Pradesh
+                        <MenuItem value={'Unipole'} sx={{ color: "#000" }}>
+                          Unipole
                         </MenuItem>
-                        <MenuItem value={30} sx={{ color: "#000" }}>
-                          Goa
+                        <MenuItem value={3} sx={{ color: "#000" }}>
+                          Billboard
                         </MenuItem>
                       </Select>
                     </FormControl>
@@ -455,7 +458,7 @@ export default function Outdoor() {
                 width: "100px",
               }}
               onClick={() => {
-                getProductsByState(state, city);
+                getProductsByState(state, city, type);
               }}
             >
               SUBMIT
@@ -467,7 +470,7 @@ export default function Outdoor() {
       <Grid
         container
         sx={{
-          marginTop: { xs: "300px", sm: "190px", md: "350px", lg: "350px" },
+          marginTop: { xs: "300px", sm: "190px", md: "250px", lg: "250px" },
           marginBottom: "50px",
         }}
       >
@@ -489,18 +492,16 @@ export default function Outdoor() {
         >
           <Grid container spacing={2}>
             {products &&
-              products
-                .filter((item) => item.category === "Outdoor") // Assuming there's a 'category' property indicating the product category
-                .map((item) => (
-                  <Cards
-                    key={item.id} // Add a unique key for each mapped element
-                    data={item}
-                    onClick={() => {
-                      navigate("/full-card");
-                      console.log("hello world");
-                    }}
-                  />
-                ))}
+              products.map((item) => (
+                <Cards
+                  key={item.id} // Add a unique key for each mapped element
+                  data={item}
+                  onClick={() => {
+                    navigate("/full-card");
+                    console.log("hello world");
+                  }}
+                />
+              ))}
           </Grid>
         </Grid>
         <Grid

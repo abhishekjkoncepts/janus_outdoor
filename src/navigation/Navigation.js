@@ -12,6 +12,7 @@ import Aboutus from "../pages/AboutUs/Aboutus";
 import Contactus from "../pages/ContactUs/Contactus";
 import Hoardings from "../pages/Hoardings/Hoardings";
 import Blogs from "../pages/Blogs/Blogs";
+import Ourservice from "../pages/OurServices/Ourservice";
 
 // SUB-PAGES
 import Billboard from "../pages/SubPages/BillBoard/Billboard";
@@ -50,6 +51,7 @@ const Navigation = () => {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/hoardings" element={<Hoardings />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/our-service" element={<Ourservice/>} />
 
           {/* SUB-PAGES */}
           <Route path="/billboard" element={<Billboard />} />

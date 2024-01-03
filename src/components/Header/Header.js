@@ -24,9 +24,11 @@ import { Link, useNavigate } from "react-router-dom";
 
 // IMAGES
 import janusLogo from "../../assets/images/janusLogo.png";
+import dropdownicon from  "../../assets/images/dropDownIcon.png"
 
 // CSS
 import "./Header.css";
+import { Directions } from "@mui/icons-material";
 
 const buttonHoverStyle = {
   "&:hover": {
@@ -130,12 +132,12 @@ function Header(props) {
           return (
             <ListItem key={index} disablePadding>
               <ListItemButton
-                sx={{ textAlign: "center" ,borderBottom:"1px solid #C02222" }}
+                sx={{ textAlign: "center", borderBottom: "1px solid #C02222" }}
                 onClick={() => {
                   navigate(item?.to);
                 }}
               >
-                <Box sx={{ }}>
+                <Box sx={{}}>
                   <Typography
                     sx={{
                       color: "#fff",
@@ -164,7 +166,14 @@ function Header(props) {
       <AppBar
         component="nav"
         // style={{ backgroundColor: "#011e29" }}
-        sx={{backgroundColor: {xs:"black" , sm:"black" , md:"rgb(8,8,8, 0.4)" , lg:"rgb(8,8,8, 0.4)"}  }}
+        sx={{
+          backgroundColor: {
+            xs: "black",
+            sm: "black",
+            md: "rgb(8,8,8, 0.4)",
+            lg: "rgb(8,8,8, 0.4)",
+          },
+        }}
         // sx={{ backgroundColor: "#05445c" }}
         elevation={0}
       >
@@ -203,7 +212,12 @@ function Header(props) {
                   md: "50px",
                   lg: "50px",
                 },
-                marginLeft: { xs: "100px", sm: "100px", md: "43px", lg: "43px" },
+                marginLeft: {
+                  xs: "100px",
+                  sm: "100px",
+                  md: "43px",
+                  lg: "43px",
+                },
                 marginTop: { xs: "5px", sm: "5px", md: "7px", lg: "7px" },
               }}
               alt="redTriangleArrow"
@@ -217,8 +231,8 @@ function Header(props) {
                 flexDirection: "row",
                 // marginRight: "50px",
                 marginRight: "44px",
-                justifyContent:"space-between",
-                marginTop:"30px"
+                justifyContent: "space-between",
+                marginTop: "30px",
               }}
             >
               <Button component={Link} to="">
@@ -250,228 +264,346 @@ function Header(props) {
               </Box>
 
               {/* Dropdown */}
-              <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
-                <Typography
-                  aria-controls="simple-menu"
-                  aria-haspopup="true"
-                  onMouseOver={handleOpenMenu}
-                  sx={{
-                    color: "#fff",
-                    fontSize: "16px",
-                    fontWeight: "500",
-                    fontFamily: "Poppins, sans-serif",
-                  }}
-                >
-                  OUR SERVICES
-                </Typography>
-
-                <Menu
-                  sx={{ marginTop: "20px" }}
-                  id="simple-menu"
-                  anchorEl={anchorEl}
-                  keepMounted
-                  open={Boolean(anchorEl)}
-                  onClose={handleCloseMenu}
-                >
-                  <Box sx={{ width: "250px" }}>
-                    <Box sx={{ marginTop: "15px" }}>
-                      <Link
-                        to={"/billboard"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Billboard
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link
-                        to={"/transitmedia"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Transit Media
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link
-                        to={"/digital-billboard"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Digital Billboard
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link
-                        to={"/mallmedia"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Mall Media
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link
-                        to={"/inflight-branding"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Inflight Branding
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link
-                        to={"/lift-branding"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Lift Branding
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link
-                        to={"/airport-branding"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          Airport Branding
-                        </Typography>
-                      </Link>
-                    </Box>
-
-                    <Box>
-                      <Link to={"/dooh"} style={{ textDecoration: "none" }}>
-                        <Typography
-                          sx={{
-                            marginLeft: "20px",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            color: "#000",
-                            "&:hover": {
-                              color: "red",
-                              cursor: "pointer",
-                            },
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            fontFamily: "Lato, sans-serif",
-                          }}
-                        >
-                          DOOH
-                        </Typography>
-                      </Link>
-                    </Box>
+              <Link to={"/our-service"} style={{ textDecoration: "none" }}>
+                <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
+                  <Box sx={{display:"flex" , flexDirection:"row"}}>
+                  <Box>
+                  <Typography
+                    aria-controls="simple-menu"
+                    aria-haspopup="true"
+                    onMouseOver={handleOpenMenu}
+                    sx={{
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    OUR SERVICES
+                  </Typography>
                   </Box>
-                  {/* 
+                  <Box>
+                    <img src={dropdownicon} style={{width:"10px" ,height:"5px", marginLeft:"5px" , marginBottom:"2px"}}/>
+                  </Box>
+                  </Box>
+
+                  <Menu
+                    sx={{ marginTop: "9px" }}
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleCloseMenu}
+                  >
+                    <Box sx={{ width: "200px" }}>
+                      {/* outdoor */}
+                      <Box sx={{ marginTop: "5px" }}>
+                        <Link
+                          to={"/outdoor"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            OUTDOOR
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* cinema*/}
+                      <Box sx={{}}>
+                        <Link to={"/cinema"} style={{ textDecoration: "none" }}>
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            CINEMA
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Airport branding */}
+                      <Box sx={{}}>
+                        <Link
+                          to={"/airport-branding"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            AIRPORT BRANDING
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* SIgnage */}
+                      <Box sx={{}}>
+                        <Link
+                          to={"/signage"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            SIGNAGE
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Billboard */}
+                      <Box>
+                        <Link
+                          to={"/billboard"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            BILLBOARD
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Transit media */}
+                      <Box>
+                        <Link
+                          to={"/transitmedia"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            TRANSIT MEDIA
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Digital -Billboard */}
+                      <Box>
+                        <Link
+                          to={"/digital-billboard"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            DIGITAL BILLBOARD
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Mallmedia */}
+                      <Box>
+                        <Link
+                          to={"/mallmedia"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            MALL MEDIA
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Inflight banding */}
+                      <Box>
+                        <Link
+                          to={"/inflight-branding"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            INFLIGHT BRANDING
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Lift-branding */}
+                      <Box>
+                        <Link
+                          to={"/lift-branding"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Lato, sans-serif",
+                            }}
+                          >
+                            LIFT BRANDING
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* Airport branding */}
+                      <Box>
+                        <Link
+                          to={"/airport-branding"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Lato, sans-serif",
+                            }}
+                          >
+                           AIRPORT BRANDING
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                      {/* DOOH */}
+                      <Box>
+                        <Link to={"/dooh"} style={{ textDecoration: "none" }}>
+                          <Typography
+                            sx={{
+                              marginLeft: "20px",
+                              paddingTop: "1px",
+                              paddingBottom: "1px",
+                              color: "#000",
+                              "&:hover": {
+                                color: "red",
+                                cursor: "pointer",
+                              },
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              fontFamily: "Poppins, sans-serif",
+                            }}
+                          >
+                            DOOH
+                          </Typography>
+                        </Link>
+                      </Box>
+
+                    </Box>
+                    {/* 
                   <MenuItem
                     component={Link}
                     to="/services/service1"
@@ -527,11 +659,12 @@ function Header(props) {
                   >
                     DOOH
                   </MenuItem> */}
-                </Menu>
-              </Box>
+                  </Menu>
+                </Box>
+              </Link>
 
-               {/* BLOGS */}
-               <Box sx={{ paddingLeft: "30px" }}>
+              {/* BLOGS */}
+              {/* <Box sx={{ paddingLeft: "30px" }}>
                 <Button component={Link} to="/blogs">
                   <Typography
                     sx={{
@@ -544,7 +677,7 @@ function Header(props) {
                     BLOGS
                   </Typography>
                 </Button>
-              </Box>  
+              </Box>   */}
 
               {/* Dropdown  ends*/}
               <Box sx={{ paddingLeft: "30px" }}>
@@ -561,7 +694,6 @@ function Header(props) {
                   </Typography>
                 </Button>
               </Box>
-             
             </Box>
           </Box>
         </Toolbar>

@@ -24,8 +24,8 @@ export async function getProducts() {
   });
 }
 
-export async function getProductsByState(state, city){
-  return apiGet(`${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}`).then((res)=>{
+export async function getProductsByState(state, city , category){
+  return apiGet(`${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&category=${category}`).then((res)=>{
     console.log(res);
     dispatch({
       type: types.GET_PRODUCTS_BY_STATE,

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box } from "@mui/material";
@@ -9,7 +9,6 @@ import { useLocation } from "react-router-dom";
 import { getProductsById } from "../../redux/actions/Outdoor";
 
 const Fullcard = () => {
-
   const location = useLocation();
 
   const [DATA, setDATA] = useState(null);
@@ -17,11 +16,10 @@ const Fullcard = () => {
   useEffect(() => {
     console.log(location);
     getProductsById(location.state.id).then((res) => {
-      console.log('PRODUCTS BY ID', res);
+      console.log("PRODUCTS BY ID", res);
       setDATA(res);
-    })
-  }, [])
-  
+    });
+  }, []);
 
   return (
     <Box>
@@ -87,7 +85,7 @@ const Fullcard = () => {
                     },
                     display: "flex",
                     borderRadius: "10px",
-                    border:"2px solid red"
+                    border: "2px solid red",
                   }}
                   alt="add_img1"
                   src={DATA?.image}
@@ -95,8 +93,12 @@ const Fullcard = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={6} 
-            // sx={{ backgroundColor: "grey" }}
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={6}
+              // sx={{ backgroundColor: "grey" }}
             >
               <Box
                 sx={{
@@ -110,16 +112,81 @@ const Fullcard = () => {
                 }}
               >
                 <Box>
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "17px",
+                          sm: "17px",
+                          md: "20px",
+                          lg: "20px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: {
+                          xs: "500",
+                          sm: "500",
+                          md: "400",
+                          lg: "400",
+                        },
+                        display: "flex",
+                        alignContent: {
+                          xs: "center",
+                          sm: "center",
+                          md: "flex-end",
+                          lg: "flex-end",
+                        },
+                        alignItems: {
+                          xs: "center",
+                          sm: "center",
+                          md: "flex-start",
+                          lg: "flex-start",
+                        },
+                        justifyContent: {
+                          xs: "flex-start",
+                          sm: "flex-start",
+                          md: "flex-start",
+                          lg: "flex-start",
+                        },
+                        lineHeight: {
+                          xs: "20px",
+                          sm: "12px",
+                          md: "12px",
+                          lg: "12px",
+                        },
+                        marginTop: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "30px",
+                          lg: "30px",
+                        },
+                        color: "rgb(79, 74, 76)",
+                        marginLeft: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                      }}
+                    >
+                      {DATA?.category}
+                    </Typography>
+                  </Box>
+
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "20px",
-                        sm: "20px",
+                        xs: "30px",
+                        sm: "30px",
                         md: "30px",
                         lg: "30px",
                       },
                       fontFamily: "Poppins, sans-serif",
-                      fontWeight: "600",
+                      fontWeight: {
+                        xs: "500",
+                        sm: "500",
+                        md: "500",
+                        lg: "500",
+                      },
                       display: "flex",
                       alignContent: {
                         xs: "center",
@@ -139,7 +206,24 @@ const Fullcard = () => {
                         md: "flex-start",
                         lg: "flex-start",
                       },
-                      lineHeight:{xs:"20px" ,sm:"12px" ,md:"34px" ,lg:"34px"}
+                      lineHeight: {
+                        xs: "37px",
+                        sm: "37px",
+                        md: "34px",
+                        lg: "34px",
+                      },
+                      marginTop: {
+                        xs: "5px",
+                        sm: "5px",
+                        md: "15px",
+                        lg: "15px",
+                      },
+                      marginLeft: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
                     }}
                   >
                     {DATA?.address}
@@ -153,14 +237,14 @@ const Fullcard = () => {
                     justifyContent: "space-between",
                     marginTop: "15px",
                     paddingLeft: {
-                      xs: "5px",
-                      sm: "5px",
+                      xs: "10px",
+                      sm: "10px",
                       md: "0px",
                       lg: "0px",
                     },
                     paddingRight: {
-                      xs: "5px",
-                      sm: "5px",
+                      xs: "10px",
+                      sm: "10px",
                       md: "0px",
                       lg: "0px",
                     },
@@ -171,27 +255,34 @@ const Fullcard = () => {
                       <Typography
                         sx={{
                           fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "16px",
-                            lg: "16px",
+                            xs: "13px",
+                            sm: "13px",
+                            md: "14px",
+                            lg: "14px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "600",
                           display: "flex",
+                          color: "rgb(79, 74, 76)",
                         }}
                       >
-                        CATEGORY
+                        Category
                       </Typography>
                     </Box>
                     <Box>
                       <Typography
                         sx={{
                           fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "18px",
-                            lg: "18px",
+                            xs: "14px",
+                            sm: "14px",
+                            md: "16px",
+                            lg: "16px",
+                          },
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "5px",
+                            lg: "5px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "700",
@@ -208,14 +299,15 @@ const Fullcard = () => {
                       <Typography
                         sx={{
                           fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "16px",
-                            lg: "16px",
+                            xs: "13px",
+                            sm: "13px",
+                            md: "14px",
+                            lg: "14px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "600",
                           display: "flex",
+                          color: "rgb(79, 74, 76)",
                         }}
                       >
                         Size
@@ -225,10 +317,16 @@ const Fullcard = () => {
                       <Typography
                         sx={{
                           fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "18px",
-                            lg: "18px",
+                            xs: "14px",
+                            sm: "14px",
+                            md: "16px",
+                            lg: "16px",
+                          },
+                          marginTop: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "5px",
+                            lg: "5px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "700",
@@ -243,34 +341,41 @@ const Fullcard = () => {
                   <Box sx={{ display: "flex", flexDirection: "column" }}>
                     <Box>
                       <Typography
-                        sx={{
-                          fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "16px",
-                            lg: "16px",
-                          },
-                          fontFamily: "Poppins, sans-serif",
-                          fontWeight: "600",
-                          display: "flex",
-                        }}
+                       sx={{
+                        fontSize: {
+                          xs: "13px",
+                          sm: "13px",
+                          md: "14px",
+                          lg: "14px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "600",
+                        display: "flex",
+                        color: "rgb(79, 74, 76)",
+                      }}
                       >
                         Illumination
                       </Typography>
                     </Box>
                     <Box>
                       <Typography
-                        sx={{
-                          fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "18px",
-                            lg: "18px",
-                          },
-                          fontFamily: "Poppins, sans-serif",
-                          fontWeight: "700",
-                          display: "flex",
-                        }}
+                       sx={{
+                        fontSize: {
+                          xs: "14px",
+                          sm: "14px",
+                          md: "16px",
+                          lg: "16px",
+                        },
+                        marginTop: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "5px",
+                          lg: "5px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "700",
+                        display: "flex",
+                      }}
                       >
                         {DATA?.illumination}
                       </Typography>
@@ -280,16 +385,17 @@ const Fullcard = () => {
                   <Box sx={{ display: "flex", flexDirection: "column" }}>
                     <Box>
                       <Typography
-                        sx={{
+                         sx={{
                           fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "16px",
-                            lg: "16px",
+                            xs: "13px",
+                            sm: "13px",
+                            md: "14px",
+                            lg: "14px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "600",
                           display: "flex",
+                          color: "rgb(79, 74, 76)",
                         }}
                       >
                         Total Area
@@ -297,17 +403,23 @@ const Fullcard = () => {
                     </Box>
                     <Box>
                       <Typography
-                        sx={{
-                          fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "18px",
-                            lg: "18px",
-                          },
-                          fontFamily: "Poppins, sans-serif",
-                          fontWeight: "700",
-                          display: "flex",
-                        }}
+                       sx={{
+                        fontSize: {
+                          xs: "14px",
+                          sm: "14px",
+                          md: "16px",
+                          lg: "16px",
+                        },
+                        marginTop: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "5px",
+                          lg: "5px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "700",
+                        display: "flex",
+                      }}
                       >
                         {DATA?.totalsqft}
                       </Typography>
@@ -318,8 +430,8 @@ const Fullcard = () => {
                 <Box
                   sx={{
                     marginTop: {
-                      xs: "20px",
-                      sm: "20px",
+                      xs: "14px",
+                      sm: "14px",
                       md: "20px",
                       lg: "20px",
                     },
@@ -328,15 +440,15 @@ const Fullcard = () => {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "17px",
-                        lg: "17px",
+                        xs: "15px",
+                        sm: "15px",
+                        md: "16px",
+                        lg: "16px",
                       },
                       fontFamily: "Poppins, sans-serif",
-                      fontWeight: "300",
+                      fontWeight: "400",
                       display: "flex",
-                      textAlign:"justify",
+                      // textAlign: "justify",
                       alignContent: {
                         xs: "center",
                         sm: "center",
@@ -355,6 +467,20 @@ const Fullcard = () => {
                         md: "flex-start",
                         lg: "flex-start",
                       },
+                      color:"rgb(55, 52, 53)",
+                      paddingLeft:{
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      color:"rgb(55, 52, 53)",
+                      paddingRight:{
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      }
                     }}
                   >
                     {DATA?.desc}
@@ -363,26 +489,43 @@ const Fullcard = () => {
 
                 <Box>
                   <Box
-                   sx={{
-                    marginTop: { xs: "5px", sm: "5px", md: "20px", lg: "20px" },
-                    marginBottom: {
-                      xs: "5px",
-                      sm: "5px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}>
-                    <Typography
                     sx={{
-                      fontSize: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "16px",
-                        lg: "16px",
+                      marginTop: {
+                        xs: "5px",
+                        sm: "5px",
+                        md: "20px",
+                        lg: "20px",
                       },
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: "600",
-                    }} >Price : {DATA?.price}</Typography>
+                      marginBottom: {
+                        xs: "5px",
+                        sm: "5px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "13px",
+                          sm: "13px",
+                          md: "15px",
+                          lg: "15px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "600",
+                        display: "flex",
+                        color: "#000",
+                        paddingLeft:{
+                          xs: "10px",
+                          sm: "10px",
+                          md: "0px",
+                          lg: "0px",
+                        }
+                      }}
+                    >
+                      Price : {DATA?.price}
+                    </Typography>
                   </Box>
                 </Box>
               </Box>

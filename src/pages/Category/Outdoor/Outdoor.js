@@ -208,7 +208,7 @@ export default function Outdoor() {
       {/* DROP-DOWN GRID */}
       <Box
         sx={{
-          marginTop: { xs: "50px", sm: "0px", md: "20px", lg: "20px" },
+          marginTop: { xs: "70px", sm: "0px", md: "20px", lg: "20px" },
         }}
       >
         <Grid

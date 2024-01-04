@@ -61,10 +61,11 @@ const Fullcard = () => {
                       lg: "530px",
                     },
                     height: {
-                      xs: "200px",
-                      sm: "200px",
-                      md: "400px",
-                      lg: "400px",
+                      // xs: "300px",
+                      xs: "100%",
+                      // sm: "300px",
+                      md: "100%",
+                      lg: "100%",
                     },
                     paddingLeft: {
                       xs: "10px",
@@ -87,7 +88,7 @@ const Fullcard = () => {
                     },
                     display: "flex",
                     borderRadius: "10px",
-                    border: "2px solid red",
+                    // border: "2px solid red",
                   }}
                   alt="add_img1"
                   src={DATA?.image}

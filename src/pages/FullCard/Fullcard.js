@@ -53,8 +53,10 @@ const Fullcard = () => {
                   component="img"
                   sx={{
                     width: {
-                      xs: "400px",
-                      sm: "400px",
+                      // xs: "400px",
+                      xs: "100%",
+                      // sm: "400px",
+                      sm: "100%",
                       md: "530px",
                       lg: "530px",
                     },
@@ -64,22 +66,22 @@ const Fullcard = () => {
                       md: "400px",
                       lg: "400px",
                     },
-                    marginLeft: {
-                      xs: "5px",
-                      sm: "5px",
+                    paddingLeft: {
+                      xs: "10px",
+                      sm: "10px",
                       md: "0px",
                       lg: "0px",
                     },
-                    marginRight: {
-                      xs: "5px",
-                      sm: "5px",
+                    paddingRight: {
+                      xs: "10px",
+                      sm: "10px",
                       md: "0px",
                       lg: "0px",
                     },
                     marginTop: { xs: "5px", sm: "5px", md: "20px", lg: "20px" },
                     marginBottom: {
-                      xs: "5px",
-                      sm: "5px",
+                      xs: "10px",
+                      sm: "10px",
                       md: "20px",
                       lg: "20px",
                     },

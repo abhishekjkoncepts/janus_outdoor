@@ -70,7 +70,8 @@ const Navigation = () => {
           <Route path="/signage" element={<Signage/>} />
 
           {/* FULl CArd */}
-          <Route path="/full-card" element={<Fullcard />} />
+          {/* <Route path="/seedetails/:seotitle" element={<Fullcard />} /> */}
+          <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} />
         </Routes>
       </Scrolltotop>
     </BrowserRouter>

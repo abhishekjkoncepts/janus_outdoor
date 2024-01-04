@@ -26,6 +26,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Category } from "@mui/icons-material";
 
+// BOOTSTRAP
+import Dropdown from "react-bootstrap/Dropdown";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export default function Outdoor() {
   const [state, setState] = React.useState(null);
   const [city, setCity] = React.useState("");
@@ -204,14 +208,15 @@ export default function Outdoor() {
       {/* DROP-DOWN GRID */}
       <Box
         sx={{
-          marginTop: { xs: "80px", sm: "0px", md: "20px", lg: "20px" },
+          marginTop: { xs: "50px", sm: "0px", md: "20px", lg: "20px" },
         }}
       >
         <Grid
           container
           sx={
             {
-              // backgroundColor: { xs: "red",sm: "red",},
+              // backgroundColor: { xs: "red",sm: "red"},
+              height:"100%"
             }
           }
         >
@@ -227,6 +232,8 @@ export default function Outdoor() {
               }
             }
           ></Grid>
+
+          {/* MUI DROPDOWN */}
 
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Grid container>
@@ -426,6 +433,8 @@ export default function Outdoor() {
               </Grid>
             </Grid>
           </Grid>
+
+         
         </Grid>
       </Box>
 
@@ -444,6 +453,7 @@ export default function Outdoor() {
               justifyContent: "center",
               alignItems: "center",
               marginTop: "40px",
+              marginTop:{xs:"70px" , sm:"70px" , md:"40px" , lg:"40px"}
             }}
           >
             <Button
@@ -470,7 +480,7 @@ export default function Outdoor() {
       <Grid
         container
         sx={{
-          marginTop: { xs: "300px", sm: "190px", md: "250px", lg: "250px" },
+          marginTop: { xs: "30px", sm: "30px", md: "270px", lg: "270px" },
           marginBottom: "50px",
         }}
       >
@@ -497,7 +507,10 @@ export default function Outdoor() {
                   key={item.id} // Add a unique key for each mapped element
                   data={item}
                   onClick={() => {
-                    navigate("/full-card", {state: {id: item._id}});
+                    navigate(
+                      `/seedetails/${item?.category}/${item?.seotitle}`,
+                      { state: { id: item._id } }
+                    );
                     console.log("hello world");
                   }}
                 />

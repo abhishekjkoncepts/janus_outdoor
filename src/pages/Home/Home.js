@@ -1687,7 +1687,7 @@ const Home = () => {
             lg={10.6}
             // sx={{ backgroundColor: "green" }}
           >
-            <Grid container sx={{ height: "300px", backgroundcolor: "black" }}>
+            <Grid container sx={{ height: "100%", backgroundcolor: "black" }}>
               {/* CIRCLE 1 */}
               <Grid
                 item
@@ -1699,28 +1699,34 @@ const Home = () => {
                   backgroundColor: "#000",
                   display: "flex",
                   flexDirection: "column",
-                  // justifyContent: "center",
-                  // alignItems: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <Box className="main-bg">
-                  <Box className="circle">
-                    <h1>527</h1>
+                <Box
+                  sx={{
+                    marginTop: { xs: "20px", sm: "20px", lg: "20px", md: "20px" },
+                    marginBottom: { xs: "20px", sm: "20px", lg: "40px", md: "40px" },
+                  }}
+                >
+                  <Box className="main-bg">
+                    <Box className="circle">
+                      <h1>527</h1>
+                    </Box>
                   </Box>
-                </Box>
-                <Box>
-                  <Typography
-                    sx={{
-                      color: "#fff",
-                      marginTop: "70px",
-                      fontSize: "22px",
-                      marginLeft: "170px",
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    Happy Clients
-                  </Typography>
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#fff",
+                        marginTop: "15px",
+                        fontSize: "20px",
+                        fontWeight: "500",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                    >
+                      HAPPY CLIENTS
+                    </Typography>
+                  </Box>
                 </Box>
               </Grid>
               {/* CIRCLE 2 */}
@@ -1739,6 +1745,12 @@ const Home = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
+                  <Box
+                  sx={{
+                    marginTop: { xs: "20px", sm: "20px", lg: "20px", md: "20px" },
+                    marginBottom: { xs: "20px", sm: "20px", lg: "40px", md: "40px" },
+                  }}
+                >
                 <Box className="main-bg2">
                   <Box className="circle2">
                     <h1>423</h1>
@@ -1748,16 +1760,21 @@ const Home = () => {
                   <Typography
                     sx={{
                       color: "#fff",
-                      marginTop: "20px",
-                      fontSize: "22px",
+                      marginTop: "15px",
+                      fontSize: "20px",
                       fontWeight: "500",
+                      display:"flex",
+                      justifyContent:"center",
+                      alignitems:"center",
                       fontFamily: "Poppins, sans-serif",
                     }}
                   >
-                    OOH Sites
+                    OOH SITES
                   </Typography>
                 </Box>
+                </Box>
               </Grid>
+
               {/* CIRCLE 3 */}
               <Grid
                 item
@@ -1771,9 +1788,17 @@ const Home = () => {
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
-                <Box className="main-bg">
+                
+                <Box
+                  sx={{
+                    marginTop: { xs: "20px", sm: "20px", lg: "20px", md: "20px" },
+                    marginBottom: { xs: "20px", sm: "20px", lg: "40px", md: "40px" },
+                  }}
+                >
+                <Box className="main-bg3">
                   <Box className="circle3">
                     <h1>47CR</h1>
                   </Box>
@@ -1782,17 +1807,21 @@ const Home = () => {
                   <Typography
                     sx={{
                       color: "#fff",
-                      marginTop: "20px",
-                      marginRight: "100px",
-                      fontSize: "22px",
+                      marginTop: "15px",
+                      fontSize: "20px",
                       fontWeight: "500",
+                      display:"flex",
+                      justifyContent:"center",
+                      alignitems:"center",
                       fontFamily: "Poppins, sans-serif",
                     }}
                   >
-                    People Impacted
+                    PEOPLE IMPACTED
                   </Typography>
                 </Box>
+                </Box>
               </Grid>
+                
             </Grid>
           </Grid>
 
@@ -1822,6 +1851,7 @@ const Home = () => {
               justifyContent: "center",
               alignItems: "center",
               // backgroundColor:"green"
+             
             }}
           >
             {/* <Box> */}

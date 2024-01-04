@@ -264,7 +264,7 @@ function Header(props) {
               </Box>
 
               {/* Dropdown */}
-              <Link to={"/our-service"} style={{ textDecoration: "none" }}>
+              <Link  style={{ textDecoration: "none" }}>
                 <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
                   <Box sx={{display:"flex" , flexDirection:"row"}}>
                   <Box>

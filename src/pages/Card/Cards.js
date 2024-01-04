@@ -116,13 +116,14 @@ const Cards = ({ data, onClick }) => {
                       display: "-webkit-box",
                       overflow: "hidden",
                       WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 1,
+                      WebkitLineClamp: 2,
                       color: "#D2122E",
                       fontSize: "16px",
                       fontFamily: " 'Mukta', sans-serif",
                       fontWeight: "600",
                       // textAlign: "justify",
                       wordSpacing: "1px",
+                      lineHeight:"17px"
                     }}
                   >
                     {data?.address}
@@ -141,7 +142,7 @@ const Cards = ({ data, onClick }) => {
                       // textAlign: "justify"
                     }}
                   >
-                    Price {data?.price}
+                    City : {data?.city}
                   </Typography>
                   <Typography
                     color="text.secondary"
@@ -157,9 +158,9 @@ const Cards = ({ data, onClick }) => {
                       // textAlign: "justify"
                     }}
                   >
-                    State {data?.state}
+                    State : {data?.state}
                   </Typography>
-                </Box>
+                </Box> 
               </CardContent>
             </CardActionArea>
           </Card>

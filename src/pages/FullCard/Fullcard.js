@@ -64,8 +64,8 @@ const Fullcard = () => {
                       // xs: "300px",
                       xs: "100%",
                       // sm: "300px",
-                      md: "100%",
-                      lg: "100%",
+                      md: "400px",
+                      lg: "400px",
                     },
                     paddingLeft: {
                       xs: "10px",
@@ -87,7 +87,12 @@ const Fullcard = () => {
                       lg: "20px",
                     },
                     display: "flex",
-                    borderRadius: "10px",
+                    borderRadius:{
+                      xs: "10px",
+                      sm: "10px",
+                      md: "10px",
+                      lg: "10px",
+                    },
                     // border: "2px solid red",
                   }}
                   alt="add_img1"
@@ -178,8 +183,8 @@ const Fullcard = () => {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "30px",
-                        sm: "30px",
+                        xs: "25px",
+                        sm: "25px",
                         md: "30px",
                         lg: "30px",
                       },
@@ -210,8 +215,8 @@ const Fullcard = () => {
                         lg: "flex-start",
                       },
                       lineHeight: {
-                        xs: "37px",
-                        sm: "37px",
+                        xs: "25px",
+                        sm: "25px",
                         md: "34px",
                         lg: "34px",
                       },
@@ -524,6 +529,18 @@ const Fullcard = () => {
                           sm: "10px",
                           md: "0px",
                           lg: "0px",
+                        },
+                        marginTop:{
+                          xs:"10px",
+                          sm:"10px",
+                          md:"0px",
+                          lg:"0px"
+                        },
+                        marginBottom:{
+                          xs:"25px",
+                          sm:"25x",
+                          md:"0px",
+                          lg:"0px"
                         }
                       }}
                     >

@@ -34,3 +34,8 @@ export async function getProductsByState(state, city , category){
   })
 
 }
+
+export async function getProductsById(id) {
+  return apiGet(`${GET_PRODUCTS}/${id}`);
+}
+

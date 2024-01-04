@@ -497,7 +497,7 @@ export default function Outdoor() {
                   key={item.id} // Add a unique key for each mapped element
                   data={item}
                   onClick={() => {
-                    navigate("/full-card");
+                    navigate("/full-card", {state: {id: item._id}});
                     console.log("hello world");
                   }}
                 />

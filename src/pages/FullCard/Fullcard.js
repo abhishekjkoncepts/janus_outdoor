@@ -1,12 +1,28 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box } from "@mui/material";
 
 // IMAGES
 import sampleImg from "../../assets/images/add4.webp";
+import { useLocation } from "react-router-dom";
+import { getProductsById } from "../../redux/actions/Outdoor";
 
 const Fullcard = () => {
+
+  const location = useLocation();
+
+  const [DATA, setDATA] = useState(null);
+
+  useEffect(() => {
+    console.log(location);
+    getProductsById(location.state.id).then((res) => {
+      console.log('PRODUCTS BY ID', res);
+      setDATA(res);
+    })
+  }, [])
+  
+
   return (
     <Box>
       <Grid container sx={{ marginTop: "65px" }}>
@@ -71,9 +87,10 @@ const Fullcard = () => {
                     },
                     display: "flex",
                     borderRadius: "10px",
+                    border:"2px solid red"
                   }}
                   alt="add_img1"
-                  src={sampleImg}
+                  src={DATA?.image}
                 />
               </Box>
             </Grid>
@@ -122,10 +139,10 @@ const Fullcard = () => {
                         md: "flex-start",
                         lg: "flex-start",
                       },
-                      lineHeight:"34px"
+                      lineHeight:{xs:"20px" ,sm:"12px" ,md:"34px" ,lg:"34px"}
                     }}
                   >
-                    Seelampur Flyover GT Road towards Shahdara
+                    {DATA?.address}
                   </Typography>
                 </Box>
 
@@ -164,7 +181,7 @@ const Fullcard = () => {
                           display: "flex",
                         }}
                       >
-                        Category
+                        CATEGORY
                       </Typography>
                     </Box>
                     <Box>
@@ -181,7 +198,7 @@ const Fullcard = () => {
                           display: "flex",
                         }}
                       >
-                        Outdoor
+                        {DATA?.category}
                       </Typography>
                     </Box>
                   </Box>
@@ -218,7 +235,7 @@ const Fullcard = () => {
                           display: "flex",
                         }}
                       >
-                        10 x 20
+                        {DATA?.heightwidth}
                       </Typography>
                     </Box>
                   </Box>
@@ -255,7 +272,7 @@ const Fullcard = () => {
                           display: "flex",
                         }}
                       >
-                        LED
+                        {DATA?.illumination}
                       </Typography>
                     </Box>
                   </Box>
@@ -292,7 +309,7 @@ const Fullcard = () => {
                           display: "flex",
                         }}
                       >
-                        200 sq. ft.
+                        {DATA?.totalsqft}
                       </Typography>
                     </Box>
                   </Box>
@@ -340,11 +357,7 @@ const Fullcard = () => {
                       },
                     }}
                   >
-                    Hoardings in Delhi enhance enduring brand remembrance while
-                    extending your reach over. These promotional materials are
-                    strategically positioned zoned with substantial footfall,
-                    ensuring remarkable prominence among bystanders, walkers,
-                    and travelers.
+                    {DATA?.desc}
                   </Typography>
                 </Box>
 
@@ -369,7 +382,7 @@ const Fullcard = () => {
                       },
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: "600",
-                    }} >Price : 4166</Typography>
+                    }} >Price : {DATA?.price}</Typography>
                   </Box>
                 </Box>
               </Box>

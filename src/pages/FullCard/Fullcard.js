@@ -215,8 +215,8 @@ const Fullcard = () => {
                         lg: "flex-start",
                       },
                       lineHeight: {
-                        xs: "25px",
-                        sm: "25px",
+                        xs: "30px",
+                        sm: "30px",
                         md: "34px",
                         lg: "34px",
                       },

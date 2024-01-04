@@ -53,8 +53,8 @@ const Fullcard = () => {
                   component="img"
                   sx={{
                     width: {
-                      xs: "310px",
-                      sm: "310px",
+                      xs: "400px",
+                      sm: "400px",
                       md: "530px",
                       lg: "530px",
                     },

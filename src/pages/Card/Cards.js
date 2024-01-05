@@ -1,65 +1,3 @@
-// import React from "react";
-
-// // MUI
-// import { Grid, Typography, Button, Box } from "@mui/material";
-
-// // CARD
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import { CardActionArea } from "@mui/material";
-
-// const Cards = ({data, onClick}) => {
-// // const Cards = ({ result }) => {
-//   return (
-//     <Box onClick={() => {
-//       onClick()
-//     }}>
-//       <Box>
-//         <Grid item xs={12} sm={12} md={4} lg={4}>
-//           <Card
-//             sx={{
-//               Width: 360,
-//               Height: 800,
-//               borderRadius: "150px 150px 0 0",
-//               border: "1px solid #C02222",
-//             }}
-//           >
-//             <CardActionArea>
-//               <CardMedia
-//                 component="img"
-//                 height="250"
-//                 image={data?.image}
-//                 // image={result?.image}
-//                 alt="product 1"
-//                 sx={{ backgroundColor: "grey" }}
-//               />
-//               <CardContent sx={{ height: "180px" }}>
-//                 <Typography
-//                   sx={{
-//                     fontFamily: "Poppins, sans-serif",
-//                     fontSize: "16px",
-//                     fontWeight: "600",
-//                   }}
-//                 >
-//                   {data?.address}
-//                   {/* {result?.address} */}
-//                 </Typography>
-//                 <Typography variant="body2" color="text.secondary">
-//                   State: {data?.state} <br />
-//                   {/* State: {result?.state} */}
-//                 </Typography>
-//               </CardContent>
-//             </CardActionArea>
-//           </Card>
-//         </Grid>
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Cards;
-
 import React from "react";
 import { Grid, Button, Typography, Box } from "@mui/material";
 
@@ -129,7 +67,8 @@ const Cards = ({ data, onClick }) => {
                       lineHeight:"17px"
                     }}
                   >
-                    {data?.address}
+                    {/* {data?.address} */}
+                    {data?.address ? data.address.charAt(0).toUpperCase() + data.address.slice(1).toLowerCase() : ''}
                   </Typography>
                   <Typography
                     color="text.secondary"

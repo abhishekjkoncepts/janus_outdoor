@@ -209,13 +209,15 @@ const Footer = () => {
               md: "flex-end",
               lg: "flex-end",
             },
+            alignItems:"center",
           }}
         >
           <Box
             sx={{
               width: "120px",
-              marginTop: {xs:"4px" , sm:"4px" , md:"4px" , lg:"4px"},
+              marginTop: {xs:"4px" , sm:"4px" , md:"2px" , lg:"2px"},
               marginBottom:  {xs:"4px" , sm:"4px" , md:"3px" , lg:"3px"},
+           
             }}
           >
             <Box

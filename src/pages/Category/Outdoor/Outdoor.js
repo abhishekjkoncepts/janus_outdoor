@@ -213,12 +213,10 @@ export default function Outdoor() {
       >
         <Grid
           container
-          sx={
-            {
-              // backgroundColor: { xs: "red",sm: "red"},
-              height:"100%"
-            }
-          }
+          sx={{
+            // backgroundColor: { xs: "red",sm: "red"},
+            height: "100%",
+          }}
         >
           <Grid
             item
@@ -417,10 +415,10 @@ export default function Outdoor() {
                         label="state"
                         onChange={handleChange3}
                       >
-                        <MenuItem value={'Digital'} sx={{ color: "#000" }}>
+                        <MenuItem value={"Digital"} sx={{ color: "#000" }}>
                           Digital
                         </MenuItem>
-                        <MenuItem value={'Unipole'} sx={{ color: "#000" }}>
+                        <MenuItem value={"Unipole"} sx={{ color: "#000" }}>
                           Unipole
                         </MenuItem>
                         <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
@@ -433,8 +431,6 @@ export default function Outdoor() {
               </Grid>
             </Grid>
           </Grid>
-
-         
         </Grid>
       </Box>
 
@@ -453,7 +449,7 @@ export default function Outdoor() {
               justifyContent: "center",
               alignItems: "center",
               marginTop: "40px",
-              marginTop:{xs:"70px" , sm:"70px" , md:"40px" , lg:"40px"}
+              marginTop: { xs: "70px", sm: "70px", md: "40px", lg: "40px" },
             }}
           >
             <Button
@@ -500,7 +496,7 @@ export default function Outdoor() {
           lg={10.6}
           // sx={{ backgroundColor: "yellow" }}
         >
-          <Grid container spacing={2}>
+          {/* <Grid container spacing={2}>
             {products &&
               products.map((item) => (
                 <Cards
@@ -509,6 +505,22 @@ export default function Outdoor() {
                   onClick={() => {
                     navigate(
                       `/${item?.category?.toLowerCase()}/${item?.seotitle}/`,
+                      { state: { id: item._id } }
+                    );
+                    console.log("hello world");
+                  }}
+                />
+              ))}
+          </Grid> */}
+          <Grid container spacing={2}>
+            {products &&
+              products.map((item) => (
+                <Cards
+                  key={item.id} // Add a unique key for each mapped element
+                  data={item}
+                  onClick={() => {
+                    navigate(
+                      `/${item?.category?.toLowerCase() ? item?.category?.toLowerCase() : item?.code }/${item?.seotitle ? item?.seotitle : item?.address}/`,
                       { state: { id: item._id } }
                     );
                     console.log("hello world");

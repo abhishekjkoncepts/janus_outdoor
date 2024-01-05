@@ -10,18 +10,8 @@ import { Box, Typography, Grid } from "@mui/material";
 import Home from "../pages/Home/Home";
 import Aboutus from "../pages/AboutUs/Aboutus";
 import Contactus from "../pages/ContactUs/Contactus";
-import Hoardings from "../pages/Hoardings/Hoardings";
 import Blogs from "../pages/Blogs/Blogs";
 import Ourservice from "../pages/OurServices/Ourservice";
-
-// SUB-PAGES
-import Billboard from "../pages/SubPages/BillBoard/Billboard";
-import Digitalbillboard from "../pages/SubPages/DigitalBillboard/Digitalbillboard";
-import Dooh from "../pages/SubPages/Dooh/Dooh";
-import Inflightbranding from "../pages/SubPages/InflightBranding/Inflightbranding";
-import Liftbranding from "../pages/SubPages/LiftBranding/Liftbranding";
-import Mallmedia from "../pages/SubPages/MallMedia/Mallmedia";
-import Transitmedia from "../pages/SubPages/TransitMedia/Transitmedia";
 
 // HEADER
 import Header from "../components/Header/Header";
@@ -48,19 +38,8 @@ const Navigation = () => {
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/contactus" element={<Contactus />} />
-          <Route path="/hoardings" element={<Hoardings />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/our-service" element={<Ourservice />} />
-
-          {/* SUB-PAGES */}
-          <Route path="/billboard" element={<Billboard />} />
-          <Route path="/transitmedia" element={<Transitmedia />} />
-          <Route path="/digital-billboard" element={<Digitalbillboard />} />
-          <Route path="/mallmedia" element={<Mallmedia />} />
-          <Route path="/inflight-branding" element={<Inflightbranding />} />
-          <Route path="/lift-branding" element={<Liftbranding />} />
-          <Route path="/airport-branding" element={<Airportbranding />} />
-          <Route path="/dooh" element={<Dooh />} />
 
           {/* CATEGORY*/}
           <Route path="/outdoor" element={<Outdoor />} />

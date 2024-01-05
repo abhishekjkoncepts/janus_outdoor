@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // MATERIAL-UI
-import { Typography, Grid, Box } from "@mui/material";
+import { Typography, Grid, Box , Button } from "@mui/material";
 
 // IMAGES
 import sampleImg from "../../assets/images/add4.webp";
@@ -294,17 +294,17 @@ const Fullcard = () => {
                             lg: "16px",
                           },
                           marginTop: {
-                            xs: "5px",
-                            sm: "5px",
-                            md: "0px",
-                            lg: "0px",
+                            xs: "0px",
+                            sm: "0px",
+                            md: "-1px",
+                            lg: "-1px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "700",
                           display: "flex",
                         }}
                       >
-                        {DATA?.code}
+                       &nbsp;{DATA?.code}
                       </Typography>
                     </Box>
                   </Box>
@@ -620,7 +620,10 @@ const Fullcard = () => {
                           },
                         }}
                       >
-                        Price : {DATA?.price}
+                        {/* Price : {DATA?.price} */}
+                        <Box>
+                          <Button sx={{backgroundColor:"#C02222" , color:"white"}}>ENQUIRY NOW</Button>
+                        </Box>
                       </Typography>
                     </Box>
                   </Box>

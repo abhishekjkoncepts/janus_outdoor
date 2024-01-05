@@ -69,6 +69,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
+// CSS
+import "./Cards.css"
+
 const Cards = ({ data, onClick }) => {
   return (
     <>
@@ -119,7 +122,7 @@ const Cards = ({ data, onClick }) => {
                       WebkitLineClamp: 2,
                       color: "#D2122E",
                       fontSize: "16px",
-                      fontFamily: " 'Mukta', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                       fontWeight: "600",
                       // textAlign: "justify",
                       wordSpacing: "1px",
@@ -138,7 +141,7 @@ const Cards = ({ data, onClick }) => {
                       color: "black",
                       fontSize: "14px",
                       fontWeight: "500",
-                      fontFamily: " 'Mukta', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                       // textAlign: "justify"
                     }}
                   >
@@ -154,7 +157,7 @@ const Cards = ({ data, onClick }) => {
                       color: "black",
                       fontSize: "14px",
                       fontWeight: "500",
-                      fontFamily: " 'Mukta', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                       // textAlign: "justify"
                     }}
                   >

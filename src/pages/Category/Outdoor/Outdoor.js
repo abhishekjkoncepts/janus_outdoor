@@ -208,7 +208,7 @@ export default function Outdoor() {
       {/* DROP-DOWN GRID */}
       <Box
         sx={{
-          marginTop: { xs: "70px", sm: "0px", md: "20px", lg: "20px" },
+          marginTop: { xs: "80px", sm: "80px", md: "20px", lg: "20px" },
         }}
       >
         <Grid
@@ -423,8 +423,8 @@ export default function Outdoor() {
                         <MenuItem value={'Unipole'} sx={{ color: "#000" }}>
                           Unipole
                         </MenuItem>
-                        <MenuItem value={3} sx={{ color: "#000" }}>
-                          Billboard
+                        <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
+                          Outdoor
                         </MenuItem>
                       </Select>
                     </FormControl>
@@ -508,7 +508,7 @@ export default function Outdoor() {
                   data={item}
                   onClick={() => {
                     navigate(
-                      `/seedetails/${item?.category}/${item?.seotitle}`,
+                      `/${item?.category?.toLowerCase()}/${item?.seotitle}/`,
                       { state: { id: item._id } }
                     );
                     console.log("hello world");

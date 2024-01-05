@@ -23,7 +23,6 @@ import Liftbranding from "../pages/SubPages/LiftBranding/Liftbranding";
 import Mallmedia from "../pages/SubPages/MallMedia/Mallmedia";
 import Transitmedia from "../pages/SubPages/TransitMedia/Transitmedia";
 
-
 // HEADER
 import Header from "../components/Header/Header";
 
@@ -51,7 +50,7 @@ const Navigation = () => {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/hoardings" element={<Hoardings />} />
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="/our-service" element={<Ourservice/>} />
+          <Route path="/our-service" element={<Ourservice />} />
 
           {/* SUB-PAGES */}
           <Route path="/billboard" element={<Billboard />} />
@@ -67,10 +66,12 @@ const Navigation = () => {
           <Route path="/outdoor" element={<Outdoor />} />
           <Route path="/cinema" element={<Cinema />} />
           <Route path="/airportbranding" element={<Airportbranding />} />
-          <Route path="/signage" element={<Signage/>} />
+          <Route path="/signage" element={<Signage />} />
 
           {/* FULl CArd */}
           {/* <Route path="/seedetails/:seotitle" element={<Fullcard />} /> */}
+          {/* <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} /> */}
+          <Route path="/:category/:seotitle" element={<Fullcard />} />
           <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} />
         </Routes>
       </Scrolltotop>

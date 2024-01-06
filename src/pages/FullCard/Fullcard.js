@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // MATERIAL-UI
-import { Typography, Grid, Box , Button } from "@mui/material";
+import { Typography, Grid, Box, Button } from "@mui/material";
 
 // IMAGES
 import sampleImg from "../../assets/images/add4.webp";
@@ -10,6 +10,7 @@ import { getProductsById } from "../../redux/actions/Outdoor";
 
 // REACT-HELMET
 import { Helmet } from "react-helmet";
+import Popupcomponent from "../PopUp/Popupcomponent";
 
 const Fullcard = () => {
   const location = useLocation();
@@ -24,12 +25,30 @@ const Fullcard = () => {
     });
   }, []);
 
+  // POP-UP
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <Helmet>
         <title>{DATA?.seotitle}</title>
         <meta name="description" content={DATA?.seodesc} />
       </Helmet>
+      {isOpen && (
+        <Popupcomponent
+          handleClose={togglePopup}
+          content={
+            <div>
+              <h2>title</h2>
+              <p>this is sampe content formy pop up</p>
+            </div>
+          }
+        />
+      )}
       <Box>
         <Grid container sx={{ marginTop: "65px" }}>
           <Grid
@@ -304,7 +323,7 @@ const Fullcard = () => {
                           display: "flex",
                         }}
                       >
-                       &nbsp;{DATA?.code}
+                        &nbsp;{DATA?.code}
                       </Typography>
                     </Box>
                   </Box>
@@ -571,7 +590,23 @@ const Fullcard = () => {
                     </Typography>
                   </Box>
 
-                  <Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: {
+                        xs: "center",
+                        sm: "center",
+                        md: "flex-start",
+                        lg: "flex-start",
+                      },
+                      paddingLeft:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"0px",
+                        lg:"0px",
+                      }
+                    }}
+                  >
                     <Box
                       sx={{
                         marginTop: {
@@ -586,44 +621,48 @@ const Fullcard = () => {
                           md: "20px",
                           lg: "20px",
                         },
+                        display: "flex",
+                        justifyContent: {
+                          xs: "center",
+                          sm: "center",
+                          md: "center",
+                          lg: "center",
+                        },
+                        alignItems: "center",
+                        width: {
+                          xs: "100px",
+                          sm: "100px",
+                          md: "115px",
+                          lg: "115px",
+                        },
+                        height: {
+                          xs: "30px",
+                          sm: "30px",
+                          md: "40px",
+                          lg: "40px",
+                        },
+                        backgroundColor: "red",
+                        borderRadius: "20px",
                       }}
+                      onClick={togglePopup}
                     >
                       <Typography
                         sx={{
                           fontSize: {
-                            xs: "13px",
-                            sm: "13px",
+                            xs: "12px",
+                            sm: "12px",
                             md: "15px",
                             lg: "15px",
                           },
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: "600",
+                          color: "white",
                           display: "flex",
-                          color: "#000",
-                          paddingLeft: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "0px",
-                            lg: "0px",
-                          },
-                          marginTop: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "0px",
-                            lg: "0px",
-                          },
-                          marginBottom: {
-                            xs: "25px",
-                            sm: "25x",
-                            md: "0px",
-                            lg: "0px",
-                          },
+                          justifyContent: "center",
+                          alignitems: "center",
                         }}
                       >
-                        {/* Price : {DATA?.price} */}
-                        <Box>
-                          <Button sx={{backgroundColor:"#C02222" , color:"white"}}>ENQUIRY NOW</Button>
-                        </Box>
+                        ENQUIRY NOW
                       </Typography>
                     </Box>
                   </Box>

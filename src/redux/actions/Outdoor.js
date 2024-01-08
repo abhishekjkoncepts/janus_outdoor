@@ -1,8 +1,8 @@
 import store from "../store";
 import types from "../types";
 
-import { GET_PRODUCTS ,GET_PRODUCTS_BY_STATE } from "../../services/urls";
-import { apiGet } from "../../services/api";
+import { GET_PRODUCTS ,GET_PRODUCTS_BY_STATE , POST_CUSTOMER_ENQUIRY} from "../../services/urls";
+import { apiGet, apiPost } from "../../services/api";
 
 const { dispatch } = store;
 // export async function get_products() {
@@ -38,4 +38,11 @@ export async function getProductsByState(state, city , category){
 export async function getProductsById(id) {
   return apiGet(`${GET_PRODUCTS}/${id}`);
 }
+
+export async function submitenquiry(data) {
+  return apiPost(POST_CUSTOMER_ENQUIRY, data).then((res) => {
+    console.log(res);
+  })
+}
+
 

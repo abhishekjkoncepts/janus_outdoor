@@ -40,5 +40,6 @@ export function apiGet(url, data = {}, headers = {}) {
 }
 
 export function apiPost(url, data = {}, headers = {}) {
+    console.log(data);
     return request(url, 'post', data, headers);
 }

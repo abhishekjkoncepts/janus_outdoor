@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box, Button } from "@mui/material";
 import closebtn from "../../assets/images/close.png";
 import TextField from "@mui/material/TextField";
 
+import SendIcon from "@mui/icons-material/Send";
+
+import { submitenquiry } from "../../redux/actions/Outdoor";
+
 import "./Popupcomponent.css";
 
 const Popupcomponent = (props) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   return (
     // <Box className="popup-box">
     //   <Box className="box">
@@ -74,6 +80,8 @@ const Popupcomponent = (props) => {
             <Box
               sx={{
                 paddingLeft: { xs: "18px", sm: "18px", md: "15px", lg: "15px" },
+                display:"flex",
+                justifyContent:"center",
               }}
             >
               <Box sx={{}}>
@@ -89,7 +97,7 @@ const Popupcomponent = (props) => {
                     Family: "Poppins, sans-serif",
                   }}
                 >
-                  Support and Contact Enquiry
+                  Enquiry Now
                 </Typography>
               </Box>
             </Box>
@@ -118,14 +126,18 @@ const Popupcomponent = (props) => {
               sx={{
                 paddingLeft: { xs: "10px" },
                 paddingRight: { xs: "10px" },
-                marginTop: { xs: "0px", sm: "0px", md: "5px", lg: "5px" },
+                marginTop: { xs: "0px", sm: "0px", md: "10px", lg: "10px" },
               }}
             >
               <TextField
                 id="standard-basic"
                 label="Name*"
                 variant="standard"
+                value={name}
                 sx={{ width: "100%" }}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
               />
             </Box>
           </Grid>
@@ -177,6 +189,10 @@ const Popupcomponent = (props) => {
                 id="standard-basic"
                 label="Email*"
                 variant="standard"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 sx={{
                   width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
                 }}
@@ -259,9 +275,20 @@ const Popupcomponent = (props) => {
             >
               <Button
                 variant="contained"
+                endIcon={<SendIcon />}
                 sx={{
                   backgroundColor: "#C02222",
                   width: "100%",
+                }}
+                onClick={() => {
+                  console.log({
+                    name: name,
+                    email: email,
+                  });
+                  submitenquiry({
+                    name: name,
+                    email: email,
+                  });
                 }}
               >
                 <Typography>SEND MESSAGE</Typography>
@@ -330,7 +357,6 @@ const Popupcomponent = (props) => {
                     marginTop: "10px",
                   }}
                 >
-                  {" "}
                   Email-id: birender@janusalive.com
                 </Typography>
               </Box>

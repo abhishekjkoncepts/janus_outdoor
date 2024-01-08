@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box, Button } from "@mui/material";
-import TextField from '@mui/material/TextField';
+import TextField from "@mui/material/TextField";
+import SendIcon from "@mui/icons-material/Send";
 
 // IMAGES
 import sampleImg from "../../assets/images/add4.webp";
@@ -12,6 +13,9 @@ import { getProductsById } from "../../redux/actions/Outdoor";
 // REACT-HELMET
 import { Helmet } from "react-helmet";
 import Popupcomponent from "../PopUp/Popupcomponent";
+
+// TOASTI-FY
+import { ToastContainer, toast } from "react-toastify";
 
 const Fullcard = () => {
   const location = useLocation();
@@ -33,6 +37,13 @@ const Fullcard = () => {
     setIsOpen(!isOpen);
   };
 
+  // Toastify
+  const showToastMessage = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
   return (
     <>
       <Helmet>
@@ -46,9 +57,6 @@ const Fullcard = () => {
             <div>
               <h2>title</h2>
               <p>this is sampe content formy pop up</p>
-             
-
-
             </div>
           }
         />
@@ -604,12 +612,12 @@ const Fullcard = () => {
                         md: "flex-start",
                         lg: "flex-start",
                       },
-                      paddingLeft:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"0px",
-                        lg:"0px",
-                      }
+                      paddingLeft: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
                     }}
                   >
                     <Box
@@ -646,7 +654,7 @@ const Fullcard = () => {
                           md: "40px",
                           lg: "40px",
                         },
-                        backgroundColor: "red",
+                        backgroundColor: "#C02222",
                         borderRadius: "20px",
                       }}
                       onClick={togglePopup}
@@ -667,10 +675,11 @@ const Fullcard = () => {
                           alignitems: "center",
                         }}
                       >
-                        ENQUIRY NOW
+                        Enquiry
                       </Typography>
                     </Box>
                   </Box>
+                 
                 </Box>
               </Grid>
             </Grid>

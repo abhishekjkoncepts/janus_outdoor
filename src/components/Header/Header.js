@@ -24,7 +24,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 // IMAGES
 import janusLogo from "../../assets/images/janusLogo.png";
-import dropdownicon from  "../../assets/images/dropDownIcon.png"
+import dropdownicon from "../../assets/images/dropDownIcon.png";
 
 // CSS
 import "./Header.css";
@@ -63,7 +63,7 @@ const navItems = [
 
 function Header(props) {
   // dropdwon
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(false);
 
   const handleOpenMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -264,141 +264,146 @@ function Header(props) {
               </Box>
 
               {/* Dropdown */}
-              <Link  style={{ textDecoration: "none" }}>
-                <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
-                  <Box sx={{display:"flex" , flexDirection:"row"}}>
+              <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
+                <Box
+                  sx={{ display: "flex", flexDirection: "row" }}
+                  onClick={() => navigate("/our-service")}
+                >
                   <Box>
-                  <Typography
-                    aria-controls="simple-menu"
-                    aria-haspopup="true"
-                    onMouseOver={handleOpenMenu}
-                    sx={{
-                      color: "#fff",
-                      fontSize: "16px",
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    OUR SERVICES
-                  </Typography>
+                    <Typography
+                      aria-controls="simple-menu"
+                      aria-haspopup="true"
+                      sx={{
+                        color: "#fff",
+                        fontSize: "16px",
+                        fontWeight: "500",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                      onMouseOver={handleOpenMenu}
+                    >
+                      OUR SERVICES
+                    </Typography>
                   </Box>
                   <Box>
-                    <img src={dropdownicon} style={{width:"10px" ,height:"5px", marginLeft:"5px" , marginBottom:"2px"}}/>
+                    <img
+                      src={dropdownicon}
+                      style={{
+                        width: "10px",
+                        height: "5px",
+                        marginLeft: "5px",
+                        marginBottom: "2px",
+                      }}
+                    />
                   </Box>
-                  </Box>
+                </Box>
 
-                  <Menu
-                    sx={{ marginTop: "9px" }}
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    keepMounted
-                    open={Boolean(anchorEl)}
-                    onClose={handleCloseMenu}
-                  >
-                    <Box sx={{ width: "200px" }}>
-                      {/* outdoor */}
-                      <Box sx={{ marginTop: "5px" }}>
-                        <Link
-                          to={"/outdoor"}
-                          style={{ textDecoration: "none" }}
+                <Menu
+                  sx={{ marginTop: "9px" }}
+                  id="simple-menu"
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={Boolean(anchorEl)}
+                  onClose={handleCloseMenu}
+                  MenuListProps={{ onMouseLeave: handleCloseMenu }}
+                >
+                  <Box sx={{ width: "200px" }}>
+                    {/* outdoor */}
+                    <Box sx={{ marginTop: "5px" }}>
+                      <Link to={"/outdoor"} style={{ textDecoration: "none" }}>
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
                         >
-                          <Typography
-                            sx={{
-                              marginLeft: "20px",
-                              paddingTop: "1px",
-                              paddingBottom: "1px",
-                              color: "#000",
-                              "&:hover": {
-                                color: "red",
-                                cursor: "pointer",
-                              },
-                              fontSize: "15px",
-                              fontWeight: "600",
-                              fontFamily: "Poppins, sans-serif",
-                            }}
-                          >
-                            OUTDOOR
-                          </Typography>
-                        </Link>
-                      </Box>
+                          OUTDOOR
+                        </Typography>
+                      </Link>
+                    </Box>
 
-                      {/* cinema*/}
-                      <Box sx={{}}>
-                        <Link to={"/cinema"} style={{ textDecoration: "none" }}>
-                          <Typography
-                            sx={{
-                              marginLeft: "20px",
-                              paddingTop: "1px",
-                              paddingBottom: "1px",
-                              color: "#000",
-                              "&:hover": {
-                                color: "red",
-                                cursor: "pointer",
-                              },
-                              fontSize: "15px",
-                              fontWeight: "600",
-                              fontFamily: "Poppins, sans-serif",
-                            }}
-                          >
-                            CINEMA
-                          </Typography>
-                        </Link>
-                      </Box>
-
-                      {/* Airport branding */}
-                      <Box sx={{}}>
-                        <Link
-                          to={"/airport-branding"}
-                          style={{ textDecoration: "none" }}
+                    {/* cinema*/}
+                    <Box sx={{}}>
+                      <Link to={"/cinema"} style={{ textDecoration: "none" }}>
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
                         >
-                          <Typography
-                            sx={{
-                              marginLeft: "20px",
-                              paddingTop: "1px",
-                              paddingBottom: "1px",
-                              color: "#000",
-                              "&:hover": {
-                                color: "red",
-                                cursor: "pointer",
-                              },
-                              fontSize: "15px",
-                              fontWeight: "600",
-                              fontFamily: "Poppins, sans-serif",
-                            }}
-                          >
-                            AIRPORT BRANDING
-                          </Typography>
-                        </Link>
-                      </Box>
+                          CINEMA
+                        </Typography>
+                      </Link>
+                    </Box>
 
-                      {/* SIgnage */}
-                      <Box sx={{}}>
-                        <Link
-                          to={"/signage"}
-                          style={{ textDecoration: "none" }}
+                    {/* Airport branding */}
+                    <Box sx={{}}>
+                      <Link
+                        to={"/airport-branding"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
                         >
-                          <Typography
-                            sx={{
-                              marginLeft: "20px",
-                              paddingTop: "1px",
-                              paddingBottom: "1px",
-                              color: "#000",
-                              "&:hover": {
-                                color: "red",
-                                cursor: "pointer",
-                              },
-                              fontSize: "15px",
-                              fontWeight: "600",
-                              fontFamily: "Poppins, sans-serif",
-                            }}
-                          >
-                            SIGNAGE
-                          </Typography>
-                        </Link>
-                      </Box>
+                          AIRPORT BRANDING
+                        </Typography>
+                      </Link>
+                    </Box>
 
-                      {/* Billboard */}
-                      {/* <Box>
+                    {/* SIgnage */}
+                    <Box sx={{}}>
+                      <Link to={"/signage"} style={{ textDecoration: "none" }}>
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          SIGNAGE
+                        </Typography>
+                      </Link>
+                    </Box>
+
+                    {/* Billboard */}
+                    {/* <Box>
                         <Link
                           to={"/billboard"}
                           style={{ textDecoration: "none" }}
@@ -423,8 +428,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* Transit media */}
-                      {/* <Box>
+                    {/* Transit media */}
+                    {/* <Box>
                         <Link
                           to={"/transitmedia"}
                           style={{ textDecoration: "none" }}
@@ -449,8 +454,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* Digital -Billboard */}
-                      {/* <Box>
+                    {/* Digital -Billboard */}
+                    {/* <Box>
                         <Link
                           to={"/digital-billboard"}
                           style={{ textDecoration: "none" }}
@@ -475,8 +480,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* Mallmedia */}
-                      {/* <Box>
+                    {/* Mallmedia */}
+                    {/* <Box>
                         <Link
                           to={"/mallmedia"}
                           style={{ textDecoration: "none" }}
@@ -501,8 +506,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* Inflight banding */}
-                      {/* <Box>
+                    {/* Inflight banding */}
+                    {/* <Box>
                         <Link
                           to={"/inflight-branding"}
                           style={{ textDecoration: "none" }}
@@ -527,8 +532,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* Lift-branding */}
-                      {/* <Box>
+                    {/* Lift-branding */}
+                    {/* <Box>
                         <Link
                           to={"/lift-branding"}
                           style={{ textDecoration: "none" }}
@@ -553,8 +558,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* Airport branding */}
-                      {/* <Box>
+                    {/* Airport branding */}
+                    {/* <Box>
                         <Link
                           to={"/airport-branding"}
                           style={{ textDecoration: "none" }}
@@ -579,8 +584,8 @@ function Header(props) {
                         </Link>
                       </Box> */}
 
-                      {/* DOOH */}
-                      {/* <Box>
+                    {/* DOOH */}
+                    {/* <Box>
                         <Link to={"/dooh"} style={{ textDecoration: "none" }}>
                           <Typography
                             sx={{
@@ -601,9 +606,8 @@ function Header(props) {
                           </Typography>
                         </Link>
                       </Box> */}
-
-                    </Box>
-                    {/* 
+                  </Box>
+                  {/* 
                   <MenuItem
                     component={Link}
                     to="/services/service1"
@@ -659,9 +663,8 @@ function Header(props) {
                   >
                     DOOH
                   </MenuItem> */}
-                  </Menu>
-                </Box>
-              </Link>
+                </Menu>
+              </Box>
 
               {/* BLOGS */}
               {/* <Box sx={{ paddingLeft: "30px" }}>

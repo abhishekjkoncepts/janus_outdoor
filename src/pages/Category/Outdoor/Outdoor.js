@@ -150,7 +150,7 @@ export default function Outdoor() {
                       color: "#fff",
                     }}
                   >
-                    Hoardings In Delhi
+                    Outdoor Advertising
                   </Typography>
                 </Box>
                 {/* TEXT 2 */}
@@ -514,7 +514,7 @@ export default function Outdoor() {
           </Grid> */}
           <Grid container spacing={2}>
             {products &&
-              products.map((item) => (
+              products.filter((item) => item?.category === 'Outdoor').map((item) => (
                 <Cards
                   key={item.id} // Add a unique key for each mapped element
                   data={item}

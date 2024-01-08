@@ -57,14 +57,15 @@ const Cards = ({ data, onClick }) => {
                       display: "-webkit-box",
                       overflow: "hidden",
                       WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 2,
+                      WebkitLineClamp: 1,
                       color: "#D2122E",
                       fontSize: "16px",
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: "600",
                       // textAlign: "justify",
                       wordSpacing: "1px",
-                      lineHeight:"17px"
+                      lineHeight:"17px",
+                      textTransform:"capitalize"
                     }}
                   >
                     {/* {data?.address} */}

@@ -16,6 +16,7 @@
   z-index: 2;
   color:#C02222;
   font-size: 40px;
+  margin-top: 20px;
   }
   .circle2::after{
       content:"";

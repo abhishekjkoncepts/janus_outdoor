@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box, Button } from "@mui/material";
+import TextField from '@mui/material/TextField';
 
 // IMAGES
 import sampleImg from "../../assets/images/add4.webp";
@@ -45,6 +46,9 @@ const Fullcard = () => {
             <div>
               <h2>title</h2>
               <p>this is sampe content formy pop up</p>
+             
+
+
             </div>
           }
         />
@@ -208,7 +212,8 @@ const Fullcard = () => {
                           },
                         }}
                       >
-                        {DATA?.category.toUpperCase()}
+                        {/* {DATA?.category.toUpperCase()} */}
+                        {DATA?.subcat}
                       </Typography>
                     </Box>
 

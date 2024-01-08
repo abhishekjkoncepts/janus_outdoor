@@ -52,6 +52,7 @@ import "./Circle1.css";
 import "./Circle2.css";
 import "./Circle3.css";
 import { getProducts } from "../../redux/actions/Outdoor";
+import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
 
 const Home = () => {
   return (
@@ -770,6 +771,7 @@ const Home = () => {
           ></Grid>
         </Grid>
       </Box>
+      {/* <Categorycarousel/> */}
 
       {/* EXPLORE */}
       <Box>

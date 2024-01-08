@@ -20,7 +20,9 @@ import Header from "../components/Header/Header";
 import Outdoor from "../pages/Category/Outdoor/Outdoor";
 import Cinema from "../pages/Category/Cinema/Cinema";
 import Airportbranding from "../pages/Category/AirportBranding/Airportbranding";
-import Signage from "../pages/Category/Signage/Signage";
+import Inflightbranding from "../pages/Category/InflightBranding/Inflightbranding";
+import Mallmedia from "../pages/Category/MallMedia/Mallmedia";
+import Transitmedia from "../pages/Category/TransitMedia/Transitmedia";
 
 //FULL-CARD
 import Fullcard from "../pages/FullCard/Fullcard";
@@ -44,14 +46,16 @@ const Navigation = () => {
           {/* CATEGORY*/}
           <Route path="/outdoor" element={<Outdoor />} />
           <Route path="/cinema" element={<Cinema />} />
-          <Route path="/airportbranding" element={<Airportbranding />} />
-          <Route path="/signage" element={<Signage />} />
+          <Route path="/airport-branding" element={<Airportbranding />} />
+          <Route path="/inflight-branding" element={<Inflightbranding />} />
+          <Route path="/mall-media" element={<Mallmedia />} />
+          <Route path="/transit-media" element={<Transitmedia />} />
 
           {/* FULl CArd */}
           {/* <Route path="/seedetails/:seotitle" element={<Fullcard />} /> */}
           {/* <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} /> */}
           <Route path="/:category/:seotitle" element={<Fullcard />} />
-          <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} />
+          <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />}/>
         </Routes>
       </Scrolltotop>
     </BrowserRouter>

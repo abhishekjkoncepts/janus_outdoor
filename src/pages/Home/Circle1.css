@@ -7,6 +7,7 @@
   box-shadow: 0 0 20px rgb(74, 153, 228);
   /* box-shadow: 0 0 20px orange; */
   animation: animate 2s linear forwards infinite;
+  margin-top: 10px;
 }
 .circle h1 {
   position: absolute;
@@ -16,6 +17,7 @@
   z-index: 2;
   color:#C02222;
   font-size: 40px;
+  margin-top: 20px;
 }
 .circle::after{
     content:"";

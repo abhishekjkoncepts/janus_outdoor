@@ -12,6 +12,7 @@ import Testing from "./pages/Testing/Testing";
 //REDUX
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Categorycarousel from "./pages/Carousels/CategoryCarousel/Categorycarousel";
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Navigation />
         <Footer />
         {/* <Testing/> */}
+        {/* <Categorycarousel/> */}
       </Box>
     </Provider>
   );

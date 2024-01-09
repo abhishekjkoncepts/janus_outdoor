@@ -1,28 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box, Button } from "@mui/material";
-import closebtn from "../../assets/images/close.png";
 import TextField from "@mui/material/TextField";
-
 import SendIcon from "@mui/icons-material/Send";
 
+// IMAGES
+import closebtn from "../../assets/images/close.png";
+import call from "../../assets/images/call.png";
+import mail from "../../assets/images/mail.png";
+
+// REDUX
+// post-----
 import { submitenquiry } from "../../redux/actions/Outdoor";
+// get-----
+import { getProductsById } from "../../redux/actions/Outdoor";
+
+// REACT-ROUTER-DOM
+// REACT-ROUTER-DOM
+import { useLocation } from "react-router-dom";
 
 import "./Popupcomponent.css";
 
 const Popupcomponent = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [ProductId, setProductId] = useState("");
+
+  const [DATA, setDATA] = useState(null);
+
+  const location = useLocation();
+  useEffect(() => {
+    console.log(location);
+    getProductsById(location.state.id).then((res) => {
+      console.log("PRODUCTS BY ID", res);
+      setProductId(res?._id);
+      setDATA(res);
+    });
+  }, []);
   return (
-    // <Box className="popup-box">
-    //   <Box className="box">
-    //     <button className="btn-close" onClick={props.handleClose}></button>
-    //     {/* {props.content  } */}
-    //     <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-    //     <TextField id="filled-basic" label="Filled" variant="filled" />
-    //   </Box>
-    // </Box>
     <Box
       sx={{
         position: "fixed",
@@ -80,8 +98,8 @@ const Popupcomponent = (props) => {
             <Box
               sx={{
                 paddingLeft: { xs: "18px", sm: "18px", md: "15px", lg: "15px" },
-                display:"flex",
-                justifyContent:"center",
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <Box sx={{}}>
@@ -205,6 +223,10 @@ const Popupcomponent = (props) => {
                 id="standard-basic"
                 label="Phone*"
                 variant="standard"
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
                 sx={{
                   width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
                 }}
@@ -250,6 +272,10 @@ const Popupcomponent = (props) => {
                 label="Write a message*"
                 variant="standard"
                 sx={{ width: "100%" }}
+                value={message}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
               />
             </Box>
           </Grid>
@@ -275,19 +301,28 @@ const Popupcomponent = (props) => {
             >
               <Button
                 variant="contained"
+                disableRipple
+                disableElevation
                 endIcon={<SendIcon />}
                 sx={{
-                  backgroundColor: "#C02222",
+                  // backgroundColor: "#C02222",
+                  bgcolor: "#C02222",
                   width: "100%",
+                  "$:hover": { bgcolor: "green" },
                 }}
                 onClick={() => {
                   console.log({
                     name: name,
                     email: email,
+                    phone: phone,
+                    message: message
                   });
                   submitenquiry({
+                    id: ProductId,
                     name: name,
                     email: email,
+                    phone: phone,
+                    message: message
                   });
                 }}
               >
@@ -326,7 +361,22 @@ const Popupcomponent = (props) => {
                   or
                 </Typography>
               </Box>
-              <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  marginTop: "10px",
+                }}
+              >
+                <img
+                  src={call}
+                  style={{
+                    height: "15px",
+                    width: "15px",
+                    marginTop: "3px",
+                    marginRight: "8px",
+                  }}
+                />
                 <Typography
                   sx={{
                     fontSize: {
@@ -337,13 +387,27 @@ const Popupcomponent = (props) => {
                     },
                     fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
-                    marginTop: "10px",
                   }}
                 >
-                  Call us : +91 96507-64004
+                  +91 96507-64004
                 </Typography>
               </Box>
-              <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  marginTop: "10px",
+                }}
+              >
+                <img
+                  src={mail}
+                  style={{
+                    height: "15px",
+                    width: "15px",
+                    marginTop: "3px",
+                    marginRight: "8px",
+                  }}
+                />
                 <Typography
                   sx={{
                     fontSize: {
@@ -354,10 +418,9 @@ const Popupcomponent = (props) => {
                     },
                     fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
-                    marginTop: "10px",
                   }}
                 >
-                  Email-id: birender@janusalive.com
+                  birender@janusalive.com
                 </Typography>
               </Box>
             </Box>

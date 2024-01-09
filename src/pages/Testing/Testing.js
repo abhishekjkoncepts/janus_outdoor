@@ -92,3 +92,375 @@ const Testing = () => {
   );
 };
 
+
+//  <Box
+//             sx={{
+//               marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
+//               marginBottom: { xs: "20px", sm: "20px", md: "60px", lg: "60px" },
+//             }}
+//           >
+//             <Carousel
+//               cols={4}
+//               rows={1}
+//               gap={20}
+//               loop={true}
+//               showDots={false}
+//               dotColorActive="#795548"
+//               dotColorInactive="#ccc"
+//               style={{ padding: "10px" }}
+//             >
+//               <Carousel.Item width="20%">
+//                 <Box
+//                   sx={{
+//                     marginTop: {
+//                       xs: "20px",
+//                       sm: "20px",
+//                       md: "10px",
+//                       lg: "10px",
+//                     },
+//                     marginBottom: {
+//                       xs: "0px",
+//                       sm: "0px",
+//                       md: "60px",
+//                       lg: "60px",
+//                     },
+//                   }}
+//                 >
+//                   <Card
+//                     sx={{
+//                       maxWidth: "245px",
+//                       maxHeight: 800,
+//                       borderRadius: "150px 150px 0 0",
+//                       border: "2px solid #C02222",
+//                       background:
+//                         "linear-gradient(to bottom, #C02222 85%, #000)",
+//                     }}
+//                   >
+//                     <CardActionArea>
+//                       <CardMedia
+//                         component="img"
+//                         height="250"
+//                         image={add1}
+//                         alt="green iguana"
+//                         sx={{
+//                           overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+//                           transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+//                           "&:hover": {
+//                             transform: "scale(1.1)", // Scale the card by 10% when hovered
+//                           },
+//                         }}
+//                       />
+//                       <CardContent sx={{ height: "60px" }}>
+//                         <Typography
+//                           sx={{
+//                             fontFamily: "Poppins, sans-serif",
+//                             fontSize: "21px",
+//                             fontWeight: "600",
+//                             textAlign: "center",
+//                             color: "#fff",
+//                           }}
+//                         >
+//                           OUTDOOR
+//                         </Typography>
+//                       </CardContent>
+//                     </CardActionArea>
+//                   </Card>
+//                 </Box>
+//               </Carousel.Item>
+
+//               <Carousel.Item width="20%">
+//                 <Box
+//                   sx={{
+//                     marginTop: {
+//                       xs: "20px",
+//                       sm: "20px",
+//                       md: "10px",
+//                       lg: "10px",
+//                     },
+//                     marginBottom: {
+//                       xs: "0px",
+//                       sm: "0px",
+//                       md: "60px",
+//                       lg: "60px",
+//                     },
+//                   }}
+//                 >
+//                   <Card
+//                     sx={{
+//                       maxWidth: "245px",
+//                       maxHeight: 800,
+//                       borderRadius: "150px 150px 0 0",
+//                       border: "2px solid #C02222",
+//                       background:
+//                         "linear-gradient(to bottom, #C02222 85%, #000)",
+//                     }}
+//                   >
+//                     <CardActionArea>
+//                       <CardMedia
+//                         component="img"
+//                         height="250"
+//                         image={add1}
+//                         alt="green iguana"
+//                         sx={{
+//                           overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+//                           transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+//                           "&:hover": {
+//                             transform: "scale(1.1)", // Scale the card by 10% when hovered
+//                           },
+//                         }}
+//                       />
+//                       <CardContent sx={{ height: "60px" }}>
+//                         <Typography
+//                           sx={{
+//                             fontFamily: "Poppins, sans-serif",
+//                             fontSize: "21px",
+//                             fontWeight: "600",
+//                             textAlign: "center",
+//                             color: "#fff",
+//                           }}
+//                         >
+//                           CINEMA
+//                         </Typography>
+//                       </CardContent>
+//                     </CardActionArea>
+//                   </Card>
+//                 </Box>
+//               </Carousel.Item>
+
+//               <Carousel.Item width="20%">
+//                 <Box
+//                   sx={{
+//                     marginTop: {
+//                       xs: "20px",
+//                       sm: "20px",
+//                       md: "10px",
+//                       lg: "10px",
+//                     },
+//                     marginBottom: {
+//                       xs: "0px",
+//                       sm: "0px",
+//                       md: "60px",
+//                       lg: "60px",
+//                     },
+//                   }}
+//                 >
+//                   <Card
+//                     sx={{
+//                       maxWidth: "245px",
+//                       maxHeight: 800,
+//                       borderRadius: "150px 150px 0 0",
+//                       border: "2px solid #C02222",
+//                       background:
+//                         "linear-gradient(to bottom, #C02222 85%, #000)",
+//                     }}
+//                   >
+//                     <CardActionArea>
+//                       <CardMedia
+//                         component="img"
+//                         height="250"
+//                         image={add1}
+//                         alt="green iguana"
+//                         sx={{
+//                           overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+//                           transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+//                           "&:hover": {
+//                             transform: "scale(1.1)", // Scale the card by 10% when hovered
+//                           },
+//                         }}
+//                       />
+//                       <CardContent sx={{ height: "60px" }}>
+//                         <Typography
+//                           sx={{
+//                             fontFamily: "Poppins, sans-serif",
+//                             fontSize: "21px",
+//                             fontWeight: "600",
+//                             textAlign: "center",
+//                             color: "#fff",
+//                           }}
+//                         >
+//                           AIRPORT BRANDING
+//                         </Typography>
+//                       </CardContent>
+//                     </CardActionArea>
+//                   </Card>
+//                 </Box>
+//               </Carousel.Item>
+
+//               <Carousel.Item width="20%">
+//                 <Box
+//                   sx={{
+//                     marginTop: {
+//                       xs: "20px",
+//                       sm: "20px",
+//                       md: "10px",
+//                       lg: "10px",
+//                     },
+//                     marginBottom: {
+//                       xs: "0px",
+//                       sm: "0px",
+//                       md: "60px",
+//                       lg: "60px",
+//                     },
+//                   }}
+//                 >
+//                   <Card
+//                     sx={{
+//                       maxWidth: "245px",
+//                       maxHeight: 800,
+//                       borderRadius: "150px 150px 0 0",
+//                       border: "2px solid #C02222",
+//                       background:
+//                         "linear-gradient(to bottom, #C02222 85%, #000)",
+//                     }}
+//                   >
+//                     <CardActionArea>
+//                       <CardMedia
+//                         component="img"
+//                         height="250"
+//                         image={add1}
+//                         alt="green iguana"
+//                         sx={{
+//                           overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+//                           transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+//                           "&:hover": {
+//                             transform: "scale(1.1)", // Scale the card by 10% when hovered
+//                           },
+//                         }}
+//                       />
+//                       <CardContent sx={{ height: "60px" }}>
+//                         <Typography
+//                           sx={{
+//                             fontFamily: "Poppins, sans-serif",
+//                             fontSize: "21px",
+//                             fontWeight: "600",
+//                             textAlign: "center",
+//                             color: "#fff",
+//                           }}
+//                         >
+//                           TRANSIT MEDIA
+//                         </Typography>
+//                       </CardContent>
+//                     </CardActionArea>
+//                   </Card>
+//                 </Box>
+//               </Carousel.Item>
+
+//               <Carousel.Item>
+//                 <Box
+//                   sx={{
+//                     marginTop: {
+//                       xs: "20px",
+//                       sm: "20px",
+//                       md: "10px",
+//                       lg: "10px",
+//                     },
+//                     marginBottom: {
+//                       xs: "0px",
+//                       sm: "0px",
+//                       md: "60px",
+//                       lg: "60px",
+//                     },
+//                   }}
+//                 >
+//                   <Card
+//                     sx={{
+//                       maxWidth: "245px",
+//                       maxHeight: 800,
+//                       borderRadius: "150px 150px 0 0",
+//                       border: "2px solid #C02222",
+//                       background:
+//                         "linear-gradient(to bottom, #C02222 85%, #000)",
+//                     }}
+//                   >
+//                     <CardActionArea>
+//                       <CardMedia
+//                         component="img"
+//                         height="250"
+//                         image={add1}
+//                         alt="green iguana"
+//                         sx={{
+//                           overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+//                           transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+//                           "&:hover": {
+//                             transform: "scale(1.1)", // Scale the card by 10% when hovered
+//                           },
+//                         }}
+//                       />
+//                       <CardContent sx={{ height: "60px" }}>
+//                         <Typography
+//                           sx={{
+//                             fontFamily: "Poppins, sans-serif",
+//                             fontSize: "21px",
+//                             fontWeight: "600",
+//                             textAlign: "center",
+//                             color: "#fff",
+//                           }}
+//                         >
+//                           MALL MEDIA
+//                         </Typography>
+//                       </CardContent>
+//                     </CardActionArea>
+//                   </Card>
+//                 </Box>
+//               </Carousel.Item>
+
+//               <Carousel.Item width="20%">
+//                 <Box
+//                   sx={{
+//                     marginTop: {
+//                       xs: "20px",
+//                       sm: "20px",
+//                       md: "10px",
+//                       lg: "10px",
+//                     },
+//                     marginBottom: {
+//                       xs: "0px",
+//                       sm: "0px",
+//                       md: "60px",
+//                       lg: "60px",
+//                     },
+//                   }}
+//                 >
+//                   <Card
+//                     sx={{
+//                       maxWidth: "245px",
+//                       maxHeight: 800,
+//                       borderRadius: "150px 150px 0 0",
+//                       border: "2px solid #C02222",
+//                       background:
+//                         "linear-gradient(to bottom, #C02222 85%, #000)",
+//                     }}
+//                   >
+//                     <CardActionArea>
+//                       <CardMedia
+//                         component="img"
+//                         height="250"
+//                         image={add1}
+//                         alt="green iguana"
+//                         sx={{
+//                           overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+//                           transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+//                           "&:hover": {
+//                             transform: "scale(1.1)", // Scale the card by 10% when hovered
+//                           },
+//                         }}
+//                       />
+//                       <CardContent sx={{ height: "60px" }}>
+//                         <Typography
+//                           sx={{
+//                             fontFamily: "Poppins, sans-serif",
+//                             fontSize: "21px",
+//                             fontWeight: "600",
+//                             textAlign: "center",
+//                             color: "#fff",
+//                           }}
+//                         >
+//                           INFLIGHT BRANDING
+//                         </Typography>
+//                       </CardContent>
+//                     </CardActionArea>
+//                   </Card>
+//                 </Box>
+//               </Carousel.Item>
+//             </Carousel>
+//           </Box>

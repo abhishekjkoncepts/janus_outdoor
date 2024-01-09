@@ -9,10 +9,14 @@ import { Grid, Button, Typography } from "@mui/material";
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
 
+// CSS
 import "./Outdoor.css";
 
 // CARD
 import Cards from "../../Card/Cards";
+
+// REACT-HELMET
+import { Helmet } from "react-helmet";
 
 // JSON
 import { states, stateDistricts } from "../../../assets/json/statesCity";
@@ -59,6 +63,10 @@ export default function Outdoor() {
 
   return (
     <>
+
+    <Helmet>
+      <title>Outdoor</title>
+    </Helmet>
       {/* VIDEO */}
       <Box
         sx={{
@@ -514,19 +522,25 @@ export default function Outdoor() {
           </Grid> */}
           <Grid container spacing={2}>
             {products &&
-              products.filter((item) => item?.category === 'Outdoor').map((item) => (
-                <Cards
-                  key={item.id} // Add a unique key for each mapped element
-                  data={item}
-                  onClick={() => {
-                    navigate(
-                      `/${item?.category?.toLowerCase() ? item?.category?.toLowerCase() : item?.code }/${item?.seotitle ? item?.seotitle : item?.address}/`,
-                      { state: { id: item._id } }
-                    );
-                    console.log("hello world");
-                  }}
-                />
-              ))}
+              products
+                .filter((item) => item?.category === "Outdoor")
+                .map((item) => (
+                  <Cards
+                    key={item.id} // Add a unique key for each mapped element
+                    data={item}
+                    onClick={() => {
+                      navigate(
+                        `/${
+                          item?.category?.toLowerCase()
+                            ? item?.category?.toLowerCase()
+                            : item?.code
+                        }/${item?.seotitle ? item?.seotitle : item?.address}/`,
+                        { state: { id: item._id } }
+                      );
+                      console.log("hello world");
+                    }}
+                  />
+                ))}
           </Grid>
         </Grid>
         <Grid

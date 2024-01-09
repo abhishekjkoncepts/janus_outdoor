@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Carosuel
 import Carousel from "react-grid-carousel";
@@ -8,6 +8,10 @@ import { Grid, Typography, Button, Box } from "@mui/material";
 
 // REACT_ROUTER_DOM
 import { Link } from "react-router-dom";
+
+// REDUX
+import { useSelector } from "react-redux";
+import { getProductsCategories } from "../../../redux/actions/Home";
 
 // IMAGES
 import sample from "../../../assets/images/Sample.jpg";
@@ -26,6 +30,11 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
 const Categorycarousel = () => {
+  const { productscategories } = useSelector((state) => state.HomeReducer);
+
+  useEffect(() => {
+    getProductsCategories();
+  }, []);
   return (
     <>
       <Grid
@@ -86,8 +95,8 @@ const Categorycarousel = () => {
                 }}
               >
                 Elevate Your Brand with Our Unmatched Outdoor Media Solutions
-                  <br /> – Impactful , Creative & Results-Driven Advertising
-                  Excellence.
+                <br /> – Impactful , Creative & Results-Driven Advertising
+                Excellence.
               </Typography>
             </Box>
           </Box>
@@ -136,65 +145,8 @@ const Categorycarousel = () => {
               style={{ padding: "10px" }}
             >
              
-                <Carousel.Item width="20%">
-                  <Box
-                    sx={{
-                      marginTop: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "10px",
-                        lg: "10px",
-                      },
-                      marginBottom: {
-                        xs: "0px",
-                        sm: "0px",
-                        md: "60px",
-                        lg: "60px",
-                      },
-                    }}
-                  >
-                    <Card
-                      sx={{
-                        maxWidth: "245px",
-                        maxHeight: 800,
-                        borderRadius: "150px 150px 0 0",
-                        border: "2px solid #C02222",
-                        background:
-                          "linear-gradient(to bottom, #C02222 85%, #000)",
-                      }}
-                    >
-                      <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          height="250"
-                          image={add1}
-                          alt="green iguana"
-                          sx={{
-                            overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                            transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                            "&:hover": {
-                              transform: "scale(1.1)", // Scale the card by 10% when hovered
-                            },
-                          }}
-                        />
-                        <CardContent sx={{ height: "60px" }}>
-                          <Typography
-                            sx={{
-                              fontFamily: "Poppins, sans-serif",
-                              fontSize: "21px",
-                              fontWeight: "600",
-                              textAlign: "center",
-                              color: "#fff",
-                            }}
-                          >
-                            OUTDOOR
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Card>
-                  </Box>
-                </Carousel.Item>
-                            
+             {productscategories ? (
+            productscategories.map((item) => (
               <Carousel.Item width="20%">
                 <Box
                   sx={{
@@ -212,68 +164,7 @@ const Categorycarousel = () => {
                     },
                   }}
                 >
-                  {/* <Link to="/outdoor" style={{ textDecoration: "none" }}> */}
-                  <Card
-                    sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "2px solid #C02222",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add1}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
-                          sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
-                          }}
-                        >
-                          CINEMA
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                  {/* </Link> */}
-                </Box>
-              </Carousel.Item>
 
-              <Carousel.Item width="20%">
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  {/* <Link to="/outdoor" style={{ textDecoration: "none" }}> */}
                   <Card
                     sx={{
                       maxWidth: "245px",
@@ -308,197 +199,18 @@ const Categorycarousel = () => {
                             color: "#fff",
                           }}
                         >
-                          AIRPORT BRANDING
+                          {item?.category}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                   </Card>
-                  {/* </Link> */}
                 </Box>
-              </Carousel.Item>
+              </Carousel.Item> ))
+          ) : (
+            <Typography>No categories available</Typography>
+          )}
+             
 
-              <Carousel.Item width="20%">
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  {/* <Link to="/outdoor" style={{ textDecoration: "none" }}> */}
-                  <Card
-                    sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "2px solid #C02222",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add1}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
-                          sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
-                          }}
-                        >
-                          TRANSIT MEDIA
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                  {/* </Link> */}
-                </Box>
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  {/* <Link to="/outdoor" style={{ textDecoration: "none" }}> */}
-                  <Card
-                    sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "2px solid #C02222",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add1}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
-                          sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
-                          }}
-                        >
-                          MALL MEDIA
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                  {/* </Link> */}
-                </Box>
-              </Carousel.Item>
-
-              <Carousel.Item width="20%">
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-                  {/* <Link to="/outdoor" style={{ textDecoration: "none" }}> */}
-                  <Card
-                    sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "2px solid #C02222",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add1}
-                        alt="green iguana"
-                        sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
-                        }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
-                          sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
-                          }}
-                        >
-                         INFLIGHT BRANDING
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                  {/* </Link> */}
-                </Box>
-              </Carousel.Item>
             </Carousel>
           </Box>
         </Grid>

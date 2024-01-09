@@ -1,21 +1,18 @@
 import types from "../types";
 
-const initialState = {
-    Articles: null,
-    FullArticle: null,
+const initialstate = {
+  productscategories: null,
 };
 
-export const HomeReducer = (state = initialState, action) => {
-
-    switch (action.type) {
-        case types.GET_ARTICLES:
-            const data = action.payload;
-            return { ...state, Articles: data };
-        case types.GET_ARTICLE_BY_ID:
-                const article = action.payload;
-                return { ...state, FullArticle: article };
-        default:
-            return state;
-    }
-
+export const HomeReducer = (state = initialstate, action) => {
+  switch (action.type) {
+    case types.GET_PRODUCTS_CATEGORIES:
+      const category = action.payload;
+      return {
+        ...state,
+        productscategories: category,
+      };
+    default:
+      return state;
+  }
 };

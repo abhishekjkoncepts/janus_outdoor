@@ -177,21 +177,22 @@ const Aboutus = () => {
                     // lineHeight:"26px"
                   }}
                 >
-                  Welcome to JanusAlive, India's foremost outdoor hoarding media
-                  agency established in 2002. With two decades of expertise,
-                  we've become the nation's largest network in this dynamic
-                  industry. Our commitment to excellence and creativity has
-                  propelled us to the forefront, providing tailored media
-                  solutions for businesses of all sizes. Boasting a 200+ client
-                  portfolio, JanusAlive is dedicated to crafting impactful
-                  outdoor advertising campaigns that leave a lasting impression.
-                  <br />
-                  <br />
-                  Our experienced team merges creativity with strategic
-                  thinking, ensuring your brand stands out in the ever-evolving
-                  advertising landscape. Join JanusAlive for an unparalleled
-                  outdoor advertising journey, making your message resonate with
-                  the world.
+                  Founded in 2002, JanusAlive
+                    is the leading outdoor hoarding media agency in India. With
+                    20 years of experience, we are now the largest network in
+                    the country in this fast-paced sector. Our dedication to
+                    innovation and quality has brought us to the forefront,
+                    where we offer specialized media solutions to companies of
+                    all kinds. With more than 200 clients under its belt,
+                    JanusAlive is committed to creating memorable outdoor
+                    advertising campaigns.
+                    <br />
+                    <br />
+                    Our skilled team combines strategic
+                    thinking with creativity to make sure your brand sticks out
+                    in the constantly changing advertising market. Join
+                    JanusAlive for an unmatched outdoor advertising experience
+                    that will help the world connect with your message.
                 </Typography>
               </Box>
 

@@ -71,7 +71,7 @@ const Cardcarousel = () => {
                   color: "#000",
                 }}
               >
-                OUR TOP SITES
+                HOARDINGS PLACED
               </Typography>
             </Box>
 
@@ -85,8 +85,10 @@ const Cardcarousel = () => {
                   textAlign: "center",
                 }}
               >
-                Explore some of the best business from around the world
-                <br /> from our partners and friends.
+                Cityscape Brilliance Unveiled Journey through our top sites in
+                key cities, showcasing<br /> businesses worldwide—a testament to
+                impactful collaborations.
+                
               </Typography>
             </Box>
           </Box>

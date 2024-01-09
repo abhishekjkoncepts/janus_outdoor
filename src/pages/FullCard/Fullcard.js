@@ -7,11 +7,17 @@ import SendIcon from "@mui/icons-material/Send";
 
 // IMAGES
 import sampleImg from "../../assets/images/add4.webp";
+
+// REACT-ROUTER-DOM
 import { useLocation } from "react-router-dom";
+
+// REDUX
 import { getProductsById } from "../../redux/actions/Outdoor";
 
 // REACT-HELMET
 import { Helmet } from "react-helmet";
+
+// PAGES
 import Popupcomponent from "../PopUp/Popupcomponent";
 
 // TOASTI-FY
@@ -47,9 +53,10 @@ const Fullcard = () => {
   return (
     <>
       <Helmet>
-        <title>{DATA?.seotitle}</title>
+        <title>{DATA?.seotitle ? DATA?.seotitle : DATA?.address}</title>
         <meta name="description" content={DATA?.seodesc} />
       </Helmet>
+      
       {isOpen && (
         <Popupcomponent
           handleClose={togglePopup}

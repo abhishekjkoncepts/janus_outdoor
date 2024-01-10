@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
+import CircularProgress from "@mui/material/CircularProgress";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Grid, Button, Typography } from "@mui/material";
@@ -27,8 +28,9 @@ import {
   getProducts,
   getProductsByState,
 } from "../../../redux/actions/Outdoor";
+
+// REACT-ROUTER_DOM
 import { useNavigate } from "react-router-dom";
-import { Category } from "@mui/icons-material";
 
 // BOOTSTRAP
 import Dropdown from "react-bootstrap/Dropdown";
@@ -38,6 +40,7 @@ export default function Outdoor() {
   const [state, setState] = React.useState(null);
   const [city, setCity] = React.useState("");
   const [type, setType] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
 
   const { products } = useSelector((state) => state.OutdoorReducer);
 
@@ -60,6 +63,16 @@ export default function Outdoor() {
   React.useEffect(() => {
     getProducts();
   }, []);
+
+  // LOADER
+  const handleSubmission = () => {
+    setLoading(true);
+    getProductsByState(state, city, type)
+      .then(() => setLoading(false))
+      .catch(() => setLoading(false));
+  };
+
+
 
   return (
     <>
@@ -471,11 +484,13 @@ export default function Outdoor() {
                 borderRadius: "30px",
                 width: "100px",
               }}
-              onClick={() => {
-                getProductsByState(state, city, type);
-              }}
+              // onClick={() => {
+              //   getProductsByState(state, city, type);
+              // }}
+              onClick={handleSubmission}
             >
-              SUBMIT
+              {/* SUBMIT */}
+              {loading ? <CircularProgress size={24} color="secondary" /> : "SUBMIT"}
             </Button>
           </Box>
         </Grid>
@@ -504,22 +519,6 @@ export default function Outdoor() {
           lg={10.6}
           // sx={{ backgroundColor: "yellow" }}
         >
-          {/* <Grid container spacing={2}>
-            {products &&
-              products.map((item) => (
-                <Cards
-                  key={item.id} // Add a unique key for each mapped element
-                  data={item}
-                  onClick={() => {
-                    navigate(
-                      `/${item?.category?.toLowerCase()}/${item?.seotitle}/`,
-                      { state: { id: item._id } }
-                    );
-                    console.log("hello world");
-                  }}
-                />
-              ))}
-          </Grid> */}
           <Grid container spacing={2}>
             {products &&
               products

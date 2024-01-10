@@ -8,6 +8,7 @@ import { Grid, Typography, Button, Box } from "@mui/material";
 
 // REACT_ROUTER_DOM
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // REDUX
 import { useSelector } from "react-redux";
@@ -30,6 +31,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
 const Categorycarousel = () => {
+  const navigate = useNavigate();
   const { productscategories } = useSelector((state) => state.HomeReducer);
 
   useEffect(() => {
@@ -139,78 +141,91 @@ const Categorycarousel = () => {
               rows={1}
               gap={20}
               loop={true}
-              showDots={false}
-              dotColorActive="#795548"
+              showDots={true}
+              scrollSnap={true}
+              dotColorActive="#C02222"
               dotColorInactive="#ccc"
               style={{ padding: "10px" }}
             >
-             
-             {productscategories ? (
-            productscategories.map((item) => (
-              <Carousel.Item width="20%">
-                <Box
-                  sx={{
-                    marginTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                    marginBottom: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "60px",
-                      lg: "60px",
-                    },
-                  }}
-                >
-
-                  <Card
-                    sx={{
-                      maxWidth: "245px",
-                      maxHeight: 800,
-                      borderRadius: "150px 150px 0 0",
-                      border: "2px solid #C02222",
-                      background:
-                        "linear-gradient(to bottom, #C02222 85%, #000)",
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="250"
-                        image={add1}
-                        alt="green iguana"
+              {productscategories ? (
+                productscategories.map((item) => (
+                  <Carousel.Item width="20%">
+                    <Box
+                      onClick={() => {
+                        if (item.category === "Outdoor") {
+                          navigate("/outdoor");
+                        } else if (item.category === "Cinema") {
+                          navigate("/cinema");
+                        } else if (item.category === "Airport Branding") {
+                          navigate("/airport-branding");
+                        } else if (item.category === "Transit Media") {
+                          navigate("/transit-media");
+                        } else if (item.category === "Mall Media") {
+                          navigate("/mall-media");
+                        } else if (item.category === "Inflight Branding") {
+                          navigate("/inflight-branding");
+                        }
+                      }}
+                      sx={{
+                        marginTop: {
+                          xs: "20px",
+                          sm: "20px",
+                          md: "10px",
+                          lg: "10px",
+                        },
+                        marginBottom: {
+                          xs: "0px",
+                          sm: "0px",
+                          md: "60px",
+                          lg: "60px",
+                        },
+                      }}
+                    >
+                      <Card
                         sx={{
-                          overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                          transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                          "&:hover": {
-                            transform: "scale(1.1)", // Scale the card by 10% when hovered
-                          },
+                          maxWidth: "245px",
+                          maxHeight: 800,
+                          borderRadius: "150px 150px 0 0",
+                          border: "2px solid #C02222",
+                          background:
+                            "linear-gradient(to bottom, #C02222 85%, #000)",
                         }}
-                      />
-                      <CardContent sx={{ height: "60px" }}>
-                        <Typography
-                          sx={{
-                            fontFamily: "Poppins, sans-serif",
-                            fontSize: "21px",
-                            fontWeight: "600",
-                            textAlign: "center",
-                            color: "#fff",
-                          }}
-                        >
-                          {item?.category}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Box>
-              </Carousel.Item> ))
-          ) : (
-            <Typography>No categories available</Typography>
-          )}
-             
-
+                      >
+                        <CardActionArea>
+                          <CardMedia
+                            component="img"
+                            height="250"
+                            image={add1}
+                            alt="green iguana"
+                            sx={{
+                              overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
+                              transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
+                              "&:hover": {
+                                transform: "scale(1.1)", // Scale the card by 10% when hovered
+                              },
+                            }}
+                          />
+                          <CardContent sx={{ height: "60px" }}>
+                            <Typography
+                              sx={{
+                                fontFamily: "Poppins, sans-serif",
+                                fontSize: "21px",
+                                fontWeight: "600",
+                                textAlign: "center",
+                                color: "#fff",
+                              }}
+                            >
+                              {item?.category}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                      </Card>
+                    </Box>
+                  </Carousel.Item>
+                ))
+              ) : (
+                <Typography>No categories available</Typography>
+              )}
             </Carousel>
           </Box>
         </Grid>

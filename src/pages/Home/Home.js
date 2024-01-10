@@ -403,7 +403,7 @@ const Home = () => {
         </Box>
 
         {/* OUR SERVICES - CATEGORIES */}
-        <Box>
+        {/* <Box>
           <Grid
             container
             sx={{
@@ -831,8 +831,8 @@ const Home = () => {
               // sx={{ backgroundColor: "orange" }}
             ></Grid>
           </Grid>
-        </Box>
-        {/* <Categorycarousel/> */}
+        </Box> */}
+        <Categorycarousel/>
 
         {/* EXPLORE */}
         <Box>

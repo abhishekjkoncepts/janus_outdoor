@@ -288,18 +288,19 @@ const Popupcomponent = (props) => {
             // sx={{ backgroundColor: "green" }}
           ></Grid>
         </Grid>
+
         {/* Button */}
         <Grid container>
           <Grid item xs={12} sm={12} md={0.5} lg={0.5}></Grid>
           <Grid item xs={12} sm={12} md={11} lg={11}>
             <Box
               sx={{
-                marginTop: { xs: "20px", sm: "20px", md: "50px", lg: "50px" },
-                paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
-                paddingRight: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+                marginTop: { xs: "20px", sm: "20px", md: "40px", lg: "40px" },
+                paddingLeft: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
+                paddingRight: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
               }}
             >
-              <Button
+              {/* <Button
                 variant="contained"
                 disableRipple
                 disableElevation
@@ -315,19 +316,56 @@ const Popupcomponent = (props) => {
                     name: name,
                     email: email,
                     phone: phone,
-                    message: message
+                    message: message,
                   });
                   submitenquiry({
                     id: ProductId,
                     name: name,
                     email: email,
                     phone: phone,
-                    message: message
+                    message: message,
                   });
                 }}
               >
                 <Typography>SEND MESSAGE</Typography>
-              </Button>
+              </Button> */}
+              <Box
+                sx={{
+                  bgcolor: "#C02222",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "35px",
+                  borderRadius: "5px",
+                }}
+                onClick={() => {
+                  console.log({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message,
+                  });
+                  submitenquiry({
+                    id: ProductId,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message,
+                  });
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#fff",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                >
+                  SEND MESSAGE
+                </Typography>
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={0.5} lg={0.5}></Grid>
@@ -341,7 +379,7 @@ const Popupcomponent = (props) => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: "10px",
+                marginTop: {xs:"20px",sm:"20px", md:"30px",lg:"30px"},
               }}
             >
               <Box>

@@ -139,7 +139,7 @@ const Categorycarousel = () => {
             <Carousel
               cols={3}
               rows={1}
-              gap={10}
+              gap={50}
               loop={true}
               showDots={true}
               scrollSnap={true}
@@ -185,7 +185,7 @@ const Categorycarousel = () => {
                         sx={{
                           maxWidth: "400px",
                           maxHeight: 700,
-                          borderRadius: "150px 150px 0 0",
+                          borderRadius: "190px 190px 0 0",
                           border: "2px solid #C02222",
                           background:
                             "linear-gradient(to bottom, #C02222 85%, #000)",

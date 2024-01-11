@@ -10,7 +10,6 @@ import { Grid, Typography, Button, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 // IMAGES
-import sample from "../../../assets/images/Sample.jpg";
 import add1 from "../../../assets/images/add1.webp";
 import add2 from "../../../assets/images/add2.webp";
 import add3 from "../../../assets/images/add3.webp";
@@ -25,7 +24,24 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
+// REDUX
+import { useSelector } from "react-redux";
+import {
+  getProducts,
+  getProductsByState,
+} from "../../../redux/actions/Outdoor";
+
+// REACT-ROUTER_DOM
+import { useNavigate } from "react-router-dom";
+
 const Cardcarousel = () => {
+  React.useEffect(() => {
+    getProducts();
+  }, []);
+
+  const { products } = useSelector((state) => state.OutdoorReducer);
+
+  const navigate = useNavigate();
   return (
     <>
       <Grid
@@ -86,9 +102,9 @@ const Cardcarousel = () => {
                 }}
               >
                 Cityscape Brilliance Unveiled Journey through our top sites in
-                key cities, showcasing<br /> businesses worldwide—a testament to
-                impactful collaborations.
-                
+                key cities, showcasing
+                <br /> businesses worldwide—a testament to impactful
+                collaborations.
               </Typography>
             </Box>
           </Box>
@@ -127,56 +143,73 @@ const Cardcarousel = () => {
             }}
           >
             <Carousel
-              cols={4}
+              cols={3}
               rows={1}
-              gap={20}
+              gap={50}
               loop={true}
               showDots={false}
-              dotColorActive="#795548"
+              dotColorActive="#C02222"
               dotColorInactive="#ccc"
               style={{ padding: "10px" }}
             >
-              <Carousel.Item>
-                <Card
-                  sx={{
-                    // maxWidth: 360,
-                    // maxHeight: 800,
-                    borderRadius: "150px 150px 0 0",
-                    border: "1px solid #C02222",
-                  }}
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="250"
-                      image={add1}
-                      alt="green iguana"
-                      sx={{ backgroundColor: "grey" }}
-                    />
-                    <CardContent sx={{ height: "180px" }}>
-                      <Typography
-                        sx={{
-                          fontFamily: "Poppins, sans-serif",
-                          fontSize: "16px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        A.A Circle B.H Road Near Shivappa Nayaka Shoping Complex
-                        Shivamogga
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        State: Karnataka <br />
-                        District: Shivamogga
-                        <br />
-                        City: Shivamogga
-                        <br />
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Carousel.Item>
-
-              <Carousel.Item width="20%">
+              {products &&
+                products.reverse().map((item) => (
+                  <Carousel.Item>
+                    <Card
+                      sx={{
+                        maxWidth: "400px",
+                        maxHeight: 700,
+                        borderRadius: "190px 190px 0 0",
+                        border: "2px solid #C02222",
+                        background:
+                          "linear-gradient(to bottom, #C02222 85%, #000)",
+                      }}
+                      onClick={() => {
+                        navigate(
+                          `/${
+                            item?.category?.toLowerCase()
+                              ? item?.category?.toLowerCase()
+                              : item?.code
+                          }/${item?.url ? item?.url : item?.address}/`,
+                          { state: { id: item._id } }
+                        );
+                        console.log("hello world");
+                      }}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="300"
+                          image={item?.image}
+                          alt="green iguana"
+                          sx={{ backgroundColor: "grey" }}
+                        />
+                        <CardContent sx={{ height: "110px", }}>
+                          <Typography
+                            sx={{
+                              fontFamily: "Poppins, sans-serif",
+                              fontSize: "16px",
+                              fontWeight: "600",
+                              color:"#fff",
+                              display: "-webkit-box",
+                      overflow: "hidden",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: 1,
+                            }}
+                          >
+                            {item?.address}
+                          </Typography>
+                          <Typography variant="body2" color="#fff" sx={{marginTop:"5px"}}  >
+                            State: {item?.state} <br />
+                            City: {item?.city}
+                            <br />
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Carousel.Item>
+                ))}
+              {/* <Carousel.Item width="20%">
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -213,9 +246,9 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -253,9 +286,9 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -292,8 +325,8 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
-              <Carousel.Item>
+              </Carousel.Item> */}
+              {/* <Carousel.Item>
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -329,9 +362,9 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -367,9 +400,9 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -406,9 +439,9 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
                 <Card
                   sx={{
                     maxWidth: 360,
@@ -444,7 +477,7 @@ const Cardcarousel = () => {
                     </CardContent>
                   </CardActionArea>
                 </Card>
-              </Carousel.Item>
+              </Carousel.Item> */}
             </Carousel>
           </Box>
         </Grid>

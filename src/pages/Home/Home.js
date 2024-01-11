@@ -12,7 +12,9 @@ import { Helmet } from "react-helmet";
 // PAGES
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
 import Cardcarousel from "../Carousels/CardCarousel/Cardcarousel";
-import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
+import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel"
+
+
 
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
@@ -2459,6 +2461,7 @@ const Home = () => {
             ></Grid>
           </Grid>
         </Box>
+
 
         {/* <Button
           onClick={() => {

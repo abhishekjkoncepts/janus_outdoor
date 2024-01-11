@@ -70,14 +70,6 @@ export default function Outdoor() {
     getProducts();
   }, []);
 
-  // LOADER
-  const handleSubmission = () => {
-    setLoading(true);
-    getProductsByState(state, city, type)
-      .then(() => setLoading(false))
-      .catch(() => setLoading(false));
-  };
-
   return (
     <>
       <Helmet>
@@ -487,17 +479,11 @@ export default function Outdoor() {
                 borderRadius: "30px",
                 width: "100px",
               }}
-              // onClick={() => {
-              //   getProductsByState(state, city, type);
-              // }}
-              onClick={handleSubmission}
+              onClick={() => {
+                getProductsByState(state, city, type);
+              }}
             >
-              {/* SUBMIT */}
-              {loading ? (
-                <CircularProgress size={24} color="secondary" />
-              ) : (
-                "SUBMIT"
-              )}
+              SUBMIT
             </Button>
           </Box>
         </Grid>

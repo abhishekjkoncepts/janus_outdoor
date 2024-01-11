@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 // PAGES
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
 import Cardcarousel from "../Carousels/CardCarousel/Cardcarousel";
+import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
 
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
@@ -57,7 +58,7 @@ import "./Circle1.css";
 import "./Circle2.css";
 import "./Circle3.css";
 import { getProducts } from "../../redux/actions/Outdoor";
-import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
+
 
 import { getProductsCategories } from "../../redux/actions/Home";
 

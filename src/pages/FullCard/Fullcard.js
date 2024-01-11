@@ -53,7 +53,7 @@ const Fullcard = () => {
   return (
     <>
       <Helmet>
-        <title>{DATA?.seotitle ? DATA?.seotitle : DATA?.address}</title>
+        <title>{DATA?.seotitle ? DATA?.seotitle : (DATA?.address.charAt(0).toUpperCase() + DATA?.address.slice(1).toLowerCase())}</title>
         <meta name="description" content={DATA?.seodesc} />
       </Helmet>
       

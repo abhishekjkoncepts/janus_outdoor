@@ -1,18 +1,27 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { Grid, Button, Typography } from "@mui/material";
+import {
+  Grid,
+  Button,
+  Typography,
+  Box,
+  InputLabel,
+  MenuItem,
+  CircularProgress,
+  FormControl,
+  Select,
+} from "@mui/material";
 
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
 
+// CSS
 import "./Cinema.css";
 
 // CARD
 import Cards from "../../Card/Cards";
+
+// REACT-HELMET
+import { Helmet } from "react-helmet";
 
 // JSON
 import { states, stateDistricts } from "../../../assets/json/statesCity";
@@ -23,12 +32,19 @@ import {
   getProducts,
   getProductsByState,
 } from "../../../redux/actions/Outdoor";
+
+// REACT-ROUTER_DOM
 import { useNavigate } from "react-router-dom";
+
+// BOOTSTRAP
+import Dropdown from "react-bootstrap/Dropdown";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Cinema() {
   const [state, setState] = React.useState(null);
   const [city, setCity] = React.useState("");
   const [type, setType] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
 
   const { products } = useSelector((state) => state.OutdoorReducer);
 
@@ -54,6 +70,9 @@ export default function Cinema() {
 
   return (
     <>
+      <Helmet>
+        <title>Cinema</title>
+      </Helmet>
       {/* VIDEO */}
       <Box
         sx={{
@@ -145,7 +164,7 @@ export default function Cinema() {
                       color: "#fff",
                     }}
                   >
-                    Hoardings In Delhi
+                    Cinema Advertising
                   </Typography>
                 </Box>
                 {/* TEXT 2 */}
@@ -203,16 +222,15 @@ export default function Cinema() {
       {/* DROP-DOWN GRID */}
       <Box
         sx={{
-          marginTop: { xs: "80px", sm: "0px", md: "20px", lg: "20px" },
+          marginTop: { xs: "80px", sm: "80px", md: "20px", lg: "20px" },
         }}
       >
         <Grid
           container
-          sx={
-            {
-              // backgroundColor: { xs: "red",sm: "red",},
-            }
-          }
+          sx={{
+            // backgroundColor: { xs: "red",sm: "red"},
+            height: "100%",
+          }}
         >
           <Grid
             item
@@ -226,6 +244,8 @@ export default function Cinema() {
               }
             }
           ></Grid>
+
+          {/* MUI DROPDOWN */}
 
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Grid container>
@@ -361,7 +381,7 @@ export default function Cinema() {
                     </FormControl>
                   </Box>
 
-                  <Box
+                  {/* <Box
                     sx={{
                       display: "flex",
                       justifyContent: { xs: "center", sm: "center" },
@@ -409,17 +429,48 @@ export default function Cinema() {
                         label="state"
                         onChange={handleChange3}
                       >
-                        <MenuItem value={'Digital'} sx={{ color: "#000" }}>
+                        <MenuItem value={"Digital"} sx={{ color: "#000" }}>
                           Digital
                         </MenuItem>
-                        <MenuItem value={'Unipole'} sx={{ color: "#000" }}>
+                        <MenuItem value={"Unipole"} sx={{ color: "#000" }}>
                           Unipole
                         </MenuItem>
-                        <MenuItem value={3} sx={{ color: "#000" }}>
-                          Billboard
+                        <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
+                          Outdoor
                         </MenuItem>
                       </Select>
                     </FormControl>
+                  </Box> */}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginTop: {
+                        xs: "70px",
+                        sm: "70px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      sx={{
+                        height: "55px",
+                        marginTop: "0px",
+                        marginLeft: "10px",
+                        backgroundColor: "#fafafa",
+                        color: "#000",
+                        borderRadius: "30px",
+                        width: "100px",
+                      }}
+                      onClick={() => {
+                        getProductsByState(state, city);
+                      }}
+                    >
+                      SUBMIT
+                    </Button>
                   </Box>
                 </Box>
               </Grid>
@@ -428,7 +479,7 @@ export default function Cinema() {
         </Grid>
       </Box>
 
-      <Box>
+      {/* <Box>
         <Grid
           item
           xs={12}
@@ -443,6 +494,7 @@ export default function Cinema() {
               justifyContent: "center",
               alignItems: "center",
               marginTop: "40px",
+              marginTop: { xs: "70px", sm: "70px", md: "40px", lg: "40px" },
             }}
           >
             <Button
@@ -457,19 +509,19 @@ export default function Cinema() {
                 width: "100px",
               }}
               onClick={() => {
-                getProductsByState(state, city, type);
+                getProductsByState(state, city);
               }}
             >
               SUBMIT
             </Button>
           </Box>
         </Grid>
-      </Box>
+      </Box> */}
 
       <Grid
         container
         sx={{
-          marginTop: { xs: "300px", sm: "190px", md: "250px", lg: "250px" },
+          marginTop: { xs: "30px", sm: "30px", md: "320px", lg: "320px" },
           marginBottom: "50px",
         }}
       >
@@ -491,16 +543,26 @@ export default function Cinema() {
         >
           <Grid container spacing={2}>
             {products &&
-              products.map((item) => (
-                <Cards
-                  key={item.id} // Add a unique key for each mapped element
-                  data={item}
-                  onClick={() => {
-                    navigate("/full-card");
-                    console.log("hello world");
-                  }}
-                />
-              ))}
+              products
+                .filter((item) => item?.category === "Cinema")
+                .reverse()
+                .map((item) => (
+                  <Cards
+                    key={item.id} // Add a unique key for each mapped element
+                    data={item}
+                    onClick={() => {
+                      navigate(
+                        `/${
+                          item?.category?.toLowerCase()
+                            ? item?.category?.toLowerCase()
+                            : item?.code
+                        }/${item?.seotitle ? item?.seotitle : item?.address}/`,
+                        { state: { id: item._id } }
+                      );
+                      console.log("hello world");
+                    }}
+                  />
+                ))}
           </Grid>
         </Grid>
         <Grid

@@ -1,11 +1,17 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import CircularProgress from "@mui/material/CircularProgress";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { Grid, Button, Typography } from "@mui/material";
+
+// MUI
+import {
+  Grid,
+  Button,
+  Typography,
+  Box,
+  InputLabel,
+  MenuItem,
+  CircularProgress,
+  FormControl,
+  Select,
+} from "@mui/material";
 
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
@@ -72,14 +78,11 @@ export default function Outdoor() {
       .catch(() => setLoading(false));
   };
 
-
-
   return (
     <>
-
-    <Helmet>
-      <title>Outdoor</title>
-    </Helmet>
+      <Helmet>
+        <title>Outdoor</title>
+      </Helmet>
       {/* VIDEO */}
       <Box
         sx={{
@@ -490,7 +493,11 @@ export default function Outdoor() {
               onClick={handleSubmission}
             >
               {/* SUBMIT */}
-              {loading ? <CircularProgress size={24} color="secondary" /> : "SUBMIT"}
+              {loading ? (
+                <CircularProgress size={24} color="secondary" />
+              ) : (
+                "SUBMIT"
+              )}
             </Button>
           </Box>
         </Grid>
@@ -523,6 +530,7 @@ export default function Outdoor() {
             {products &&
               products
                 .filter((item) => item?.category === "Outdoor")
+                .reverse()
                 .map((item) => (
                   <Cards
                     key={item.id} // Add a unique key for each mapped element
@@ -533,7 +541,7 @@ export default function Outdoor() {
                           item?.category?.toLowerCase()
                             ? item?.category?.toLowerCase()
                             : item?.code
-                        }/${item?.seotitle ? item?.seotitle : item?.address}/`,
+                        }/${item?.url ? item?.url : item?.address}/`,
                         { state: { id: item._id } }
                       );
                       console.log("hello world");

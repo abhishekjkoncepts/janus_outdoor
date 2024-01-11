@@ -137,15 +137,15 @@ const Categorycarousel = () => {
             }}
           >
             <Carousel
-              cols={4}
+              cols={3}
               rows={1}
-              gap={20}
+              gap={10}
               loop={true}
               showDots={true}
               scrollSnap={true}
               dotColorActive="#C02222"
               dotColorInactive="#ccc"
-              style={{ padding: "10px" }}
+              // style={{ padding: "10px" }}
             >
               {productscategories ? (
                 productscategories.map((item) => (
@@ -183,8 +183,8 @@ const Categorycarousel = () => {
                     >
                       <Card
                         sx={{
-                          maxWidth: "245px",
-                          maxHeight: 800,
+                          maxWidth: "400px",
+                          maxHeight: 700,
                           borderRadius: "150px 150px 0 0",
                           border: "2px solid #C02222",
                           background:

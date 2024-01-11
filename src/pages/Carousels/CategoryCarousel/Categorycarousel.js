@@ -160,8 +160,8 @@ const Categorycarousel = () => {
                           navigate("/airport-branding");
                         } else if (item.category === "Transit Media") {
                           navigate("/transit-media");
-                        } else if (item.category === "Mall Media") {
-                          navigate("/mall-media");
+                        } else if (item.category === "Mall Branding") {
+                          navigate("/mall-branding");
                         } else if (item.category === "Inflight Branding") {
                           navigate("/inflight-branding");
                         }
@@ -194,7 +194,7 @@ const Categorycarousel = () => {
                         <CardActionArea>
                           <CardMedia
                             component="img"
-                            height="250"
+                            height="300"
                             image={add1}
                             alt="green iguana"
                             sx={{

@@ -12,7 +12,13 @@ import whatsapp from "../../assets/images/FooterIcons/whatsapp.png";
 // CSS
 import "./Footer.css";
 
+// REACT-ROUTER-DOM
+// import { useNavigate } from "react-router-dom";
+
 const Footer = () => {
+
+  // const navigate = useNavigate();
+
   return (
     <Box>
       <Grid
@@ -103,7 +109,7 @@ const Footer = () => {
               <Box
                 sx={{
                   backgroundColor: "#fff",
-                  height: { xs: "25px", sm: "25px", md: "50px", lg: "50px" },
+                  height: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
                   width: { xs: "100px", sm: "100px", md: "160px", lg: "160px" },
                   borderRadius: "30px",
                   display: "flex",
@@ -122,14 +128,15 @@ const Footer = () => {
                     lg: "20px",
                   },
                 }}
+                // onClick={() => navigate("/contactus")}
               >
                 <Typography
                   sx={{
                     fontSize: {
                       xs: "12px",
                       sm: "12px",
-                      md: "14px",
-                      lg: "14px",
+                      md: "16px",
+                      lg: "16px",
                     },
                     fontWeight: "600",
                     color: "#000",

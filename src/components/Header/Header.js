@@ -378,9 +378,9 @@ function Header(props) {
                       </Link>
                     </Box>
 
-                    {/* SIgnage */}
+                    {/* TRANSIT-MEDIA */}
                     <Box sx={{}}>
-                      <Link to={"/signage"} style={{ textDecoration: "none" }}>
+                      <Link to={"/transit-media"} style={{ textDecoration: "none" }}>
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -396,7 +396,53 @@ function Header(props) {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          SIGNAGE
+                          TRANSIT MEDIA
+                        </Typography>
+                      </Link>
+                    </Box>
+
+                    {/* MALL-MEDIA */}
+                    <Box sx={{}}>
+                      <Link to={"/mall-branding"} style={{ textDecoration: "none" }}>
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          MALL BRANDING
+                        </Typography>
+                      </Link>
+                    </Box>
+
+                      {/* INFLIGHT-BRANDING */}
+                      <Box sx={{}}>
+                      <Link to={"/inflight-branding"} style={{ textDecoration: "none" }}>
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
+                        >
+                          INFLIGHT BRANDING
                         </Typography>
                       </Link>
                     </Box>

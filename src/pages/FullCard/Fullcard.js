@@ -630,14 +630,14 @@ const Fullcard = () => {
                     <Box
                       sx={{
                         marginTop: {
-                          xs: "5px",
-                          sm: "5px",
+                          xs: "15px",
+                          sm: "15px",
                           md: "20px",
                           lg: "20px",
                         },
                         marginBottom: {
-                          xs: "5px",
-                          sm: "5px",
+                          xs: "10px",
+                          sm: "10px",
                           md: "20px",
                           lg: "20px",
                         },
@@ -656,8 +656,8 @@ const Fullcard = () => {
                           lg: "115px",
                         },
                         height: {
-                          xs: "30px",
-                          sm: "30px",
+                          xs: "40px",
+                          sm: "40px",
                           md: "40px",
                           lg: "40px",
                         },
@@ -669,8 +669,8 @@ const Fullcard = () => {
                       <Typography
                         sx={{
                           fontSize: {
-                            xs: "12px",
-                            sm: "12px",
+                            xs: "13px",
+                            sm: "13px",
                             md: "15px",
                             lg: "15px",
                           },
@@ -682,8 +682,8 @@ const Fullcard = () => {
                           alignitems: "center",
                         }}
                       >
-                        Enquiry
-                      </Typography>
+                        ENQUIRY                  
+                           </Typography>
                     </Box>
                   </Box>
                  

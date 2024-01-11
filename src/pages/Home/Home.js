@@ -1692,7 +1692,7 @@ const Home = () => {
             >
               <Box
                 sx={{
-                  marginTop: { xs: "10", sm: "10", md: "40px", lg: "40px" },
+                  marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
                   marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
                 }}
               >

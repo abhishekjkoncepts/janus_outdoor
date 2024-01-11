@@ -35,8 +35,10 @@ const Popupcomponent = (props) => {
   useEffect(() => {
     console.log(location);
     getProductsById(location.state.id).then((res) => {
-      console.log("PRODUCTS BY ID", res);
+      console.log("PRODUCTS BY ID", res?._id);
+
       setProductId(res?._id);
+
       setDATA(res);
     });
   }, []);
@@ -347,7 +349,7 @@ const Popupcomponent = (props) => {
                     message: message,
                   });
                   submitenquiry({
-                    id: ProductId,
+                    ProductId: ProductId,
                     name: name,
                     email: email,
                     phone: phone,

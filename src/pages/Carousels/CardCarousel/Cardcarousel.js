@@ -153,7 +153,7 @@ const Cardcarousel = () => {
               style={{ padding: "10px" }}
             >
               {products &&
-                products.reverse().map((item) => (
+                products.reverse().map((item,index) => index < 9 && (
                   <Carousel.Item>
                     <Card
                       sx={{
@@ -184,22 +184,26 @@ const Cardcarousel = () => {
                           alt="green iguana"
                           sx={{ backgroundColor: "grey" }}
                         />
-                        <CardContent sx={{ height: "110px", }}>
+                        <CardContent sx={{ height: "110px" }}>
                           <Typography
                             sx={{
                               fontFamily: "Poppins, sans-serif",
                               fontSize: "16px",
                               fontWeight: "600",
-                              color:"#fff",
+                              color: "#fff",
                               display: "-webkit-box",
-                      overflow: "hidden",
-                      WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 1,
+                              overflow: "hidden",
+                              WebkitBoxOrient: "vertical",
+                              WebkitLineClamp: 1,
                             }}
                           >
                             {item?.address}
                           </Typography>
-                          <Typography variant="body2" color="#fff" sx={{marginTop:"5px"}}  >
+                          <Typography
+                            variant="body2"
+                            color="#fff"
+                            sx={{ marginTop: "5px" }}
+                          >
                             State: {item?.state} <br />
                             City: {item?.city}
                             <br />

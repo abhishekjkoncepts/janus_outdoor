@@ -43,7 +43,7 @@ const navItems = [
     name: "HOME",
   },
   {
-    to: "/aboutus",
+    to: "/about-us/",
     name: "ABOUT US",
   },
   {
@@ -51,7 +51,7 @@ const navItems = [
     name: "OUR SERVICES",
   },
   {
-    to: "/contactus",
+    to: "/contact-us/",
     name: "CONTACT US",
   },
   {
@@ -248,7 +248,7 @@ function Header(props) {
               </Button>
 
               <Box sx={{ paddingLeft: "30px" }}>
-                <Button component={Link} to="/aboutus">
+                <Button component={Link} to="/about-us/">
                   <Typography
                     sx={{
                       color: "#fff",
@@ -452,7 +452,7 @@ function Header(props) {
 
               {/* Dropdown  ends*/}
               <Box sx={{ paddingLeft: "30px" }}>
-                <Button component={Link} to="/contactus">
+                <Button component={Link} to="/contact-us/">
                   <Typography
                     sx={{
                       color: "#fff",

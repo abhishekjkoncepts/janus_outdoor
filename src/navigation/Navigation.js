@@ -38,8 +38,8 @@ const Navigation = () => {
         {/* PARENT-PAGES */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<Aboutus />} />
-          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/about-us/" element={<Aboutus />} />
+          <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/our-service" element={<Ourservice />} />
 

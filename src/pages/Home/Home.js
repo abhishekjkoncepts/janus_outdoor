@@ -24,6 +24,8 @@ import chennai from "../../assets/images/states2/chennai.jpg";
 import hyderabad from "../../assets/images/states2/hyderabad.jpg";
 import pune from "../../assets/images/states2/pune.jpg";
 
+import janusnew from "../../assets/images/janusmain.jpg"
+
 // import amarujala from "../../assets/images/Triumphs/pngresize/amarujala.png";
 // import Digividya from "../../assets/images/Triumphs/pngresize/digividyapeeth.png";
 // import dominos from "../../assets/images/Triumphs/pngresize/dominos250x200.png";
@@ -391,7 +393,7 @@ const Home = () => {
                   },
                 }}
                 alt="add_img1"
-                src={add_img1}
+                src={janusnew}
               />
             </Grid>
 

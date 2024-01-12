@@ -6,6 +6,8 @@ import { Grid, Typography, Button, Box } from "@mui/material";
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
 
+import janusnew from "../../assets/images/janusmain.jpg"
+
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
 const Aboutus = () => {
@@ -278,7 +280,7 @@ const Aboutus = () => {
                 marginBottom: { xs: "20px", sm: "20px", md: "0px", lg: "0px" },
               }}
               alt="add_img1"
-              src={add_img1}
+              src={janusnew}
             />
           </Grid>
 

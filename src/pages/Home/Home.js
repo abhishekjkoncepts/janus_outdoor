@@ -44,7 +44,6 @@ import timesin from "../../assets/images/Triumphs/png230x90/toi.png";
 import timesin2 from "../../assets/images/Triumphs/png230x90/toifull.png";
 import timesin3 from "../../assets/images/Triumphs/png230x90/toifullblack.png";
 
-
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
 
@@ -294,59 +293,60 @@ const Home = () => {
                     world connect with your message.
                   </Typography>
                 </Box>
-
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: {
-                      xs: "center",
-                      sm: "center",
-                      md: "flex-start",
-                      lg: "flex-start",
-                    },
-                    alignItems: "center",
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}
-                >
+                <Link to="/about-us/" style={{textDecoration:"none"}}>
                   <Box
                     sx={{
-                      backgroundColor: "#C02222",
-                      height: "40px",
-                      width: "120px",
-                      borderRadius: "30px",
                       display: "flex",
-                      justifyContent: "center",
+                      justifyContent: {
+                        xs: "center",
+                        sm: "center",
+                        md: "flex-start",
+                        lg: "flex-start",
+                      },
                       alignItems: "center",
                       marginTop: {
-                        xs: "5px",
-                        sm: "5px",
-                        md: "5px",
-                        lg: "5px",
-                      },
-                      marginBottom: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "50px",
-                        lg: "50px",
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
                       },
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "14px",
-                        fontWeight: "600",
-                        color: "#fff",
+                        backgroundColor: "#C02222",
+                        height: "40px",
+                        width: "120px",
+                        borderRadius: "30px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginTop: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "5px",
+                          lg: "5px",
+                        },
+                        marginBottom: {
+                          xs: "20px",
+                          sm: "20px",
+                          md: "50px",
+                          lg: "50px",
+                        },
                       }}
                     >
-                      KNOW MORE
-                    </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          color: "#fff",
+                        }}
+                      >
+                        KNOW MORE
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
+                </Link>
               </Box>
             </Grid>
 
@@ -1587,9 +1587,11 @@ const Home = () => {
               sm={12}
               md={0.7}
               lg={0.7}
-              sx={{
-                //  backgroundColor: "yellow" 
-                }}
+              sx={
+                {
+                  //  backgroundColor: "yellow"
+                }
+              }
             ></Grid>
             <Grid
               item
@@ -1610,7 +1612,12 @@ const Home = () => {
                   sx={{
                     // backgroundColor: "red",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-start",
+                      lg: "flex-start",
+                    },
                     alignItems: "center",
                   }}
                 >
@@ -1691,7 +1698,7 @@ const Home = () => {
                           md: "25px",
                           lg: "25px",
                         },
-                        borderRadius:"10px"
+                        borderRadius: "10px",
                       }}
                       alt="add_img1"
                       // src={timesin}
@@ -1760,7 +1767,12 @@ const Home = () => {
                   sx={{
                     // backgroundColor: "#483D8B",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-end",
+                      lg: "flex-end",
+                    },
                     alignItems: "center",
                   }}
                 >
@@ -1833,7 +1845,12 @@ const Home = () => {
                   sx={{
                     // backgroundColor: "#FF8C00",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-start",
+                      lg: "flex-start",
+                    },
                     alignItems: "center",
                   }}
                 >
@@ -1968,7 +1985,6 @@ const Home = () => {
                   </Box>
                 </Grid>
 
-
                 <Grid
                   item
                   xs={12}
@@ -1978,7 +1994,12 @@ const Home = () => {
                   sx={{
                     // backgroundColor: "#DCDCDC",
                     display: "flex",
-                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
+                    justifyContent: {
+                      xs: "center",
+                      sm: "center",
+                      md: "flex-end",
+                      lg: "flex-end",
+                    },
                     alignItems: "center",
                   }}
                 >

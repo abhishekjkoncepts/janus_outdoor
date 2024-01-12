@@ -17,8 +17,11 @@ import { submitenquiry } from "../../redux/actions/Outdoor";
 import { getProductsById } from "../../redux/actions/Outdoor";
 
 // REACT-ROUTER-DOM
-// REACT-ROUTER-DOM
 import { useLocation } from "react-router-dom";
+
+// TOASTIFY
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./Popupcomponent.css";
 
@@ -299,7 +302,12 @@ const Popupcomponent = (props) => {
               sx={{
                 marginTop: { xs: "20px", sm: "20px", md: "40px", lg: "40px" },
                 paddingLeft: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
-                paddingRight: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
+                paddingRight: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "10px",
+                  lg: "10px",
+                },
               }}
             >
               {/* <Button
@@ -331,7 +339,7 @@ const Popupcomponent = (props) => {
               >
                 <Typography>SEND MESSAGE</Typography>
               </Button> */}
-              <Box
+              {/* <Box
                 sx={{
                   bgcolor: "#C02222",
                   width: "100%",
@@ -367,7 +375,64 @@ const Popupcomponent = (props) => {
                 >
                   SEND MESSAGE
                 </Typography>
+              </Box> */}
+              <Box
+                sx={{
+                  bgcolor: "#C02222",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "35px",
+                  borderRadius: "5px",
+                }}
+                onClick={() => {
+                  console.log({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message,
+                  });
+
+                  submitenquiry({
+                    ProductId: ProductId,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message,
+                  });
+
+                  // Add toast notification
+                  toast.success("Query sent successfully!", {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000, // Adjust the duration of the notification
+                  });
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#fff",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                >
+                  SEND MESSAGE
+                </Typography>
               </Box>
+              <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                toastStyle={{ top: "80px" }}
+              />
+              {/* Add this line to render ToastContainer */}
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={0.5} lg={0.5}></Grid>
@@ -381,7 +446,7 @@ const Popupcomponent = (props) => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: {xs:"20px",sm:"20px", md:"30px",lg:"30px"},
+                marginTop: { xs: "20px", sm: "20px", md: "30px", lg: "30px" },
               }}
             >
               <Box>

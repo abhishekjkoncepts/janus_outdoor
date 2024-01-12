@@ -4,7 +4,9 @@ const getApiUrl = (endpoint) => baseUrl + endpoint;
 
 export const GET_PRODUCTS = getApiUrl('/api/products');
 export const GET_PRODUCTS_BY_STATE = getApiUrl('/api/products');
-export const POST_CUSTOMER_ENQUIRY = getApiUrl('/api/conatactform');
+// export const POST_CUSTOMER_ENQUIRY = getApiUrl('/api/conatactform');
+export const POST_CUSTOMER_ENQUIRY = getApiUrl('/api/query');
 export const GET_PRODUCTS_CATEGORIES = getApiUrl('/api/category')
+export const POST_CUSTOMER_CONTACT = getApiUrl('/api/conatactform')
 
 

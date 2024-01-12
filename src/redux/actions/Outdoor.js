@@ -2,11 +2,11 @@ import store from "../store";
 import types from "../types";
 
 import {
-   GET_PRODUCTS ,
-   GET_PRODUCTS_BY_STATE , 
-   POST_CUSTOMER_ENQUIRY , 
+  GET_PRODUCTS,
+  GET_PRODUCTS_BY_STATE,
+  POST_CUSTOMER_ENQUIRY,
   //  GET_PRODUCTS_CATEGORIES
-  } from "../../services/urls";
+} from "../../services/urls";
 import { apiGet, apiPost } from "../../services/api";
 
 const { dispatch } = store;
@@ -21,14 +21,18 @@ export async function getProducts() {
   });
 }
 
-export async function getProductsByState(state, city , category){
-  return apiGet(`${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&category=${category}`).then((res)=>{
+export async function getProductsByState(state, city, category = "") {
+  const url =
+    category === ""
+      ? `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}`
+      : `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&category=${category}`;
+  return apiGet(url).then((res) => {
     console.log(res);
     dispatch({
       type: types.GET_PRODUCTS_BY_STATE,
-      payload:res,
-    })
-  })
+      payload: res,
+    });
+  });
 }
 
 // export async function getProductsCategories(){
@@ -49,7 +53,5 @@ export async function getProductsById(id) {
 export async function submitenquiry(data) {
   return apiPost(POST_CUSTOMER_ENQUIRY, data).then((res) => {
     console.log(res);
-  })
+  });
 }
-
-

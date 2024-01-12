@@ -56,6 +56,7 @@ const Navigation = () => {
           {/* <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} /> */}
           <Route path="/:category/:seotitle" element={<Fullcard />} />
           <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />}/>
+          {/* <Route path="/:param1?/:param2?/:param3?" element={<Individual />} /> */}
         </Routes>
       </Scrolltotop>
     </BrowserRouter>

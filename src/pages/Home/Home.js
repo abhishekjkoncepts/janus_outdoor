@@ -12,17 +12,10 @@ import { Helmet } from "react-helmet";
 // PAGES
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
 import Cardcarousel from "../Carousels/CardCarousel/Cardcarousel";
-import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel"
-
-
+import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
 
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
-import advertisement from "../../assets/images/adverstising.png";
-import add1 from "../../assets/images/add1.webp";
-import add2 from "../../assets/images/add2.webp";
-import add3 from "../../assets/images/add3.webp";
-import add4 from "../../assets/images/add4.webp";
 
 import delhi from "../../assets/images/states2/indiagate.jpg";
 import tajhotel from "../../assets/images/states2/tajhotel.jpg";
@@ -31,14 +24,26 @@ import chennai from "../../assets/images/states2/chennai.jpg";
 import hyderabad from "../../assets/images/states2/hyderabad.jpg";
 import pune from "../../assets/images/states2/pune.jpg";
 
-import avana from "../../assets/images/clients/avana.jpg";
-import hindustanTimes from "../../assets/images/clients/hindustantimes.jpg";
-import hindware from "../../assets/images/clients/hindware.jpg";
-import micromax from "../../assets/images/clients/micromax.jpg";
-import moonbow from "../../assets/images/clients/moonbow.png";
-import renault from "../../assets/images/clients/renault.jpg";
-import unique from "../../assets/images/clients/unique.jpg";
-import philips from "../../assets/images/clients/philips.jpg";
+// import amarujala from "../../assets/images/Triumphs/pngresize/amarujala.png";
+// import Digividya from "../../assets/images/Triumphs/pngresize/digividyapeeth.png";
+// import dominos from "../../assets/images/Triumphs/pngresize/dominos250x200.png";
+// import geniefie from "../../assets/images/Triumphs/pngresize/geniefie.png";
+// import icici from "../../assets/images/Triumphs/png/icicipruamc-logo.png";
+// import malasia from "../../assets/images/Triumphs/png/malaysiaairlines.png";
+// import nippo from "../../assets/images/Triumphs/png/nipponindiaim.png";
+// import timesin from "../../assets/images/Triumphs/png/timesofindia-png.png";
+
+import amarujala from "../../assets/images/Triumphs/png230x90/amarujala.png";
+import Digividya from "../../assets/images/Triumphs/png230x90/digividyapeeth.png";
+import dominos from "../../assets/images/Triumphs/png230x90/dominos.png";
+import geniefie from "../../assets/images/Triumphs/png230x90/geniefie.png";
+import icici from "../../assets/images/Triumphs/png230x90/icici.png";
+import malasia from "../../assets/images/Triumphs/png230x90/malasia.png";
+import nippo from "../../assets/images/Triumphs/png230x90/nippo.png";
+import timesin from "../../assets/images/Triumphs/png230x90/toi.png";
+import timesin2 from "../../assets/images/Triumphs/png230x90/toifull.png";
+import timesin3 from "../../assets/images/Triumphs/png230x90/toifullblack.png";
+
 
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
@@ -48,8 +53,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
-
-
 
 // VIDEO
 import vid from "../../assets/video/VideoWithText.mp4";
@@ -61,11 +64,9 @@ import "./Circle2.css";
 import "./Circle3.css";
 import { getProducts } from "../../redux/actions/Outdoor";
 
-
 import { getProductsCategories } from "../../redux/actions/Home";
 
 const Home = () => {
-
   return (
     <>
       <Helmet>
@@ -406,436 +407,7 @@ const Home = () => {
         </Box>
 
         {/* OUR SERVICES - CATEGORIES */}
-        {/* <Box>
-          <Grid
-            container
-            sx={{
-              backgroundColor: "#F5F5F5",
-            }}
-          >
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={0.7}
-              lg={0.7}
-              // sx={{ backgroundColor: "purple" }}
-            ></Grid>
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={10.6}
-              lg={10.6}
-              // sx={{ backgroundColor: "pink" }}
-            >
-              <Box
-                sx={{
-                  marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-                  marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
-                }}
-              >
-                <Box>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        xs: "21px",
-                        sm: "21px",
-                        md: "36px",
-                        lg: "36px",
-                      },
-                      fontWeight: "600",
-                      fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
-                      color: "#000",
-                    }}
-                  >
-                    OUR SERVICES
-                  </Typography>
-                </Box>
-
-                <Box>
-                  <Typography
-                    sx={{
-                      color: "#000",
-                      fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "16px",
-                        lg: "16px",
-                      },
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
-                    }}
-                  >
-                    Elevate Your Brand with Our Unmatched Outdoor Media
-                    Solutions
-                    <br /> –{" "}
-                    <span
-                      sx={{
-                        color: "#000",
-                        fontSize: {
-                          xs: "14px",
-                          sm: "14px",
-                          md: "16px",
-                          lg: "16px",
-                        },
-                        fontWeight: "900",
-                        fontFamily: "Poppins, sans-serif",
-                        textAlign: "center",
-                      }}
-                    >
-                      Impactful , Creative & Results-Driven Advertising
-                      Excellence.
-                    </span>
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={0.7}
-              lg={0.7}
-              // sx={{ backgroundColor: "purple" }}
-            ></Grid>
-          </Grid>
-
-          <Grid container sx={{ backgroundColor: "#F5F5F5" }}>
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={0.5}
-              lg={0.5}
-              // sx={{ backgroundColor: "orange" }}
-            ></Grid>
-
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={11}
-              lg={11}
-              sx={{
-                display: "flex",
-              }}
-            >
-              <Grid
-                container
-                sx={
-                  {
-                    //  backgroundColor: "red"
-                  }
-                }
-              >
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Link to="/outdoor" style={{ textDecoration: "none" }}>
-                    <Box
-                      sx={{
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "10px",
-                          lg: "10px",
-                        },
-                        marginBottom: {
-                          xs: "0px",
-                          sm: "0px",
-                          md: "60px",
-                          lg: "60px",
-                        },
-                      }}
-                    >
-                      <Card
-                        sx={{
-                          maxWidth: "245px",
-                          maxHeight: 800,
-                          borderRadius: "150px 150px 0 0",
-                          border: "2px solid #C02222",
-                          background:
-                            "linear-gradient(to bottom, #C02222 85%, #000)",
-                        }}
-                      >
-                        <CardActionArea>
-                          <CardMedia
-                            component="img"
-                            height="250"
-                            image={add1}
-                            alt="green iguana"
-                            sx={{
-                              overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                              transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                              "&:hover": {
-                                transform: "scale(1.1)", // Scale the card by 10% when hovered
-                              },
-                            }}
-                          />
-                          <CardContent sx={{ height: "60px" }}>
-                            <Typography
-                              sx={{
-                                fontFamily: "Poppins, sans-serif",
-                                fontSize: "21px",
-                                fontWeight: "600",
-                                textAlign: "center",
-                                color: "#fff",
-                              }}
-                            >
-                              OUTDOOR
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Box>
-                  </Link>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{
-                    // backgroundColor: "blue",
-                    display: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Link to="/cinema" style={{ textDecoration: "none" }}>
-                    <Box
-                      sx={{
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "10px",
-                          lg: "10px",
-                        },
-                        marginBottom: {
-                          xs: "0px",
-                          sm: "0px",
-                          md: "60px",
-                          lg: "60px",
-                        },
-                      }}
-                    >
-                      <Card
-                        sx={{
-                          maxWidth: "245px",
-                          maxHeight: 800,
-                          borderRadius: "150px 150px 0 0",
-                          border: "2px solid #C02222",
-                          background:
-                            "linear-gradient(to bottom, #C02222 85%, #000)",
-                        }}
-                      >
-                        <CardActionArea>
-                          <CardMedia
-                            component="img"
-                            height="250"
-                            image={add2}
-                            alt="green iguana"
-                            sx={{
-                              overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                              transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                              "&:hover": {
-                                transform: "scale(1.1)", // Scale the card by 10% when hovered
-                              },
-                            }}
-                          />
-                          <CardContent sx={{ height: "60px" }}>
-                            <Typography
-                              sx={{
-                                fontFamily: "Poppins, sans-serif",
-                                fontSize: "21px",
-                                fontWeight: "600",
-                                textAlign: "center",
-                                color: "#fff",
-                              }}
-                            >
-                              CINEMA
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Box>
-                  </Link>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{
-                    // backgroundColor: "green",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Link
-                    to="/airportbranding"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Box
-                      sx={{
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "10px",
-                          lg: "10px",
-                        },
-                        marginBottom: {
-                          xs: "0px",
-                          sm: "0px",
-                          md: "60px",
-                          lg: "60px",
-                        },
-                      }}
-                    >
-                      <Card
-                        sx={{
-                          maxWidth: "245px",
-                          maxHeight: 800,
-                          borderRadius: "150px 150px 0 0",
-                          border: "2px solid  #C02222",
-                          background:
-                            "linear-gradient(to bottom, #C02222 85%, #000)",
-                        }}
-                      >
-                        <CardActionArea>
-                          <CardMedia
-                            component="img"
-                            height="250"
-                            image={add3}
-                            alt="green iguana"
-                            sx={{
-                              overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                              transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                              "&:hover": {
-                                transform: "scale(1.1)", // Scale the card by 10% when hovered
-                              },
-                            }}
-                          />
-                          <CardContent sx={{ height: "60px", width: "100%" }}>
-                            <Typography
-                              sx={{
-                                fontFamily: "Poppins, sans-serif",
-                                fontSize: "21px",
-                                fontWeight: "600",
-                                textAlign: "center",
-                                color: "#fff",
-                              }}
-                            >
-                              AIRPORT BRANDING
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Box>
-                  </Link>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{
-                    // backgroundColor: "yellow",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Link to="/signage" style={{ textDecoration: "none" }}>
-                    <Box
-                      sx={{
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "10px",
-                          lg: "10px",
-                        },
-                        marginBottom: {
-                          xs: "40px",
-                          sm: "40px",
-                          md: "60px",
-                          lg: "60px",
-                        },
-                      }}
-                    >
-                      <Card
-                        sx={{
-                          maxWidth: "245px",
-                          maxHeight: 800,
-                          borderRadius: "150px 150px 0 0",
-                          border: "2px solid #C02222",
-                          background:
-                            "linear-gradient(to bottom, #C02222 85%, #000)",
-                        }}
-                      >
-                        <CardActionArea>
-                          <CardMedia
-                            component="img"
-                            height="250px"
-                            image={add4}
-                            alt="green iguana"
-                            sx={{
-                              overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part
-                              transition: "transform 0.1s ease-in-out", // Add a smooth transition effect
-                              "&:hover": {
-                                transform: "scale(1.1)", // Scale the card by 10% when hovered
-                              },
-                            }}
-                          />
-                          <CardContent sx={{ height: "60px" }}>
-                            <Typography
-                              sx={{
-                                fontFamily: "Poppins, sans-serif",
-                                fontSize: "21px",
-                                fontWeight: "600",
-                                textAlign: "center",
-                                color: "#fff",
-                              }}
-                            >
-                              SIGNAGE
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Box>
-                  </Link>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={0.5}
-              lg={0.5}
-              // sx={{ backgroundColor: "orange" }}
-            ></Grid>
-          </Grid>
-        </Box> */}
-        <Categorycarousel/>
+        <Categorycarousel />
 
         {/* EXPLORE */}
         <Box>
@@ -945,9 +517,11 @@ const Home = () => {
                   sm={12}
                   md={4}
                   lg={4}
-                  sx={{
-                    backgroundcolor: "red",
-                  }}
+                  sx={
+                    {
+                      // backgroundcolor: "red",
+                    }
+                  }
                 >
                   <Box
                     sx={{
@@ -1956,8 +1530,8 @@ const Home = () => {
               {/* <Box> */}
               <Box
                 sx={{
-                  marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-                  marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+                  marginTop: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
+                  marginBottom: { xs: "10", sm: "10", md: "0px", lg: "0px" },
                 }}
               >
                 <Box>
@@ -2013,7 +1587,9 @@ const Home = () => {
               sm={12}
               md={0.7}
               lg={0.7}
-              sx={{ backgroundColor: "#fff" }}
+              sx={{
+                //  backgroundColor: "yellow" 
+                }}
             ></Grid>
             <Grid
               item
@@ -2024,6 +1600,7 @@ const Home = () => {
               sx={{ backgroundColor: "#fff" }}
             >
               <Grid container>
+                {/* amar-ujala */}
                 <Grid
                   item
                   xs={12}
@@ -2031,7 +1608,56 @@ const Home = () => {
                   md={3}
                   lg={3}
                   sx={{
-                    backgroundColor: "#fff",
+                    // backgroundColor: "red",
+                    display: "flex",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                    alignItems: "center",
+                  }}
+                >
+                  <Box>
+                    <Box
+                      component="img"
+                      sx={{
+                        width: {
+                          xs: "200px",
+                          sm: "200px",
+                          md: "230px",
+                          lg: "230px",
+                        },
+                        height: {
+                          xs: "100px",
+                          sm: "100px",
+                          md: "90px",
+                          lg: "90px",
+                        },
+                        marginTop: {
+                          xs: "20px",
+                          sm: "20px",
+                          md: "50px",
+                          lg: "50px",
+                        },
+                        marginBottom: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "25px",
+                          lg: "25px",
+                        },
+                      }}
+                      alt="add_img1"
+                      src={icici}
+                    />
+                  </Box>
+                </Grid>
+
+                {/* digi-vidyapeeth */}
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={3}
+                  lg={3}
+                  sx={{
+                    // backgroundColor: "#8B008B",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -2044,8 +1670,8 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "230px",
+                          lg: "230px",
                         },
                         height: {
                           xs: "100px",
@@ -2056,22 +1682,26 @@ const Home = () => {
                         marginTop: {
                           xs: "20px",
                           sm: "20px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "50px",
+                          lg: "50px",
                         },
                         marginBottom: {
                           xs: "10px",
                           sm: "10px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "25px",
+                          lg: "25px",
                         },
+                        borderRadius:"10px"
                       }}
                       alt="add_img1"
-                      src={avana}
+                      // src={timesin}
+                      src={timesin2}
+                      // src={timesin3}
                     />
                   </Box>
                 </Grid>
 
+                {/* Dominos */}
                 <Grid
                   item
                   xs={12}
@@ -2079,7 +1709,7 @@ const Home = () => {
                   md={3}
                   lg={3}
                   sx={{
-                    backgroundColor: "#fff",
+                    // backgroundColor: "#006400",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -2092,8 +1722,8 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "230px",
+                          lg: "230px",
                         },
                         height: {
                           xs: "100px",
@@ -2104,22 +1734,23 @@ const Home = () => {
                         marginTop: {
                           xs: "20px",
                           sm: "20px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "50px",
+                          lg: "50px",
                         },
                         marginBottom: {
                           xs: "10px",
                           sm: "10px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "25px",
+                          lg: "25px",
                         },
                       }}
                       alt="add_img1"
-                      src={hindustanTimes}
+                      src={geniefie}
                     />
                   </Box>
                 </Grid>
 
+                {/* Genifie */}
                 <Grid
                   item
                   xs={12}
@@ -2127,9 +1758,9 @@ const Home = () => {
                   md={3}
                   lg={3}
                   sx={{
-                    backgroundColor: "#fff",
+                    // backgroundColor: "#483D8B",
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
                     alignItems: "center",
                   }}
                 >
@@ -2140,8 +1771,8 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "230px",
+                          lg: "230px",
                         },
                         height: {
                           xs: "100px",
@@ -2152,78 +1783,21 @@ const Home = () => {
                         marginTop: {
                           xs: "20px",
                           sm: "20px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "50px",
+                          lg: "50px",
                         },
                         marginBottom: {
                           xs: "10px",
                           sm: "10px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "25px",
+                          lg: "25px",
                         },
                       }}
                       alt="add_img1"
-                      src={hindware}
+                      src={dominos}
                     />
                   </Box>
                 </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{
-                    backgroundColor: "#fff",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Box>
-                    <Box
-                      component="img"
-                      sx={{
-                        width: {
-                          xs: "200px",
-                          sm: "200px",
-                          md: "200px",
-                          lg: "200px",
-                        },
-                        height: {
-                          xs: "100px",
-                          sm: "100px",
-                          md: "90px",
-                          lg: "90px",
-                        },
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "40px",
-                          lg: "40px",
-                        },
-                        marginBottom: {
-                          xs: "10px",
-                          sm: "10px",
-                          md: "40px",
-                          lg: "40px",
-                        },
-                      }}
-                      alt="add_img1"
-                      src={micromax}
-                    />
-                  </Box>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{ backgroundColor: "#fff" }}
-                ></Grid>
               </Grid>
             </Grid>
             <Grid
@@ -2232,7 +1806,7 @@ const Home = () => {
               sm={12}
               md={0.7}
               lg={0.7}
-              sx={{ backgroundColor: "#fff" }}
+              // sx={{ backgroundColor: "yellow" }}
             ></Grid>
           </Grid>
 
@@ -2244,11 +1818,12 @@ const Home = () => {
               sm={12}
               md={0.7}
               lg={0.7}
-              sx={{ backgroundColor: "#fff" }}
+              // sx={{ backgroundColor: "#66CDAA" }}
             ></Grid>
 
             <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
               <Grid container>
+                {/* icici */}
                 <Grid
                   item
                   xs={12}
@@ -2256,7 +1831,55 @@ const Home = () => {
                   md={3}
                   lg={3}
                   sx={{
-                    backgroundColor: "#fff",
+                    // backgroundColor: "#FF8C00",
+                    display: "flex",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-start" , lg:"flex-start"},
+                    alignItems: "center",
+                  }}
+                >
+                  <Box>
+                    <Box
+                      component="img"
+                      sx={{
+                        width: {
+                          xs: "200px",
+                          sm: "200px",
+                          md: "250px",
+                          lg: "250px",
+                        },
+                        height: {
+                          xs: "100px",
+                          sm: "100px",
+                          md: "90%",
+                          lg: "90%",
+                        },
+                        marginTop: {
+                          xs: "20px",
+                          sm: "20px",
+                          md: "25px",
+                          lg: "25px",
+                        },
+                        marginBottom: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "50px",
+                          lg: "50px",
+                        },
+                      }}
+                      alt="add_img1"
+                      src={malasia}
+                    />
+                  </Box>
+                </Grid>
+
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={3}
+                  lg={3}
+                  sx={{
+                    // backgroundColor: "#00CED1",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -2269,30 +1892,30 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "250px",
+                          lg: "250px",
                         },
                         height: {
                           xs: "100px",
                           sm: "100px",
-                          md: "90px",
-                          lg: "90px",
+                          md: "90%",
+                          lg: "90%",
                         },
                         marginTop: {
                           xs: "20px",
                           sm: "20px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "25px",
+                          lg: "25px",
                         },
                         marginBottom: {
                           xs: "10px",
                           sm: "10px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "50px",
+                          lg: "50px",
                         },
                       }}
                       alt="add_img1"
-                      src={moonbow}
+                      src={Digividya}
                     />
                   </Box>
                 </Grid>
@@ -2304,7 +1927,7 @@ const Home = () => {
                   md={3}
                   lg={3}
                   sx={{
-                    backgroundColor: "#fff",
+                    // backgroundColor: "#1E90FF",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -2317,33 +1940,34 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "250px",
+                          lg: "250px",
                         },
                         height: {
                           xs: "100px",
                           sm: "100px",
-                          md: "90px",
-                          lg: "90px",
+                          md: "90%",
+                          lg: "90%",
                         },
                         marginTop: {
                           xs: "20px",
                           sm: "20px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "25px",
+                          lg: "25px",
                         },
                         marginBottom: {
                           xs: "10px",
                           sm: "10px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "50px",
+                          lg: "50px",
                         },
                       }}
                       alt="add_img1"
-                      src={renault}
+                      src={amarujala}
                     />
                   </Box>
                 </Grid>
+
 
                 <Grid
                   item
@@ -2352,9 +1976,9 @@ const Home = () => {
                   md={3}
                   lg={3}
                   sx={{
-                    backgroundColor: "#fff",
+                    // backgroundColor: "#DCDCDC",
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: {xs:"center" , sm:"center" , md:"flex-end" , lg:"flex-end"},
                     alignItems: "center",
                   }}
                 >
@@ -2365,30 +1989,30 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "230px",
+                          lg: "230px",
                         },
                         height: {
                           xs: "100px",
                           sm: "100px",
-                          md: "90px",
-                          lg: "90px",
+                          md: "90%",
+                          lg: "90%",
                         },
                         marginTop: {
                           xs: "20px",
                           sm: "20px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "25px",
+                          lg: "25px",
                         },
                         marginBottom: {
                           xs: "10px",
                           sm: "10px",
-                          md: "40px",
-                          lg: "40px",
+                          md: "50px",
+                          lg: "50px",
                         },
                       }}
                       alt="add_img1"
-                      src={unique}
+                      src={nippo}
                     />
                   </Box>
                 </Grid>
@@ -2399,55 +2023,7 @@ const Home = () => {
                   sm={12}
                   md={3}
                   lg={3}
-                  sx={{
-                    backgroundColor: "#fff",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Box>
-                    <Box
-                      component="img"
-                      sx={{
-                        width: {
-                          xs: "200px",
-                          sm: "200px",
-                          md: "200px",
-                          lg: "200px",
-                        },
-                        height: {
-                          xs: "100px",
-                          sm: "100px",
-                          md: "90px",
-                          lg: "90px",
-                        },
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "40px",
-                          lg: "40px",
-                        },
-                        marginBottom: {
-                          xs: "10px",
-                          sm: "10px",
-                          md: "40px",
-                          lg: "40px",
-                        },
-                      }}
-                      alt="add_img1"
-                      src={philips}
-                    />
-                  </Box>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  lg={3}
-                  sx={{ backgroundColor: "#fff" }}
+                  // sx={{ backgroundColor: "#66CDAA" }}
                 ></Grid>
               </Grid>
             </Grid>
@@ -2461,7 +2037,6 @@ const Home = () => {
             ></Grid>
           </Grid>
         </Box>
-
 
         {/* <Button
           onClick={() => {

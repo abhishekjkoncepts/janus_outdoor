@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
@@ -13,190 +13,38 @@ import "./Contactus.css";
 // IMAGES
 import address from "../../assets/images/address.png";
 import call from "../../assets/images/call.png";
-import email from "../../assets/images/email.png";
+import Gmail from "../../assets/images/email.png";
+
+// post
+import { submitContactDetails } from "../../redux/actions/Contactus";
+import { submitenquiry } from "../../redux/actions/Outdoor";
+
+// Toastify
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 const Contactus = () => {
-  return (
-    // <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "66px", lg: "66px" } }}>
-    //   {/* Name and Email */}
-    //   <Grid container>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "red" }}
-    //     ></Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "green" }}
-    //     >
-    //       <Box sx={{marginTop:"20px"}}>
-    //       <Box
-    //         sx={{
-    //           display: "flex",
-    //           justifyContent: "center",
-    //           alignItems: "center",
-    //         }}
-    //       >
-    //         <TextField
-    //           id="outlined-basic"
-    //           label="Name*"
-    //           variant="outlined"
-    //           sx={{ width: "98%" }}
-    //         />
-    //       </Box>
-    //       </Box>
-    //     </Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "yellow" }}
-    //     >
-    //       <Box
-    //         sx={{
-    //           display: "flex",
-    //           justifyContent: "center",
-    //           alignItems: "center",
-    //         }}
-    //       >
-    //         <TextField
-    //           id="outlined-basic"
-    //           label="Email*"
-    //           variant="outlined"
-    //           sx={{ width: "98%" }}
-    //         />
-    //       </Box>
-    //     </Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "red" }}
-    //     ></Grid>
-    //   </Grid>
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [city, setCity] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
-    //   {/* Name and Phone */}
-    //   <Grid container>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "red" }}
-    //     ></Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "green" }}
-    //     >
-    //       <Box
-    //         sx={{
-    //           display: "flex",
-    //           justifyContent: "center",
-    //           alignItems: "center",
-    //         }}
-    //       >
-    //         <TextField
-    //           id="outlined-basic"
-    //           label="City*"
-    //           variant="outlined"
-    //           sx={{ width: "98%" }}
-    //           color="success"
-    //         />
-    //       </Box>
-    //     </Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "yellow" }}
-    //     >
-    //       <Box
-    //         sx={{
-    //           display: "flex",
-    //           justifyContent: "center",
-    //           alignItems: "center",
-    //         }}
-    //       >
-    //         <TextField
-    //           id="outlined-basic"
-    //           label="Pin Code*"
-    //           variant="outlined"
-    //           sx={{ width: "98%" }}
-    //         />
-    //       </Box>
-    //     </Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "red" }}
-    //     ></Grid>
-    //   </Grid>
-    //   {/* message */}
-    //   <Grid container>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "red" }}
-    //     ></Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={6}
-    //       lg={6}
-    //       sx={{ backgroundColor: "green" }}
-    //     >
-    //       <Box
-    //         sx={{
-    //           display: "flex",
-    //           justifyContent: "center",
-    //           alignItems: "center",
-    //         }}
-    //       >
-    //         <TextField
-    //           id="outlined-multiline-flexible"
-    //           label="Multiline"
-    //           multiline
-    //           maxRows={6}
-    //           sx={{ width: "99%" }}
-    //         />
-    //       </Box>
-    //     </Grid>
-    //     <Grid
-    //       item
-    //       xs={12}
-    //       sm={12}
-    //       md={3}
-    //       lg={3}
-    //       sx={{ backgroundColor: "red" }}
-    //     ></Grid>
-    //   </Grid>
-    //   {/* message */}
-    // </Box>
+  const handleSubmit = () => {
+    submitContactDetails({
+      name: name,
+      email: email,
+      phone: Number(phone),
+      message: message,
+      city: city,
+    }).then(() => {
+      // Display a success message using Toastify
+      toast.success("Thanks, we will contact you soon");
+    });
+  };
+  return (
     <>
       <Box
         sx={{ marginTop: { xs: "51px", sm: "51px", md: "66px", lg: "66px" } }}
@@ -253,7 +101,7 @@ const Contactus = () => {
                     md: "10px",
                     lg: "10px",
                   },
-                  paddingLeft:{xs:"5px",sm:"5px",md:"0px",lg:"0px"}
+                  paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
                 }}
               >
                 <Typography
@@ -268,14 +116,20 @@ const Contactus = () => {
                 </Typography>
               </Box>
 
-              <Box sx={{ display: "flex", flexDirection: "column", paddingLeft:{xs:"5px",sm:"5px",md:"0px",lg:"0px"} }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                }}
+              >
                 {/* Address */}
                 <Box
                   sx={{
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "flex-start",
-                    marginTop:{xs:"5px",sm:"5px",md:"5px",lg:"5px"}
+                    marginTop: { xs: "5px", sm: "5px", md: "5px", lg: "5px" },
                   }}
                 >
                   <Box>
@@ -311,8 +165,7 @@ const Contactus = () => {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "flex-start",
-                    marginTop:{xs:"5px",sm:"5px",md:"5px",lg:"5px"}
-
+                    marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
                   }}
                 >
                   <Box>
@@ -340,12 +193,12 @@ const Contactus = () => {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "flex-start",
-                    marginTop:{xs:"5px",sm:"5px",md:"5px",lg:"5px"}
+                    marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
                   }}
                 >
                   <Box>
                     <img
-                      src={email}
+                      src={Gmail}
                       style={{ width: "20px", height: "20px" }}
                     />
                   </Box>
@@ -381,8 +234,8 @@ const Contactus = () => {
                 marginTop: {
                   xs: "20px",
                   sm: "20px",
-                  md: "100px",
-                  lg: "100px",
+                  md: "120px",
+                  lg: "120px",
                 },
                 marginBottom: {
                   xs: "20px",
@@ -423,6 +276,10 @@ const Contactus = () => {
                       sx={{
                         width: { xs: "95%", sm: "95%", md: "98%", lg: "98%" },
                       }}
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
                     />
                   </Box>
                 </Grid>
@@ -454,6 +311,10 @@ const Contactus = () => {
                       variant="outlined"
                       sx={{
                         width: { xs: "95%", sm: "95%", md: "98%", lg: "98%" },
+                      }}
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
                       }}
                     />
                   </Box>
@@ -496,6 +357,10 @@ const Contactus = () => {
                       sx={{
                         width: { xs: "95%", sm: "95%", md: "98%", lg: "98%" },
                       }}
+                      value={city}
+                      onChange={(e) => {
+                        setCity(e.target.value);
+                      }}
                     />
                   </Box>
                 </Grid>
@@ -528,10 +393,14 @@ const Contactus = () => {
                   >
                     <TextField
                       id="outlined-basic"
-                      label="Pin Code*"
+                      label="Phone*"
                       variant="outlined"
                       sx={{
                         width: { xs: "95%", sm: "95%", md: "98%", lg: "98%" },
+                      }}
+                      value={phone}
+                      onChange={(e) => {
+                        setPhone(e.target.value);
                       }}
                     />
                   </Box>
@@ -575,6 +444,10 @@ const Contactus = () => {
                       sx={{
                         width: { xs: "95%", sm: "95%", md: "99%", lg: "99%" },
                       }}
+                      value={message}
+                      onChange={(e) => {
+                        setMessage(e.target.value);
+                      }}
                     />
                   </Box>
                 </Grid>
@@ -582,92 +455,61 @@ const Contactus = () => {
 
               {/* Button */}
               <Grid container>
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  lg={12}
-                  // sx={{ backgroundColor: "pink" }}
+          <Grid item xs={12} sm={12} md={12} lg={12}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: {
+                  xs: "center",
+                  sm: "center",
+                  md: "flex-start",
+                  lg: "flex-start",
+                },
+                paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+              }}
+            >
+              <Box
+                sx={{
+                  marginTop: { xs: "15px", sm: "15px", md: "20px", lg: "20px" },
+                  marginBottom: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "10px",
+                    lg: "10px",
+                  },
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    sm: "center",
+                    md: "center",
+                    lg: "center",
+                  },
+                  alignItems: "center",
+                  width: { xs: "100px", sm: "100px", md: "115px", lg: "115px" },
+                  height: { xs: "35px", sm: "35px", md: "40px", lg: "40px" },
+                  backgroundColor: "#C02222",
+                  borderRadius: "20px",
+                }}
+                onClick={handleSubmit}
+              >
+                <Typography
+                  sx={{
+                    fontSize: { xs: "12px", sm: "12px", md: "15px", lg: "15px" },
+                    fontFamily: "Poppins, sans-serif",
+                    fontWeight: "600",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: {
-                        xs: "center",
-                        sm: "center",
-                        md: "flex-start",
-                        lg: "flex-start",
-                      },
-                      paddingLeft: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        marginTop: {
-                          xs: "15px",
-                          sm: "15px",
-                          md: "20px",
-                          lg: "20px",
-                        },
-                        marginBottom: {
-                          xs: "5px",
-                          sm: "5px",
-                          md: "10px",
-                          lg: "10px",
-                        },
-                        display: "flex",
-                        justifyContent: {
-                          xs: "center",
-                          sm: "center",
-                          md: "center",
-                          lg: "center",
-                        },
-                        alignItems: "center",
-                        width: {
-                          xs: "100px",
-                          sm: "100px",
-                          md: "115px",
-                          lg: "115px",
-                        },
-                        height: {
-                          xs: "35px",
-                          sm: "35px",
-                          md: "40px",
-                          lg: "40px",
-                        },
-                        backgroundColor: "#C02222",
-                        borderRadius: "20px",
-                      }}
-                      // onClick={togglePopup}
-                    >
-                      <Typography
-                        sx={{
-                          fontSize: {
-                            xs: "12px",
-                            sm: "12px",
-                            md: "15px",
-                            lg: "15px",
-                          },
-                          fontFamily: "Poppins, sans-serif",
-                          fontWeight: "600",
-                          color: "white",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignitems: "center",
-                        }}
-                      >
-                        Submit
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Grid>
-              </Grid>
+                  Submit
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <ToastContainer position="bottom-right" autoClose={3000} />
+        </Grid>
             </Box>
           </Grid>
 

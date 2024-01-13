@@ -67,20 +67,7 @@ const navItems = [
 ];
 
 function Header(props) {
-// PopOver
-const [anchorEl2, setAnchorEl2] = React.useState(null);
-
-const handlePopoverOpen = (event) => {
-  setAnchorEl2(event.currentTarget);
-};
-
-const handlePopoverClose = () => {
-  setAnchorEl2(null);
-};
-
-const open = Boolean(anchorEl2);
-
-
+  
   // dropdwon
   const [anchorEl, setAnchorEl] = useState(false);
 
@@ -177,9 +164,9 @@ const open = Boolean(anchorEl2);
         })}
       </List> */}
 
-      <Box sx={{ marginTop: "10px" }}>
+      <Box sx={{ marginTop: "30px" }}>
         {/* Home */}
-        <Box sx={{display:"flex" ,flexDirection:"row"}}>
+        <Box sx={{display:"flex" ,flexDirection:"row" ,marginLeft:"20px" ,marginTop:"15px"}}>
           <Box>
             <img src={homeIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
           </Box>
@@ -203,7 +190,7 @@ const open = Boolean(anchorEl2);
         </Box>
 
         {/* About us  */}
-        <Box sx={{display:"flex" ,flexDirection:"row"}}>
+        <Box sx={{display:"flex" ,flexDirection:"row" ,marginLeft:"20px"}}>
           <Box>
             <img src={aboutUsIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
           </Box>
@@ -226,8 +213,32 @@ const open = Boolean(anchorEl2);
           </Box>
         </Box>
 
+        {/* Contact us  */}
+        <Box sx={{display:"flex" ,flexDirection:"row" ,marginLeft:"20px"}}>
+          <Box>
+            <img src={servicesIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
+          </Box>
+          <Box>
+            <Link to={"/services"} style={{ textDecoration: "none" }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                  fontFamily: "Poppins, sans-serif",
+                  marginLeft: "4px",
+                  paddingTop: "5px",
+                  paddingBottom: "5px",
+                }}
+              >
+                SERVICES
+              </Typography>
+            </Link>
+          </Box>
+        </Box>
+
          {/* Contact us  */}
-         <Box sx={{display:"flex" ,flexDirection:"row"}}>
+         <Box sx={{display:"flex" ,flexDirection:"row" ,marginLeft:"20px"}}>
           <Box>
             <img src={contactUsIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
           </Box>
@@ -249,39 +260,6 @@ const open = Boolean(anchorEl2);
             </Link>
           </Box>
         </Box>
-
-        {/* Services */}
-        <div>
-      <Typography
-        aria-owns={open ? 'mouse-over-popover' : undefined}
-        aria-haspopup="true"
-        onMouseEnter={handlePopoverOpen}
-        onMouseLeave={handlePopoverClose}
-        sx={{color:"#000"}}
-      >
-        Hover with a Popover.
-      </Typography>
-      <Popover
-        id="mouse-over-popover"
-        sx={{
-          pointerEvents: 'none',
-        }}
-        open={open}
-        anchorEl={anchorEl2}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        onClose={handlePopoverClose}
-        disableRestoreFocus
-      >
-        <Typography sx={{ p: 1 }}>I use Popover.</Typography>
-      </Popover>
-    </div>
       </Box>
     </Box>
   );

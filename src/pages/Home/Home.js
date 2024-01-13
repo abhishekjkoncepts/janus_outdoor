@@ -71,7 +71,13 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>JanusAlive</title>
+        <title>JanusAlive India's Largest Outdoor Advertising Agency In India</title>
+        <meta
+          name="description"
+          content={
+            "Boost your brand visibility with JanusAlive, India's premier outdoor advertising agency. Elevate your reach and impact through strategic outdoor campaigns"
+          }
+          />
       </Helmet>
 
       <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" } }}>

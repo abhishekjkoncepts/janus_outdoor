@@ -195,8 +195,8 @@ const Footer = () => {
           >
             <Typography
               sx={{
-                fontSize: "11px",
-                fontWeight: "500",
+                fontSize: "13px",
+                fontWeight: "400",
                 color: "#fff",
                 fontFamily: "Poppins, sans-serif",
               }}

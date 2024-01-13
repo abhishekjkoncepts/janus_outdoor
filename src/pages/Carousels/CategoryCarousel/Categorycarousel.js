@@ -153,17 +153,17 @@ const Categorycarousel = () => {
                     <Box
                       onClick={() => {
                         if (item.category === "Outdoor") {
-                          navigate("/outdoor");
+                          navigate("/outdoor/");
                         } else if (item.category === "Cinema") {
-                          navigate("/cinema");
+                          navigate("/cinema/");
                         } else if (item.category === "Airport Branding") {
-                          navigate("/airport-branding");
+                          navigate("/airport-branding/");
                         } else if (item.category === "Transit Media") {
-                          navigate("/transit-media");
+                          navigate("/transit-media/");
                         } else if (item.category === "Mall Branding") {
-                          navigate("/mall-branding");
+                          navigate("/mall-branding/");
                         } else if (item.category === "Inflight Branding") {
-                          navigate("/inflight-branding");
+                          navigate("/inflight-branding/");
                         }
                       }}
                       sx={{

@@ -284,8 +284,7 @@ const Home = () => {
                       // lineHeight:"26px"
                     }}
                   >
-                    Founded in 2002, JanusAlive is the leading outdoor hoarding
-                    media agency in India. With 20 years of experience, we are
+                    Founded in 2002, JanusAlive is the leading Outdoor  Advertising agency in India. With 20 years of experience, we are
                     now the largest network in the country in this fast-paced
                     sector. Our dedication to innovation and quality has brought
                     us to the forefront, where we offer specialized media

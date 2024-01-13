@@ -44,12 +44,12 @@ const Navigation = () => {
           <Route path="/our-service" element={<Ourservice />} />
 
           {/* CATEGORY*/}
-          <Route path="/outdoor" element={<Outdoor />} />
-          <Route path="/cinema" element={<Cinema />} />
-          <Route path="/airport-branding" element={<Airportbranding />} />
-          <Route path="/inflight-branding" element={<Inflightbranding />} />
-          <Route path="/mall-branding" element={<Mallmedia />} />
-          <Route path="/transit-media" element={<Transitmedia />} />
+          <Route path="/outdoor/" element={<Outdoor />} />
+          <Route path="/cinema/" element={<Cinema />} />
+          <Route path="/airport-branding/" element={<Airportbranding />} />
+          <Route path="/inflight-branding/" element={<Inflightbranding />} />
+          <Route path="/mall-branding/" element={<Mallmedia />} />
+          <Route path="/transit-media/" element={<Transitmedia />} />
 
           {/* FULl CArd */}
           {/* <Route path="/seedetails/:seotitle" element={<Fullcard />} /> */}

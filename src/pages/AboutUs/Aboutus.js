@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
@@ -6,15 +6,15 @@ import { Grid, Typography, Button, Box } from "@mui/material";
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
 
-import janusnew from "../../assets/images/janusmain.jpg"
+import janusnew from "../../assets/images/janusmain.jpg";
 
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
 const Aboutus = () => {
   return (
     <Box sx={{ marginTop: { xs: "55px", sm: "55px", md: "50px", lg: "50px" } }}>
-            {/* WE SEE THINGS DIFFERENTLY */}
-        <Box>
+      {/* WE SEE THINGS DIFFERENTLY */}
+      <Box>
         <Grid container>
           <Grid
             item
@@ -41,7 +41,12 @@ const Aboutus = () => {
                 display: "flex",
                 flexDirection: "column",
                 marginTop: { xs: "10px", sm: "10px", md: "50px", lg: "50px" },
-                marginBottom: { xs: "10px", sm: "10px", md: "60px", lg: "60px" },
+                marginBottom: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "60px",
+                  lg: "60px",
+                },
               }}
             >
               <Box
@@ -174,27 +179,26 @@ const Aboutus = () => {
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#333333",
-                    marginBottom:"60px"
+                    marginBottom: "60px",
 
                     // lineHeight:"26px"
                   }}
                 >
-                  Founded in 2002, JanusAlive
-                    is the leading outdoor hoarding media agency in India. With
-                    20 years of experience, we are now the largest network in
-                    the country in this fast-paced sector. Our dedication to
-                    innovation and quality has brought us to the forefront,
-                    where we offer specialized media solutions to companies of
-                    all kinds. With more than 200 clients under its belt,
-                    JanusAlive is committed to creating memorable outdoor
-                    advertising campaigns.
-                    <br />
-                    <br />
-                    Our skilled team combines strategic
-                    thinking with creativity to make sure your brand sticks out
-                    in the constantly changing advertising market. Join
-                    JanusAlive for an unmatched outdoor advertising experience
-                    that will help the world connect with your message.
+                  Founded in 2002, JanusAlive is the leading Outdoor Advertising
+                  agency in India. With 20 years of experience, we are now
+                  the largest network in the country in this fast-paced sector.
+                  Our dedication to innovation and quality has brought us to the
+                  forefront, where we offer specialized media solutions to
+                  companies of all kinds. With more than 200 clients under its
+                  belt, JanusAlive is committed to creating memorable outdoor
+                  advertising campaigns.
+                  <br />
+                  <br />
+                  Our skilled team combines strategic thinking with creativity
+                  to make sure your brand sticks out in the constantly changing
+                  advertising market. Join JanusAlive for an unmatched outdoor
+                  advertising experience that will help the world connect with
+                  your message.
                 </Typography>
               </Box>
 
@@ -295,9 +299,9 @@ const Aboutus = () => {
         </Grid>
       </Box>
 
-         {/* EXPERIENCE */}
-       {/* EXPERIENCE */}
-       <Box>
+      {/* EXPERIENCE */}
+      {/* EXPERIENCE */}
+      <Box>
         <Grid
           container
           sx={{
@@ -407,8 +411,18 @@ const Aboutus = () => {
               >
                 <Box
                   sx={{
-                    marginTop: { xs: "20px", sm: "20px", lg: "20px", md: "20px" },
-                    marginBottom: { xs: "20px", sm: "20px", lg: "40px", md: "40px" },
+                    marginTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "20px",
+                      md: "20px",
+                    },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "40px",
+                      md: "40px",
+                    },
                   }}
                 >
                   <Box className="main-bg">
@@ -447,33 +461,43 @@ const Aboutus = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                  <Box
+                <Box
                   sx={{
-                    marginTop: { xs: "20px", sm: "20px", lg: "20px", md: "20px" },
-                    marginBottom: { xs: "20px", sm: "20px", lg: "40px", md: "40px" },
+                    marginTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "20px",
+                      md: "20px",
+                    },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "40px",
+                      md: "40px",
+                    },
                   }}
                 >
-                <Box className="main-bg2">
-                  <Box className="circle2">
-                    <h1>423</h1>
+                  <Box className="main-bg2">
+                    <Box className="circle2">
+                      <h1>423</h1>
+                    </Box>
                   </Box>
-                </Box>
-                <Box>
-                  <Typography
-                    sx={{
-                      color: "#fff",
-                      marginTop: "15px",
-                      fontSize: "20px",
-                      fontWeight: "500",
-                      display:"flex",
-                      justifyContent:"center",
-                      alignitems:"center",
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    OOH SITES
-                  </Typography>
-                </Box>
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#fff",
+                        marginTop: "15px",
+                        fontSize: "20px",
+                        fontWeight: "500",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignitems: "center",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                    >
+                      OOH SITES
+                    </Typography>
+                  </Box>
                 </Box>
               </Grid>
 
@@ -493,37 +517,45 @@ const Aboutus = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                
                 <Box
                   sx={{
-                    marginTop: { xs: "20px", sm: "20px", lg: "20px", md: "20px" },
-                    marginBottom: { xs: "20px", sm: "20px", lg: "40px", md: "40px" },
+                    marginTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "20px",
+                      md: "20px",
+                    },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "40px",
+                      md: "40px",
+                    },
                   }}
                 >
-                <Box className="main-bg3">
-                  <Box className="circle3">
-                    <h1>47CR</h1>
+                  <Box className="main-bg3">
+                    <Box className="circle3">
+                      <h1>47CR</h1>
+                    </Box>
+                  </Box>
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#fff",
+                        marginTop: "15px",
+                        fontSize: "20px",
+                        fontWeight: "500",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignitems: "center",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                    >
+                      PEOPLE IMPACTED
+                    </Typography>
                   </Box>
                 </Box>
-                <Box>
-                  <Typography
-                    sx={{
-                      color: "#fff",
-                      marginTop: "15px",
-                      fontSize: "20px",
-                      fontWeight: "500",
-                      display:"flex",
-                      justifyContent:"center",
-                      alignitems:"center",
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    PEOPLE IMPACTED
-                  </Typography>
-                </Box>
-                </Box>
               </Grid>
-                
             </Grid>
           </Grid>
 
@@ -538,8 +570,7 @@ const Aboutus = () => {
         </Grid>
       </Box>
     </Box>
+  );
+};
 
-  )
-}
-
-export default Aboutus
+export default Aboutus;

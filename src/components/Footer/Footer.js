@@ -10,9 +10,14 @@ import Link from "@mui/material/Link";
 
 // IMAGES
 import facebook from "../../assets/images/FooterIcons/facebook.png";
+// import facebook from "../../assets/images/FooterIcons/fb.png";
+
 import instagram from "../../assets/images/FooterIcons/instagram.png";
-import youtube from "../../assets/images/FooterIcons/youtube.png";
+// import instagram2 from "../../assets/images/FooterIcons/instagram2.png";
+// import instagram2 from "../../assets/images/FooterIcons/insta.png";
+
 import whatsapp from "../../assets/images/FooterIcons/whatsapp.png";
+// import whatsapp2 from "../../assets/images/FooterIcons/wapp3.png";
 
 // CSS
 import "./Footer.css";
@@ -227,8 +232,8 @@ const Footer = () => {
           <Box
             sx={{
               width: "120px",
-              marginTop: {xs:"4px" , sm:"4px" , md:"2px" , lg:"2px"},
-              marginBottom:  {xs:"4px" , sm:"4px" , md:"3px" , lg:"3px"},
+              marginTop: {xs:"4px" , sm:"4px" , md:"4px" , lg:"4px"},
+              marginBottom:  {xs:"4px" , sm:"4px" , md:"5px" , lg:"5px"},
            
             }}
           >
@@ -237,102 +242,82 @@ const Footer = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-evenly",
+                marginRight:"10px"
               }}
             >
               {/* Facebook  */}
               <Box>
-                <Link href="https://www.facebook.com/JanusAlives/">
+                <a href="https://www.facebook.com/JanusAlives/" target="_blank">
                 <Box
                   component="img"
                   sx={{
                     width: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "22px",
+                      lg: "22px",
                     },
                     height: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "22px",
+                      lg: "22px",
                     },
                   }}
                   alt="facebook"
                   src={facebook}
                 />
-                </Link>
+                </a>
               </Box>
               {/* Instagram */}
               <Box>
-              <Link href="https://www.instagram.com/janusalives/">
+              <a href="https://www.instagram.com/janusalives/" target="_blank">
                 <Box
                   component="img"
                   sx={{
                     width: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "22px",
+                      lg: "22px",
                     },
                     height: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "22px",
+                      lg: "22px",
                     },
                   }}
                   alt="instagram"
                   src={instagram}
                 />
-                </Link>
+                </a>
               </Box>
-              {/* youtube */}
-              <Box>
-                <Box
-                  component="img"
-                  sx={{
-                    width: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    height: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}
-                  alt="youtube"
-                  src={youtube}
-                />
-              </Box>
-
+      
               {/* whatsapp */}
-              <Box>
-              <Link href="https://wa.me/+919650764004?text=Hi-Janus-Alive,">
+              <Box >
+              <a href="https://wa.me/+919650764004?text=Hi-Janus-Alive," target="_blank">
                 <Box
                   component="img"
                   sx={{
                     width: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "22px",
+                      lg: "22px",
                     },
                     height: {
                       xs: "20px",
                       sm: "20px",
-                      md: "20px",
-                      lg: "20px",
+                      md: "22px",
+                      lg: "22px",
                     },
+                  
                   }}
-                  alt="whatsapp"
+                  alt="whatsappLogo"
                   src={whatsapp}
                 />
-              </Link>
+              </a>
               </Box>
             </Box>
           </Box>

@@ -308,7 +308,7 @@ const Footer = () => {
 
               {/* whatsapp */}
               <Box>
-              <Link href="https://wa.me/9650764004?text=I-m-interested-in-your-website">
+              <Link href="https://wa.me/000 9650764004?text=I-m-interested-in-your-website">
                 <Box
                   component="img"
                   sx={{

@@ -241,6 +241,7 @@ const Footer = () => {
             >
               {/* Facebook  */}
               <Box>
+                <Link href="https://www.facebook.com/JanusAlives/">
                 <Box
                   component="img"
                   sx={{
@@ -260,9 +261,11 @@ const Footer = () => {
                   alt="facebook"
                   src={facebook}
                 />
+                </Link>
               </Box>
               {/* Instagram */}
               <Box>
+              <Link href="https://www.instagram.com/janusalives/">
                 <Box
                   component="img"
                   sx={{
@@ -282,6 +285,7 @@ const Footer = () => {
                   alt="instagram"
                   src={instagram}
                 />
+                </Link>
               </Box>
               {/* youtube */}
               <Box>
@@ -308,7 +312,7 @@ const Footer = () => {
 
               {/* whatsapp */}
               <Box>
-              <Link href="https://wa.me/+919650764004?text=I-m-interested-in-your-website">
+              <Link href="https://wa.me/+919650764004?text=Hi-Janus-Alive,">
                 <Box
                   component="img"
                   sx={{

@@ -17,6 +17,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import Popover from '@mui/material/Popover';
+
 import MenuIcon from "@mui/icons-material/Menu";
 
 // REACT_ROUTER_DOM
@@ -25,6 +27,10 @@ import { Link, useNavigate } from "react-router-dom";
 // IMAGES
 import janusLogo from "../../assets/images/janusLogo.png";
 import dropdownicon from "../../assets/images/dropDownIcon.png";
+import homeIcon from "../../assets/images/Side-Drawer-icons/home.png";
+import aboutUsIcon from "../../assets/images/Side-Drawer-icons/about-us.png";
+import servicesIcon from "../../assets/images/Side-Drawer-icons/services.png";
+import contactUsIcon from "../../assets/images/Side-Drawer-icons/contact-us.png";
 
 // CSS
 import "./Header.css";
@@ -61,6 +67,20 @@ const navItems = [
 ];
 
 function Header(props) {
+// PopOver
+const [anchorEl2, setAnchorEl2] = React.useState(null);
+
+const handlePopoverOpen = (event) => {
+  setAnchorEl2(event.currentTarget);
+};
+
+const handlePopoverClose = () => {
+  setAnchorEl2(null);
+};
+
+const open = Boolean(anchorEl2);
+
+
   // dropdwon
   const [anchorEl, setAnchorEl] = useState(false);
 
@@ -88,7 +108,8 @@ function Header(props) {
       sx={{
         textAlign: "center",
         //  backgroundColor: "#011e29",
-        backgroundColor: "#080808",
+        // backgroundColor: "#080808",
+        backgroundColor: "#fff",
         height: "100%",
       }}
     >
@@ -102,31 +123,33 @@ function Header(props) {
           ...buttonHoverStyle,
         }}
       >
-        <Box
-          component="img"
-          sx={{
-            width: {
-              xs: "60px",
-              sm: "60px",
-              md: "70px",
-              lg: "70px",
-            },
-            height: {
-              xs: "40px",
-              sm: "40px",
-              md: "50px",
-              lg: "50px",
-            },
-            marginLeft: { xs: "15px", sm: "15px", md: "43px", lg: "43px" },
-            marginTop: { xs: "5px", sm: "5px", md: "7px", lg: "7px" },
-          }}
-          alt="janusLogo"
-          src={janusLogo}
-        />
+        <Box>
+          <Box
+            component="img"
+            sx={{
+              width: {
+                xs: "60px",
+                sm: "60px",
+                md: "70px",
+                lg: "70px",
+              },
+              height: {
+                xs: "40px",
+                sm: "40px",
+                md: "50px",
+                lg: "50px",
+              },
+              // marginLeft: { xs: "15px", sm: "15px", md: "43px", lg: "43px" },
+              marginTop: { xs: "5px", sm: "5px", md: "15px", lg: "15px" },
+            }}
+            alt="janusLogo"
+            src={janusLogo}
+          />
+        </Box>
       </Link>
       {/* <Divider sx={{ backgroundColor: "#fff" }} /> */}
-      <Divider sx={{ backgroundColor: "#C02222", height: "2px" }} />
-      <List>
+      {/* <Divider sx={{ backgroundColor: "#C02222", height: "2px" }} /> */}
+      {/* <List>
         {navItems.map((item, index) => {
           return (
             <ListItem key={index} disablePadding>
@@ -152,7 +175,114 @@ function Header(props) {
             </ListItem>
           );
         })}
-      </List>
+      </List> */}
+
+      <Box sx={{ marginTop: "10px" }}>
+        {/* Home */}
+        <Box sx={{display:"flex" ,flexDirection:"row"}}>
+          <Box>
+            <img src={homeIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
+          </Box>
+          <Box>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                  fontFamily: "Poppins, sans-serif",
+                  marginLeft: "4px",
+                  paddingTop: "5px",
+                  paddingBottom: "5px",
+                }}
+              >
+                HOME
+              </Typography>
+            </Link>
+          </Box>
+        </Box>
+
+        {/* About us  */}
+        <Box sx={{display:"flex" ,flexDirection:"row"}}>
+          <Box>
+            <img src={aboutUsIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
+          </Box>
+          <Box>
+            <Link to={"/about-us"} style={{ textDecoration: "none" }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                  fontFamily: "Poppins, sans-serif",
+                  marginLeft: "4px",
+                  paddingTop: "5px",
+                  paddingBottom: "5px",
+                }}
+              >
+                ABOUT US
+              </Typography>
+            </Link>
+          </Box>
+        </Box>
+
+         {/* Contact us  */}
+         <Box sx={{display:"flex" ,flexDirection:"row"}}>
+          <Box>
+            <img src={contactUsIcon} style={{width:"20px", height:"20px", marginTop:"5px"}} />
+          </Box>
+          <Box>
+            <Link to={"/contact-us"} style={{ textDecoration: "none" }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                  fontFamily: "Poppins, sans-serif",
+                  marginLeft: "4px",
+                  paddingTop: "5px",
+                  paddingBottom: "5px",
+                }}
+              >
+                CONTACT US
+              </Typography>
+            </Link>
+          </Box>
+        </Box>
+
+        {/* Services */}
+        <div>
+      <Typography
+        aria-owns={open ? 'mouse-over-popover' : undefined}
+        aria-haspopup="true"
+        onMouseEnter={handlePopoverOpen}
+        onMouseLeave={handlePopoverClose}
+        sx={{color:"#000"}}
+      >
+        Hover with a Popover.
+      </Typography>
+      <Popover
+        id="mouse-over-popover"
+        sx={{
+          pointerEvents: 'none',
+        }}
+        open={open}
+        anchorEl={anchorEl2}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        onClose={handlePopoverClose}
+        disableRestoreFocus
+      >
+        <Typography sx={{ p: 1 }}>I use Popover.</Typography>
+      </Popover>
+    </div>
+      </Box>
     </Box>
   );
 
@@ -199,7 +329,12 @@ function Header(props) {
             <Box
               sx={{
                 display: "flex",
-                justifyContent: { xs: "flex-end", sm:"flex-end" , md:"flex-start", lg:"flex-start"},
+                justifyContent: {
+                  xs: "flex-end",
+                  sm: "flex-end",
+                  md: "flex-start",
+                  lg: "flex-start",
+                },
               }}
             >
               <Box

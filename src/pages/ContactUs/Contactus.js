@@ -213,7 +213,7 @@ const Contactus = () => {
                         color: "rgb(79, 74, 76)",
                       }}
                     >
-                      birender@janusalive.com
+                     Janusalive09@gmail.com
                     </Typography>
                   </Box>
                 </Box>

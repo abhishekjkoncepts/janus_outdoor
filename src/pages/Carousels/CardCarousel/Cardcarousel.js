@@ -68,7 +68,7 @@ const Cardcarousel = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
+              marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
               marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
             }}
           >

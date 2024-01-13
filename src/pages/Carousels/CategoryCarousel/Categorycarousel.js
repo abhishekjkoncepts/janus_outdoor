@@ -63,7 +63,7 @@ const Categorycarousel = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
+              marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
               marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
             }}
           >
@@ -132,8 +132,8 @@ const Categorycarousel = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-              marginBottom: { xs: "20px", sm: "20px", md: "60px", lg: "60px" },
+              marginTop: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
+              marginBottom: { xs: "20px", sm: "20px", md: "10px", lg: "10px" },
             }}
           >
             <Carousel
@@ -141,7 +141,7 @@ const Categorycarousel = () => {
               rows={1}
               gap={50}
               loop={true}
-              showDots={true}
+              showDots={false}
               scrollSnap={true}
               dotColorActive="#C02222"
               dotColorInactive="#ccc"

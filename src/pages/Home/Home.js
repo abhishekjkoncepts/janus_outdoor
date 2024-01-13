@@ -443,7 +443,7 @@ const Home = () => {
             >
               <Box
                 sx={{
-                  marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
+                  marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
                   marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
                 }}
               >
@@ -1538,7 +1538,7 @@ const Home = () => {
               {/* <Box> */}
               <Box
                 sx={{
-                  marginTop: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
+                  marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
                   marginBottom: { xs: "10", sm: "10", md: "0px", lg: "0px" },
                 }}
               >
@@ -1634,8 +1634,8 @@ const Home = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "200px",
-                          sm: "200px",
+                          xs: "220px",
+                          sm: "220px",
                           md: "230px",
                           lg: "230px",
                         },
@@ -1658,7 +1658,7 @@ const Home = () => {
                           lg: "25px",
                         },
                       }}
-                      alt="add_img1"
+                      alt="iciciLogo"
                       src={icici}
                     />
                   </Box>

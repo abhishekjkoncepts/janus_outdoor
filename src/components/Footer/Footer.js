@@ -2,6 +2,11 @@ import React from "react";
 
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+
+// REACT-ROUTER-DOM
+// import { Link } from "react-router-dom";
+import Link from "@mui/material/Link";
 
 // IMAGES
 import facebook from "../../assets/images/FooterIcons/facebook.png";
@@ -90,7 +95,7 @@ const Footer = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Email-id: birender@janusalive.com
+                Email-id: Janusalive09@gmail.com
               </Typography>
             </Box>
             <Box
@@ -240,16 +245,16 @@ const Footer = () => {
                   component="img"
                   sx={{
                     width: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                     height: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                   }}
                   alt="facebook"
@@ -262,16 +267,16 @@ const Footer = () => {
                   component="img"
                   sx={{
                     width: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                     height: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                   }}
                   alt="instagram"
@@ -284,43 +289,46 @@ const Footer = () => {
                   component="img"
                   sx={{
                     width: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                     height: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                   }}
                   alt="youtube"
                   src={youtube}
                 />
               </Box>
+
               {/* whatsapp */}
               <Box>
+              <Link href="https://wa.me/9650764004?text=I-m-interested-in-your-website">
                 <Box
                   component="img"
                   sx={{
                     width: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                     height: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "15px",
-                      lg: "15px",
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
                     },
                   }}
                   alt="whatsapp"
                   src={whatsapp}
                 />
+              </Link>
               </Box>
             </Box>
           </Box>

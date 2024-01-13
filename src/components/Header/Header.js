@@ -54,10 +54,10 @@ const navItems = [
     to: "/contact-us/",
     name: "CONTACT US",
   },
-  {
-    to: "/blogs",
-    name: "BLOGS",
-  },
+  // {
+  //   to: "/blogs",
+  //   name: "BLOGS",
+  // },
 ];
 
 function Header(props) {
@@ -197,31 +197,39 @@ function Header(props) {
             }}
           >
             <Box
-              component="img"
               sx={{
-                width: {
-                  xs: "60px",
-                  sm: "60px",
-                  md: "70px",
-                  lg: "70px",
-                },
-                height: {
-                  xs: "40px",
-                  sm: "40px",
-                  md: "50px",
-                  lg: "50px",
-                },
-                marginLeft: {
-                  xs: "100px",
-                  sm: "100px",
-                  md: "43px",
-                  lg: "43px",
-                },
-                marginTop: { xs: "5px", sm: "5px", md: "7px", lg: "7px" },
+                display: "flex",
+                justifyContent: { xs: "flex-end", sm:"flex-end" , md:"flex-start", lg:"flex-start"},
               }}
-              alt="redTriangleArrow"
-              src={janusLogo}
-            />
+            >
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "60px",
+                    sm: "60px",
+                    md: "70px",
+                    lg: "70px",
+                  },
+                  height: {
+                    xs: "40px",
+                    sm: "40px",
+                    md: "50px",
+                    lg: "50px",
+                  },
+                  marginLeft: {
+                    xs: "100px",
+                    sm: "100px",
+                    md: "45px",
+                    lg: "45px",
+                  },
+
+                  marginTop: { xs: "5px", sm: "5px", md: "7px", lg: "7px" },
+                }}
+                alt="redTriangleArrow"
+                src={janusLogo}
+              />
+            </Box>
           </Link>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Box
@@ -380,7 +388,10 @@ function Header(props) {
 
                     {/* TRANSIT-MEDIA */}
                     <Box sx={{}}>
-                      <Link to={"/transit-media"} style={{ textDecoration: "none" }}>
+                      <Link
+                        to={"/transit-media"}
+                        style={{ textDecoration: "none" }}
+                      >
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -403,7 +414,10 @@ function Header(props) {
 
                     {/* MALL-MEDIA */}
                     <Box sx={{}}>
-                      <Link to={"/mall-branding"} style={{ textDecoration: "none" }}>
+                      <Link
+                        to={"/mall-branding"}
+                        style={{ textDecoration: "none" }}
+                      >
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -424,9 +438,12 @@ function Header(props) {
                       </Link>
                     </Box>
 
-                      {/* INFLIGHT-BRANDING */}
-                      <Box sx={{}}>
-                      <Link to={"/inflight-branding"} style={{ textDecoration: "none" }}>
+                    {/* INFLIGHT-BRANDING */}
+                    <Box sx={{}}>
+                      <Link
+                        to={"/inflight-branding"}
+                        style={{ textDecoration: "none" }}
+                      >
                         <Typography
                           sx={{
                             marginLeft: "20px",

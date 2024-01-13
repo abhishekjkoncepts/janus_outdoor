@@ -438,7 +438,13 @@ export default function Outdoor() {
                           Unipole
                         </MenuItem>
                         <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
-                          Outdoor
+                          Billboard
+                        </MenuItem>
+                        <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
+                          Digital Billboard
+                        </MenuItem>
+                        <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
+                          DOOH
                         </MenuItem>
                       </Select>
                     </FormControl>

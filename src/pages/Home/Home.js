@@ -1482,7 +1482,7 @@ const Home = () => {
                     </Box>
                     <Box>
                       <Typography
-                        sx={{
+                         sx={{
                           color: "#fff",
                           marginTop: "15px",
                           fontSize: "20px",
@@ -1491,7 +1491,7 @@ const Home = () => {
                           justifyContent: "center",
                           alignitems: "center",
                           fontFamily: "Poppins, sans-serif",
-                        }}
+                         }}
                       >
                         PEOPLE IMPACTED
                       </Typography>

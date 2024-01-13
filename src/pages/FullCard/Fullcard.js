@@ -144,7 +144,7 @@ const Fullcard = () => {
                         md: "10px",
                         lg: "10px",
                       },
-                      // border: "2px solid red",
+                      border: "2px solid red",
                     }}
                     alt="add_img1"
                     src={DATA?.image}
@@ -261,8 +261,8 @@ const Fullcard = () => {
                           lg: "flex-start",
                         },
                         justifyContent: {
-                          xs: "center",
-                          sm: "center",
+                          xs: "flex-start",
+                          sm: "flex-start",
                           md: "flex-start",
                           lg: "flex-start",
                         },

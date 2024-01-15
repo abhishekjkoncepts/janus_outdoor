@@ -60,12 +60,6 @@ const Fullcard = () => {
       {isOpen && (
         <Popupcomponent
           handleClose={togglePopup}
-          content={
-            <div>
-              <h2>title</h2>
-              <p>this is sampe content formy pop up</p>
-            </div>
-          }
         />
       )}
       <Box>

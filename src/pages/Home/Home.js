@@ -356,6 +356,7 @@ const Home = () => {
               md={4.6}
               lg={4.6}
               sx={{
+                backgroundcolor:"yellow",
                 display: "flex",
                 justifyContent: {
                   xs: "center",
@@ -370,16 +371,16 @@ const Home = () => {
                 component="img"
                 sx={{
                   width: {
-                    xs: "300px",
-                    sm: "300px",
-                    md: "400px",
-                    lg: "400px",
+                    xs: "70%",
+                    sm: "70%",
+                    md: "90%",
+                    lg: "90%",
                   },
                   height: {
-                    xs: "300px",
-                    sm: "300px",
-                    md: "460px",
-                    lg: "460px",
+                    xs: "95%",
+                    sm: "95%",
+                    md: "80%",
+                    lg: "80%",
                   },
                   marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
                   marginBottom: {
@@ -388,6 +389,7 @@ const Home = () => {
                     md: "0px",
                     lg: "0px",
                   },
+                  borderRadius:"10px"
                 }}
                 alt="add_img1"
                 src={janusnew}

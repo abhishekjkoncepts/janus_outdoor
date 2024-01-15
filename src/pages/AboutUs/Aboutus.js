@@ -179,7 +179,7 @@ const Aboutus = () => {
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#333333",
-                    marginBottom: "60px",
+                    marginBottom: "20px",
 
                     // lineHeight:"26px"
                   }}
@@ -269,20 +269,25 @@ const Aboutus = () => {
               component="img"
               sx={{
                 width: {
-                  xs: "300px",
-                  sm: "300px",
-                  md: "400px",
-                  lg: "400px",
+                  xs: "70%",
+                  sm: "70%",
+                  md: "90%",
+                  lg: "90%",
                 },
                 height: {
-                  xs: "300px",
-                  sm: "300px",
-                  md: "460px",
-                  lg: "460px",
+                  xs: "95%",
+                  sm: "95%",
+                  md: "80%",
+                  lg: "80%",
                 },
                 marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
-                marginBottom: { xs: "20px", sm: "20px", md: "0px", lg: "0px" },
-              }}
+                marginBottom: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
+                borderRadius:"10px"}}
               alt="add_img1"
               src={janusnew}
             />

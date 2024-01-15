@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 import { getProductsCategories } from "../../../redux/actions/Home";
 
 // IMAGES
-import add1 from "../../../assets/images/Categories_Images/Airport_Branding22.jpeg";
+import add1 from "../../../assets/images/Categories_Images/coming_soon.jpg";
 
 // CSS
 import "./Categorycarousel.css";

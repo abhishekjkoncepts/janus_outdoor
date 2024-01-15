@@ -26,7 +26,6 @@ import "./Footer.css";
 // import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-
   // const navigate = useNavigate();
 
   return (
@@ -226,15 +225,14 @@ const Footer = () => {
               md: "flex-end",
               lg: "flex-end",
             },
-            alignItems:"center",
+            alignItems: "center",
           }}
         >
           <Box
             sx={{
               width: "120px",
-              marginTop: {xs:"4px" , sm:"4px" , md:"4px" , lg:"4px"},
-              marginBottom:  {xs:"4px" , sm:"4px" , md:"5px" , lg:"5px"},
-           
+              marginTop: { xs: "4px", sm: "4px", md: "4px", lg: "4px" },
+              marginBottom: { xs: "4px", sm: "4px", md: "5px", lg: "5px" },
             }}
           >
             <Box
@@ -242,82 +240,87 @@ const Footer = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-evenly",
-                marginRight:"10px"
+                marginRight: "10px",
               }}
             >
               {/* Facebook  */}
               <Box>
                 <a href="https://www.facebook.com/JanusAlives/" target="_blank">
-                <Box
-                  component="img"
-                  sx={{
-                    width: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "22px",
-                      lg: "22px",
-                    },
-                    height: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "22px",
-                      lg: "22px",
-                    },
-                  }}
-                  alt="facebook"
-                  src={facebook}
-                />
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "22px",
+                      },
+                      height: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "22px",
+                      },
+                    }}
+                    alt="facebook"
+                    src={facebook}
+                  />
                 </a>
               </Box>
               {/* Instagram */}
               <Box>
-              <a href="https://www.instagram.com/janusalives/" target="_blank">
-                <Box
-                  component="img"
-                  sx={{
-                    width: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "22px",
-                      lg: "22px",
-                    },
-                    height: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "22px",
-                      lg: "22px",
-                    },
-                  }}
-                  alt="instagram"
-                  src={instagram}
-                />
+                <a
+                  href="https://www.instagram.com/janusalives/"
+                  target="_blank"
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "22px",
+                      },
+                      height: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "22px",
+                      },
+                    }}
+                    alt="instagram"
+                    src={instagram}
+                  />
                 </a>
               </Box>
-      
+
               {/* whatsapp */}
-              <Box >
-              <a href="https://wa.me/+919650764004?text=Hi-Janus-Alive," target="_blank">
-                <Box
-                  component="img"
-                  sx={{
-                    width: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "22px",
-                      lg: "22px",
-                    },
-                    height: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "22px",
-                      lg: "22px",
-                    },
-                  
-                  }}
-                  alt="whatsappLogo"
-                  src={whatsapp}
-                />
-              </a>
+              <Box>
+                <a
+                  href="https://wa.me/+919650764004?text=Hello from JanusAlive! We're here to elevate your experience beyond boundaries. Welcome!,"
+                  target="_blank"
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "22px",
+                      },
+                      height: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "22px",
+                      },
+                    }}
+                    alt="whatsappLogo"
+                    src={whatsapp}
+                  />
+                </a>
               </Box>
             </Box>
           </Box>

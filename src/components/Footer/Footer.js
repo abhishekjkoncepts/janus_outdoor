@@ -298,7 +298,7 @@ const Footer = () => {
               {/* whatsapp */}
               <Box>
                 <a
-                  href="https://wa.me/+919650764004?text=Hello from JanusAlive! We're here to elevate your experience beyond boundaries. Welcome!,"
+                  href="https://wa.me/+919650764004?text=Hello from JanusAlive! We're here to elevate your experience beyond boundaries. Welcome! ,"
                   target="_blank"
                 >
                   <Box

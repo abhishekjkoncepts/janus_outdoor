@@ -18,7 +18,7 @@ import Header from "../components/Header/Header";
 
 // OUR-SERVICES
 import Outdoor from "../pages/Category/Outdoor/Outdoor";
-import Cinema from "../pages/Category/Cinema/Cinema";
+import Metro from "../pages/Category/Metro/Metro";
 import Airportbranding from "../pages/Category/AirportBranding/Airportbranding";
 import Inflightbranding from "../pages/Category/InflightBranding/Inflightbranding";
 import Mallmedia from "../pages/Category/MallMedia/Mallmedia";
@@ -44,18 +44,40 @@ const Navigation = () => {
           <Route path="/our-service" element={<Ourservice />} />
 
           {/* CATEGORY*/}
-          <Route path="/outdoor/" element={<Outdoor />} />
-          <Route path="/cinema/" element={<Cinema />} />
+          {/* <Route path="/outdoor/" element={<Outdoor />} />
+          <Route path="/metro/" element={<Metro />} />
           <Route path="/airport-branding/" element={<Airportbranding />} />
           <Route path="/inflight-branding/" element={<Inflightbranding />} />
           <Route path="/mall-branding/" element={<Mallmedia />} />
-          <Route path="/transit-media/" element={<Transitmedia />} />
+          <Route path="/transit-media/" element={<Transitmedia />} /> */}
+
+          <Route path="/outdoor-advertising-agency/" element={<Outdoor />} />
+          <Route path="/metro-advertising-agency/" element={<Metro />} />
+          <Route
+            path="/airport-branding-advertising-agency/"
+            element={<Airportbranding />}
+          />
+          <Route
+            path="/inflight-branding-advertising-agency/"
+            element={<Inflightbranding />}
+          />
+          <Route
+            path="/mall-branding-advertising-agency/"
+            element={<Mallmedia />}
+          />
+          <Route
+            path="/transit-media-advertising-agency/"
+            element={<Transitmedia />}
+          />
 
           {/* FULl CArd */}
           {/* <Route path="/seedetails/:seotitle" element={<Fullcard />} /> */}
           {/* <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} /> */}
           <Route path="/:category/:seotitle" element={<Fullcard />} />
-          <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />}/>
+          <Route
+            path="/seedetails/:category?/:seotitle"
+            element={<Fullcard />}
+          />
           {/* <Route path="/:param1?/:param2?/:param3?" element={<Individual />} /> */}
         </Routes>
       </Scrolltotop>

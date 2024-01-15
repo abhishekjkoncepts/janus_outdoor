@@ -447,7 +447,7 @@ function Header(props) {
                   <Box sx={{ width: "210px", borderRadius: "0px" }}>
                     {/* outdoor */}
                     <Box sx={{ marginTop: "5px" , borderBottom:"1px solid #D3D3D3" }}>
-                      <Link to={"/outdoor/"} style={{ textDecoration: "none" }}>
+                      <Link to={"/outdoor-advertising-agency/"} style={{ textDecoration: "none" }}>
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -469,9 +469,9 @@ function Header(props) {
                       </Link>
                     </Box>
 
-                    {/* cinema*/}
+                    {/* metro*/}
                     <Box sx={{borderBottom:"1px solid #D3D3D3" ,}}>
-                      <Link to={"/cinema/"} style={{ textDecoration: "none" }}>
+                      <Link to={"/metro-advertising-agency/"} style={{ textDecoration: "none" }}>
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -489,7 +489,7 @@ function Header(props) {
                             paddingBottom:"7px"
                           }}
                         >
-                          Cinema Advertising
+                          Metro Advertising
                         </Typography>
                       </Link>
                     </Box>
@@ -497,7 +497,7 @@ function Header(props) {
                     {/* Airport branding */}
                     <Box sx={{borderBottom:"1px solid #D3D3D3"}}>
                       <Link
-                        to={"/airport-branding/"}
+                        to={"/airport-branding-advertising-agency/"}
                         style={{ textDecoration: "none" }}
                       >
                         <Typography
@@ -522,10 +522,10 @@ function Header(props) {
                       </Link>
                     </Box>
 
-                    {/* MALL-MEDIA */}
+                    {/* MALL-BRANDING */}
                     <Box sx={{borderBottom:"1px solid #D3D3D3"}}>
                       <Link
-                        to={"/mall-branding/"}
+                        to={"/mall-branding-advertising-agency/"}
                         style={{ textDecoration: "none" }}
                       >
                         <Typography
@@ -553,7 +553,7 @@ function Header(props) {
                     {/* INFLIGHT-BRANDING */}
                     <Box sx={{ borderBottom:"1px solid #D3D3D3"}}>
                       <Link
-                        to={"/inflight-branding/"}
+                        to={"/inflight-branding-advertising-agency/"}
                         style={{ textDecoration: "none" }}
                       >
                         <Typography
@@ -581,7 +581,7 @@ function Header(props) {
                     {/* TRANSIT-MEDIA */}
                     <Box sx={{}}>
                       <Link
-                        to={"/transit-media/"}
+                        to={"/transit-media-advertising-agency/"}
                         style={{ textDecoration: "none" }}
                       >
                         <Typography

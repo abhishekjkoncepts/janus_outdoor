@@ -555,10 +555,10 @@ export default function Airportbranding() {
                     onClick={() => {
                       navigate(
                         `/${
-                          item?.category?.toLowerCase()
-                            ? item?.category?.toLowerCase()
-                            : item?.code
-                        }/${item?.seotitle ? item?.seotitle : item?.address}/`,
+                          item?.urlcat?.toLowerCase()
+                            ? item?.urlcat?.toLowerCase()
+                            : item?.urlcat
+                        }/${item?.url ? item?.url : item?.address}/`,
                         { state: { id: item._id } }
                       );
                       console.log("hello world");

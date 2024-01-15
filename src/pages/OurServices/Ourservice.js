@@ -267,7 +267,7 @@ const Ourservice = () => {
                               color: "#fff",
                             }}
                           >
-                            CINEMA
+                            Metro
                           </Typography>
                         </CardContent>
                       </CardActionArea>

@@ -15,7 +15,7 @@ import {
 import { TypeAnimation } from "react-type-animation";
 
 // CSS
-import "./Cinema.css";
+import "./Metro.css";
 
 // CARD
 import Cards from "../../Card/Cards";
@@ -40,7 +40,7 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Cinema() {
+export default function Metro() {
   const [state, setState] = React.useState(null);
   const [city, setCity] = React.useState("");
   const [type, setType] = React.useState("");
@@ -164,7 +164,7 @@ export default function Cinema() {
                       color: "#fff",
                     }}
                   >
-                    Cinema Advertising
+                    Metro Advertising
                   </Typography>
                 </Box>
                 {/* TEXT 2 */}
@@ -544,7 +544,7 @@ export default function Cinema() {
           <Grid container spacing={2}>
             {products &&
               products
-                .filter((item) => item?.category === "Cinema")
+                .filter((item) => item?.category === "Metro Branding")
                 .reverse()
                 .map((item) => (
                   <Cards
@@ -553,10 +553,10 @@ export default function Cinema() {
                     onClick={() => {
                       navigate(
                         `/${
-                          item?.category?.toLowerCase()
-                            ? item?.category?.toLowerCase()
-                            : item?.code
-                        }/${item?.seotitle ? item?.seotitle : item?.address}/`,
+                          item?.urlcat?.toLowerCase()
+                            ? item?.urlcat?.toLowerCase()
+                            : item?.urlcat
+                        }/${item?.url ? item?.url : item?.address}/`,
                         { state: { id: item._id } }
                       );
                       console.log("hello world");

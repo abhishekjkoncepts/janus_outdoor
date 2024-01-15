@@ -530,9 +530,9 @@ export default function Outdoor() {
                     onClick={() => {
                       navigate(
                         `/${
-                          item?.category?.toLowerCase()
-                            ? item?.category?.toLowerCase()
-                            : item?.code
+                          item?.urlcat?.toLowerCase()
+                            ? item?.urlcat?.toLowerCase()
+                            : item?.urlcat
                         }/${item?.url ? item?.url : item?.address}/`,
                         { state: { id: item._id } }
                       );

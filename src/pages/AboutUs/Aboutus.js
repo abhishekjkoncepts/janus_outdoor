@@ -271,8 +271,8 @@ const Aboutus = () => {
                 width: {
                   xs: "70%",
                   sm: "70%",
-                  md: "90%",
-                  lg: "90%",
+                  md: "85%",
+                  lg: "85%",
                 },
                 height: {
                   xs: "95%",

@@ -25,7 +25,7 @@ import chennai from "../../assets/images/states2/chennai.jpg";
 import hyderabad from "../../assets/images/states2/hyderabad.jpg";
 import pune from "../../assets/images/states2/pune.jpg";
 
-import janusnew from "../../assets/images/janusmain.jpg"
+import janusnew from "../../assets/images/janusmain.jpg";
 
 import amarujala from "../../assets/images/Triumphs/png230x90/amarujala.png";
 import Digividya from "../../assets/images/Triumphs/png230x90/digividyapeeth.png";
@@ -63,13 +63,15 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>JanusAlive India's Largest Outdoor Advertising Agency In India</title>
+        <title>
+          JanusAlive India's Largest Outdoor Advertising Agency In India
+        </title>
         <meta
           name="description"
           content={
             "Boost your brand visibility with JanusAlive, India's premier outdoor advertising agency. Elevate your reach and impact through strategic outdoor campaigns"
           }
-          />
+        />
       </Helmet>
 
       <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" } }}>
@@ -276,13 +278,14 @@ const Home = () => {
                       // lineHeight:"26px"
                     }}
                   >
-                    Founded in 2002, JanusAlive is the leading Outdoor  Advertising agency in India. With 20 years of experience, we are
-                    now the largest network in the country in this fast-paced
-                    sector. Our dedication to innovation and quality has brought
-                    us to the forefront, where we offer specialized media
-                    solutions to companies of all kinds. With more than 200
-                    clients under its belt, JanusAlive is committed to creating
-                    memorable outdoor advertising campaigns.
+                    Founded in 2002, JanusAlive is the leading Outdoor
+                    Advertising agency in India. With 20 years of experience, we
+                    are now the largest network in the country in this
+                    fast-paced sector. Our dedication to innovation and quality
+                    has brought us to the forefront, where we offer specialized
+                    media solutions to companies of all kinds. With more than
+                    200 clients under its belt, JanusAlive is committed to
+                    creating memorable outdoor advertising campaigns.
                     <br />
                     <br />
                     Our skilled team combines strategic thinking with creativity
@@ -292,7 +295,7 @@ const Home = () => {
                     world connect with your message.
                   </Typography>
                 </Box>
-                <Link to="/about-us/" style={{textDecoration:"none"}}>
+                <Link to="/about-us/" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -356,7 +359,7 @@ const Home = () => {
               md={4.6}
               lg={4.6}
               sx={{
-                backgroundcolor:"yellow",
+                backgroundcolor: "yellow",
                 display: "flex",
                 justifyContent: {
                   xs: "center",
@@ -373,7 +376,7 @@ const Home = () => {
                   width: {
                     xs: "70%",
                     sm: "70%",
-                    md: "90%",
+                    md: "85%",
                     lg: "90%",
                   },
                   height: {
@@ -389,7 +392,7 @@ const Home = () => {
                     md: "0px",
                     lg: "0px",
                   },
-                  borderRadius:"10px"
+                  borderRadius: "10px",
                 }}
                 alt="add_img1"
                 src={janusnew}
@@ -1290,20 +1293,65 @@ const Home = () => {
                   </Typography>
                 </Box>
 
-                <Box>
+                <Box
+                  sx={{
+                    paddingLeft: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    paddingRight: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                  }}
+                >
                   <Typography
                     sx={{
                       color: "#fff",
-                      fontSize: "15px",
+                      fontSize: {
+                        xs: "0px",
+                        sm: "0px",
+                        md: "15px",
+                        lg: "15px",
+                      },
                       fontWeight: "400",
                       fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
+                      textAlign: {
+                        xs: "left",
+                        sm: "left",
+                        md: "center",
+                        lg: "center",
+                      },
                     }}
                   >
                     We're a creative force, surpassing standard online
                     marketing. Our agency offers an experience <br /> that goes
-                    beyond, ensuring exceptional results and impact.
+                    beyond, ensuring exceptional results and impact
                   </Typography>
+                  <Box >
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: {
+                        xs: "12px",
+                        sm: "12px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      fontWeight: "400",
+                      fontFamily: "Poppins, sans-serif",
+                      textAlign:"center"
+                    }}
+                  >
+                    We're a creative force, surpassing standard online
+                    marketing. Our agency offers an experience that goes beyond,
+                    ensuring exceptional results and impact.
+                  </Typography>
+                  </Box>
                 </Box>
               </Box>
             </Grid>
@@ -1364,6 +1412,10 @@ const Home = () => {
                         lg: "40px",
                         md: "40px",
                       },
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "column",
                     }}
                   >
                     <Box className="main-bg">
@@ -1416,6 +1468,10 @@ const Home = () => {
                         lg: "40px",
                         md: "40px",
                       },
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "column",
                     }}
                   >
                     <Box className="main-bg2">
@@ -1432,7 +1488,7 @@ const Home = () => {
                           fontWeight: "500",
                           display: "flex",
                           justifyContent: "center",
-                          alignitems: "center",
+                          alignItems: "center",
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
@@ -1472,6 +1528,10 @@ const Home = () => {
                         lg: "40px",
                         md: "40px",
                       },
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "column",
                     }}
                   >
                     <Box className="main-bg3">
@@ -1481,16 +1541,14 @@ const Home = () => {
                     </Box>
                     <Box>
                       <Typography
-                         sx={{
+                        sx={{
                           color: "#fff",
                           marginTop: "15px",
                           fontSize: "20px",
                           fontWeight: "500",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignitems: "center",
+
                           fontFamily: "Poppins, sans-serif",
-                         }}
+                        }}
                       >
                         PEOPLE IMPACTED
                       </Typography>
@@ -1527,7 +1585,6 @@ const Home = () => {
                 alignItems: "center",
               }}
             >
-
               {/* <Box
                 sx={{
                   marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
@@ -1574,11 +1631,9 @@ const Home = () => {
                   </Typography>
                 </Box>
               </Box> */}
-
             </Grid>
             <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
           </Grid>
-
 
           <Grid container>
             <Grid
@@ -2065,7 +2120,7 @@ const Home = () => {
           </Grid>
         </Box>
 
-        <Triumphs/>
+        <Triumphs />
 
         {/* <Button
           onClick={() => {

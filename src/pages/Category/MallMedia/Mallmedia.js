@@ -545,7 +545,7 @@ export default function Mallmedia() {
           <Grid container spacing={2}>
             {products &&
               products
-                .filter((item) => item?.category === "Mall Media")
+                .filter((item) => item?.category === "Mall Branding")
                 .reverse()
                 .map((item) => (
                   <Cards
@@ -554,10 +554,10 @@ export default function Mallmedia() {
                     onClick={() => {
                       navigate(
                         `/${
-                          item?.category?.toLowerCase()
-                            ? item?.category?.toLowerCase()
-                            : item?.code
-                        }/${item?.seotitle ? item?.seotitle : item?.address}/`,
+                          item?.urlcat?.toLowerCase()
+                            ? item?.urlcat?.toLowerCase()
+                            : item?.urlcat
+                        }/${item?.url ? item?.url : item?.address}/`,
                         { state: { id: item._id } }
                       );
                       console.log("hello world");

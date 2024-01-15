@@ -15,11 +15,7 @@ import { useSelector } from "react-redux";
 import { getProductsCategories } from "../../../redux/actions/Home";
 
 // IMAGES
-import sample from "../../../assets/images/Sample.jpg";
-import add1 from "../../../assets/images/add1.webp";
-import add2 from "../../../assets/images/add2.webp";
-import add3 from "../../../assets/images/add3.webp";
-import add4 from "../../../assets/images/add4.webp";
+import add1 from "../../../assets/images/Categories_Images/Airport_Branding22.jpeg";
 
 // CSS
 import "./Categorycarousel.css";
@@ -153,17 +149,17 @@ const Categorycarousel = () => {
                     <Box
                       onClick={() => {
                         if (item.category === "Outdoor") {
-                          navigate("/outdoor/");
-                        } else if (item.category === "Cinema") {
-                          navigate("/cinema/");
+                          navigate("/outdoor-advertising-agency/");
+                        } else if (item.category === "Metro Branding") {
+                          navigate("/metro-advertising-agency/");
                         } else if (item.category === "Airport Branding") {
-                          navigate("/airport-branding/");
+                          navigate("/airport-branding-advertising-agency/");
                         } else if (item.category === "Transit Media") {
-                          navigate("/transit-media/");
+                          navigate("/transit-media-advertising-agency/");
                         } else if (item.category === "Mall Branding") {
-                          navigate("/mall-branding/");
+                          navigate("/mall-branding-advertising-agency/");
                         } else if (item.category === "Inflight Branding") {
-                          navigate("/inflight-branding/");
+                          navigate("/inflight-branding-advertising-agency/");
                         }
                       }}
                       sx={{

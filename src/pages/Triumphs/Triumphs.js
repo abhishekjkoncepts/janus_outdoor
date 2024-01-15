@@ -397,8 +397,8 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "150px",
-                          sm: "150px",
+                          xs: "160px",
+                          sm: "160px",
                           md: "250px",
                           lg: "250px",
                         },
@@ -487,8 +487,8 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "155px",
-                          sm: "155px",
+                          xs: "160px",
+                          sm: "160px",
                           md: "230px",
                           lg: "230px",
                         },

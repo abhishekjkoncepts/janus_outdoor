@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet";
 import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
 import Cardcarousel from "../Carousels/CardCarousel/Cardcarousel";
 import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
+import Triumphs from "../Triumphs/Triumphs";
 
 // IMAGES
 import add_img1 from "../../assets/images/add_img1.jpeg";
@@ -25,15 +26,6 @@ import hyderabad from "../../assets/images/states2/hyderabad.jpg";
 import pune from "../../assets/images/states2/pune.jpg";
 
 import janusnew from "../../assets/images/janusmain.jpg"
-
-// import amarujala from "../../assets/images/Triumphs/pngresize/amarujala.png";
-// import Digividya from "../../assets/images/Triumphs/pngresize/digividyapeeth.png";
-// import dominos from "../../assets/images/Triumphs/pngresize/dominos250x200.png";
-// import geniefie from "../../assets/images/Triumphs/pngresize/geniefie.png";
-// import icici from "../../assets/images/Triumphs/png/icicipruamc-logo.png";
-// import malasia from "../../assets/images/Triumphs/png/malaysiaairlines.png";
-// import nippo from "../../assets/images/Triumphs/png/nipponindiaim.png";
-// import timesin from "../../assets/images/Triumphs/png/timesofindia-png.png";
 
 import amarujala from "../../assets/images/Triumphs/png230x90/amarujala.png";
 import Digividya from "../../assets/images/Triumphs/png230x90/digividyapeeth.png";
@@ -1517,7 +1509,7 @@ const Home = () => {
           </Grid>
         </Box>
 
-        {/* CLIENTS */}
+        {/* TRIUMPHS */}
         <Box>
           <Grid container sx={{ backgroundColor: "#fff" }}>
             <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
@@ -1531,11 +1523,10 @@ const Home = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                // backgroundColor:"green"
               }}
             >
-              {/* <Box> */}
-              <Box
+
+              {/* <Box
                 sx={{
                   marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
                   marginBottom: { xs: "10", sm: "10", md: "0px", lg: "0px" },
@@ -1580,13 +1571,13 @@ const Home = () => {
                     <br /> prowess, surpassing ordinary online marketing impact.
                   </Typography>
                 </Box>
-              </Box>
-              {/* </Box> */}
+              </Box> */}
+
             </Grid>
             <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
           </Grid>
 
-          {/* Container 1 */}
+
           <Grid container>
             <Grid
               item
@@ -1628,15 +1619,15 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
                         width: {
                           xs: "220px",
                           sm: "220px",
-                          md: "230px",
-                          lg: "230px",
+                          md: "170px",
+                          lg: "170px",
                         },
                         height: {
                           xs: "100px",
@@ -1656,11 +1647,17 @@ const Home = () => {
                           md: "25px",
                           lg: "25px",
                         },
+                        marginLeft:{
+                          xs: "10px",
+                          sm: "10px",
+                          md: "30px",
+                          lg: "30px",
+                        }
                       }}
                       alt="iciciLogo"
                       src={icici}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 {/* digi-vidyapeeth */}
@@ -1677,7 +1674,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -1712,7 +1709,7 @@ const Home = () => {
                       src={timesin2}
                       // src={timesin3}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 {/* Dominos */}
@@ -1729,7 +1726,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -1761,7 +1758,7 @@ const Home = () => {
                       alt="add_img1"
                       src={geniefie}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 {/* Genifie */}
@@ -1783,7 +1780,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -1815,7 +1812,7 @@ const Home = () => {
                       alt="add_img1"
                       src={dominos}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
               </Grid>
             </Grid>
@@ -1861,7 +1858,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -1893,7 +1890,7 @@ const Home = () => {
                       alt="add_img1"
                       src={malasia}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 <Grid
@@ -1909,7 +1906,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -1941,7 +1938,7 @@ const Home = () => {
                       alt="add_img1"
                       src={Digividya}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 <Grid
@@ -1957,7 +1954,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -1989,7 +1986,7 @@ const Home = () => {
                       alt="add_img1"
                       src={amarujala}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 <Grid
@@ -2010,7 +2007,7 @@ const Home = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box>
+                  {/* <Box>
                     <Box
                       component="img"
                       sx={{
@@ -2042,7 +2039,7 @@ const Home = () => {
                       alt="add_img1"
                       src={nippo}
                     />
-                  </Box>
+                  </Box> */}
                 </Grid>
 
                 <Grid
@@ -2065,6 +2062,8 @@ const Home = () => {
             ></Grid>
           </Grid>
         </Box>
+
+        <Triumphs/>
 
         {/* <Button
           onClick={() => {

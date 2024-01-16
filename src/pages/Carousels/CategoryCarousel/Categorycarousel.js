@@ -144,7 +144,7 @@ const Categorycarousel = () => {
               // style={{ padding: "10px" }}
             >
               {productscategories ? (
-                productscategories.reverse().map((item) => (
+                productscategories.map((item) => (
                   <Carousel.Item width="20%">
                     <Box
                       onClick={() => {

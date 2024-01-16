@@ -144,7 +144,7 @@ const Categorycarousel = () => {
               // style={{ padding: "10px" }}
             >
               {productscategories ? (
-                productscategories.map((item) => (
+                productscategories.reverse().map((item) => (
                   <Carousel.Item width="20%">
                     <Box
                       onClick={() => {
@@ -180,7 +180,7 @@ const Categorycarousel = () => {
                       <Card
                         sx={{
                           maxWidth: "400px",
-                          maxHeight: 700,
+                          maxHeight: 750,
                           borderRadius: "190px 190px 0 0",
                           border: "2px solid #C02222",
                           background:
@@ -190,8 +190,8 @@ const Categorycarousel = () => {
                         <CardActionArea>
                           <CardMedia
                             component="img"
-                            height="300"
-                            image={add1}
+                            height="350"
+                            image={item?.img}
                             alt="green iguana"
                             sx={{
                               overflow: "hidden", // Ensure the overflow is hidden to hide the zoomed-in part

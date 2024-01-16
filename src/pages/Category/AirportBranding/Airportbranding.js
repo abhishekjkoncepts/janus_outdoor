@@ -164,7 +164,7 @@ export default function Airportbranding() {
                       color: "#fff",
                     }}
                   >
-                    Airport Branding
+                    Airport Advertising
                   </Typography>
                 </Box>
                 {/* TEXT 2 */}

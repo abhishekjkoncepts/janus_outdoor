@@ -1,59 +1,61 @@
-{/* <Carousel
-  cols={3}
-  rows={1}
-  gap={20}
-  loop={true}
-  showDots={false}
-  dotColorActive="#795548"
-  dotColorInactive="#ccc"
-  style={{ padding: "10px" }}
->
-  {products &&
-    products.reverse().map((item) => (
-      <Carousel.Item>
-        <Card
+import React from "react";
+import { Container, Button, Paper, Input } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+// import { colors } from "material-ui";
+import { purple, green,} from "@mui/material/colors";
+
+const Colors={
+  secondary:"#C02222",
+  buttoncolor:"green"
+}
+const theme = createTheme({
+  palette: {
+    beta: {
+      main:Colors.buttoncolor,
+    },
+    secondary:{
+      main:Colors.secondary
+    }
+  },
+});
+const Testing = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Container
+        sx={{
+          maxWidth: "400px",
+        }}
+      >
+        <Paper
           sx={{
-            borderRadius: "150px 150px 0 0",
-            border: "1px solid #C02222",
-          }}
-          onClick={() => {
-            navigate(
-              `/${
-                item?.category?.toLowerCase()
-                  ? item?.category?.toLowerCase()
-                  : item?.code
-              }/${item?.url ? item?.url : item?.address}/`,
-              { state: { id: item._id } }
-            );
-            console.log("hello world");
+            padding: "1rem",
+            marginTop: "2rem",
+            maxWidth: "400px",
           }}
         >
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="250"
-              image={item?.image}
-              alt="green iguana"
-              sx={{ backgroundColor: "grey" }}
-            />
-            <CardContent sx={{ height: "180px" }}>
-              <Typography
-                sx={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                }}
-              >
-                {item?.address}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                State: {item?.state} <br />
-                City: {item?.city}
-                <br />
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Carousel.Item>
-    ))}
-</Carousel>; */}
+          <Input fullWidth placeholder="firstname" />
+          <Input fullWidth placeholder="lastname" />
+          <Input fullWidth placeholder="password" />
+          <Input fullWidth placeholder="new password" />
+          <Button
+            variant="contained"
+            disableRipple={true}
+            sx={{ marginTop: "5px" }}
+          >
+            Submit
+          </Button>
+          <Button
+            variant="contained" 
+            color="beta"
+            disableRipple={true}
+            sx={{ marginLeft:"20px",marginTop: "5px", borderRadius:"20px" }}
+          >
+            Submit
+          </Button>
+        </Paper>
+      </Container>
+    </ThemeProvider>
+  );
+};
+
+export default Testing;

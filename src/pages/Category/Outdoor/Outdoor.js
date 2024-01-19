@@ -868,8 +868,8 @@ export default function Outdoor() {
                               lg: "space-between",
                             },
                             marginTop: {
-                              xs: "20px",
-                              sm: "20px",
+                              xs: "0px",
+                              sm: "0px",
                               md: "40px",
                               lg: "40px",
                             },
@@ -881,8 +881,8 @@ export default function Outdoor() {
                               justifyContent: { xs: "center", sm: "center" },
                               alignItems: { xs: "center", sm: "center" },
                               marginTop: {
-                                xs: "50px",
-                                sm: "50px",
+                                xs: "0px",
+                                sm: "0px",
                                 md: "0px",
                                 lg: "0px",
                               },

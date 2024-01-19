@@ -868,8 +868,8 @@ export default function Outdoor() {
                               lg: "space-between",
                             },
                             marginTop: {
-                              xs: "0px",
-                              sm: "0px",
+                              xs: "40px",
+                              sm: "40px",
                               md: "40px",
                               lg: "40px",
                             },

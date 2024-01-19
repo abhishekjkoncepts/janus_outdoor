@@ -634,6 +634,7 @@ import {
   CircularProgress,
   FormControl,
   Select,
+  CardMedia,
 } from "@mui/material";
 
 import { NativeSelect } from "@mui/material";
@@ -714,7 +715,13 @@ export default function Outdoor() {
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Box className="bgContainer">
-              <video src={videotwo} autoPlay loop muted />
+              {/* <video src={videotwo} autoPlay loop muted style={{width:"100%" , height:"100%" , objectFit:"cover"}}/> */}
+              <CardMedia
+                component="video"
+                // className={classes.media}
+                image={videotwo}
+                autoPlay
+              />
               {/* <Box className="container"> */}
               <Box
                 sx={{
@@ -921,7 +928,7 @@ export default function Outdoor() {
                                 value={state}
                                 label="state"
                                 onChange={handleChange}
-                                sx={{backgroundColor:"#F0F0F0"}}
+                                sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 {states.map((item, index) => (
                                   <MenuItem value={item} sx={{ color: "#000" }}>
@@ -978,7 +985,7 @@ export default function Outdoor() {
                                 value={city}
                                 label="state"
                                 onChange={handleChange2}
-                                sx={{backgroundColor:"#F0F0F0"}}
+                                sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 {state &&
                                   stateDistricts[state]?.map((item) => (
@@ -1038,7 +1045,7 @@ export default function Outdoor() {
                                 value={type}
                                 label="state"
                                 onChange={handleChange3}
-                                sx={{backgroundColor: "#F0F0F0"}}
+                                sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 <MenuItem
                                   value={"Digital"}
@@ -1117,63 +1124,65 @@ export default function Outdoor() {
         </Grid>
       </Box>
 
-      <Grid
-        container
-        sx={{
-          // marginTop: { xs: "30px", sm: "30px", md: "270px", lg: "209px" },
-          // marginBottom: "50px",
-          backgroundColor: { xs: "#E8E8E8", md: "", lg: "" },
-        }}
-      >
+      <Box>
         <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          // sx={{ backgroundColor: "red" }}
-        ></Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={10.6}
-          lg={10.6}
-          // sx={{ backgroundColor: "yellow" }}
+          container
+          sx={{
+            // marginTop: { xs: "30px", sm: "30px", md: "270px", lg: "209px" },
+            // marginBottom: "50px",
+            backgroundColor: { xs: "#E8E8E8", md: "", lg: "" },
+          }}
         >
-          <Grid container spacing={2}>
-            {products &&
-              products
-                .filter((item) => item?.category === "Outdoor")
-                .reverse()
-                .map((item) => (
-                  <Cards
-                    key={item.id} // Add a unique key for each mapped element
-                    data={item}
-                    onClick={() => {
-                      navigate(
-                        `/${
-                          item?.urlcat?.toLowerCase()
-                            ? item?.urlcat?.toLowerCase()
-                            : item?.urlcat
-                        }/${item?.url ? item?.url : item?.address}/`,
-                        { state: { id: item._id } }
-                      );
-                      console.log("hello world");
-                    }}
-                  />
-                ))}
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "red" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            // sx={{ backgroundColor: "yellow" }}
+          >
+            <Grid container spacing={2}>
+              {products &&
+                products
+                  .filter((item) => item?.category === "Outdoor")
+                  .reverse()
+                  .map((item) => (
+                    <Cards
+                      key={item.id} // Add a unique key for each mapped element
+                      data={item}
+                      onClick={() => {
+                        navigate(
+                          `/${
+                            item?.urlcat?.toLowerCase()
+                              ? item?.urlcat?.toLowerCase()
+                              : item?.urlcat
+                          }/${item?.url ? item?.url : item?.address}/`,
+                          { state: { id: item._id } }
+                        );
+                        console.log("hello world");
+                      }}
+                    />
+                  ))}
+            </Grid>
           </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "green" }}
+          ></Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          // sx={{ backgroundColor: "green" }}
-        ></Grid>
-      </Grid>
+      </Box>
     </>
   );
 }

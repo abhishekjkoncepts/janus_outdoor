@@ -750,8 +750,8 @@ export default function Outdoor() {
                     <Box
                       sx={{
                         marginTop: {
-                          xs: "90px",
-                          sm: "90px",
+                          xs: "120px",
+                          sm: "120px",
                           md: "100px",
                           lg: "100px",
                         },
@@ -868,8 +868,8 @@ export default function Outdoor() {
                               lg: "space-between",
                             },
                             marginTop: {
-                              xs: "60px",
-                              sm: "60px",
+                              xs: "90px",
+                              sm: "90px",
                               md: "40px",
                               lg: "40px",
                             },

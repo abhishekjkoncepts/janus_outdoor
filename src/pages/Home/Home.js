@@ -459,65 +459,65 @@ const Home = () => {
               </Box>
 
               <Box
+                sx={{
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+              >
+                <Typography
                   sx={{
-                    paddingLeft: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "0px",
-                      lg: "0px",
+                    color: "#000",
+                    fontSize: {
+                      xs: "0px",
+                      sm: "0px",
+                      md: "15px",
+                      lg: "15px",
                     },
-                    paddingRight: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "0px",
-                      lg: "0px",
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: {
+                      xs: "left",
+                      sm: "left",
+                      md: "center",
+                      lg: "center",
                     },
                   }}
                 >
+                  Elevate Your Brand with Our Unmatched Outdoor Media Solutions
+                  <br /> – Impactful , Creative & Results-Driven Advertising
+                  Excellence.
+                </Typography>
+                <Box>
                   <Typography
                     sx={{
                       color: "#000",
                       fontSize: {
-                        xs: "0px",
-                        sm: "0px",
-                        md: "15px",
-                        lg: "15px",
+                        xs: "12px",
+                        sm: "12px",
+                        md: "0px",
+                        lg: "0px",
                       },
-                      fontWeight: "600",
+                      fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
-                      textAlign: {
-                        xs: "left",
-                        sm: "left",
-                        md: "center",
-                        lg: "center",
-                      },
+                      textAlign: "center",
                     }}
                   >
-                     Elevate Your Brand with Our Unmatched Outdoor Media Solutions
-                  <br /> – Impactful , Creative & Results-Driven Advertising
-                  Excellence.
+                    Elevate Your Brand with Our Unmatched Outdoor Media
+                    Solutions – Impactful , Creative & Results-Driven
+                    Advertising Excellence.
                   </Typography>
-                  <Box>
-                    <Typography
-                      sx={{
-                        color: "#000",
-                        fontSize: {
-                          xs: "12px",
-                          sm: "12px",
-                          md: "0px",
-                          lg: "0px",
-                        },
-                        fontWeight: "500",
-                        fontFamily: "Poppins, sans-serif",
-                        textAlign: "center",
-                      }}
-                    >
-                     Elevate Your Brand with Our Unmatched Outdoor Media Solutions
-                  – Impactful , Creative & Results-Driven Advertising
-                  Excellence.
-                    </Typography>
-                  </Box>
                 </Box>
+              </Box>
             </Box>
           </Grid>
           <Grid
@@ -635,9 +635,10 @@ const Home = () => {
                         textAlign: "center",
                       }}
                     >
-                      Propel your brand's presence across <br />cities with 
-                      our  dynamic outdoor solutions,<br/> delivering impactful, 
-                      creative advertising excellence seamlessly.
+                      Propel your brand's presence across <br />
+                      cities with our  dynamic outdoor solutions,
+                      <br /> delivering impactful, creative advertising
+                      excellence seamlessly.
                     </Typography>
                   </Box>
                 </Box>

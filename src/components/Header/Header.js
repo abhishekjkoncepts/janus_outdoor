@@ -93,8 +93,6 @@ function Header(props) {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        //  backgroundColor: "#011e29",
-        // backgroundColor: "#080808",
         backgroundColor: "#fff",
         height: "100%",
       }}
@@ -114,80 +112,52 @@ function Header(props) {
             component="img"
             sx={{
               width: {
-                xs: "60px",
-                sm: "60px",
+                xs: "80px",
+                sm: "80px",
                 md: "70px",
                 lg: "70px",
               },
               height: {
-                xs: "40px",
-                sm: "40px",
+                xs: "60px",
+                sm: "60px",
                 md: "50px",
                 lg: "50px",
               },
               // marginLeft: { xs: "15px", sm: "15px", md: "43px", lg: "43px" },
-              marginTop: { xs: "5px", sm: "5px", md: "15px", lg: "15px" },
+              marginTop: { xs: "5px", sm: "5px", md: "25px", lg: "55px" },
             }}
             alt="janusLogo"
             src={janusLogo}
           />
         </Box>
       </Link>
-      {/* <Divider sx={{ backgroundColor: "#fff" }} /> */}
-      {/* <Divider sx={{ backgroundColor: "#C02222", height: "2px" }} /> */}
-      {/* <List>
-        {navItems.map((item, index) => {
-          return (
-            <ListItem key={index} disablePadding>
-              <ListItemButton
-                sx={{ textAlign: "center", borderBottom: "1px solid #C02222" }}
-                onClick={() => {
-                  navigate(item?.to);
-                }}
-              >
-                <Box sx={{}}>
-                  <Typography
-                    sx={{
-                      color: "#fff",
-                      fontSize: "16px",
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    {item?.name}
-                  </Typography>
-                </Box>
-              </ListItemButton>
-            </ListItem>
-          );
-        })}
-      </List> */}
-
       <Box sx={{ marginTop: "30px" }}>
         {/* Home */}
+        <Box sx={{borderTop:"1px solid black"}}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "row",
             marginLeft: "20px",
-            marginTop: "15px",
+            marginTop: "7px",
+            marginBottom: "7px",
           }}
         >
           <Box>
             <img
               src={homeIcon}
-              style={{ width: "20px", height: "20px", marginTop: "5px" }}
+              style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
-          <Box>
+          <Box sx={{marginLeft:"8px"}}>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
                   color: "#000",
-                  fontSize: "17px",
+                  fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
-                  marginLeft: "4px",
+                  // marginLeft: "4px",
                   paddingTop: "5px",
                   paddingBottom: "5px",
                 }}
@@ -197,9 +167,11 @@ function Header(props) {
             </Link>
           </Box>
         </Box>
+        </Box>
 
         {/* About us  */}
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" }}>
+        <Box sx={{ borderTop:"1px solid black"}}>
+        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px"  }}>
           <Box>
             <img
               src={aboutUsIcon}
@@ -223,6 +195,7 @@ function Header(props) {
               </Typography>
             </Link>
           </Box>
+        </Box>
         </Box>
 
         {/* Contact us  */}

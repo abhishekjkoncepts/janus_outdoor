@@ -436,8 +436,8 @@ const Home = () => {
           >
             <Box
               sx={{
-                marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
-                marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+                marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
+                marginBottom: { xs: "15px", sm: "15px", md: "20px", lg: "20px" },
               }}
             >
               <Box>
@@ -558,8 +558,8 @@ const Home = () => {
             >
               <Box
                 sx={{
-                  marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
-                  marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+                  marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
+                  marginBottom: { xs: "0px", sm: "0px", md: "20px", lg: "20px" },
                 }}
               >
                 <Box>
@@ -1043,6 +1043,7 @@ const Home = () => {
               // sx={{ backgroundColor: "red" }}
             >
               <Grid container>
+                <Box sx={{marginBottom:{xs:"15px" , sm:"15pxs"}}}>
                 {/* PUNE */}
                 <Grid
                   item
@@ -1387,6 +1388,7 @@ const Home = () => {
                     </Box>
                   </Box>
                 </Grid>
+                </Box>
               </Grid>
             </Grid>
 
@@ -2282,7 +2284,7 @@ const Home = () => {
         <Triumphs />
 
         {/* FOOTER */}
-        <Footer/>
+        {/* <Footer/> */}
       </Box>
     </>
   );

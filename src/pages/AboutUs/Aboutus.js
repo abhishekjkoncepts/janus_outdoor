@@ -631,7 +631,7 @@ const Aboutus = () => {
         </Grid>
       </Box>
 
-      <Footer/>
+      {/* <Footer/> */}
     </Box>
   );
 };

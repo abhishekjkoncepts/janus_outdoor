@@ -1227,7 +1227,7 @@ export default function Outdoor() {
         ></Grid>
       </Grid>
 
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

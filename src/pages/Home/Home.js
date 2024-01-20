@@ -455,7 +455,7 @@ const Home = () => {
                     color: "#000",
                   }}
                 >
-                  OUR SERVICES
+                  Our Services
                 </Typography>
               </Box>
 
@@ -1449,7 +1449,7 @@ const Home = () => {
                       color: "#fff",
                     }}
                   >
-                    EXPERIENCE
+                    Experience
                   </Typography>
                 </Box>
 

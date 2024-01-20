@@ -62,7 +62,7 @@ const Triumphs = () => {
                     color: "#000",
                   }}
                 >
-                  TRIUMPHS
+                  Triumphs
                 </Typography>
               </Box>
 

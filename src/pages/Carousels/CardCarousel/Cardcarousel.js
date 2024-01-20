@@ -87,7 +87,7 @@ const Cardcarousel = () => {
                   color: "#000",
                 }}
               >
-                HOARDINGS PLACED
+                Hoarding Placed
               </Typography>
             </Box>
 

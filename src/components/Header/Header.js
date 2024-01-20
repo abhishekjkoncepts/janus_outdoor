@@ -171,22 +171,23 @@ function Header(props) {
 
         {/* About us  */}
         <Box sx={{ borderTop:"1px solid black"}}>
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px"  }}>
+        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" , paddingTop: "5px",
+                  paddingBottom: "5px",  }}>
           <Box>
             <img
               src={aboutUsIcon}
-              style={{ width: "20px", height: "20px", marginTop: "5px" }}
+              style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
-          <Box>
+          <Box sx={{marginLeft:"8px"}}>
             <Link to={"/about-us"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
                   color: "#000",
-                  fontSize: "17px",
+                  fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
-                  marginLeft: "4px",
+                  // marginLeft: "4px",
                   paddingTop: "5px",
                   paddingBottom: "5px",
                 }}
@@ -198,25 +199,27 @@ function Header(props) {
         </Box>
         </Box>
 
-        {/* Contact us  */}
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" }}>
+        {/* Services  */}
+        <Box sx={{ borderTop:"1px solid black"}}>
+        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
+                  paddingBottom: "5px", }}>
           <Box>
             <img
               src={servicesIcon}
-              style={{ width: "20px", height: "20px", marginTop: "5px" }}
+              style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
-          <Box>
+          <Box  sx={{marginLeft:"8px"}}>
             <Link to={"/our-service"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
                   color: "#000",
-                  fontSize: "17px",
+                  fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
-                  marginLeft: "4px",
                   paddingTop: "5px",
                   paddingBottom: "5px",
+                  
                 }}
               >
                 SERVICES
@@ -224,21 +227,24 @@ function Header(props) {
             </Link>
           </Box>
         </Box>
+        </Box>
 
         {/* Contact us  */}
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" }}>
+        <Box sx={{ borderTop:"1px solid black" , borderBottom:"1px solid black" }}>
+        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
+                  paddingBottom: "5px", }}>
           <Box>
             <img
               src={contactUsIcon}
-              style={{ width: "20px", height: "20px", marginTop: "5px" }}
+              style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
-          <Box>
+          <Box sx={{marginLeft:"8px"}}>
             <Link to={"/contact-us"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
                   color: "#000",
-                  fontSize: "17px",
+                  fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
                   marginLeft: "4px",
@@ -250,6 +256,7 @@ function Header(props) {
               </Typography>
             </Link>
           </Box>
+        </Box>
         </Box>
       </Box>
     </Box>

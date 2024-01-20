@@ -19,7 +19,7 @@ const App = () => {
     <Provider store={store}>
       <Box flex={1}>
         <Navigation />
-        <Footer />
+        {/* <Footer /> */}
         {/* <Testing/> */}
         {/* <Categorycarousel/> */}
       </Box>

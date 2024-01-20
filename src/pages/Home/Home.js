@@ -58,6 +58,7 @@ import "./Circle3.css";
 import { getProducts } from "../../redux/actions/Outdoor";
 
 import { getProductsCategories } from "../../redux/actions/Home";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -2279,6 +2280,9 @@ const Home = () => {
           </Grid>
         </Box>
         <Triumphs />
+
+        {/* FOOTER */}
+        <Footer/>
       </Box>
     </>
   );

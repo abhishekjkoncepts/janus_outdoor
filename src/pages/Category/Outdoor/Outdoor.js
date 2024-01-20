@@ -670,6 +670,7 @@ import { useNavigate } from "react-router-dom";
 // BOOTSTRAP
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "../../../components/Footer/Footer";
 
 export default function Outdoor() {
   const [state, setState] = React.useState(null);
@@ -1108,7 +1109,7 @@ export default function Outdoor() {
                                   value={"Unipole"}
                                   sx={{ color: "#000" }}
                                 >
-                                  Unipole
+                                  UNIPOLE
                                 </MenuItem>
                                 <MenuItem
                                   value={"Outdoor"}
@@ -1225,6 +1226,8 @@ export default function Outdoor() {
           // sx={{ backgroundColor: "green" }}
         ></Grid>
       </Grid>
+
+      <Footer/>
     </>
   );
 }

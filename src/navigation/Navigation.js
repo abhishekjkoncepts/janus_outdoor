@@ -12,6 +12,7 @@ import Aboutus from "../pages/AboutUs/Aboutus";
 import Contactus from "../pages/ContactUs/Contactus";
 import Blogs from "../pages/Blogs/Blogs";
 import Ourservice from "../pages/OurServices/Ourservice";
+import Footer from "../components/Footer/Footer";
 
 // HEADER
 import Header from "../components/Header/Header";
@@ -34,6 +35,7 @@ const Navigation = () => {
   return (
     <BrowserRouter>
       <Header />
+
       <Scrolltotop>
         {/* PARENT-PAGES */}
         <Routes>
@@ -42,6 +44,7 @@ const Navigation = () => {
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/our-service" element={<Ourservice />} />
+          
 
           {/* CATEGORY*/}
           {/* <Route path="/outdoor/" element={<Outdoor />} />
@@ -71,8 +74,6 @@ const Navigation = () => {
           />
 
           {/* FULl CArd */}
-          {/* <Route path="/seedetails/:seotitle" element={<Fullcard />} /> */}
-          {/* <Route path="/seedetails/:category?/:seotitle" element={<Fullcard />} /> */}
           <Route path="/:category/:seotitle" element={<Fullcard />} />
           <Route
             path="/seedetails/:category?/:seotitle"
@@ -81,6 +82,7 @@ const Navigation = () => {
           {/* <Route path="/:param1?/:param2?/:param3?" element={<Individual />} /> */}
         </Routes>
       </Scrolltotop>
+      
     </BrowserRouter>
   );
 };

@@ -115,6 +115,7 @@ const Footer = () => {
                 marginTop: { xs: "10px", sm: "10px", md: "15px", lg: "15px" },
               }}
             >
+              <Link to="/contact-us/" style={{ textDecoration:"none"}}>  
               <Box
                 sx={{
                   backgroundColor: "#fff",
@@ -139,6 +140,7 @@ const Footer = () => {
                 }}
                 // onClick={() => navigate("/contactus")}
               >
+                
                 <Typography
                   sx={{
                     fontSize: {
@@ -154,7 +156,64 @@ const Footer = () => {
                 >
                   CONTACT US
                 </Typography>
+               
               </Box>
+              </Link>
+
+              <Link to="/about-us/" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: {
+                        xs: "center",
+                        sm: "center",
+                        md: "flex-start",
+                        lg: "flex-start",
+                      },
+                      alignItems: "center",
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        backgroundColor: "#C02222",
+                        height: "40px",
+                        width: "120px",
+                        borderRadius: "30px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginTop: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "5px",
+                          lg: "5px",
+                        },
+                        marginBottom: {
+                          xs: "20px",
+                          sm: "20px",
+                          md: "50px",
+                          lg: "50px",
+                        },
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          color: "#fff",
+                        }}
+                      >
+                        KNOW MORE
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Link>
             </Box>
           </Box>
         </Grid>

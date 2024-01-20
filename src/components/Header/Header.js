@@ -144,7 +144,7 @@ function Header(props) {
       </Link>
       <Box sx={{ marginTop: "30px" }}>
         {/* Home */}
-        <Box sx={{borderTop:"1px solid #C02222"}}>
+        <Box sx={{borderTop:"1px solid #fff"}}>
         <Box
           sx={{
             display: "flex",
@@ -157,8 +157,8 @@ function Header(props) {
           <Box>
             <img
               // src={homeIcon}
-              src={homeIcon2}
-              // src={homeIcon3}
+              // src={homeIcon2}
+              src={homeIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -167,8 +167,8 @@ function Header(props) {
               <Typography
                 sx={{
                   // color: "#000",
-                  color: "#C02222",
-                  // color: "#fff",
+                  // color: "#C02222",
+                  color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -185,14 +185,14 @@ function Header(props) {
         </Box>
 
         {/* About us  */}
-        <Box sx={{ borderTop:"1px solid #C02222"}}>
+        <Box sx={{ borderTop:"1px solid #fff"}}>
         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" , paddingTop: "5px",
                   paddingBottom: "5px",  }}>
           <Box>
             <img
               // src={aboutUsIcon}
-              src={aboutUsIcon2}
-              // src={aboutUsIcon3}
+              // src={aboutUsIcon2}
+              src={aboutUsIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -201,8 +201,8 @@ function Header(props) {
               <Typography
                 sx={{
                   // color: "#000",
-                  color: "#C02222",
-                  // color: "#fff",
+                  // color: "#C02222",
+                  color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -219,14 +219,14 @@ function Header(props) {
         </Box>
 
         {/* Services  */}
-        <Box sx={{ borderTop:"1px solid #C02222"}}>
+        <Box sx={{ borderTop:"1px solid #fff"}}>
         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
                   paddingBottom: "5px", }}>
           <Box>
             <img
               // src={servicsIcon}
-              src={servicesIcon2}
-              // src={servicesIcon3}
+              // src={servicesIcon2}
+              src={servicesIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -235,8 +235,8 @@ function Header(props) {
               <Typography
                 sx={{
                   // color: "#000",
-                  color: "#C02222",
-                  // color: "#fff",
+                  // color: "#C02222",
+                  color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -253,14 +253,14 @@ function Header(props) {
         </Box>
 
         {/* Contact us  */}
-        <Box sx={{ borderTop:"1px solid #C02222" , borderBottom:"1px solid #C02222" }}>
+        <Box sx={{ borderTop:"1px solid #fff" , borderBottom:"1px solid #fff" }}>
         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
                   paddingBottom: "5px", }}>
           <Box>
             <img
               // src={contactUsIcon}
-              src={contactUsIcon2}
-              // src={contactUsIcon3}
+              // src={contactUsIcon2}
+              src={contactUsIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -269,8 +269,8 @@ function Header(props) {
               <Typography
                 sx={{
                   // color: "#000",
-                  color: "#C02222",
-                  // color: "#fff",
+                  // color: "#C02222",
+                  color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",

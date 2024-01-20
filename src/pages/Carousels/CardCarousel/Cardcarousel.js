@@ -91,7 +91,6 @@ const Cardcarousel = () => {
               </Typography>
             </Box>
 
-
             <Box
               sx={{
                 paddingLeft: {
@@ -147,9 +146,9 @@ const Cardcarousel = () => {
                     textAlign: "center",
                   }}
                 >
-                  Cityscape Brilliance Unveiled Journey  <br/> throughour top sites in
-                  key cities, showcasing businesses worldwide—a testament to
-                  impactful collaborations.
+                  Cityscape Brilliance Unveiled Journey <br /> throughour top
+                  sites in key cities, showcasing businesses worldwide—a
+                  testament to impactful collaborations.
                 </Typography>
               </Box>
             </Box>
@@ -201,7 +200,7 @@ const Cardcarousel = () => {
               {products &&
                 products.reverse().map(
                   (item, index) =>
-                    index < 9 && (
+                    (
                       <Carousel.Item>
                         <Card
                           sx={{
@@ -212,12 +211,23 @@ const Cardcarousel = () => {
                             background:
                               "linear-gradient(to bottom, #C02222 85%, #000)",
                           }}
+                          // onClick={() => {
+                          //   navigate(
+                          //     `/${
+                          //       item?.category?.toLowerCase()
+                          //         ? item?.category?.toLowerCase()
+                          //         : item?.code
+                          //     }/${item?.url ? item?.url : item?.address}/`,
+                          //     { state: { id: item._id } }
+                          //   );
+                          //   console.log("hello world");
+                          // }}
                           onClick={() => {
                             navigate(
                               `/${
-                                item?.category?.toLowerCase()
-                                  ? item?.category?.toLowerCase()
-                                  : item?.code
+                                item?.urlcat?.toLowerCase()
+                                  ? item?.urlcat?.toLowerCase()
+                                  : item?.urlcat
                               }/${item?.url ? item?.url : item?.address}/`,
                               { state: { id: item._id } }
                             );

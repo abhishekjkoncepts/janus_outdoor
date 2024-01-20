@@ -411,6 +411,79 @@ const Home = () => {
         </Box>
 
         {/* OUR SERVICES - CATEGORIES */}
+        <Grid
+        container
+        sx={{
+          backgroundColor: "#F5F5F5",
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={0.7}
+          lg={0.7}
+          // sx={{ backgroundColor: "purple" }}
+        ></Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={10.6}
+          lg={10.6}
+          // sx={{ backgroundColor: "pink" }}
+        >
+          <Box
+            sx={{
+              marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
+              marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+            }}
+          >
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "21px",
+                    sm: "21px",
+                    md: "36px",
+                    lg: "36px",
+                  },
+                  fontWeight: "600",
+                  fontFamily: "Poppins, sans-serif",
+                  textAlign: "center",
+                  color: "#000",
+                }}
+              >
+                OUR SERVICES
+              </Typography>
+            </Box>
+
+            <Box>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontSize: { xs: "14px", sm: "14px", md: "16px", lg: "16px" },
+                  fontWeight: "500",
+                  fontFamily: "Poppins, sans-serif",
+                  textAlign: "center",
+                }}
+              >
+                Elevate Your Brand with Our Unmatched Outdoor Media Solutions
+                <br /> – Impactful , Creative & Results-Driven Advertising
+                Excellence.
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={0.7}
+          lg={0.7}
+          // sx={{ backgroundColor: "purple" }}
+        ></Grid>
+      </Grid>
         <Categorycarousel />
 
         {/* EXPLORE */}

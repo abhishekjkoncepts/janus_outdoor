@@ -234,7 +234,7 @@ function Header(props) {
             />
           </Box>
           <Box>
-            <Link to={"/services"} style={{ textDecoration: "none" }}>
+            <Link to={"/our-service"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
                   color: "#000",

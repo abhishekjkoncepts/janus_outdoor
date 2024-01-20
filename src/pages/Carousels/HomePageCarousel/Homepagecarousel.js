@@ -14,7 +14,7 @@ import "./Homepagecarousel.css"
 
 // IMAGES
 import sample from "../../../assets/images/Sample.jpg"
-
+import amarujala from "../../../assets/images/Triumphs/png230x90/amarujala.png"
 
 const Homepagecarousel = () => {
   return (
@@ -53,54 +53,7 @@ const Homepagecarousel = () => {
               style={{ padding: "10px" }}
             >
                <Carousel.Item width="20%">
-                    <Link to="/billboard" style={{ textDecoration: "none" }}>
-                      <div
-                        style={{
-                          position: "relative",
-                          display: "flex",
-                          flexDirection: "column",
-                          borderRadius: "10px",
-                          borderTopRightRadius: "10px",
-                          borderTopLeftRadius: "10px",
-                        }}
-                      >
-                        <div
-                          style={{
-                            position: "absolute",
-                            top: "0",
-                            left: "0",
-                            height: "160px",
-                            width: "100%",
-                            backgroundColor: "black",
-                            opacity: "0.8",
-                            borderBottomRightRadius: "10px",
-                            borderBottomLeftRadius: "10px",
-                            borderTopRightRadius: "10px",
-                            borderTopLeftRadius: "10px",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            color: "#fff",
-                            fontWeight: "700",
-                            fontSize: "30px",
-                           fontFamily: "'Noto Sans Devanagari'",
-                          }}
-                        >
-                        BILLBOARD
-                        </div>
-                        <img
-                          src={sample}
-                          style={{
-                            height: "160px",
-                            width: "100%",
-                            borderBottomLeftRadius: "10px",
-                            borderBottomRightRadius: "10px",
-                            borderTopRightRadius: "10px",
-                            borderTopLeftRadius: "10px",
-                          }}
-                        />
-                      </div>
-                    </Link>
+               <img src={amarujala} style={{width:"90px", height:"100px"}}/>
                   </Carousel.Item>
 
               <Carousel.Item width="20%">

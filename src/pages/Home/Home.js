@@ -1043,7 +1043,6 @@ const Home = () => {
               // sx={{ backgroundColor: "red" }}
             >
               <Grid container>
-                <Box sx={{marginBottom:{xs:"15px" , sm:"15pxs"}}}>
                 {/* PUNE */}
                 <Grid
                   item
@@ -1388,7 +1387,6 @@ const Home = () => {
                     </Box>
                   </Box>
                 </Grid>
-                </Box>
               </Grid>
             </Grid>
 
@@ -2282,6 +2280,7 @@ const Home = () => {
           </Grid>
         </Box>
         <Triumphs />
+        {/* <Homepaagecarousel/> */}
 
         {/* FOOTER */}
         {/* <Footer/> */}

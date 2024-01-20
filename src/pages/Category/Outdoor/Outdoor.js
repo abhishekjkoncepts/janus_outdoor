@@ -1103,7 +1103,7 @@ export default function Outdoor() {
                                   value={"Digital"}
                                   sx={{ color: "#000" }}
                                 >
-                                  Digital
+                                  DIGITAL
                                 </MenuItem>
                                 <MenuItem
                                   value={"Unipole"}
@@ -1115,13 +1115,13 @@ export default function Outdoor() {
                                   value={"Outdoor"}
                                   sx={{ color: "#000" }}
                                 >
-                                  Billboard
+                                  BILLBOARD
                                 </MenuItem>
                                 <MenuItem
                                   value={"Outdoor"}
                                   sx={{ color: "#000" }}
                                 >
-                                  Digital Billboard
+                                  DIGITAL BILLBOARD
                                 </MenuItem>
                                 <MenuItem
                                   value={"Outdoor"}

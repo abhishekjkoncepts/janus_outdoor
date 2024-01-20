@@ -21,6 +21,9 @@ import timesin from "../../assets/images/Triumphs/png230x90/toi.png";
 import timesin2 from "../../assets/images/Triumphs/png230x90/toifull.png";
 import timesin3 from "../../assets/images/Triumphs/png230x90/toifullblack.png";
 
+// PAGES
+import Homepagecarousel from "../Carousels/HomePageCarousel/Homepagecarousel";
+
 const Triumphs = () => {
   return (
     <>
@@ -568,6 +571,7 @@ const Triumphs = () => {
             sx={{ backgroundColor: "#fff" }}
           ></Grid>
         </Grid>
+        <Homepagecarousel/>
       </Box>
     </>
   );

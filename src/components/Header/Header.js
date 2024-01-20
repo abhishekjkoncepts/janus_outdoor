@@ -27,10 +27,21 @@ import { Link, useNavigate } from "react-router-dom";
 // IMAGES
 import janusLogo from "../../assets/images/janusLogo.png";
 import dropdownicon from "../../assets/images/dropDownIcon.png";
+// black
 import homeIcon from "../../assets/images/Side-Drawer-icons/home.png";
 import aboutUsIcon from "../../assets/images/Side-Drawer-icons/about-us.png";
 import servicesIcon from "../../assets/images/Side-Drawer-icons/services.png";
 import contactUsIcon from "../../assets/images/Side-Drawer-icons/contact-us.png";
+// red
+import homeIcon2 from "../../assets/images/Side-Drawer-icons/icons-red/home.png";
+import aboutUsIcon2 from "../../assets/images/Side-Drawer-icons/icons-red/about-us.png";
+import servicesIcon2 from "../../assets/images/Side-Drawer-icons/icons-red/services.png";
+import contactUsIcon2 from "../../assets/images/Side-Drawer-icons/icons-red/contact-us.png";
+// white
+import homeIcon3 from "../../assets/images/Side-Drawer-icons/icons-white/home-white.png";
+import aboutUsIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/about-us-white.png";
+import servicesIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/services-white.png";
+import contactUsIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/contact-us-white.png";
 
 // CSS
 import "./Header.css";
@@ -93,7 +104,7 @@ function Header(props) {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#000",
         height: "100%",
       }}
     >
@@ -133,7 +144,7 @@ function Header(props) {
       </Link>
       <Box sx={{ marginTop: "30px" }}>
         {/* Home */}
-        <Box sx={{borderTop:"1px solid black"}}>
+        <Box sx={{borderTop:"1px solid #C02222"}}>
         <Box
           sx={{
             display: "flex",
@@ -145,7 +156,9 @@ function Header(props) {
         >
           <Box>
             <img
-              src={homeIcon}
+              // src={homeIcon}
+              src={homeIcon2}
+              // src={homeIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -153,7 +166,9 @@ function Header(props) {
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
-                  color: "#000",
+                  // color: "#000",
+                  color: "#C02222",
+                  // color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -170,12 +185,14 @@ function Header(props) {
         </Box>
 
         {/* About us  */}
-        <Box sx={{ borderTop:"1px solid black"}}>
+        <Box sx={{ borderTop:"1px solid #C02222"}}>
         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" , paddingTop: "5px",
                   paddingBottom: "5px",  }}>
           <Box>
             <img
-              src={aboutUsIcon}
+              // src={aboutUsIcon}
+              src={aboutUsIcon2}
+              // src={aboutUsIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -183,7 +200,9 @@ function Header(props) {
             <Link to={"/about-us"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
-                  color: "#000",
+                  // color: "#000",
+                  color: "#C02222",
+                  // color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -200,12 +219,14 @@ function Header(props) {
         </Box>
 
         {/* Services  */}
-        <Box sx={{ borderTop:"1px solid black"}}>
+        <Box sx={{ borderTop:"1px solid #C02222"}}>
         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
                   paddingBottom: "5px", }}>
           <Box>
             <img
-              src={servicesIcon}
+              // src={servicsIcon}
+              src={servicesIcon2}
+              // src={servicesIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -213,7 +234,9 @@ function Header(props) {
             <Link to={"/our-service"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
-                  color: "#000",
+                  // color: "#000",
+                  color: "#C02222",
+                  // color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
@@ -230,12 +253,14 @@ function Header(props) {
         </Box>
 
         {/* Contact us  */}
-        <Box sx={{ borderTop:"1px solid black" , borderBottom:"1px solid black" }}>
+        <Box sx={{ borderTop:"1px solid #C02222" , borderBottom:"1px solid #C02222" }}>
         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
                   paddingBottom: "5px", }}>
           <Box>
             <img
-              src={contactUsIcon}
+              // src={contactUsIcon}
+              src={contactUsIcon2}
+              // src={contactUsIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>
@@ -243,7 +268,9 @@ function Header(props) {
             <Link to={"/contact-us"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
-                  color: "#000",
+                  // color: "#000",
+                  color: "#C02222",
+                  // color: "#fff",
                   fontSize: "20px",
                   fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",

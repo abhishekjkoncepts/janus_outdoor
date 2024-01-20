@@ -714,7 +714,13 @@ export default function Outdoor() {
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Box className="bgContainer">
-              <video src={videotwo} autoPlay loop muted style={{width:"100%" , height:"80%" , objectFit:"cover"}}/>
+              <video
+                src={videotwo}
+                autoPlay
+                loop
+                muted
+                style={{ width: "100%", height: "90%", objectFit: "cover" }}
+              />
               {/* <Box className="container"> */}
               <Box
                 sx={{
@@ -921,7 +927,7 @@ export default function Outdoor() {
                                 value={state}
                                 label="state"
                                 onChange={handleChange}
-                                sx={{backgroundColor:"#F0F0F0"}}
+                                sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 {states.map((item, index) => (
                                   <MenuItem value={item} sx={{ color: "#000" }}>
@@ -978,7 +984,7 @@ export default function Outdoor() {
                                 value={city}
                                 label="state"
                                 onChange={handleChange2}
-                                sx={{backgroundColor:"#F0F0F0"}}
+                                sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 {state &&
                                   stateDistricts[state]?.map((item) => (
@@ -1038,7 +1044,7 @@ export default function Outdoor() {
                                 value={type}
                                 label="state"
                                 onChange={handleChange3}
-                                sx={{backgroundColor: "#F0F0F0"}}
+                                sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 <MenuItem
                                   value={"Digital"}
@@ -1117,14 +1123,7 @@ export default function Outdoor() {
         </Grid>
       </Box>
 
-      <Grid
-        container
-        sx={{
-          // marginTop: { xs: "30px", sm: "30px", md: "270px", lg: "209px" },
-          // marginBottom: "50px",
-          backgroundColor: { xs: "#E8E8E8", md: "", lg: "" },
-        }}
-      >
+      <Grid container>
         <Grid
           item
           xs={12}

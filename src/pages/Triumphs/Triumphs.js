@@ -571,7 +571,7 @@ const Triumphs = () => {
             sx={{ backgroundColor: "#fff" }}
           ></Grid>
         </Grid>
-        <Homepagecarousel/>
+        {/* <Homepagecarousel/> */}
       </Box>
     </>
   );

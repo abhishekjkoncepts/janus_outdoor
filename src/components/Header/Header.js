@@ -157,8 +157,8 @@ function Header(props) {
           <Box>
             <img
               // src={homeIcon}
-              // src={homeIcon2}
-              src={homeIcon3}
+              src={homeIcon2}
+              // src={homeIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
             />
           </Box>

@@ -107,19 +107,19 @@ function Header(props) {
           ...buttonHoverStyle,
         }}
       >
-        <Box>
+        <Box sx={{marginTop:"20px"}}>
           <Box
             component="img"
             sx={{
               width: {
-                xs: "80px",
-                sm: "80px",
+                xs: "90px",
+                sm: "90px",
                 md: "70px",
                 lg: "70px",
               },
               height: {
-                xs: "60px",
-                sm: "60px",
+                xs: "70px",
+                sm: "70px",
                 md: "50px",
                 lg: "50px",
               },

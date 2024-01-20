@@ -714,7 +714,7 @@ export default function Outdoor() {
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Box className="bgContainer">
-              <video src={videotwo} autoPlay loop muted style={{width:"100%" , height:"100%" , objectFit:"cover"}}/>
+              <video src={videotwo} autoPlay loop muted style={{width:"100%" , height:"80%" , objectFit:"cover"}}/>
               {/* <Box className="container"> */}
               <Box
                 sx={{

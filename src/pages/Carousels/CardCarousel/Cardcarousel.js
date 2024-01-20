@@ -91,14 +91,40 @@ const Cardcarousel = () => {
               </Typography>
             </Box>
 
-            <Box>
+
+            <Box
+              sx={{
+                paddingLeft: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "0px",
+                  lg: "0px",
+                },
+                paddingRight: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "0px",
+                  lg: "0px",
+                },
+              }}
+            >
               <Typography
                 sx={{
                   color: "#000",
-                  fontSize: { xs: "14px", sm: "14px", md: "16px", lg: "16px" },
-                  fontWeight: "500",
+                  fontSize: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "15px",
+                    lg: "15px",
+                  },
+                  fontWeight: "600",
                   fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
+                  textAlign: {
+                    xs: "left",
+                    sm: "left",
+                    md: "center",
+                    lg: "center",
+                  },
                 }}
               >
                 Cityscape Brilliance Unveiled Journey through our top sites in
@@ -106,6 +132,26 @@ const Cardcarousel = () => {
                 <br /> businesses worldwide—a testament to impactful
                 collaborations.
               </Typography>
+              <Box>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    fontSize: {
+                      xs: "12px",
+                      sm: "12px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    fontWeight: "500",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                  }}
+                >
+                  Cityscape Brilliance Unveiled Journey  <br/> throughour top sites in
+                  key cities, showcasing businesses worldwide—a testament to
+                  impactful collaborations.
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </Grid>
@@ -153,66 +199,70 @@ const Cardcarousel = () => {
               style={{ padding: "10px" }}
             >
               {products &&
-                products.reverse().map((item,index) => index < 9 && (
-                  <Carousel.Item>
-                    <Card
-                      sx={{
-                        maxWidth: "400px",
-                        maxHeight: 700,
-                        borderRadius: "190px 190px 0 0",
-                        border: "2px solid #C02222",
-                        background:
-                          "linear-gradient(to bottom, #C02222 85%, #000)",
-                      }}
-                      onClick={() => {
-                        navigate(
-                          `/${
-                            item?.category?.toLowerCase()
-                              ? item?.category?.toLowerCase()
-                              : item?.code
-                          }/${item?.url ? item?.url : item?.address}/`,
-                          { state: { id: item._id } }
-                        );
-                        console.log("hello world");
-                      }}
-                    >
-                      <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          height="300"
-                          image={item?.image}
-                          alt="green iguana"
-                          sx={{ backgroundColor: "grey" }}
-                        />
-                        <CardContent sx={{ height: "110px" }}>
-                          <Typography
-                            sx={{
-                              fontFamily: "Poppins, sans-serif",
-                              fontSize: "16px",
-                              fontWeight: "600",
-                              color: "#fff",
-                              display: "-webkit-box",
-                              overflow: "hidden",
-                              WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 1,
-                            }}
-                          >
-                            {item?.address}
-                          </Typography>
-                          <Typography
-                            variant="body2"
-                            color="#fff"
-                            sx={{ marginTop: "5px" }}
-                          >
-                            State: {item?.state} <br />
-                            City: {item?.city}
-                            <br />
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Card>
-                  </Carousel.Item>
-                ))}
+                products.reverse().map(
+                  (item, index) =>
+                    index < 9 && (
+                      <Carousel.Item>
+                        <Card
+                          sx={{
+                            maxWidth: "400px",
+                            maxHeight: 700,
+                            borderRadius: "190px 190px 0 0",
+                            border: "2px solid #C02222",
+                            background:
+                              "linear-gradient(to bottom, #C02222 85%, #000)",
+                          }}
+                          onClick={() => {
+                            navigate(
+                              `/${
+                                item?.category?.toLowerCase()
+                                  ? item?.category?.toLowerCase()
+                                  : item?.code
+                              }/${item?.url ? item?.url : item?.address}/`,
+                              { state: { id: item._id } }
+                            );
+                            console.log("hello world");
+                          }}
+                        >
+                          <CardActionArea>
+                            <CardMedia
+                              component="img"
+                              height="300"
+                              image={item?.image}
+                              alt="green iguana"
+                              sx={{ backgroundColor: "grey" }}
+                            />
+                            <CardContent sx={{ height: "120px" }}>
+                              <Typography
+                                sx={{
+                                  fontFamily: "Poppins, sans-serif",
+                                  fontSize: "16px",
+                                  fontWeight: "600",
+                                  color: "#fff",
+                                  display: "-webkit-box",
+                                  overflow: "hidden",
+                                  WebkitBoxOrient: "vertical",
+                                  WebkitLineClamp: 2,
+                                }}
+                              >
+                                {item?.address}
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                color="#fff"
+                                sx={{ marginTop: "5px" }}
+                              >
+                                City: {item?.city}
+                                <br />
+                                State: {item?.state}
+                                <br />
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                        </Card>
+                      </Carousel.Item>
+                    )
+                )}
               {/* <Carousel.Item width="20%">
                 <Card
                   sx={{

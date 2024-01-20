@@ -66,25 +66,65 @@ const Triumphs = () => {
                 </Typography>
               </Box>
 
-              <Box>
+              <Box
+                sx={{
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+              >
                 <Typography
                   sx={{
                     color: "#000",
                     fontSize: {
-                      xs: "14px",
-                      sm: "14px",
-                      md: "16px",
-                      lg: "16px",
+                      xs: "0px",
+                      sm: "0px",
+                      md: "15px",
+                      lg: "15px",
                     },
-                    fontWeight: "500",
+                    fontWeight: "600",
                     fontFamily: "Poppins, sans-serif",
-                    textAlign: "center",
+                    textAlign: {
+                      xs: "left",
+                      sm: "left",
+                      md: "center",
+                      lg: "center",
+                    },
                   }}
                 >
-                  Showcasing the success stories of clients who've experienced
+                 Showcasing the success stories of clients who've experienced
                   our creative
                   <br /> prowess, surpassing ordinary online marketing impact.
                 </Typography>
+                <Box>
+                  <Typography
+                    sx={{
+                      color: "#000",
+                      fontSize: {
+                        xs: "12px",
+                        sm: "12px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      fontWeight: "500",
+                      fontFamily: "Poppins, sans-serif",
+                      textAlign: "center",
+                    }}
+                  >
+                    Showcasing the success stories of clients who've experienced
+                    our creative prowess, surpassing ordinary online marketing
+                    impact.
+                  </Typography>
+                </Box>
               </Box>
             </Box>
             {/* </Box> */}
@@ -499,7 +539,7 @@ const Triumphs = () => {
                           lg: "60%",
                         },
                         marginTop: {
-                          xs: "16px",   
+                          xs: "16px",
                           sm: "16px",
                           md: "25px",
                           lg: "25px",

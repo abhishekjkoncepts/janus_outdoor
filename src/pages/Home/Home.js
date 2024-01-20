@@ -412,78 +412,123 @@ const Home = () => {
 
         {/* OUR SERVICES - CATEGORIES */}
         <Grid
-        container
-        sx={{
-          backgroundColor: "#F5F5F5",
-        }}
-      >
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          // sx={{ backgroundColor: "purple" }}
-        ></Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={10.6}
-          lg={10.6}
-          // sx={{ backgroundColor: "pink" }}
+          container
+          sx={{
+            backgroundColor: "#F5F5F5",
+          }}
         >
-          <Box
-            sx={{
-              marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
-              marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
-            }}
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            // sx={{ backgroundColor: "pink" }}
           >
-            <Box>
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "21px",
-                    sm: "21px",
-                    md: "36px",
-                    lg: "36px",
-                  },
-                  fontWeight: "600",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
-                  color: "#000",
-                }}
-              >
-                OUR SERVICES
-              </Typography>
-            </Box>
+            <Box
+              sx={{
+                marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
+                marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
+              }}
+            >
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "21px",
+                      sm: "21px",
+                      md: "36px",
+                      lg: "36px",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    color: "#000",
+                  }}
+                >
+                  OUR SERVICES
+                </Typography>
+              </Box>
 
-            <Box>
-              <Typography
-                sx={{
-                  color: "#000",
-                  fontSize: { xs: "14px", sm: "14px", md: "16px", lg: "16px" },
-                  fontWeight: "500",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
-                }}
-              >
-                Elevate Your Brand with Our Unmatched Outdoor Media Solutions
-                <br /> – Impactful , Creative & Results-Driven Advertising
-                Excellence.
-              </Typography>
+              <Box
+                  sx={{
+                    paddingLeft: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    paddingRight: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#000",
+                      fontSize: {
+                        xs: "0px",
+                        sm: "0px",
+                        md: "15px",
+                        lg: "15px",
+                      },
+                      fontWeight: "600",
+                      fontFamily: "Poppins, sans-serif",
+                      textAlign: {
+                        xs: "left",
+                        sm: "left",
+                        md: "center",
+                        lg: "center",
+                      },
+                    }}
+                  >
+                     Elevate Your Brand with Our Unmatched Outdoor Media Solutions
+                  <br /> – Impactful , Creative & Results-Driven Advertising
+                  Excellence.
+                  </Typography>
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#000",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "12px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                        fontWeight: "500",
+                        fontFamily: "Poppins, sans-serif",
+                        textAlign: "center",
+                      }}
+                    >
+                     Elevate Your Brand with Our Unmatched Outdoor Media Solutions
+                  – Impactful , Creative & Results-Driven Advertising
+                  Excellence.
+                    </Typography>
+                  </Box>
+                </Box>
             </Box>
-          </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "purple" }}
+          ></Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          // sx={{ backgroundColor: "purple" }}
-        ></Grid>
-      </Grid>
         <Categorycarousel />
 
         {/* EXPLORE */}
@@ -535,19 +580,39 @@ const Home = () => {
                   </Typography>
                 </Box>
 
-                <Box>
+                <Box
+                  sx={{
+                    paddingLeft: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    paddingRight: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                  }}
+                >
                   <Typography
                     sx={{
                       color: "#000",
                       fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "16px",
-                        lg: "16px",
+                        xs: "0px",
+                        sm: "0px",
+                        md: "15px",
+                        lg: "15px",
                       },
-                      fontWeight: "500",
+                      fontWeight: "600",
                       fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
+                      textAlign: {
+                        xs: "left",
+                        sm: "left",
+                        md: "center",
+                        lg: "center",
+                      },
                     }}
                   >
                     Propel your brand's presence across cities with our  dynamic
@@ -555,6 +620,26 @@ const Home = () => {
                     delivering impactful, creative advertising excellence
                     seamlessly.
                   </Typography>
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#000",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "12px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                        fontWeight: "500",
+                        fontFamily: "Poppins, sans-serif",
+                        textAlign: "center",
+                      }}
+                    >
+                      Propel your brand's presence across <br />cities with 
+                      our  dynamic outdoor solutions,<br/> delivering impactful, 
+                      creative advertising excellence seamlessly.
+                    </Typography>
+                  </Box>
                 </Box>
               </Box>
             </Grid>
@@ -1314,7 +1399,7 @@ const Home = () => {
           </Grid>
         </Box>
 
-        {/* CARD CAROUSEL */}
+        {/* Hoarding placed */}
         <Cardcarousel />
 
         {/* EXPERIENCE */}
@@ -1405,25 +1490,25 @@ const Home = () => {
                     marketing. Our agency offers an experience <br /> that goes
                     beyond, ensuring exceptional results and impact
                   </Typography>
-                  <Box >
-                  <Typography
-                    sx={{
-                      color: "#fff",
-                      fontSize: {
-                        xs: "12px",
-                        sm: "12px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      fontWeight: "400",
-                      fontFamily: "Poppins, sans-serif",
-                      textAlign:"center"
-                    }}
-                  >
-                    We're a creative force, surpassing standard online
-                    marketing. Our agency offers an experience that goes beyond,
-                    ensuring exceptional results and impact.
-                  </Typography>
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#fff",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "12px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                        fontWeight: "400",
+                        fontFamily: "Poppins, sans-serif",
+                        textAlign: "center",
+                      }}
+                    >
+                      We're a creative force, surpassing standard online
+                      marketing. Our agency offers an experience that goes
+                      beyond, ensuring exceptional results and impact.
+                    </Typography>
                   </Box>
                 </Box>
               </Box>
@@ -2192,19 +2277,7 @@ const Home = () => {
             ></Grid>
           </Grid>
         </Box>
-
         <Triumphs />
-
-        {/* <Button
-          onClick={() => {
-            console.log("Hello World");
-            getProductsCategories();
-          }}
-        >
-          CLICK ME!
-        </Button> */}
-
-        {/* <Typography>{productscategories?.category}</Typography> */}
       </Box>
     </>
   );

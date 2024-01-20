@@ -756,8 +756,8 @@ export default function Outdoor() {
                     <Box
                       sx={{
                         marginTop: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "60px",
+                          sm: "60px",
                           md: "100px",
                           lg: "100px",
                         },
@@ -773,14 +773,14 @@ export default function Outdoor() {
                           sx={{
                             display: "flex",
                             fontSize: {
-                              xs: "30px",
-                              sm: "30px",
+                              xs: "0px",
+                              sm: "px",
                               md: "70px",
                               lg: "70px",
                             },
                             fontWeight: {
-                              xs: "500",
-                              sm: "500",
+                              xs: "0",
+                              sm: "0",
                               md: "600",
                               lg: "600",
                             },
@@ -791,6 +791,58 @@ export default function Outdoor() {
                           Outdoor Advertising
                         </Typography>
                       </Box>
+                      {/* for mobile */}
+                      <Box sx={{}}>
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            fontSize: {
+                              xs: "50px",
+                              sm: "50px",
+                              md: "0px",
+                              lg: "0px",
+                            },
+                            fontWeight: {
+                              xs: "500",
+                              sm: "500",
+                              md: "0",
+                              lg: "0",
+                            },
+                            paddingLeft:"10px",
+                            paddingRight:"10px",
+                            fontFamily: "Poppins, sans-serif",
+                            color: "#fff",
+                            justifyContent:"center" ,
+                             alignItems:"center"
+                          }}
+                        >
+                          Outdoor
+                        </Typography>
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            fontSize: {
+                              xs: "50px",
+                              sm: "50px",
+                              md: "0px",
+                              lg: "0px",
+                            },
+                            fontWeight: {
+                              xs: "500",
+                              sm: "500",
+                              md: "0",
+                              lg: "0",
+                            },
+                            fontFamily: "Poppins, sans-serif",
+                            color: "#fff",
+                            justifyContent:"center" ,
+                            alignItems:"center"
+                          }}
+                        >
+                          Advertising
+                        </Typography>
+                      </Box>
+
                       {/* TEXT 2 */}
                       <Box>
                         <Typography
@@ -874,8 +926,8 @@ export default function Outdoor() {
                               lg: "space-between",
                             },
                             marginTop: {
-                              xs: "90px",
-                              sm: "90px",
+                              xs: "30px",
+                              sm: "30px",
                               md: "40px",
                               lg: "40px",
                             },

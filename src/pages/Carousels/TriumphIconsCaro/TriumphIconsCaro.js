@@ -38,12 +38,13 @@ const TriumphIconsCaro = () => {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             initialSlide: 3,
             infinite: true,
             dots: true,
             arrows: true,
+            rows: 2,
           },
         },
         {
@@ -53,6 +54,7 @@ const TriumphIconsCaro = () => {
             slidesToScroll: 1,
             infinite: true,
             dots: false,
+            rows: 2,
           },
         },
       ],
@@ -73,13 +75,13 @@ const TriumphIconsCaro = () => {
                 component="img"
                 sx={{
                   width: {
-                    xs: "100%",
-                    sm: "70px",
+                    xs: "90%",
+                    sm: "100%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "40px",
+                    xs: "60px",
                     sm: "55%",
                     md: "0px",
                     lg: "0px",
@@ -90,6 +92,7 @@ const TriumphIconsCaro = () => {
                     md: "10px",
                     lg: "10px",
                   },
+                  marginLeft: "8px",
                   paddingLeft: "5px",
                   paddingRight: "5px",
 
@@ -114,13 +117,13 @@ const TriumphIconsCaro = () => {
                 component="img"
                 sx={{
                   width: {
-                    xs: "100%",
+                    xs: "90%",
                     sm: "100%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "35px",
+                    xs: "55px",
                     sm: "35px",
                     md: "0px",
                     lg: "0px",
@@ -133,9 +136,7 @@ const TriumphIconsCaro = () => {
                   },
                   paddingLeft: "5px",
                   paddingRight: "5px",
-                  // display: "flex",
-                  // justifyContent: "center",
-                  // alignItems: "center",
+                 marginLeft:"10px"
                 }}
                 alt="add_img1"
                 src={img2}
@@ -147,31 +148,31 @@ const TriumphIconsCaro = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                // backgroundColor: "grey",
+                // backgroundColor: "lightgrey",
               }}
             >
               <Box
                 component="img"
                 sx={{
                   width: {
-                    xs: "100%",
-                    sm: "100%",
+                    xs: "90%",
+                    sm: "90%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "45px",
-                    sm: "95%",
+                    xs: "90px",
+                    sm: "90px",
                     md: "0px",
                     lg: "0px",
                   },
                   marginTop: {
-                    xs: "1px",
+                    xs: "-13px",
                     sm: "5px",
                     md: "10px",
                     lg: "10px",
                   },
-
+                  marginLeft: "10px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -195,30 +196,30 @@ const TriumphIconsCaro = () => {
                 component="img"
                 sx={{
                   width: {
-                    xs: "85%",
+                    xs: "65%",
                     sm: "85%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "30px",
+                    xs: "45px",
                     sm: "55px",
                     md: "0px",
                     lg: "0px",
                   },
                   marginTop: {
-                    xs: "7px",
+                    xs: "-5px",
                     sm: "5px",
                     md: "10px",
                     lg: "10px",
                   },
+                  marginLeft:"25px",
 
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   paddingLeft: "7px",
-                  marginLeft: "7px",
-                  paddingRight: "5px",
+                  paddingRight: "0px",
                 }}
                 alt="add_img1"
                 src={img4}

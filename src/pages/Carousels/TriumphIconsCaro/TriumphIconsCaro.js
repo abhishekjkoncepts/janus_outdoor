@@ -18,8 +18,8 @@ import img8 from "../../../assets/images/Triumphs/png230x90/toifull.png";
 const TriumphIconsCaro = () => {
   {
     var settings = {
-      arrows: false,
-      dots: true,
+      arrows: true,
+      // dots: true,
       infinite: false,
       speed: 500,
       slidesToShow: 4,
@@ -32,15 +32,18 @@ const TriumphIconsCaro = () => {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true,
+            dots: false,
           },
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 4,
-            slidesToScroll: 3,
+            slidesToScroll: 4,
             initialSlide: 3,
+            infinite: true,
+            dots: true,
+            arrows: true,
           },
         },
         {
@@ -48,12 +51,14 @@ const TriumphIconsCaro = () => {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            infinite: true,
+            dots: false,
           },
         },
       ],
     };
     return (
-      <Grid container>
+      <Grid container sx={{ marginTop: "-190px" }}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <Slider {...settings}>
             <Box
@@ -61,29 +66,32 @@ const TriumphIconsCaro = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                // backgroundColor: "grey",
               }}
             >
               <Box
                 component="img"
                 sx={{
                   width: {
-                    xs: "70px",
-                    sm: "70%",
+                    xs: "100%",
+                    sm: "70px",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "95%",
-                    sm: "95%",
+                    xs: "40px",
+                    sm: "55%",
                     md: "0px",
                     lg: "0px",
                   },
                   marginTop: {
-                    xs: "30px",
-                    sm: "5px",
+                    xs: "4px",
+                    sm: "10px",
                     md: "10px",
                     lg: "10px",
                   },
+                  paddingLeft: "5px",
+                  paddingRight: "5px",
 
                   display: "flex",
                   justifyContent: "center",
@@ -99,33 +107,35 @@ const TriumphIconsCaro = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                // backgroundColor: "grey",
               }}
             >
               <Box
                 component="img"
                 sx={{
                   width: {
-                    xs: "70px",
-                    sm: "70%",
+                    xs: "100%",
+                    sm: "100%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "95%",
-                    sm: "95%",
+                    xs: "35px",
+                    sm: "35px",
                     md: "0px",
                     lg: "0px",
                   },
                   marginTop: {
-                    xs: "30px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
+                    xs: "7px",
+                    sm: "30px",
+                    md: "0px",
+                    lg: "0px",
                   },
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  paddingLeft: "5px",
+                  paddingRight: "5px",
+                  // display: "flex",
+                  // justifyContent: "center",
+                  // alignItems: "center",
                 }}
                 alt="add_img1"
                 src={img2}
@@ -137,25 +147,26 @@ const TriumphIconsCaro = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                // backgroundColor: "grey",
               }}
             >
               <Box
                 component="img"
                 sx={{
                   width: {
-                    xs: "70px",
-                    sm: "70%",
+                    xs: "100%",
+                    sm: "100%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "95%",
+                    xs: "45px",
                     sm: "95%",
                     md: "0px",
                     lg: "0px",
                   },
                   marginTop: {
-                    xs: "30px",
+                    xs: "1px",
                     sm: "5px",
                     md: "10px",
                     lg: "10px",
@@ -164,6 +175,8 @@ const TriumphIconsCaro = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  paddingLeft: "5px",
+                  paddingRight: "5px",
                 }}
                 alt="add_img1"
                 src={img3}
@@ -175,25 +188,26 @@ const TriumphIconsCaro = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                // backgroundColor: "grey",
               }}
             >
               <Box
                 component="img"
                 sx={{
                   width: {
-                    xs: "70px",
-                    sm: "70%",
+                    xs: "85%",
+                    sm: "85%",
                     md: "0px",
                     lg: "0px",
                   },
                   height: {
-                    xs: "95%",
-                    sm: "95%",
+                    xs: "30px",
+                    sm: "55px",
                     md: "0px",
                     lg: "0px",
                   },
                   marginTop: {
-                    xs: "30px",
+                    xs: "7px",
                     sm: "5px",
                     md: "10px",
                     lg: "10px",
@@ -202,6 +216,9 @@ const TriumphIconsCaro = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  paddingLeft: "7px",
+                  marginLeft: "7px",
+                  paddingRight: "5px",
                 }}
                 alt="add_img1"
                 src={img4}

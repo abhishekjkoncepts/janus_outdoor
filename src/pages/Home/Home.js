@@ -59,6 +59,7 @@ import { getProducts } from "../../redux/actions/Outdoor";
 
 import { getProductsCategories } from "../../redux/actions/Home";
 import Footer from "../../components/Footer/Footer";
+import TriumphIconsCaro from "../Carousels/TriumphIconsCaro/TriumphIconsCaro";
 
 const Home = () => {
   return (
@@ -437,7 +438,12 @@ const Home = () => {
             <Box
               sx={{
                 marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
-                marginBottom: { xs: "15px", sm: "15px", md: "20px", lg: "20px" },
+                marginBottom: {
+                  xs: "15px",
+                  sm: "15px",
+                  md: "20px",
+                  lg: "20px",
+                },
               }}
             >
               <Box>
@@ -559,7 +565,12 @@ const Home = () => {
               <Box
                 sx={{
                   marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
-                  marginBottom: { xs: "0px", sm: "0px", md: "20px", lg: "20px" },
+                  marginBottom: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "20px",
+                    lg: "20px",
+                  },
                 }}
               >
                 <Box>
@@ -1731,6 +1742,7 @@ const Home = () => {
 
         {/* TRIUMPHS */}
         <Box>
+          {/* TExt */}
           <Grid container sx={{ backgroundColor: "#fff" }}>
             <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
             <Grid
@@ -1744,57 +1756,11 @@ const Home = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-            >
-              {/* <Box
-                sx={{
-                  marginTop: { xs: "10px", sm: "10px", md: "40px", lg: "40px" },
-                  marginBottom: { xs: "10", sm: "10", md: "0px", lg: "0px" },
-                }}
-              >
-                <Box>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        xs: "21px",
-                        sm: "21px",
-                        md: "36px",
-                        lg: "36px",
-                      },
-                      fontWeight: "600",
-                      fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
-                      color: "#000",
-                    }}
-                  >
-                    TRIUMPHS
-                  </Typography>
-                </Box>
-
-                <Box>
-                  <Typography
-                    sx={{
-                      color: "#000",
-                      fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "16px",
-                        lg: "16px",
-                      },
-                      fontWeight: "500",
-                      fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
-                    }}
-                  >
-                    Showcasing the success stories of clients who've experienced
-                    our creative
-                    <br /> prowess, surpassing ordinary online marketing impact.
-                  </Typography>
-                </Box>
-              </Box> */}
-            </Grid>
+            ></Grid>
             <Grid item xs={12} sm={12} md={1} lg={1}></Grid>
           </Grid>
 
+          {/* container 1 */}
           <Grid container>
             <Grid
               item
@@ -2280,10 +2246,7 @@ const Home = () => {
           </Grid>
         </Box>
         <Triumphs />
-        {/* <Homepaagecarousel/> */}
-
-        {/* FOOTER */}
-        {/* <Footer/> */}
+        <TriumphIconsCaro/>
       </Box>
     </>
   );

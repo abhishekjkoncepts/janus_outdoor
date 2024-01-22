@@ -190,14 +190,14 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "170px",
                           lg: "170px",
                         },
                         height: {
-                          xs: "70px",
-                          sm: "70px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "90px",
                           lg: "90px",
                         },
@@ -223,14 +223,14 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "230px",
                           lg: "230px",
                         },
                         height: {
-                          xs: "55px",
-                          sm: "55px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "90px",
                           lg: "90px",
                         },
@@ -293,8 +293,8 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "230px",
                           lg: "230px",
                         },
@@ -326,8 +326,8 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "230px",
                           lg: "230px",
                         },
@@ -407,20 +407,20 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "250px",
                           lg: "250px",
                         },
                         height: {
-                          xs: "70px",
-                          sm: "70px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "60%",
                           lg: "60%",
                         },
                         marginTop: {
-                          xs: "20px",
-                          sm: "20px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "25px",
                           lg: "25px",
                         },
@@ -440,20 +440,20 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "160px",
-                          sm: "160px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "250px",
                           lg: "250px",
                         },
                         height: {
-                          xs: "65px",
-                          sm: "65px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "60%",
                           lg: "60%",
                         },
                         marginTop: {
-                          xs: "20px",
-                          sm: "20px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "25px",
                           lg: "25px",
                         },
@@ -496,14 +496,14 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "120px",
-                          sm: "120px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "250px",
                           lg: "250px",
                         },
                         height: {
-                          xs: "80px",
-                          sm: "80px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "55%",
                           lg: "55%",
                         },
@@ -530,14 +530,14 @@ const Triumphs = () => {
                       component="img"
                       sx={{
                         width: {
-                          xs: "160px",
-                          sm: "160px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "230px",
                           lg: "230px",
                         },
                         height: {
-                          xs: "100px",
-                          sm: "100px",
+                          xs: "0px",
+                          sm: "0px",
                           md: "60%",
                           lg: "60%",
                         },

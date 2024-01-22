@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // React-Router-Dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -32,10 +32,17 @@ import Fullcard from "../pages/FullCard/Fullcard";
 import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 
 const Navigation = () => {
+  // const params = new URLSearchParams(window.location.search);
+
+  useEffect(() => {
+    console.log("skcakjscbakjcbakbcakbcsk", window.location.pathname);
+  });
+
+  const [winLoc, setWinLoc] = useState("");
+
   return (
     <BrowserRouter>
       <Header />
-
       <Scrolltotop>
         {/* PARENT-PAGES */}
         <Routes>
@@ -44,15 +51,6 @@ const Navigation = () => {
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/our-service" element={<Ourservice />} />
-          
-
-          {/* CATEGORY*/}
-          {/* <Route path="/outdoor/" element={<Outdoor />} />
-          <Route path="/metro/" element={<Metro />} />
-          <Route path="/airport-branding/" element={<Airportbranding />} />
-          <Route path="/inflight-branding/" element={<Inflightbranding />} />
-          <Route path="/mall-branding/" element={<Mallmedia />} />
-          <Route path="/transit-media/" element={<Transitmedia />} /> */}
 
           <Route path="/outdoor-advertising-agency/" element={<Outdoor />} />
           <Route path="/metro-advertising-agency/" element={<Metro />} />
@@ -82,7 +80,7 @@ const Navigation = () => {
           {/* <Route path="/:param1?/:param2?/:param3?" element={<Individual />} /> */}
         </Routes>
       </Scrolltotop>
-      
+      {winLoc !== "" && winLoc !== "/contact-us" && <Footer />}
     </BrowserRouter>
   );
 };

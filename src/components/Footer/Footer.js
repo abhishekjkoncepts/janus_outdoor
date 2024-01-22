@@ -23,10 +23,10 @@ import whatsapp from "../../assets/images/FooterIcons/whatsapp.png";
 import "./Footer.css";
 
 // REACT-ROUTER-DOM
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Box>
@@ -115,7 +115,7 @@ const Footer = () => {
                 marginTop: { xs: "10px", sm: "10px", md: "15px", lg: "15px" },
               }}
             >
-              <Link to="/contact-us/" style={{ textDecoration:"none"}}>  
+              {/* <Link to="/contact-us/" style={{ textDecoration:"none"}}>   */}
               <Box
                 sx={{
                   backgroundColor: "#fff",
@@ -138,7 +138,7 @@ const Footer = () => {
                     lg: "20px",
                   },
                 }}
-                // onClick={() => navigate("/contactus")}
+                onClick={() => navigate("/contact-us/")}
               >
                 
                 <Typography
@@ -156,9 +156,10 @@ const Footer = () => {
                 >
                   CONTACT US
                 </Typography>
+                
                
               </Box>
-              </Link>
+              {/* </Link> */}
 
             
             </Box>

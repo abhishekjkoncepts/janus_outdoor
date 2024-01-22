@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 
 // PAGES
 import Navigation from "./navigation/Navigation";
-import Footer from "../src/components/Footer/Footer";
+// import Footer from "../src/components/Footer/Footer";
 // import Testing from "./pages/Testing/Testing";
 
 
@@ -19,7 +19,7 @@ const App = () => {
     <Provider store={store}>
       <Box flex={1}>
         <Navigation />
-        <Footer />
+        {/* <Footer /> */}
       </Box>
     </Provider>
   );

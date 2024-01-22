@@ -2246,7 +2246,7 @@ const Home = () => {
           </Grid>
         </Box>
         <Triumphs />
-        <TriumphIconsCaro/>
+        {/* <TriumphIconsCaro/> */}
       </Box>
     </>
   );

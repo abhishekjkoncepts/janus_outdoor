@@ -5,14 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { Grid, Box } from "@mui/material";
 
 // images
-import amarujala  from "../../../assets/images/Triumphs/png230x90/amarujala.png";
-import { digividya } from "../../../assets/images/Triumphs/png230x90/digividyapeeth.png";
-import { dominos } from "../../../assets/images/Triumphs/png230x90/dominos.png";
-import { geniefie } from "../../../assets/images/Triumphs/png230x90/geniefie.png";
-import { icici } from "../../../assets/images/Triumphs/png230x90/icici.png";
-import { malasia } from "../../../assets/images/Triumphs/png230x90/malasia.png";
-import { nippo } from "../../../assets/images/Triumphs/png230x90/nippo.png";
-import { toi } from "../../../assets/images/Triumphs/png230x90/toifull.png";
+import icici from "../../../assets/images/Triumphs/png230x90/icici.png";
+import toi from "../../../assets/images/Triumphs/png230x90/toifull.png";
+import geniefie from "../../../assets/images/Triumphs/png230x90/geniefie.png";
+import malasia from "../../../assets/images/Triumphs/png230x90/malasia.png";
+import dominos from "../../../assets/images/Triumphs/png230x90/dominos.png";
+import digividya from "../../../assets/images/Triumphs/png230x90/digividyapeeth.png";
+import amarujala from "../../../assets/images/Triumphs/png230x90/amarujala.png";
+import nippo from "../../../assets/images/Triumphs/png230x90/nippo.png";
 
 const TriumphIconsCaro = () => {
   var settings = {
@@ -41,54 +41,77 @@ const TriumphIconsCaro = () => {
           slidesToScroll: 4,
           initialSlide: 2,
           rows: 2,
+          infinite: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           rows: 2,
+          infinite: true,
         },
       },
     ],
   };
   return (
     <Grid container>
-      <Grid item xs={1.5} sm={1.5} md={1} lg={1} sx={{backgroundColor:"red"}}></Grid>
-      <Grid item xs={9} sm={9} md={10} lg={10} sx={{backgroundColor:"blue"}}>
+      <Grid
+        item
+        xs={1.5}
+        sm={1.5}
+        md={1}
+        lg={1}
+        // sx={{ backgroundColor: "red" }}
+      ></Grid>
+      <Grid
+        item
+        xs={9}
+        sm={9}
+        md={10}
+        lg={10}
+        // sx={{ backgroundColor: "blue" }}
+      >
         <div>
           {/* <Box sx={{display:"flex" , flexDirection:"row" , justifyContent:"center"}}> */}
           <Slider {...settings}>
             <div>
-             <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={icici} style={{ width: "100px", height: "70px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={toi} style={{ width: "100px", height: "70px" , borderRadius:"10px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={geniefie} style={{ width: "100px", height: "70px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={dominos} style={{ width: "100px", height: "80px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={malasia} style={{ width: "100px", height: "70px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={digividya} style={{ width: "100px", height: "70px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={amarujala} style={{ width: "100px", height: "70px" }} />
             </div>
             <div>
-            <img src={amarujala} style={{ width:"100px" ,  height:"70px"}}/>
+              <img src={nippo} style={{ width: "100px", height: "70px" }} />
             </div>
           </Slider>
           {/* </Box> */}
         </div>
       </Grid>
-      <Grid item xs={1.5} sm={1.5} md={1} lg={1} sx={{backgroundColor:"green"}}></Grid>
+      <Grid
+        item
+        xs={1.5}
+        sm={1.5}
+        md={1}
+        lg={1}
+        // sx={{ backgroundColor: "green" }}
+      ></Grid>
     </Grid>
   );
 };

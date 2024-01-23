@@ -5,7 +5,7 @@ import "./OurServicesCom.css";
 
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
-import Categorycarousel from "../../Carousels/CategoryCarousel/Categorycarousel";
+import Categorycarousel from "../../../Carousels/CategoryCarousel/Categorycarousel";
 
 const OurServicesCom = () => {
   return (

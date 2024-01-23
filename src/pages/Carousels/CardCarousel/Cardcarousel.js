@@ -44,126 +44,6 @@ const Cardcarousel = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Grid
-        container
-        sx={{
-          backgroundColor: "#F5F5F5",
-        }}
-      >
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          // sx={{ backgroundColor: "purple" }}
-        ></Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={10.6}
-          lg={10.6}
-          // sx={{ backgroundColor: "pink" }}
-        >
-          <Box
-            sx={{
-              marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
-              marginBottom: { xs: "10", sm: "10", md: "20px", lg: "20px" },
-            }}
-          >
-            <Box>
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "21px",
-                    sm: "21px",
-                    md: "36px",
-                    lg: "36px",
-                  },
-                  fontWeight: "600",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: "center",
-                  color: "#000",
-                }}
-              >
-                Hoarding Placed
-              </Typography>
-            </Box>
-
-            <Box
-              sx={{
-                paddingLeft: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "0px",
-                  lg: "0px",
-                },
-                paddingRight: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "0px",
-                  lg: "0px",
-                },
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#000",
-                  fontSize: {
-                    xs: "0px",
-                    sm: "0px",
-                    md: "15px",
-                    lg: "15px",
-                  },
-                  fontWeight: "600",
-                  fontFamily: "Poppins, sans-serif",
-                  textAlign: {
-                    xs: "left",
-                    sm: "left",
-                    md: "center",
-                    lg: "center",
-                  },
-                }}
-              >
-                Cityscape Brilliance Unveiled Journey through our top sites in
-                key cities, showcasing
-                <br /> businesses worldwide—a testament to impactful
-                collaborations.
-              </Typography>
-              <Box>
-                <Typography
-                  sx={{
-                    color: "#000",
-                    fontSize: {
-                      xs: "12px",
-                      sm: "12px",
-                      md: "0px",
-                      lg: "0px",
-                    },
-                    fontWeight: "500",
-                    fontFamily: "Poppins, sans-serif",
-                    textAlign: "center",
-                  }}
-                >
-                  Cityscape Brilliance Unveiled Journey <br /> throughour top
-                  sites in key cities, showcasing businesses worldwide—a
-                  testament to impactful collaborations.
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          // sx={{ backgroundColor: "purple" }}
-        ></Grid>
-      </Grid>
-
       <Grid container sx={{ backgroundColor: "#F5F5F5" }}>
         <Grid
           item
@@ -183,8 +63,8 @@ const Cardcarousel = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
-              marginBottom: { xs: "25px", sm: "25px", md: "60px", lg: "60px" },
+              marginTop: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
+              marginBottom: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
             }}
           >
             <Carousel

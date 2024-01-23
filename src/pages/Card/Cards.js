@@ -16,7 +16,7 @@ const Cards = ({ data, onClick }) => {
       <Grid item xs={12} sm={12} md={3} lg={3}>
         <Box
           sx={{
-            marginTop: { xs: "10px", sm: "10px", md: "20px", lg: "20px" },
+            marginTop: { xs: "-10px", sm: "-10px", md: "20px", lg: "20px" },
             marginBottom: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
             paddingLeft:{xs: "10px", sm: "10px", md: "0px", lg: "0px"},
             paddingRight:{xs: "10px", sm: "10px", md: "0px", lg: "0px"}
@@ -27,7 +27,7 @@ const Cards = ({ data, onClick }) => {
             sx={{
               borderTopLeftRadius: "150px",
               borderTopRightRadius: "150px",
-              borderRadius: "150px 150px 0 0",
+              borderRadius: "170px 170px 0 0",
               border: "2px solid #C02222",
             }}
           >
@@ -39,7 +39,7 @@ const Cards = ({ data, onClick }) => {
               <Box>
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="340"
                   width="100"
                   image={data?.image}
                   alt="Main Image"
@@ -57,7 +57,7 @@ const Cards = ({ data, onClick }) => {
                       display: "-webkit-box",
                       overflow: "hidden",
                       WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 1,
+                      WebkitLineClamp: 2,
                       color: "#D2122E",
                       fontSize: "16px",
                       fontFamily: "Poppins, sans-serif",

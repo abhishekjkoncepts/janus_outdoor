@@ -392,8 +392,8 @@ const Home = () => {
                 marginBottom: {
                   xs: "20px",
                   sm: "20px",
-                  md: "0px",
-                  lg: "0px",
+                  md: "3px",
+                  lg: "30px",
                 },
                 borderRadius: "10px",
               }}

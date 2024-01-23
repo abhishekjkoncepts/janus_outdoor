@@ -56,7 +56,7 @@ const TriumphIconsCaro = () => {
     ],
   };
   return (
-    <Grid container>
+    <Grid container sx={{ marginTop: "-155px" }}>
       <Grid
         item
         xs={1.5}
@@ -71,10 +71,14 @@ const TriumphIconsCaro = () => {
         sm={9}
         md={10}
         lg={10}
-        // sx={{ backgroundColor: "blue" }}
+        sx={
+          {
+            // backgroundColor: "grey"
+          }
+        }
       >
-        <div>
-          {/* <Box sx={{display:"flex" , flexDirection:"row" , justifyContent:"center"}}> */}
+        <div style={{}}>
+        
           <Slider {...settings}>
             <div>
               <img
@@ -90,42 +94,48 @@ const TriumphIconsCaro = () => {
                   height: "50px",
                   borderRadius: "10px",
                   marginTop: "15px",
+                  marginLeft: "1.5px",
                 }}
               />
             </div>
             <div>
               <img
                 src={geniefie}
-                style={{ width: "100px", height: "70px",  }}
+                style={{ width: "100px", height: "70px", marginLeft: "30px" }}
               />
             </div>
             <div>
               <img
                 src={dominos}
-                style={{ width: "100px", height: "85px", 
-               }}
+                style={{ width: "100px", height: "85px", marginLeft: "30px" }}
               />
             </div>
             <div>
-              <img src={malasia} style={{ width: "115px", height: "70px" }} />
-            </div>
-            <div>
-              <img src={digividya} style={{ width: "100px", height: "70px" }} />
+              <img src={malasia} style={{ width: "120px", height: "70px" }} />
             </div>
             <div>
               <img
-                src={nippo}
-                style={{ width: "100px", height: "70px",  }}
+                src={digividya}
+                style={{ width: "140px", height: "70px", marginTop: "10px" }}
               />
+            </div>
+            <div>
+              <img src={nippo} style={{ width: "130px", height: "70px" }} />
             </div>
             <div>
               <img
                 src={amarujala}
-                style={{ width: "100px", height: "70px", marginLeft: "15px" }}
+                style={{
+                  width: "100px",
+                  height: "70px",
+                  marginLeft: "15px",
+                  marginLeft: "30px",
+                  marginTop: "10px",
+                }}
               />
             </div>
           </Slider>
-          {/* </Box> */}
+        
         </div>
       </Grid>
       <Grid

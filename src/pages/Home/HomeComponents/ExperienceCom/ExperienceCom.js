@@ -34,7 +34,7 @@ const ExperienceCom = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "20px", sm: "20px", md: "30px", lg: "30px" },
+              marginTop: { xs: "30px", sm: "30px", md: "30px", lg: "30px" },
               marginBottom: { xs: "20px", sm: "20px", md: "15px", lg: "15px" },
             }}
           >
@@ -144,7 +144,7 @@ const ExperienceCom = () => {
           paddingLeft: { xs: "20px", sm: "20px", md: "150px", lg: "150px" },
           paddingRight: { xs: "20px", sm: "20px", md: "150px", lg: "150px" },
           paddingTop:{xs: "0px", sm: "0px", md: "20px", lg: "20px"},
-          paddingBottom:{xs: "20px", sm: "20px", md: "50px", lg: "50px"},
+          paddingBottom:{xs: "30px", sm: "30px", md: "50px", lg: "50px"},
         }}
       >
         {/* Green */}

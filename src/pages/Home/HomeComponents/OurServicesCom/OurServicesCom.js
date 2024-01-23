@@ -35,7 +35,7 @@ const OurServicesCom = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "20px", sm: "20px", md: "30px", lg: "30px" },
+              marginTop: { xs: "30px", sm: "30px", md: "30px", lg: "30px" },
               marginBottom: {
                 xs: "20px",
                 sm: "20px",

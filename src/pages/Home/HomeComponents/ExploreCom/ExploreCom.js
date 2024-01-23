@@ -42,7 +42,7 @@ const ExploreCom = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "20px", sm: "20px", md: "30px", lg: "30px" },
+              marginTop: { xs: "30px", sm: "30px", md: "30px", lg: "30px" },
               marginBottom: {
                 xs: "20px",
                 sm: "20px",
@@ -533,6 +533,7 @@ const ExploreCom = () => {
               // sx={{ backgroundColor: "red" }}
             >
               <Grid container>
+                <Box sx={{marginBottom:{xs:"30px"}}}>
                 {/* PUNE */}
                 <Grid
                   item
@@ -803,8 +804,8 @@ const ExploreCom = () => {
                           lg: "20px",
                         },
                         marginBottom: {
-                          xs: "25px",
-                          sm: "25px",
+                          xs: "10px",
+                          sm: "10px",
                           md: "60px",
                           lg: "60px",
                         },
@@ -877,6 +878,7 @@ const ExploreCom = () => {
                     </Box>
                   </Box>
                 </Grid>
+                </Box>
               </Grid>
             </Grid>
 

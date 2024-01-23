@@ -248,7 +248,7 @@ const Categorycarousel = () => {
           <Box
             sx={{
               marginTop: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
-              marginBottom: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
+              marginBottom: { xs: "40px", sm: "40px", md: "50px", lg: "50px" },
               // border:"2px solid red"
             }}
           >

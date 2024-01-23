@@ -64,7 +64,7 @@ const Categorycarousel = () => {
               rows={1}
               gap={50}
               loop={true}
-              showDots={false}
+              showDots={true}
               scrollSnap={true}
               dotColorActive="#C02222"
               dotColorInactive="#ccc"

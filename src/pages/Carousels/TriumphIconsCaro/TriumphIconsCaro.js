@@ -47,7 +47,7 @@ const TriumphIconsCaro = () => {
           rows: 2,
           infinite: true,
           autoplay: true,
-          // dots: true,
+          dots: true,
         },
       },
       {
@@ -58,7 +58,7 @@ const TriumphIconsCaro = () => {
           rows: 2,
           infinite: true,
           autoplay: true,
-          // dots: true,
+          dots: true,
         },
       },
     ],
@@ -87,7 +87,7 @@ const TriumphIconsCaro = () => {
           }
         }
       >
-        <div >
+        <div style={{marginBottom:"30px"}} >
           <Slider {...settings}>
             <Box>
               <Box

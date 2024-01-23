@@ -77,28 +77,52 @@ const TriumphIconsCaro = () => {
           {/* <Box sx={{display:"flex" , flexDirection:"row" , justifyContent:"center"}}> */}
           <Slider {...settings}>
             <div>
-              <img src={icici} style={{ width: "100px", height: "70px" }} />
+              <img
+                src={icici}
+                style={{ width: "100px", height: "70px", marginTop: "5px" }}
+              />
             </div>
             <div>
-              <img src={toi} style={{ width: "100px", height: "70px" , borderRadius:"10px" }} />
+              <img
+                src={toi}
+                style={{
+                  width: "100px",
+                  height: "50px",
+                  borderRadius: "10px",
+                  marginTop: "15px",
+                }}
+              />
             </div>
             <div>
-              <img src={geniefie} style={{ width: "100px", height: "70px" }} />
+              <img
+                src={geniefie}
+                style={{ width: "100px", height: "70px",  }}
+              />
             </div>
             <div>
-              <img src={dominos} style={{ width: "100px", height: "80px" }} />
+              <img
+                src={dominos}
+                style={{ width: "100px", height: "85px", 
+               }}
+              />
             </div>
             <div>
-              <img src={malasia} style={{ width: "100px", height: "70px" }} />
+              <img src={malasia} style={{ width: "115px", height: "70px" }} />
             </div>
             <div>
               <img src={digividya} style={{ width: "100px", height: "70px" }} />
             </div>
             <div>
-              <img src={amarujala} style={{ width: "100px", height: "70px" }} />
+              <img
+                src={nippo}
+                style={{ width: "100px", height: "70px",  }}
+              />
             </div>
             <div>
-              <img src={nippo} style={{ width: "100px", height: "70px" }} />
+              <img
+                src={amarujala}
+                style={{ width: "100px", height: "70px", marginLeft: "15px" }}
+              />
             </div>
           </Slider>
           {/* </Box> */}

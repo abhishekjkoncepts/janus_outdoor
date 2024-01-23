@@ -170,7 +170,7 @@ function Header(props) {
                   // color: "#C02222",
                   // color: "#fff",
                   fontSize: "20px",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontFamily: "Poppins, sans-serif",
                   // marginLeft: "4px",
                   paddingTop: "5px",
@@ -204,7 +204,7 @@ function Header(props) {
                   // color: "#C02222",
                   // color: "#fff",
                   fontSize: "20px",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontFamily: "Poppins, sans-serif",
                   // marginLeft: "4px",
                   paddingTop: "5px",
@@ -238,7 +238,7 @@ function Header(props) {
                   // color: "#C02222",
                   // color: "#fff",
                   fontSize: "20px",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontFamily: "Poppins, sans-serif",
                   paddingTop: "5px",
                   paddingBottom: "5px",
@@ -265,14 +265,14 @@ function Header(props) {
             />
           </Box>
           <Box sx={{marginLeft:"8px"}}>
-            <Link to={"/contact-us"} style={{ textDecoration: "none" }}>
+            <Link to={"/contact-us/"} style={{ textDecoration: "none" }}>
               <Typography
                 sx={{
                   color: "#000",
                   // color: "#C02222",
                   // color: "#fff",
                   fontSize: "20px",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontFamily: "Poppins, sans-serif",
                   marginLeft: "4px",
                   paddingTop: "5px",

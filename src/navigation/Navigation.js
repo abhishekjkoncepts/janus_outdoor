@@ -32,13 +32,6 @@ import Fullcard from "../pages/FullCard/Fullcard";
 import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 
 const Navigation = () => {
-  // const params = new URLSearchParams(window.location.search);
-
-  useEffect(() => {
-    console.log("skcakjscbakjcbakbcakbcsk", window.location.pathname);
-  });
-
-  const [winLoc, setWinLoc] = useState("");
 
   return (
     <BrowserRouter>
@@ -80,7 +73,7 @@ const Navigation = () => {
           {/* <Route path="/:param1?/:param2?/:param3?" element={<Individual />} /> */}
         </Routes>
       </Scrolltotop>
-      {winLoc !== "" && winLoc !== "/contact-us" && <Footer />}
+      <Footer />
     </BrowserRouter>
   );
 };

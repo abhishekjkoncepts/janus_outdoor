@@ -1,25 +1,74 @@
-import React, { Component } from "react";
-// import Slider from "react-slick";
 
-import { Grid, Box, Typography } from "@mui/material";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+// import { Grid, Typography, Button, Box } from "@mui/material";
+
+// const TriumphIconsCaro = () => {
+//   {
+//     var settings = {
+//       dots: true,
+//       infinite: false,
+//       speed: 500,
+//       slidesToShow: 4,
+//       slidesToScroll: 4,
+//       initialSlide: 0,
+//       responsive: [
+//         {
+//           breakpoint: 1024,
+//           settings: {
+//             slidesToShow: 3,
+//             slidesToScroll: 3,
+//             infinite: true,
+//             dots: true,
+//           },
+//         },
+//         {
+//           breakpoint: 600,
+//           settings: {
+//             slidesToShow: 2,
+//             slidesToScroll: 2,
+//             initialSlide: 2,
+//           },
+//         },
+//         {
+//           breakpoint: 480,
+//           settings: {
+//             slidesToShow: 1,
+//             slidesToScroll: 1,
+//           },
+//         },
+//       ],
+//     };
+//     return (
+//       <Grid container>
+//         <Grid item xs={11} sm={11} md={1} lg={1}></Grid>
+//         <Grid item xs={12} sm={12} md={10} lg={10}>
+//           <Slider {...settings}>
+//             <div>
+//               <div>
+//                 <h1>1</h1>
+//               </div>
+//             </div>
+//           </Slider>
+//         </Grid>
+//         <Grid item xs={11} sm={11} md={1} lg={1}></Grid>
+//       </Grid>
+//     );
+//   }
+// };
+
+// export default TriumphIconsCaro;
+
+import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from "../../../assets/images/Triumphs/png230x90/amarujala.png";
-import img2 from "../../../assets/images/Triumphs/png230x90/digividyapeeth.png";
-import img3 from "../../../assets/images/Triumphs/png230x90/dominos.png";
-import img4 from "../../../assets/images/Triumphs/png230x90/geniefie.png";
-import img5 from "../../../assets/images/Triumphs/png230x90/icici.png";
-import img6 from "../../../assets/images/Triumphs/png230x90/malasia.png";
-import img7 from "../../../assets/images/Triumphs/png230x90/nippo.png";
-import img8 from "../../../assets/images/Triumphs/png230x90/toifull.png";
-
-const TriumphIconsCaro = () => {
+ const TriumphIconsCaro =()=> {
   {
     var settings = {
-      arrows: true,
-      // dots: true,
+      dots: true,
       infinite: false,
       speed: 500,
       slidesToShow: 4,
@@ -32,353 +81,35 @@ const TriumphIconsCaro = () => {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: false,
-          },
+            dots: true
+          }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            initialSlide: 3,
-            infinite: true,
-            dots: true,
-            arrows: true,
-            rows: 2,
-          },
+            initialSlide: 2
+          }
         },
         {
-          breakpoint: 320,
+          breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false,
-            rows: 2,
-          },
-        },
-      ],
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     return (
-      <Grid container sx={{ marginTop: "-190px" }}>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Slider {...settings}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // backgroundColor: "grey",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "90%",
-                    sm: "100%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "60px",
-                    sm: "55%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "4px",
-                    sm: "10px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-                  marginLeft: "8px",
-                  paddingLeft: "5px",
-                  paddingRight: "5px",
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt="add_img1"
-                src={img1}
-              />
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // backgroundColor: "grey",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "90%",
-                    sm: "100%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "55px",
-                    sm: "35px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "7px",
-                    sm: "30px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  paddingLeft: "5px",
-                  paddingRight: "5px",
-                 marginLeft:"10px"
-                }}
-                alt="add_img1"
-                src={img2}
-              />
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // backgroundColor: "lightgrey",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "90%",
-                    sm: "90%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "90px",
-                    sm: "90px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "-13px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-                  marginLeft: "10px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  paddingLeft: "5px",
-                  paddingRight: "5px",
-                }}
-                alt="add_img1"
-                src={img3}
-              />
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                // backgroundColor: "grey",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "65%",
-                    sm: "85%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "45px",
-                    sm: "55px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "-5px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-                  marginLeft:"25px",
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  paddingLeft: "7px",
-                  paddingRight: "0px",
-                }}
-                alt="add_img1"
-                src={img4}
-              />
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "70px",
-                    sm: "70%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "95%",
-                    sm: "95%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "30px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt="add_img1"
-                src={img5}
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "70px",
-                    sm: "70%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "95%",
-                    sm: "95%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "30px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt="add_img1"
-                src={img6}
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "70px",
-                    sm: "70%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "95%",
-                    sm: "95%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "30px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt="add_img1"
-                src={img7}
-              />
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  width: {
-                    xs: "70px",
-                    sm: "70%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  height: {
-                    xs: "95%",
-                    sm: "95%",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  marginTop: {
-                    xs: "30px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                alt="add_img1"
-                src={img8}
-              />
-            </Box>
-          </Slider>
-        </Grid>
-      </Grid>
+      <div>
+        <h2> Responsive </h2>
+        <Slider {...settings}>
+      
+        </Slider>
+      </div>
     );
   }
-};
+}
 
 export default TriumphIconsCaro;

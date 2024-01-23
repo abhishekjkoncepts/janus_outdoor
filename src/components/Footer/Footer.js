@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
@@ -23,12 +23,14 @@ import whatsapp from "../../assets/images/FooterIcons/whatsapp.png";
 import "./Footer.css";
 
 // REACT-ROUTER-DOM
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
-
-  return (
+  const location = useLocation();
+  console.log('Current route', location);
+  
+  return location?.pathname !== "/contact-us/" && (
     <Box>
       <Grid
         container

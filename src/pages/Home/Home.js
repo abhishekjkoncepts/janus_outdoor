@@ -61,6 +61,8 @@ import { getProductsCategories } from "../../redux/actions/Home";
 import Footer from "../../components/Footer/Footer";
 import TriumphIconsCaro from "../Carousels/TriumphIconsCaro/TriumphIconsCaro";
 
+import Testing from "../Testing/Testing";
+
 const Home = () => {
   return (
     <>
@@ -566,8 +568,8 @@ const Home = () => {
                 sx={{
                   marginTop: { xs: "15px", sm: "15px", md: "40px", lg: "40px" },
                   marginBottom: {
-                    xs: "0px",
-                    sm: "0px",
+                    xs: "10px",
+                    sm: "10px",
                     md: "20px",
                     lg: "20px",
                   },
@@ -1324,8 +1326,8 @@ const Home = () => {
                           lg: "20px",
                         },
                         marginBottom: {
-                          xs: "10px",
-                          sm: "10px",
+                          xs: "25px",
+                          sm: "25px",
                           md: "60px",
                           lg: "60px",
                         },
@@ -1536,208 +1538,343 @@ const Home = () => {
             ></Grid>
           </Grid>
 
-          <Grid container sx={{ backgroundColor: "black" }}>
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={0.7}
-              lg={0.7}
-              // sx={{ backgroundColor: "yellow" }}
-            ></Grid>
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={10.6}
-              lg={10.6}
-              // sx={{ backgroundColor: "green" }}
-            >
-              <Grid container sx={{ height: "100%", backgroundcolor: "black" }}>
-                {/* CIRCLE 1 */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
+          {/* <Grid container sx={{ backgroundColor: "#000" }}>
+            <Grid item sx={12} sm={12} md={2} lg={2}></Grid>
+            <Grid item sx={12} sm={12} md={8} lg={8}> */}
+              <Grid container
+                sx={{
+                  backgroundColor: '#000000',
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: 'center',
+                  justifyContent: {
+                    xs: "space-between",
+                    sm: "space-between",
+                    md: "space-between",
+                    lg: "space-between",
+                  },
+                  paddingLeft: { xs:"20px" , sm:"20px" , md:"150px" ,lg:"150px"},
+                  paddingRight: { xs:"20px" , sm:"20px" , md:"150px" ,lg:"150px"}
+                }}
+              >
+                {/* Green */}
+                <Box
                   sx={{
-                    backgroundColor: "#000",
+                    marginTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "20px",
+                      md: "20px",
+                    },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "40px",
+                      md: "40px",
+                    },
                     display: "flex",
-                    flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
+                    flexDirection: "column",
                   }}
                 >
                   <Box
                     sx={{
-                      marginTop: {
-                        xs: "20px",
-                        sm: "20px",
-                        lg: "20px",
-                        md: "20px",
+                      width: {
+                        xs: "80px",
+                        sm: "80px",
+                        md: "150px",
+                        lg: "150px",
                       },
-                      marginBottom: {
-                        xs: "20px",
-                        sm: "20px",
-                        lg: "40px",
-                        md: "40px",
+                      height: {
+                        xs: "80px",
+                        sm: "80px",
+                        md: "150px",
+                        lg: "150px",
                       },
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(85, 255, 0, 0.7)",
+                      animation: "animate1 5s linear forwards infinite",
+                      transform: "translate(0%, 0%)",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      flexDirection: "column",
                     }}
                   >
-                    <Box className="main-bg">
-                      <Box className="circle">
-                        <h1>527</h1>
-                      </Box>
-                    </Box>
-                    <Box>
+                    <Box
+                      sx={{
+                        backgroundColor: "#000",
+                        height: "90%",
+                        width: "90%",
+                        borderRadius: "100px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
                       <Typography
                         sx={{
                           color: "#fff",
-                          marginTop: "15px",
-                          fontSize: "20px",
-                          fontWeight: "500",
+                          // marginTop: "15px",
+                          fontSize: {
+                            xs: "20px",
+                            sm: "20px",
+                            md: "35px",
+                            lg: "35px",
+                          },
+                          fontWeight: "700",
                           fontFamily: "Poppins, sans-serif",
+                          color: "#C02222",
                         }}
                       >
-                        HAPPY CLIENTS
+                        527
                       </Typography>
                     </Box>
                   </Box>
-                </Grid>
-                {/* CIRCLE 2 */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
+
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#fff",
+                        fontWeight: {
+                          xs: "500px",
+                          sm: "500",
+                          md: "600",
+                          lg: "600",
+                        },
+                        fontSize: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "20px",
+                          lg: "20px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        marginTop: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "15px",
+                          lg: "15px",
+                        },
+                      }}
+                    >
+                      HAPPY CLIENTS
+                    </Typography>
+                  </Box>
+                </Box>
+                {/* Blue */}
+                <Box
                   sx={{
-                    backgroundColor: "#000",
+                    marginTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "20px",
+                      md: "20px",
+                    },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "40px",
+                      md: "40px",
+                    },
                     display: "flex",
-                    flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    fontFamily: "Poppins, sans-serif",
+                    flexDirection: "column",
                   }}
                 >
-                  <Box
-                    sx={{
-                      marginTop: {
-                        xs: "20px",
-                        sm: "20px",
-                        lg: "20px",
-                        md: "20px",
-                      },
-                      marginBottom: {
-                        xs: "20px",
-                        sm: "20px",
-                        lg: "40px",
-                        md: "40px",
-                      },
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <Box className="main-bg2">
-                      <Box className="circle2">
-                        <h1>423</h1>
-                      </Box>
-                    </Box>
-                    <Box>
-                      <Typography
+                  <Box>
+                    <Box
+                      sx={{
+                        width: {
+                          xs: "80px",
+                          sm: "80px",
+                          md: "150px",
+                          lg: "150px",
+                        },
+                        height: {
+                          xs: "80px",
+                          sm: "80px",
+                          md: "150px",
+                          lg: "150px",
+                        },
+                        borderRadius: "50%",
+                        backgroundColor: "rgb(106, 90, 205)",
+                        animation: "animate2 5s linear forwards infinite",
+                        transform: "translate(0%, 0%)",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Box
                         sx={{
-                          color: "#fff",
-                          marginTop: "15px",
-                          fontSize: "20px",
-                          fontWeight: "500",
+                          backgroundColor: "#000",
+                          height: "90%",
+                          width: "90%",
+                          borderRadius: "100px",
                           display: "flex",
                           justifyContent: "center",
                           alignItems: "center",
-                          fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        OOH SITES
-                      </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            // marginTop: "15px",
+                            fontSize: {
+                              xs: "20px",
+                              sm: "20px",
+                              md: "35px",
+                              lg: "35px",
+                            },
+                            fontWeight: "700",
+                            fontFamily: "Poppins, sans-serif",
+                            color: "#C02222",
+                          }}
+                        >
+                          423
+                        </Typography>
+                      </Box>
                     </Box>
                   </Box>
-                </Grid>
-
-                {/* CIRCLE 3 */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
+                  <Box>
+                    <Typography
+                      sx={{
+                        color: "#fff",
+                        fontWeight: {
+                          xs: "500px",
+                          sm: "500",
+                          md: "600",
+                          lg: "600",
+                        },
+                        fontSize: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "20px",
+                          lg: "20px",
+                        },
+                        fontFamily: "Poppins, sans-serif",
+                        marginTop: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "15px",
+                          lg: "15px",
+                        },
+                      }}
+                    >
+                      OOH SITES
+                    </Typography>
+                  </Box>
+                </Box>
+                {/* yellow */}
+                <Box
                   sx={{
-                    backgroundColor: "#000",
+                    marginTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "20px",
+                      md: "20px",
+                    },
+                    marginBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "40px",
+                      md: "40px",
+                    },
                     display: "flex",
-                    flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    fontFamily: "Poppins, sans-serif",
+                    flexDirection: "column",
                   }}
                 >
-                  <Box
-                    sx={{
-                      marginTop: {
-                        xs: "20px",
-                        sm: "20px",
-                        lg: "20px",
-                        md: "20px",
-                      },
-                      marginBottom: {
-                        xs: "20px",
-                        sm: "20px",
-                        lg: "40px",
-                        md: "40px",
-                      },
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <Box className="main-bg3">
-                      <Box className="circle3">
-                        <h1>47CR</h1>
+                  <Box>
+                    <Box
+                      sx={{
+                        width: {
+                          xs: "80px",
+                          sm: "80px",
+                          md: "150px",
+                          lg: "150px",
+                        },
+                        height: {
+                          xs: "80px",
+                          sm: "80px",
+                          md: "150px",
+                          lg: "150px",
+                        },
+                        borderRadius: "50%",
+                        backgroundColor: "rgb(255, 165, 0)",
+                        animation: "animate3 5s linear forwards infinite",
+                        transform: "translate(0%, 0%)",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          backgroundColor: "#000",
+                          height: "90%",
+                          width: "90%",
+                          borderRadius: "100px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            // marginTop: "15px",
+                            fontSize: {
+                              xs: "20px",
+                              sm: "20px",
+                              md: "35px",
+                              lg: "35px",
+                            },
+                            fontWeight: "700",
+                            fontFamily: "Poppins, sans-serif",
+                            color: "#C02222",
+                          }}
+                        >
+                          47 CR
+                        </Typography>
                       </Box>
                     </Box>
                     <Box>
                       <Typography
                         sx={{
                           color: "#fff",
-                          marginTop: "15px",
-                          fontSize: "20px",
-                          fontWeight: "500",
-
+                          fontWeight: {
+                            xs: "500px",
+                            sm: "500",
+                            md: "600",
+                            lg: "600",
+                          },
+                          fontSize: {
+                            xs: "10px",
+                            sm: "10px",
+                            md: "20px",
+                            lg: "20px",
+                          },
                           fontFamily: "Poppins, sans-serif",
+                          marginTop: {
+                            xs: "10px",
+                            sm: "10px",
+                            md: "15px",
+                            lg: "15px",
+                          },
                         }}
                       >
                         PEOPLE IMPACTED
                       </Typography>
                     </Box>
                   </Box>
-                </Grid>
+                </Box>
               </Grid>
-            </Grid>
-
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={0.7}
-              lg={0.7}
-              // sx={{ backgroundColor: "blue" }}
-            ></Grid>
-          </Grid>
+            {/* </Grid>
+            <Grid item xs={12} sm={12} md={2} lg={2}></Grid>
+          </Grid> */}
         </Box>
 
         {/* TRIUMPHS */}
@@ -2246,7 +2383,8 @@ const Home = () => {
           </Grid>
         </Box>
         <Triumphs />
-        {/* <TriumphIconsCaro/> */}
+        {/* <TriumphIconsCaro /> */}
+        {/* <Testing/> */}
       </Box>
     </>
   );

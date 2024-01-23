@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 // PAGES
 import Navigation from "./navigation/Navigation";
 // import Footer from "../src/components/Footer/Footer";
-// import Testing from "./pages/Testing/Testing";
+import Testing from "./pages/Testing/Testing";
 
 
 //REDUX
@@ -20,6 +20,7 @@ const App = () => {
       <Box flex={1}>
         <Navigation />
         {/* <Footer /> */}
+        {/* <Testing/> */}
       </Box>
     </Provider>
   );

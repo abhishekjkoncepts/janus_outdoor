@@ -42,6 +42,12 @@ import homeIcon3 from "../../assets/images/Side-Drawer-icons/icons-white/home-wh
 import aboutUsIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/about-us-white.png";
 import servicesIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/services-white.png";
 import contactUsIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/contact-us-white.png";
+// light
+import homeIcon4 from "../../assets/images/Side-Drawer-icons/light/home.png"
+import aboutUsIcon4 from "../../assets/images/Side-Drawer-icons/light/group.png"
+import servicesIcon4 from "../../assets/images/Side-Drawer-icons/light/customer.png"
+import contactUsIcon4 from "../../assets/images/Side-Drawer-icons/light/phone-call.png"
+
 
 // CSS
 import "./Header.css";
@@ -156,7 +162,7 @@ function Header(props) {
         >
           <Box>
             <img
-              src={homeIcon}
+              src={homeIcon4}
               // src={homeIcon2}
               // src={homeIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
@@ -190,7 +196,7 @@ function Header(props) {
                   paddingBottom: "5px",  }}>
           <Box>
             <img
-              src={aboutUsIcon}
+              src={aboutUsIcon4}
               // src={aboutUsIcon2}
               // src={aboutUsIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
@@ -224,7 +230,7 @@ function Header(props) {
                   paddingBottom: "5px", }}>
           <Box>
             <img
-              src={servicesIcon}
+              src={servicesIcon4}
               // src={servicesIcon2}
               // src={servicesIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}
@@ -258,7 +264,7 @@ function Header(props) {
                   paddingBottom: "5px", }}>
           <Box>
             <img
-              src={contactUsIcon}
+              src={contactUsIcon4}
               // src={contactUsIcon2}
               // src={contactUsIcon3}
               style={{ width: "25px", height: "25px", marginTop: "5px" }}

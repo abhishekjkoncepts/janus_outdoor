@@ -54,8 +54,9 @@ const Categorycarousel = () => {
         >
           <Box
             sx={{
-              marginTop: { xs: "0px", sm: "0px", md: "10px", lg: "10px" },
-              marginBottom: { xs: "25px", sm: "25px", md: "10px", lg: "10px" },
+              marginTop: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
+              marginBottom: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
+              // border:"2px solid red"
             }}
           >
             <Carousel
@@ -87,20 +88,6 @@ const Categorycarousel = () => {
                         } else if (item.category === "Inflight Branding") {
                           navigate("/inflight-branding-advertising-agency/");
                         }
-                      }}
-                      sx={{
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          md: "10px",
-                          lg: "10px",
-                        },
-                        marginBottom: {
-                          xs: "0px",
-                          sm: "0px",
-                          md: "60px",
-                          lg: "60px",
-                        },
                       }}
                     >
                       <Card

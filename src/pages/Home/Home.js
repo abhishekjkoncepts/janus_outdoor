@@ -62,6 +62,7 @@ import Footer from "../../components/Footer/Footer";
 import TriumphIconsCaro from "../Carousels/TriumphIconsCaro/TriumphIconsCaro";
 
 import Testing from "../Testing/Testing";
+import OurServicesCom from "./HomeComponents/OurServicesCom";
 
 const Home = () => {
   return (
@@ -415,7 +416,7 @@ const Home = () => {
         </Box>
 
         {/* OUR SERVICES - CATEGORIES */}
-        <Grid
+        {/* <Grid
           container
           sx={{
             backgroundColor: "#F5F5F5",
@@ -537,8 +538,9 @@ const Home = () => {
             lg={0.7}
             // sx={{ backgroundColor: "purple" }}
           ></Grid>
-        </Grid>
-        <Categorycarousel />
+        </Grid> */}
+        <OurServicesCom/>
+        {/* <Categorycarousel /> */}
 
         {/* EXPLORE */}
         <Box>

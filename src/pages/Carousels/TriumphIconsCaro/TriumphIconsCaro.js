@@ -23,6 +23,7 @@ const TriumphIconsCaro = () => {
     slidesToScroll: 4,
     initialSlide: 0,
     rows: 2,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -42,6 +43,7 @@ const TriumphIconsCaro = () => {
           initialSlide: 2,
           rows: 2,
           infinite: true,
+          autoplay: true,
         },
       },
       {
@@ -51,6 +53,7 @@ const TriumphIconsCaro = () => {
           slidesToScroll: 2,
           rows: 2,
           infinite: true,
+          autoplay: true,
         },
       },
     ],

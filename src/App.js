@@ -12,6 +12,7 @@ import Testing from "./pages/Testing/Testing";
 //REDUX
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import TriumphIconsCaro from "./pages/Carousels/TriumphIconsCaro/TriumphIconsCaro";
 // import Categorycarousel from "./pages/Carousels/CategoryCarousel/Categorycarousel";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Navigation />
         {/* <Footer /> */}
         {/* <Testing/> */}
+        {/* <TriumphIconsCaro/> */}
       </Box>
     </Provider>
   );

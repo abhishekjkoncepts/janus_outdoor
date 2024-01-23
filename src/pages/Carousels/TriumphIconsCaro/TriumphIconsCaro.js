@@ -13,26 +13,27 @@ import dominos from "../../../assets/images/Triumphs/png230x90/dominos.png";
 import digividya from "../../../assets/images/Triumphs/png230x90/digividyapeeth.png";
 import amarujala from "../../../assets/images/Triumphs/png230x90/amarujala.png";
 import nippo from "../../../assets/images/Triumphs/png230x90/nippo.png";
+import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
 const TriumphIconsCaro = () => {
   var settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    rows: 2,
-    autoplay: true,
+    // dots: false,
+    // infinite: false,
+    // speed: 500,
+    // slidesToShow: 4,
+    // slidesToScroll: 4,
+    // initialSlide: 0,
+    // rows: 2,
+    // autoplay: /true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 104,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 0,
+          slidesToScroll: 0,
           infinite: true,
           dots: false,
-          rows: 2,
+          rows: 0,
         },
       },
       {
@@ -59,7 +60,9 @@ const TriumphIconsCaro = () => {
     ],
   };
   return (
-    <Grid container sx={{ marginTop: "-155px" }}>
+    <Grid container 
+    sx={{ marginTop: {xs:"-155px", lg:"0px"} }}
+    >
       <Grid
         item
         xs={1.5}
@@ -81,64 +84,192 @@ const TriumphIconsCaro = () => {
         }
       >
         <div style={{}}>
-        
           <Slider {...settings}>
-            <div>
-              <img
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "100px",
+                    sm: "100px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "70px",
+                    sm: "70px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginTop: "5px",
+                }}
+                alt="iciciLogo"
                 src={icici}
-                style={{ width: "100px", height: "70px", marginTop: "5px" }}
               />
-            </div>
-            <div>
-              <img
-                src={toi}
-                style={{
-                  width: "100px",
-                  height: "50px",
+            </Box>
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "100px",
+                    sm: "100px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "50px",
+                    sm: "50px",
+                    md: "0px",
+                    lg: "0px",
+                  },
                   borderRadius: "10px",
+                  marginTop: "5px",
                   marginTop: "15px",
                   marginLeft: "1.5px",
                 }}
+                alt="iciciLogo"
+                src={toi}
               />
-            </div>
-            <div>
-              <img
+            </Box>
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "100px",
+                    sm: "100px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "70px",
+                    sm: "70px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginLeft: "30px",
+                }}
+                alt="iciciLogo"
                 src={geniefie}
-                style={{ width: "100px", height: "70px", marginLeft: "30px" }}
               />
-            </div>
-            <div>
-              <img
+            </Box>
+
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "110px",
+                    sm: "110px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "85px",
+                    sm: "85px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginLeft: "15px",
+                }}
+                alt="iciciLogo"
                 src={dominos}
-                style={{ width: "100px", height: "85px", marginLeft: "30px" }}
               />
-            </div>
-            <div>
-              <img src={malasia} style={{ width: "120px", height: "70px" }} />
-            </div>
-            <div>
-              <img
+            </Box>
+           
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "120px",
+                    sm: "120px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "70px",
+                    sm: "70px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+                alt="iciciLogo"
+                src={malasia}
+              />
+            </Box>
+           
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "140px",
+                    sm: "140px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "70px",
+                    sm: "70px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginTop: "10px"
+                }}
+                alt="iciciLogo"
                 src={digividya}
-                style={{ width: "140px", height: "70px", marginTop: "10px" }}
               />
-            </div>
-            <div>
-              <img src={nippo} style={{ width: "130px", height: "70px" }} />
-            </div>
-            <div>
-              <img
-                src={amarujala}
-                style={{
-                  width: "100px",
-                  height: "70px",
+            </Box>
+
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "130px",
+                    sm: "130px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "70px",
+                    sm: "70px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+                alt="iciciLogo"
+                src={nippo}
+              />
+            </Box>
+          
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "100px",
+                    sm: "100px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  height: {
+                    xs: "70px",
+                    sm: "70px",
+                    md: "0px",
+                    lg: "0px",
+                  },
                   marginLeft: "15px",
                   marginLeft: "30px",
                   marginTop: "10px",
                 }}
+                alt="iciciLogo"
+                src={amarujala}
               />
-            </div>
+            </Box>
           </Slider>
-        
         </div>
       </Grid>
       <Grid

@@ -389,8 +389,8 @@ const Triumphs = () => {
                   marginBottom: {
                     xs: "0px",
                     sm: "0px",
-                    md: "50px",
-                    lg: "50px",
+                    md: "30px",
+                    lg: "30px",
                   },
                 }}
               >

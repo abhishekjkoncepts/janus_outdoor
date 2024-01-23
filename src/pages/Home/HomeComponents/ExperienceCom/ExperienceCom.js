@@ -143,8 +143,8 @@ const ExperienceCom = () => {
           flexDirection: "row",
           paddingLeft: { xs: "20px", sm: "20px", md: "150px", lg: "150px" },
           paddingRight: { xs: "20px", sm: "20px", md: "150px", lg: "150px" },
-          paddingTop:{xs: "0px", sm: "0px", md: "0px", lg: "0px"},
-          paddingBottom:{xs: "20px", sm: "20px", md: "50px", lg: "50px"}
+          paddingTop:{xs: "0px", sm: "0px", md: "20px", lg: "20px"},
+          paddingBottom:{xs: "20px", sm: "20px", md: "50px", lg: "50px"},
         }}
       >
         {/* Green */}

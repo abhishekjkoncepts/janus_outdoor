@@ -139,7 +139,7 @@ const Triumphs = () => {
       </Grid>
 
       {/* Container 1 */}
-      <Grid container>
+      <Grid container >
         <Grid
           item
           xs={12}
@@ -160,7 +160,9 @@ const Triumphs = () => {
           lg={10.6}
           sx={{ backgroundColor: "#fff" }}
         >
-          <Grid container>
+          <Grid container 
+          // sx={{backgroundColor:"red"}}
+          >
             <Grid
               item
               xs={12}
@@ -360,7 +362,7 @@ const Triumphs = () => {
         ></Grid>
 
         <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
-          <Grid container>
+          <Grid container >
             {/* icici */}
             <Grid item xs={12} sm={12} md={6} lg={6}>
               <Box
@@ -389,8 +391,8 @@ const Triumphs = () => {
                   marginBottom: {
                     xs: "0px",
                     sm: "0px",
-                    md: "30px",
-                    lg: "30px",
+                    md: "15px",
+                    lg: "15px",
                   },
                 }}
               >
@@ -466,8 +468,8 @@ const Triumphs = () => {
                   marginBottom: {
                     xs: "0px",
                     sm: "0px",
-                    md: "50px",
-                    lg: "50px",
+                    md: "15px",
+                    lg: "15px",
                   },
                 }}
               >

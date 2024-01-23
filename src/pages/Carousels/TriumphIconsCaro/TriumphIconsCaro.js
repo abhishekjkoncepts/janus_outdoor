@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Grid, Box } from "@mui/material";
 
+
+
 // images
 import icici from "../../../assets/images/Triumphs/png230x90/icici.png";
 import toi from "../../../assets/images/Triumphs/png230x90/toifull.png";
@@ -32,7 +34,7 @@ const TriumphIconsCaro = () => {
           slidesToShow: 0,
           slidesToScroll: 0,
           infinite: true,
-          dots: false,
+          dots: true,
           rows: 0,
         },
       },
@@ -45,6 +47,7 @@ const TriumphIconsCaro = () => {
           rows: 2,
           infinite: true,
           autoplay: true,
+          // dots: true,
         },
       },
       {
@@ -55,6 +58,7 @@ const TriumphIconsCaro = () => {
           rows: 2,
           infinite: true,
           autoplay: true,
+          // dots: true,
         },
       },
     ],
@@ -83,7 +87,7 @@ const TriumphIconsCaro = () => {
           }
         }
       >
-        <div style={{}}>
+        <div >
           <Slider {...settings}>
             <Box>
               <Box

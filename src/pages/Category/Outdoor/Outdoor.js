@@ -1193,7 +1193,7 @@ export default function Outdoor() {
           lg={10.6}
           // sx={{ backgroundColor: "yellow" }}
         >
-          <Grid container spacing={2}>
+          <Grid container spacing={2} sx={{marginTop:"-50px"}}>
             {products &&
               products
                 .filter((item) => item?.category === "Outdoor")

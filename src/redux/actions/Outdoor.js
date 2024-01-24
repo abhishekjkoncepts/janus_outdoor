@@ -23,12 +23,13 @@ export async function getProducts() {
 }
 
 export async function getProductsByState(state, city, category = "") {
+  console.log(state, city, category);
   const url =
     category === ""
       ? `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}`
-      : `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&category=${category}`;
+      : `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&type=${category}`;
   return apiGet(url).then((res) => {
-    console.log(res);
+    console.log('PRODUCTS BY STATE', res);
     dispatch({
       type: types.GET_PRODUCTS_BY_STATE,
       payload: res,

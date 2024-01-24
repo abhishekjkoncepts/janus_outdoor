@@ -13,7 +13,7 @@ import "./Cards.css";
 const Cards = ({ data, onClick }) => {
   return (
     <>
-      <Grid item xs={12} sm={12} md={4} lg={4}>
+      <Grid item xs={12} sm={12} md={3} lg={3}>
         <Box
           sx={{
             marginTop: { xs: "-10px", sm: "-10px", md: "20px", lg: "20px" },

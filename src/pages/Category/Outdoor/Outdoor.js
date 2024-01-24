@@ -673,28 +673,38 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../../../components/Footer/Footer";
+import store from "../../../redux/store";
+import types from "../../../redux/types";
+
+const { dispatch } = store;
 
 export default function Outdoor() {
-  const [state, setState] = React.useState(null);
-  const [city, setCity] = React.useState("");
-  const [Cities, setCities] = React.useState(null);
+  // const [SelectedState, setSelectedState] = React.useState(null);
   const [type, setType] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
 
-  const { products, allstates } = useSelector((state) => state.OutdoorReducer);
+  const { products, allstates, SelectedState, AllStateCities, SelectedCity } =
+    useSelector((state) => state.OutdoorReducer);
 
   const navigate = useNavigate();
 
   const handleChange = async (event) => {
     const item = await event.target.value;
-    console.log(item?.state);
-    setState(item?.state);
-    // setCities();
+    console.log(item);
+    dispatch({
+      type: types.SELECT_STATE,
+      payload: item?.state,
+    });
+    dispatch({
+      type: types.UPDATE_CITIES,
+      payload: item?.city,
+    });
   };
 
   const handleChange2 = (event) => {
-    console.log(event.target.value);
-    setCity(event.target.value);
+    dispatch({
+      type: types.SELECT_CITY,
+      payload: event.target.value,
+    });
   };
   const handleChange3 = (event) => {
     console.log(event.target.value);
@@ -703,6 +713,7 @@ export default function Outdoor() {
 
   React.useEffect(() => {
     getProducts();
+    getStateAndCity();
   }, []);
 
   return (
@@ -982,7 +993,7 @@ export default function Outdoor() {
                               <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
-                                value={state}
+                                value={SelectedState}
                                 label="state"
                                 onChange={handleChange}
                                 sx={{ backgroundColor: "#F0F0F0" }}
@@ -1039,13 +1050,13 @@ export default function Outdoor() {
                               <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
-                                value={city}
+                                value={SelectedCity}
                                 label="state"
                                 onChange={handleChange2}
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
-                                {state &&
-                                  stateDistricts[state]?.map((item) => (
+                                {AllStateCities &&
+                                  AllStateCities?.map((item) => (
                                     <MenuItem
                                       value={item}
                                       sx={{ color: "#000" }}
@@ -1165,7 +1176,12 @@ export default function Outdoor() {
                               width: "100px",
                             }}
                             onClick={() => {
-                              getProductsByState(state, city, type);
+                              console.log(
+                                SelectedState,
+                                AllStateCities,
+                                SelectedCity
+                              );
+                              // getProductsByState(SelectedState, SelectedCity, type);
                             }}
                           >
                             SUBMIT
@@ -1243,8 +1259,3 @@ export default function Outdoor() {
     </>
   );
 }
-
-
-
-
-

@@ -4,7 +4,10 @@ const intialstate = {
   products: null,
   state: null,
   city: null,
-  allstates:null,
+  allstates: null,
+  selectedState: null,
+  selectedCity: null,
+  AllStateCities: null,
 };
 
 export const OutdoorReducer = (state = intialstate, action) => {
@@ -21,12 +24,30 @@ export const OutdoorReducer = (state = intialstate, action) => {
         ...state,
         products: data2,
       };
-      case types.GET_STATE_CITY:
-        const data3 = action.payload;
-        return{
-          ...state,
+    case types.GET_STATE_CITY:
+      const data3 = action.payload;
+      return {
+        ...state,
         allstates: data3,
-        }
+      };
+    case types.SELECT_STATE:
+      const selectedState = action.payload;
+      return {
+        ...state,
+        selectedState: selectedState,
+      };
+    case types.SELECT_CITY:
+      const selectedCity = action.payload;
+      return {
+        ...state,
+        selectedCity: selectedCity,
+      };
+    case types.UPDATE_CITIES:
+      const cities = action.payload;
+      return {
+        ...state,
+        AllStateCities: cities,
+      };
     default:
       return state;
   }

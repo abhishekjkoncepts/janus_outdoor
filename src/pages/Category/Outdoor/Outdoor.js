@@ -809,12 +809,12 @@ export default function Outdoor() {
                               md: "0",
                               lg: "0",
                             },
-                            paddingLeft:"10px",
-                            paddingRight:"10px",
+                            paddingLeft: "10px",
+                            paddingRight: "10px",
                             fontFamily: "Poppins, sans-serif",
                             color: "#fff",
-                            justifyContent:"center" ,
-                             alignItems:"center"
+                            justifyContent: "center",
+                            alignItems: "center",
                           }}
                         >
                           Outdoor
@@ -836,8 +836,8 @@ export default function Outdoor() {
                             },
                             fontFamily: "Poppins, sans-serif",
                             color: "#fff",
-                            justifyContent:"center" ,
-                            alignItems:"center"
+                            justifyContent: "center",
+                            alignItems: "center",
                           }}
                         >
                           Advertising
@@ -1193,7 +1193,13 @@ export default function Outdoor() {
           lg={10.6}
           // sx={{ backgroundColor: "yellow" }}
         >
-          <Grid container spacing={2} sx={{marginTop:"-50px"}}>
+          <Grid
+            container
+            spacing={2}
+            sx={{ 
+              marginTop: "-50px", 
+              marginBottom: {xs:"30px" , sm:"30px" , md:"40px" , lg:"40px"} }}
+          >
             {products &&
               products
                 .filter((item) => item?.category === "Outdoor")

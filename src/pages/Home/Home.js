@@ -371,15 +371,22 @@ const Home = () => {
                 lg: "flex-end",
               },
               alignItems: "center",
+              marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
+              marginBottom: {
+                xs: "35px",
+                sm: "35px",
+                md: "30px",
+                lg: "30px",
+              },
             }}
           >
             <Box
               component="img"
               sx={{
                 width: {
-                  xs: "70%",
-                  sm: "70%",
-                  md: "85%",
+                  xs: "95%",
+                  sm: "95%",
+                  md: "90%",
                   lg: "90%",
                 },
                 height: {
@@ -388,13 +395,7 @@ const Home = () => {
                   md: "80%",
                   lg: "80%",
                 },
-                marginTop: { xs: "5px", sm: "5px", md: "10px", lg: "10px" },
-                marginBottom: {
-                  xs: "20px",
-                  sm: "20px",
-                  md: "3px",
-                  lg: "30px",
-                },
+              
                 borderRadius: "10px",
               }}
               alt="add_img1"

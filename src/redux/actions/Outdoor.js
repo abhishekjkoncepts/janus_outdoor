@@ -5,6 +5,7 @@ import {
   GET_PRODUCTS,
   GET_PRODUCTS_BY_STATE,
   POST_CUSTOMER_ENQUIRY,
+  GET_STATE_CITY,
   //  GET_PRODUCTS_CATEGORIES
 } from "../../services/urls";
 import { apiGet, apiPost } from "../../services/api";
@@ -52,6 +53,14 @@ export async function getProductsById(id) {
 
 export async function submitenquiry(data) {
   return apiPost(POST_CUSTOMER_ENQUIRY, data).then((res) => {
+    console.log(res);
+  });
+}
+
+// Getting States and City
+
+export async function getStateAndCity(data2) {
+  return apiGet(GET_STATE_CITY, data2).then((res) => {
     console.log(res);
   });
 }

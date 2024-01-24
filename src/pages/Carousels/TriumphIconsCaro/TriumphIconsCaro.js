@@ -17,6 +17,28 @@ import amarujala from "../../../assets/images/Triumphs/png230x90/amarujala.png";
 import nippo from "../../../assets/images/Triumphs/png230x90/nippo.png";
 import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" , borderRadius:"20px" ,marginTop:"-1px"}}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" , borderRadius:"20px",marginTop:"-1px" }}
+      onClick={onClick}
+    />
+  );
+}
+
 const TriumphIconsCaro = () => {
   var settings = {
     // dots: false,
@@ -36,6 +58,8 @@ const TriumphIconsCaro = () => {
           infinite: true,
           dots: true,
           rows: 0,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />
         },
       },
       {
@@ -48,6 +72,8 @@ const TriumphIconsCaro = () => {
           infinite: true,
           autoplay: true,
           dots: true,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />
         },
       },
       {
@@ -59,6 +85,8 @@ const TriumphIconsCaro = () => {
           infinite: true,
           autoplay: true,
           dots: true,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />
         },
       },
     ],

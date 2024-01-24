@@ -9,4 +9,6 @@ export const POST_CUSTOMER_ENQUIRY = getApiUrl('/api/query');
 export const GET_PRODUCTS_CATEGORIES = getApiUrl('/api/category')
 export const POST_CUSTOMER_CONTACT = getApiUrl('/api/conatactform')
 
+export const GET_STATE_CITY = getApiUrl('/api/statescity')
+
 

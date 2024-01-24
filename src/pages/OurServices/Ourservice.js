@@ -13,6 +13,7 @@ import {
   Select,
 } from "@mui/material";
 import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
+import Ourservicecard from "../Card/OurServiceCard/Ourservicecard";
 
 const Ourservice = () => {
   return (
@@ -85,7 +86,7 @@ const Ourservice = () => {
       <Grid container>
         <Grid item xs={12} sm={12} md={0.7} lg={0.7} sx={{backgroundColor: "#F5F5F5"}}></Grid>
         <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
-          <Categorycarousel />
+         <Ourservicecard/>
         </Grid>
         <Grid item xs={12} sm={12} md={0.7} lg={0.7} sx={{backgroundColor: "#F5F5F5"}}></Grid>
       </Grid>

@@ -480,6 +480,30 @@ import {
 // REACT-ROUTER_DOM
 import { useNavigate } from "react-router-dom";
 
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" , borderRadius:"20px" ,marginTop:"-1px"}}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" , borderRadius:"20px",marginTop:"-1px" }}
+      onClick={onClick}
+    />
+  );
+}
+
+
 const Cardcarousel = () => {
   React.useEffect(() => {
     getProducts();
@@ -496,6 +520,8 @@ const Cardcarousel = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -504,6 +530,8 @@ const Cardcarousel = () => {
           slidesToScroll: 3,
           infinite: true,
           // dots: true,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
       {
@@ -512,6 +540,8 @@ const Cardcarousel = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
       {
@@ -519,6 +549,8 @@ const Cardcarousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
     ],

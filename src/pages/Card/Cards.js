@@ -17,7 +17,7 @@ const Cards = ({ data, onClick }) => {
         <Box
           sx={{
             marginTop: { xs: "-10px", sm: "-10px", md: "20px", lg: "20px" },
-            marginBottom: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
+            marginBottom: { xs: "20px", sm: "10px", md: "10px", lg: "10px" },
             paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
             paddingRight: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
           }}
@@ -51,7 +51,7 @@ const Cards = ({ data, onClick }) => {
                 />
               </Box>
               <CardContent
-              sx={{height:"100px"}}>
+              sx={{height:"100px", marginBottom:"10px"}}>
                 <Box>
                   <Typography
                     gutterBottom
@@ -104,6 +104,7 @@ const Cards = ({ data, onClick }) => {
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
                       // textAlign: "justify"
+                      marginBottom:"20px"
                     }}
                   >
                     State : {data?.state}

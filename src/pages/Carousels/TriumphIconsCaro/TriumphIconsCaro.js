@@ -56,7 +56,7 @@ const TriumphIconsCaro = () => {
           slidesToShow: 0,
           slidesToScroll: 0,
           infinite: true,
-          dots: true,
+          // dots: true,
           rows: 0,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
@@ -71,7 +71,7 @@ const TriumphIconsCaro = () => {
           rows: 2,
           infinite: true,
           autoplay: true,
-          dots: true,
+          // dots: true,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
         },
@@ -84,7 +84,7 @@ const TriumphIconsCaro = () => {
           rows: 2,
           infinite: true,
           autoplay: true,
-          dots: true,
+          // dots: true,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
         },

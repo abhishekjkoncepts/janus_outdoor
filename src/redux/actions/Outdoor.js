@@ -59,8 +59,12 @@ export async function submitenquiry(data) {
 
 // Getting States and City
 
-export async function getStateAndCity(data2) {
-  return apiGet(GET_STATE_CITY, data2).then((res) => {
+export async function getStateAndCity(data3) {
+  return apiGet(GET_STATE_CITY, data3).then((res) => {
     console.log(res);
+    dispatch({
+      type: types.GET_STATE_CITY,
+      payload: res,
+    });
   });
 }

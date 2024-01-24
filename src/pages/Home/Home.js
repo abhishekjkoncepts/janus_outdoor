@@ -55,7 +55,7 @@ import "./Home.css";
 import "./Circle1.css";
 import "./Circle2.css";
 import "./Circle3.css";
-import { getProducts } from "../../redux/actions/Outdoor";
+import { getProducts, getStateAndCity } from "../../redux/actions/Outdoor";
 
 import { getProductsCategories } from "../../redux/actions/Home";
 import Footer from "../../components/Footer/Footer";
@@ -67,6 +67,12 @@ import ExperienceCom from "./HomeComponents/ExperienceCom/ExperienceCom";
 import HoardingPlacedCom from "./HomeComponents/HoardingPlacedCom/HoardingPlacedCom";
 
 const Home = () => {
+
+  useEffect(() => {
+    getStateAndCity();
+  }, [])
+  
+
   return (
     <>
       <Helmet>

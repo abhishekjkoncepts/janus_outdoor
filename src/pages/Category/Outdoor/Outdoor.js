@@ -621,7 +621,7 @@
 //   );
 // }
 
-import * as React from "react";
+import React, { useEffect } from "react";
 
 // MUI
 import {
@@ -635,6 +635,8 @@ import {
   FormControl,
   Select,
 } from "@mui/material";
+
+import { getStateAndCity } from "../../../redux/actions/Outdoor";
 
 import { NativeSelect } from "@mui/material";
 
@@ -675,16 +677,19 @@ import Footer from "../../../components/Footer/Footer";
 export default function Outdoor() {
   const [state, setState] = React.useState(null);
   const [city, setCity] = React.useState("");
+  const [Cities, setCities] = React.useState(null);
   const [type, setType] = React.useState("");
   const [loading, setLoading] = React.useState(false);
 
-  const { products } = useSelector((state) => state.OutdoorReducer);
+  const { products, allstates } = useSelector((state) => state.OutdoorReducer);
 
   const navigate = useNavigate();
 
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setState(event.target.value);
+  const handleChange = async (event) => {
+    const item = await event.target.value;
+    console.log(item?.state);
+    setState(item?.state);
+    // setCities();
   };
 
   const handleChange2 = (event) => {
@@ -982,9 +987,9 @@ export default function Outdoor() {
                                 onChange={handleChange}
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
-                                {states.map((item, index) => (
+                                {allstates?.map((item, index) => (
                                   <MenuItem value={item} sx={{ color: "#000" }}>
-                                    {item}
+                                    {item?.state}
                                   </MenuItem>
                                 ))}
                               </Select>
@@ -1196,9 +1201,10 @@ export default function Outdoor() {
           <Grid
             container
             spacing={2}
-            sx={{ 
-              marginTop: "-50px", 
-              marginBottom: {xs:"30px" , sm:"30px" , md:"40px" , lg:"40px"} }}
+            sx={{
+              marginTop: "-50px",
+              marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
+            }}
           >
             {products &&
               products
@@ -1237,3 +1243,8 @@ export default function Outdoor() {
     </>
   );
 }
+
+
+
+
+

@@ -68,21 +68,21 @@ const Contactus = () => {
           >
             <Box
               sx={{
-                paddingLeft: "5px",
-                paddingRight: "5px",
-                marginTop: { xs: "0px", sm: "0px", md: "100px", lg: "100px" },
+                marginTop: { xs: "5px", sm: "5px", md: "100px", lg: "100px" },
                 marginBottom: {
                   xs: "0px",
                   sm: "0px",
-                  md: "100px",
-                  lg: "100px",
+                  md: "0px",
+                  lg: "0px",
                 },
+                display:"flex",
+                justifyContent:{ xs: "center", sm: "center", md: "flex-start", lg: "flex-start" },
               }}
             >
               <Box>
                 <Typography
                   sx={{
-                    fontSize: "50px",
+                    fontSize: { xs: "40px", sm: "40px", md: "50px", lg: "50px" },
                     fontWeight: "700",
                     fontFamily: "Poppins, sans-serif",
                     color: "#C02222",
@@ -91,7 +91,9 @@ const Contactus = () => {
                   Contact Us
                 </Typography>
               </Box>
+              </Box>
 
+              <Box>
               <Box
                 sx={{
                   marginTop: { xs: "1px", sm: "1px", md: "10px", lg: "10px" },
@@ -101,12 +103,12 @@ const Contactus = () => {
                     md: "10px",
                     lg: "10px",
                   },
-                  paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                  paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
                 }}
               >
                 <Typography
                   sx={{
-                    fontSize: "13px",
+                    fontSize:  { xs: "14px", sm: "14px", md: "15px", lg: "15px" },
                     fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
                   }}
@@ -120,7 +122,7 @@ const Contactus = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                  paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
                 }}
               >
                 {/* Address */}

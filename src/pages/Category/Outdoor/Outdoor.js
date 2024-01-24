@@ -720,7 +720,7 @@ export default function Outdoor() {
                 autoPlay
                 loop
                 muted
-                style={{ width: "100%", height: "80%", objectFit: "cover" }}
+                style={{ width: "100%", height: "90%", objectFit: "cover" }}
               />
               {/* <Box className="container"> */}
               <Box
@@ -757,8 +757,8 @@ export default function Outdoor() {
                     <Box
                       sx={{
                         marginTop: {
-                          xs: "60px",
-                          sm: "60px",
+                          xs: "70px",
+                          sm: "70px",
                           md: "100px",
                           lg: "100px",
                         },
@@ -1141,8 +1141,8 @@ export default function Outdoor() {
                             alignItems: "center",
                             marginTop: "40px",
                             marginTop: {
-                              xs: "70px",
-                              sm: "70px",
+                              xs: "90px",
+                              sm: "90px",
                               md: "40px",
                               lg: "40px",
                             },

@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
 // CSS
-import "./Cards.css"
+import "./Cards.css";
 
 const Cards = ({ data, onClick }) => {
   return (
@@ -18,8 +18,8 @@ const Cards = ({ data, onClick }) => {
           sx={{
             marginTop: { xs: "-10px", sm: "-10px", md: "20px", lg: "20px" },
             marginBottom: { xs: "10px", sm: "10px", md: "10px", lg: "10px" },
-            paddingLeft:{xs: "10px", sm: "10px", md: "0px", lg: "0px"},
-            paddingRight:{xs: "10px", sm: "10px", md: "0px", lg: "0px"}
+            paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+            paddingRight: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
           }}
         >
           <Card
@@ -29,6 +29,7 @@ const Cards = ({ data, onClick }) => {
               borderTopRightRadius: "150px",
               borderRadius: "170px 170px 0 0",
               border: "2px solid #C02222",
+              background: "linear-gradient(to bottom, #C02222 85%, #000)",
             }}
           >
             <CardActionArea
@@ -40,7 +41,7 @@ const Cards = ({ data, onClick }) => {
                 <CardMedia
                   component="img"
                   height="340"
-                  width="100"
+                  width="80"
                   image={data?.image}
                   alt="Main Image"
                   sx={{
@@ -49,8 +50,9 @@ const Cards = ({ data, onClick }) => {
                   }}
                 />
               </Box>
-              <CardContent>
-                <Box sx={{}}>
+              <CardContent
+              sx={{height:"100px"}}>
+                <Box>
                   <Typography
                     gutterBottom
                     sx={{
@@ -58,27 +60,30 @@ const Cards = ({ data, onClick }) => {
                       overflow: "hidden",
                       WebkitBoxOrient: "vertical",
                       WebkitLineClamp: 2,
-                      color: "#D2122E",
+                      color: "#fff",
                       fontSize: "16px",
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: "600",
                       // textAlign: "justify",
                       wordSpacing: "1px",
-                      lineHeight:"17px",
-                      textTransform:"capitalize"
+                      lineHeight: "17px",
+                      textTransform: "capitalize",
+                      marginBottom:"5px"
                     }}
                   >
                     {/* {data?.address} */}
-                    {data?.address ? data.address.charAt(0).toUpperCase() + data.address.slice(1).toLowerCase() : ''}
+                    {data?.address
+                      ? data.address.charAt(0).toUpperCase() +
+                        data.address.slice(1).toLowerCase()
+                      : ""}
                   </Typography>
                   <Typography
-                    color="text.secondary"
                     sx={{
                       display: "-webkit-box",
                       overflow: "hidden",
                       WebkitBoxOrient: "vertical",
                       WebkitLineClamp: 3,
-                      color: "black",
+                      color: "#fff",
                       fontSize: "14px",
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
@@ -94,7 +99,7 @@ const Cards = ({ data, onClick }) => {
                       overflow: "hidden",
                       WebkitBoxOrient: "vertical",
                       WebkitLineClamp: 3,
-                      color: "black",
+                      color: "#fff",
                       fontSize: "14px",
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
@@ -103,7 +108,7 @@ const Cards = ({ data, onClick }) => {
                   >
                     State : {data?.state}
                   </Typography>
-                </Box> 
+                </Box>
               </CardContent>
             </CardActionArea>
           </Card>

@@ -997,8 +997,8 @@ export default function Outdoor() {
                               justifyContent: { xs: "center", sm: "center" },
                               alignItems: { xs: "center", sm: "center" },
                               marginTop: {
-                                xs: "70px",
-                                sm: "70px",
+                                xs: "90px",
+                                sm: "90px",
                                 md: "0px",
                                 lg: "0px",
                               },
@@ -1058,8 +1058,8 @@ export default function Outdoor() {
                               justifyContent: { xs: "center", sm: "center" },
                               alignItems: { xs: "center", sm: "center" },
                               marginTop: {
-                                xs: "70px",
-                                sm: "70px",
+                                xs: "90px",
+                                sm: "90px",
                                 md: "0px",
                                 lg: "0px",
                               },

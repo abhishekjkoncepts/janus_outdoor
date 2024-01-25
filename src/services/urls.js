@@ -11,4 +11,6 @@ export const POST_CUSTOMER_CONTACT = getApiUrl('/api/conatactform')
 
 export const GET_STATE_CITY = getApiUrl('/api/statescity')
 
+export const GET_INDIVIDUAL_PRODUCT = getApiUrl('/api/products/url')
+
 

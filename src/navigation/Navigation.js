@@ -30,9 +30,9 @@ import Fullcard from "../pages/FullCard/Fullcard";
 
 // SCROLL-TO-TOP
 import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
+import Individual from "../pages/Individual/Individual";
 
 const Navigation = () => {
-
   return (
     <BrowserRouter>
       <Header />
@@ -40,7 +40,6 @@ const Navigation = () => {
         {/* PARENT-PAGES */}
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/:param1?/:param2?" element={<individual />} /> */}
           <Route path="/about-us/" element={<Aboutus />} />
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -66,12 +65,14 @@ const Navigation = () => {
           />
 
           {/* FULl CArd */}
-          <Route path="/:category/:seotitle" element={<Fullcard />} />
+          <Route path="/:category?/:seotitle?" element={<Fullcard />} />
           <Route
             path="/seedetails/:category?/:seotitle"
             element={<Fullcard />}
           />
-          {/* <Route path="/:param1?/:param2?/:param3?" element={<Individual />} /> */}
+          {/* Individual */}
+
+          <Route path="/info/:param1?/:param2?" element={<Individual />} />
         </Routes>
       </Scrolltotop>
       <Footer />

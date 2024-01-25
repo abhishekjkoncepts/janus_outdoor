@@ -9,7 +9,7 @@ import SendIcon from "@mui/icons-material/Send";
 import sampleImg from "../../assets/images/add4.webp";
 
 // REACT-ROUTER-DOM
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 // REDUX
 import { getProductsById } from "../../redux/actions/Outdoor";
@@ -22,16 +22,18 @@ import Popupcomponent from "../PopUp/Popupcomponent";
 
 // TOASTI-FY
 import { ToastContainer, toast } from "react-toastify";
+import { getProductDetails } from "../../redux/actions/Individual";
 
 const Fullcard = () => {
   const location = useLocation();
+  const {category, seotitle} = useParams();
 
   const [DATA, setDATA] = useState(null);
 
   useEffect(() => {
     console.log(location);
-    getProductsById(location.state.id).then((res) => {
-      console.log("PRODUCTS BY ID", res);
+    getProductDetails(seotitle).then((res) => {
+      console.log(res);
       setDATA(res);
     });
   }, []);
@@ -53,15 +55,16 @@ const Fullcard = () => {
   return (
     <>
       <Helmet>
-        <title>{DATA?.seotitle ? DATA?.seotitle : (DATA?.address.charAt(0).toUpperCase() + DATA?.address.slice(1).toLowerCase())}</title>
+        <title>
+          {DATA?.seotitle
+            ? DATA?.seotitle
+            : DATA?.address.charAt(0).toUpperCase() +
+              DATA?.address.slice(1).toLowerCase()}
+        </title>
         <meta name="description" content={DATA?.seodesc} />
       </Helmet>
-      
-      {isOpen && (
-        <Popupcomponent
-          handleClose={togglePopup}
-        />
-      )}
+
+      {isOpen && <Popupcomponent handleClose={togglePopup} />}
       <Box>
         <Grid container sx={{ marginTop: "65px" }}>
           <Grid
@@ -676,11 +679,10 @@ const Fullcard = () => {
                           alignitems: "center",
                         }}
                       >
-                        ENQUIRY                  
-                           </Typography>
+                        ENQUIRY
+                      </Typography>
                     </Box>
                   </Box>
-                 
                 </Box>
               </Grid>
             </Grid>

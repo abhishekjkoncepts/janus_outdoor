@@ -20,9 +20,6 @@ import Weseethingsrevcom from "./HomeComponents/WeSeeThingsRevCom/Weseethingsrev
 
 // CSS
 import "./Home.css";
-import "./Circle1.css";
-import "./Circle2.css";
-import "./Circle3.css";
 import { getProducts, getStateAndCity } from "../../redux/actions/Outdoor";
 
 

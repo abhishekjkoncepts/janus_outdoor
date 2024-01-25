@@ -367,7 +367,7 @@ const Categorycarousel = () => {
                   <div >
                     <Box
                       onClick={() => {
-                        if (item.category === "Outdoor") {
+                        if (item.category === "Outdoor Advertising") {
                           navigate("/outdoor-advertising-agency/");
                         } else if (item.category === "Metro Branding") {
                           navigate("/metro-advertising-agency/");

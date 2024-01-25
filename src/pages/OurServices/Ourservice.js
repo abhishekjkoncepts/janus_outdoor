@@ -212,7 +212,7 @@ const Ourservice = () => {
                       key={item.id} // Add a unique key for each mapped element
                       data={item}
                       onClick={() => {
-                        if (item.category === "Outdoor") {
+                        if (item.category === "Outdoor Advertising") {
                           navigate("/outdoor-advertising-agency/");
                         } else if (item.category === "Metro Branding") {
                           navigate("/metro-advertising-agency/");

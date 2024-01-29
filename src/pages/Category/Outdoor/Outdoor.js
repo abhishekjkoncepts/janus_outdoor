@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // MUI
 import {
@@ -56,28 +56,32 @@ import types from "../../../redux/types";
 const { dispatch } = store;
 
 export default function Outdoor() {
-  // const [SelectedState, setSelectedState] = React.useState(null);
+  // const [selectedState, setSelectedState] = React.useState(null);
   const [type, setType] = React.useState("");
+  const [STATE, setSTATE] = useState(null);
+  const [CITY, setCITY] = useState(null);
 
-  const { products, allstates, SelectedState, AllStateCities, SelectedCity } =
+  const { products, allstates, selectedState, AllStateCities, selectedCity } =
     useSelector((state) => state.OutdoorReducer);
 
   const navigate = useNavigate();
 
   const handleChange = async (event) => {
-    const item = await event.target.value;
+    const item = allstates.filter(i => i.state === event.target.value);
     console.log(item);
+    setSTATE(item[0]?.state);
     dispatch({
       type: types.SELECT_STATE,
-      payload: item?.state,
+      payload: item[0]?.state,
     });
     dispatch({
       type: types.UPDATE_CITIES,
-      payload: item?.city,
+      payload: item[0]?.city,
     });
   };
 
   const handleChange2 = (event) => {
+    setCITY(event.target.value);
     dispatch({
       type: types.SELECT_CITY,
       payload: event.target.value,
@@ -388,13 +392,13 @@ export default function Outdoor() {
                               <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
-                                value={SelectedState}
+                                value={selectedState}
                                 label="state"
                                 onChange={handleChange}
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 {allstates?.map((item, index) => (
-                                  <MenuItem value={item} sx={{ color: "#000" }}>
+                                  <MenuItem value={item?.state} sx={{ color: "#000" }}>
                                     {item?.state}
                                   </MenuItem>
                                 ))}
@@ -445,7 +449,7 @@ export default function Outdoor() {
                               <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
-                                value={SelectedCity}
+                                value={CITY}
                                 label="state"
                                 onChange={handleChange2}
                                 sx={{ backgroundColor: "#F0F0F0" }}
@@ -572,11 +576,11 @@ export default function Outdoor() {
                             }}
                             onClick={() => {
                               console.log(
-                                SelectedState,
+                                selectedState,
                                 AllStateCities,
-                                SelectedCity
+                                selectedCity
                               );
-                              // getProductsByState(SelectedState, SelectedCity, type);
+                              getProductsByState(selectedState, selectedCity, type);
                             }}
                           >
                             SUBMIT

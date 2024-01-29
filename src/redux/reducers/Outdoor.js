@@ -5,8 +5,8 @@ const intialstate = {
   state: null,
   city: null,
   allstates: null,
-  selectedState: null,
-  selectedCity: null,
+  selectedState: '',
+  selectedCity: '',
   AllStateCities: null,
 };
 

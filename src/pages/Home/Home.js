@@ -22,14 +22,10 @@ import Weseethingsrevcom from "./HomeComponents/WeSeeThingsRevCom/Weseethingsrev
 import "./Home.css";
 import { getProducts, getStateAndCity } from "../../redux/actions/Outdoor";
 
-
-
 const Home = () => {
-
   useEffect(() => {
     getStateAndCity();
-  }, [])
-  
+  }, []);
 
   return (
     <>
@@ -68,8 +64,8 @@ const Home = () => {
         </Grid>
 
         {/* WE SEE THINGS DIFFERENTLY */}
-        <Weseethingscom/>
-        <Weseethingsrevcom/>
+        <Weseethingscom />
+        <Weseethingsrevcom />
 
         {/* OUR SERVICES - CATEGORIES */}
         <OurServicesCom />

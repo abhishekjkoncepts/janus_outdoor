@@ -39,15 +39,14 @@ import servicesIcon2 from "../../assets/images/Side-Drawer-icons/icons-red/servi
 import contactUsIcon2 from "../../assets/images/Side-Drawer-icons/icons-red/contact-us.png";
 // white
 import homeIcon3 from "../../assets/images/Side-Drawer-icons/icons-white/home-white.png";
-import aboutUsIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/about-us-white.png";
-import servicesIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/services-white.png";
-import contactUsIcon3  from "../../assets/images/Side-Drawer-icons/icons-white/contact-us-white.png";
+import aboutUsIcon3 from "../../assets/images/Side-Drawer-icons/icons-white/about-us-white.png";
+import servicesIcon3 from "../../assets/images/Side-Drawer-icons/icons-white/services-white.png";
+import contactUsIcon3 from "../../assets/images/Side-Drawer-icons/icons-white/contact-us-white.png";
 // light
-import homeIcon4 from "../../assets/images/Side-Drawer-icons/light/home.png"
-import aboutUsIcon4 from "../../assets/images/Side-Drawer-icons/light/group.png"
-import servicesIcon4 from "../../assets/images/Side-Drawer-icons/light/customer.png"
-import contactUsIcon4 from "../../assets/images/Side-Drawer-icons/light/phone-call.png"
-
+import homeIcon4 from "../../assets/images/Side-Drawer-icons/light/home.png";
+import aboutUsIcon4 from "../../assets/images/Side-Drawer-icons/light/group.png";
+import servicesIcon4 from "../../assets/images/Side-Drawer-icons/light/customer.png";
+import contactUsIcon4 from "../../assets/images/Side-Drawer-icons/light/phone-call.png";
 
 // CSS
 import "./Header.css";
@@ -124,7 +123,7 @@ function Header(props) {
           ...buttonHoverStyle,
         }}
       >
-        <Box sx={{marginTop:"20px"}}>
+        <Box sx={{ marginTop: "20px" }}>
           <Box
             component="img"
             sx={{
@@ -150,146 +149,169 @@ function Header(props) {
       </Link>
       <Box sx={{ marginTop: "30px" }}>
         {/* Home */}
-        <Box sx={{borderTop:"1px solid #000"}}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginLeft: "20px",
-            marginTop: "7px",
-            marginBottom: "7px",
-          }}
-        >
-          <Box>
-            <img
-              src={homeIcon4}
-              // src={homeIcon2}
-              // src={homeIcon3}
-              style={{ width: "25px", height: "25px", marginTop: "5px" }}
-            />
+        <Box sx={{ borderTop: "1px solid #000" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              marginLeft: "20px",
+              marginTop: "7px",
+              marginBottom: "7px",
+            }}
+          >
+            <Box>
+              <img
+                src={homeIcon4}
+                // src={homeIcon2}
+                // src={homeIcon3}
+                style={{ width: "25px", height: "25px", marginTop: "5px" }}
+              />
+            </Box>
+            <Box sx={{ marginLeft: "8px" }}>
+              <Link to={"/"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    // color: "#C02222",
+                    // color: "#fff",
+                    fontSize: "20px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    // marginLeft: "4px",
+                    paddingTop: "5px",
+                    paddingBottom: "5px",
+                  }}
+                >
+                  HOME
+                </Typography>
+              </Link>
+            </Box>
           </Box>
-          <Box sx={{marginLeft:"8px"}}>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <Typography
-                sx={{
-                  color: "#000",
-                  // color: "#C02222",
-                  // color: "#fff",
-                  fontSize: "20px",
-                  fontWeight: "400",
-                  fontFamily: "Poppins, sans-serif",
-                  // marginLeft: "4px",
-                  paddingTop: "5px",
-                  paddingBottom: "5px",
-                }}
-              >
-                HOME
-              </Typography>
-            </Link>
-          </Box>
-        </Box>
         </Box>
 
         {/* About us  */}
-        <Box sx={{ borderTop:"1px solid #000"}}>
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px" , paddingTop: "5px",
-                  paddingBottom: "5px",  }}>
-          <Box>
-            <img
-              src={aboutUsIcon4}
-              // src={aboutUsIcon2}
-              // src={aboutUsIcon3}
-              style={{ width: "25px", height: "25px", marginTop: "5px" }}
-            />
+        <Box sx={{ borderTop: "1px solid #000" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              marginLeft: "20px",
+              paddingTop: "5px",
+              paddingBottom: "5px",
+            }}
+          >
+            <Box>
+              <img
+                src={aboutUsIcon4}
+                // src={aboutUsIcon2}
+                // src={aboutUsIcon3}
+                style={{ width: "25px", height: "25px", marginTop: "5px" }}
+              />
+            </Box>
+            <Box sx={{ marginLeft: "8px" }}>
+              <Link to={"/about-us"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    // color: "#C02222",
+                    // color: "#fff",
+                    fontSize: "20px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    // marginLeft: "4px",
+                    paddingTop: "5px",
+                    paddingBottom: "5px",
+                  }}
+                >
+                  ABOUT US
+                </Typography>
+              </Link>
+            </Box>
           </Box>
-          <Box sx={{marginLeft:"8px"}}>
-            <Link to={"/about-us"} style={{ textDecoration: "none" }}>
-              <Typography
-                sx={{
-                  color: "#000",
-                  // color: "#C02222",
-                  // color: "#fff",
-                  fontSize: "20px",
-                  fontWeight: "400",
-                  fontFamily: "Poppins, sans-serif",
-                  // marginLeft: "4px",
-                  paddingTop: "5px",
-                  paddingBottom: "5px",
-                }}
-              >
-                ABOUT US
-              </Typography>
-            </Link>
-          </Box>
-        </Box>
         </Box>
 
         {/* Services  */}
-        <Box sx={{ borderTop:"1px solid #000"}}>
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
-                  paddingBottom: "5px", }}>
-          <Box>
-            <img
-              src={servicesIcon4}
-              // src={servicesIcon2}
-              // src={servicesIcon3}
-              style={{ width: "25px", height: "25px", marginTop: "5px" }}
-            />
-          </Box>
-          <Box  sx={{marginLeft:"8px"}}>
-            <Link to={"/our-service"} style={{ textDecoration: "none" }}>
-              <Typography
-                sx={{
-                  color: "#000",
-                  // color: "#C02222",
-                  // color: "#fff",
-                  fontSize: "20px",
-                  fontWeight: "400",
-                  fontFamily: "Poppins, sans-serif",
-                  paddingTop: "5px",
-                  paddingBottom: "5px",
+        <Box sx={{ borderTop: "1px solid #000" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              marginLeft: "20px",
+              paddingTop: "5px",
+              paddingBottom: "5px",
+            }}
+          >
+            <Box>
+              <img
+                src={servicesIcon4}
+                // src={servicesIcon2}
+                // src={servicesIcon3}
+                style={{ width: "25px", height: "25px", marginTop: "5px" }}
+              />
+            </Box>
+            <Box sx={{ marginLeft: "8px" }}>
+              <Link to={"/our-service"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    // color: "#C02222",
+                    // color: "#fff",
+                    fontSize: "20px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    paddingTop: "5px",
+                    paddingBottom: "5px",
+                  }}
                   
-                }}
-              >
-                SERVICES
-              </Typography>
-            </Link>
+                >
+                  OUR SERVICES
+                </Typography>
+              </Link>
+            </Box>
           </Box>
-        </Box>
         </Box>
 
         {/* Contact us  */}
-        <Box sx={{ borderTop:"1px solid #000" , borderBottom:"1px solid #000" }}>
-        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "20px", paddingTop: "5px",
-                  paddingBottom: "5px", }}>
-          <Box>
-            <img
-              src={contactUsIcon4}
-              // src={contactUsIcon2}
-              // src={contactUsIcon3}
-              style={{ width: "25px", height: "25px", marginTop: "5px" }}
-            />
+        <Box
+          sx={{ borderTop: "1px solid #000", borderBottom: "1px solid #000" }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              marginLeft: "20px",
+              paddingTop: "5px",
+              paddingBottom: "5px",
+            }}
+          >
+            <Box>
+              <img
+                src={contactUsIcon4}
+                // src={contactUsIcon2}
+                // src={contactUsIcon3}
+                style={{ width: "25px", height: "25px", marginTop: "5px" }}
+              />
+            </Box>
+            <Box sx={{ marginLeft: "8px" }}>
+              <Link to={"/contact-us/"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    // color: "#C02222",
+                    // color: "#fff",
+                    fontSize: "20px",
+                    fontWeight: "400",
+                    fontFamily: "Poppins, sans-serif",
+                    marginLeft: "4px",
+                    paddingTop: "5px",
+                    paddingBottom: "5px",
+                  }}
+                >
+                  CONTACT US
+                </Typography>
+              </Link>
+            </Box>
           </Box>
-          <Box sx={{marginLeft:"8px"}}>
-            <Link to={"/contact-us/"} style={{ textDecoration: "none" }}>
-              <Typography
-                sx={{
-                  color: "#000",
-                  // color: "#C02222",
-                  // color: "#fff",
-                  fontSize: "20px",
-                  fontWeight: "400",
-                  fontFamily: "Poppins, sans-serif",
-                  marginLeft: "4px",
-                  paddingTop: "5px",
-                  paddingBottom: "5px",
-                }}
-              >
-                CONTACT US
-              </Typography>
-            </Link>
-          </Box>
-        </Box>
         </Box>
       </Box>
     </Box>
@@ -459,8 +481,16 @@ function Header(props) {
                 >
                   <Box sx={{ width: "210px", borderRadius: "0px" }}>
                     {/* outdoor */}
-                    <Box sx={{ marginTop: "5px" , borderBottom:"1px solid #D3D3D3" }}>
-                      <Link to={"/outdoor-advertising-agency/"} style={{ textDecoration: "none" }}>
+                    <Box
+                      sx={{
+                        marginTop: "5px",
+                        borderBottom: "1px solid #D3D3D3",
+                      }}
+                    >
+                      <Link
+                        to={"/outdoor-advertising-agency/"}
+                        style={{ textDecoration: "none" }}
+                      >
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -474,7 +504,7 @@ function Header(props) {
                             fontSize: "15px",
                             fontWeight: "600",
                             fontFamily: "Poppins, sans-serif",
-                            paddingBottom:"5px"
+                            paddingBottom: "5px",
                           }}
                         >
                           Outdoor Advertising
@@ -483,8 +513,11 @@ function Header(props) {
                     </Box>
 
                     {/* metro*/}
-                    <Box sx={{borderBottom:"1px solid #D3D3D3" ,}}>
-                      <Link to={"/metro-advertising-agency/"} style={{ textDecoration: "none" }}>
+                    <Box sx={{ borderBottom: "1px solid #D3D3D3" }}>
+                      <Link
+                        to={"/metro-advertising-agency/"}
+                        style={{ textDecoration: "none" }}
+                      >
                         <Typography
                           sx={{
                             marginLeft: "20px",
@@ -498,8 +531,8 @@ function Header(props) {
                             fontSize: "15px",
                             fontWeight: "600",
                             fontFamily: "Poppins, sans-serif",
-                            paddingTop:"7px",
-                            paddingBottom:"7px"
+                            paddingTop: "7px",
+                            paddingBottom: "7px",
                           }}
                         >
                           Metro Advertising
@@ -508,7 +541,7 @@ function Header(props) {
                     </Box>
 
                     {/* Airport branding */}
-                    <Box sx={{borderBottom:"1px solid #D3D3D3"}}>
+                    <Box sx={{ borderBottom: "1px solid #D3D3D3" }}>
                       <Link
                         to={"/airport-branding-advertising-agency/"}
                         style={{ textDecoration: "none" }}
@@ -526,8 +559,8 @@ function Header(props) {
                             fontSize: "15px",
                             fontWeight: "600",
                             fontFamily: "Poppins, sans-serif",
-                            paddingTop:"7px",
-                            paddingBottom:"7px",
+                            paddingTop: "7px",
+                            paddingBottom: "7px",
                           }}
                         >
                           Airport Branding
@@ -536,7 +569,7 @@ function Header(props) {
                     </Box>
 
                     {/* MALL-BRANDING */}
-                    <Box sx={{borderBottom:"1px solid #D3D3D3"}}>
+                    <Box sx={{ borderBottom: "1px solid #D3D3D3" }}>
                       <Link
                         to={"/mall-branding-advertising-agency/"}
                         style={{ textDecoration: "none" }}
@@ -554,8 +587,8 @@ function Header(props) {
                             fontSize: "15px",
                             fontWeight: "600",
                             fontFamily: "Poppins, sans-serif",
-                            paddingTop:"7px",
-                            paddingBottom:"7px"
+                            paddingTop: "7px",
+                            paddingBottom: "7px",
                           }}
                         >
                           Mall Branding
@@ -564,7 +597,7 @@ function Header(props) {
                     </Box>
 
                     {/* INFLIGHT-BRANDING */}
-                    <Box sx={{ borderBottom:"1px solid #D3D3D3"}}>
+                    <Box sx={{ borderBottom: "1px solid #D3D3D3" }}>
                       <Link
                         to={"/inflight-branding-advertising-agency/"}
                         style={{ textDecoration: "none" }}
@@ -582,8 +615,8 @@ function Header(props) {
                             fontSize: "15px",
                             fontWeight: "600",
                             fontFamily: "Poppins, sans-serif",
-                            paddingTop:"7px",
-                            paddingBottom:"7px",
+                            paddingTop: "7px",
+                            paddingBottom: "7px",
                           }}
                         >
                           Inflight Branding
@@ -610,14 +643,13 @@ function Header(props) {
                             fontSize: "15px",
                             fontWeight: "600",
                             fontFamily: "Poppins, sans-serif",
-                            paddingTop:"7px"
+                            paddingTop: "7px",
                           }}
                         >
                           Transit Media
                         </Typography>
                       </Link>
                     </Box>
-
                   </Box>
                 </Menu>
               </Box>

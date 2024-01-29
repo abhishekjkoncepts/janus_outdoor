@@ -25,25 +25,21 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./Popupcomponent.css";
 
-const Popupcomponent = (props) => {
+const Popupcomponent = ({ProductId, ...props}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [ProductId, setProductId] = useState("");
+  // const [ProductId, setProductId] = useState("");
 
-  const [DATA, setDATA] = useState(null);
+  // const [DATA, setDATA] = useState(null);
 
   const location = useLocation();
   useEffect(() => {
     console.log(location);
-    getProductsById(location.state.id).then((res) => {
-      console.log("PRODUCTS BY ID", res?._id);
-
-      setProductId(res?._id);
-
-      setDATA(res);
-    });
+    // getProductsById(ProductId).then((res) => {
+    //   setDATA(res);
+    // });
   }, []);
   return (
     <Box

@@ -31,6 +31,7 @@ import Fullcard from "../pages/FullCard/Fullcard";
 // SCROLL-TO-TOP
 import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 import Individual from "../pages/Individual/Individual";
+import HoardingIn from "../pages/HoardingsIn/HoardingIn";
 
 const Navigation = () => {
   return (
@@ -40,6 +41,7 @@ const Navigation = () => {
         {/* PARENT-PAGES */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/:param" element={<HoardingIn/>} />
           <Route path="/about-us/" element={<Aboutus />} />
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs" element={<Blogs />} />

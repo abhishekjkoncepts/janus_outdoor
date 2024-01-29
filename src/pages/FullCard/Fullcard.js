@@ -29,12 +29,14 @@ const Fullcard = () => {
   const {category, seotitle} = useParams();
 
   const [DATA, setDATA] = useState(null);
+  const [ProductId, setProductId] = useState('');
 
   useEffect(() => {
     console.log(location);
     getProductDetails(seotitle).then((res) => {
       console.log(res);
       setDATA(res);
+      setProductId(res._id);
     });
   }, []);
 
@@ -64,7 +66,7 @@ const Fullcard = () => {
         <meta name="description" content={DATA?.seodesc} />
       </Helmet>
 
-      {isOpen && <Popupcomponent handleClose={togglePopup} />}
+      {isOpen && <Popupcomponent ProductId={ProductId} handleClose={togglePopup} />}
       <Box>
         <Grid container sx={{ marginTop: "65px" }}>
           <Grid

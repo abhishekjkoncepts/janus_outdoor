@@ -427,7 +427,7 @@ const Categorycarousel = () => {
                   </div>
                 ))
               ) : (
-                <Typography>No categories available</Typography>
+                <Typography></Typography>
               )}
             </Slider>
             

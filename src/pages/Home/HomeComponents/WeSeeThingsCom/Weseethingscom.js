@@ -11,8 +11,8 @@ import janusnew from "../../../../assets/images/janusmain.jpg";
 
 // TYPE-ANIMATION
 import { TypeAnimation } from "react-type-animation";
-
 const Weseethingscom = () => {
+
   return (
     <>
       <Grid container>

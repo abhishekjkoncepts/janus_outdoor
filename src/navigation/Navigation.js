@@ -33,6 +33,11 @@ import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 import Individual from "../pages/Individual/Individual";
 import HoardingIn from "../pages/HoardingsIn/HoardingIn";
 
+
+// All Outdoor
+import Allout from "../pages/Allout/Allout";
+
+
 const Navigation = () => {
   return (
     <BrowserRouter>
@@ -75,6 +80,9 @@ const Navigation = () => {
           {/* Individual */}
 
           <Route path="/info/:param1?/:param2?" element={<Individual />} />
+
+          {/* All outdoor */}
+            <Route path="/all-outdoor/" element={<Allout/>} />
         </Routes>
       </Scrolltotop>
       <Footer />

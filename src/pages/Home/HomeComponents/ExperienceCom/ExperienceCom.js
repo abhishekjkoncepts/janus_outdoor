@@ -141,8 +141,8 @@ const ExperienceCom = () => {
           display: "flex",
           justifyContent: "space-between",
           flexDirection: "row",
-          paddingLeft: { xs: "20px", sm: "20px", md: "150px", lg: "150px" },
-          paddingRight: { xs: "20px", sm: "20px", md: "150px", lg: "150px" },
+          paddingLeft: { xs: "20px", sm: "20px", md: "300px", lg: "300px" },
+          paddingRight: { xs: "20px", sm: "20px", md: "300px", lg: "300px" },
           paddingTop:{xs: "10px", sm: "10px", md: "20px", lg: "20px"},
           paddingBottom:{xs: "30px", sm: "30px", md: "50px", lg: "50px"},
         }}

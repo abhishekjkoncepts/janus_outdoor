@@ -310,7 +310,7 @@ const HoardingIn = () => {
                         color: "rgb(79, 74, 76)",
                       }}
                     >
-                      Unique code :
+                      {/* Unique code : */}
                     </Typography>
                     <Typography
                       sx={{
@@ -372,7 +372,7 @@ const HoardingIn = () => {
                           color: "rgb(79, 74, 76)",
                         }}
                       >
-                        Category
+                        {/* Category */}
                       </Typography>
                     </Box>
                     <Box>
@@ -416,7 +416,7 @@ const HoardingIn = () => {
                           color: "rgb(79, 74, 76)",
                         }}
                       >
-                        Size
+                        {/* Size */}
                       </Typography>
                     </Box>
                     <Box>
@@ -460,7 +460,7 @@ const HoardingIn = () => {
                           color: "rgb(79, 74, 76)",
                         }}
                       >
-                        Illumination
+                        {/* Illumination */}
                       </Typography>
                     </Box>
                     <Box>
@@ -504,7 +504,7 @@ const HoardingIn = () => {
                           color: "rgb(79, 74, 76)",
                         }}
                       >
-                        Total Area
+                        {/* Total Area */}
                       </Typography>
                     </Box>
                     <Box>

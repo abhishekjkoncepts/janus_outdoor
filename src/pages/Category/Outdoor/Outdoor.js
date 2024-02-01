@@ -94,7 +94,6 @@ export default function Outdoor() {
 
   React.useEffect(() => {
     getProducts();
-    getStateAndCity();
   }, []);
 
   return (

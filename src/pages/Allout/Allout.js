@@ -5,6 +5,8 @@ import React, { useEffect } from "react";
 import { Grid, Typography, Button, Box } from "@mui/material";
 import Link from "@mui/material/Link";
 import { useSelector } from "react-redux";
+import { states, stateDistricts } from "../../assets/json/statesCity";
+
 import { getStateAndCity } from "../../redux/actions/Outdoor";
 
 const Allout = () => {
@@ -20,10 +22,10 @@ const Allout = () => {
         <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
         <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
           <Box>
-            {allstates &&
-              allstates.map((item, index) => (
+            {Object.keys(stateDistricts).map((item, index) => (
+              <Box>
                 <a
-                  href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item?.state}/`}
+                  href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item}/`}
                   target="_blank"
                 >
                   <Typography
@@ -31,25 +33,25 @@ const Allout = () => {
                       fontSize: "20px",
                     }}
                   >
-                    {item?.state}
+                    {item}
                   </Typography>
-                  {item &&
-                    item?.city?.map((city, i) => (
-                      <a
-                        href={`https://www.janusalive.com/outdoor-advertising-agency-in-${city}/`}
-                        target="_blank"
-                      >
-                        <Typography
-                          sx={{
-                            fontSize: "15px",
-                          }}
-                        >
-                          {city}
-                        </Typography>
-                      </a>
-                    ))}
                 </a>
-              ))}
+                {stateDistricts[item].map((city, i) => (
+                  <a
+                    href={`https://www.janusalive.com/outdoor-advertising-agency-in-${city}/`}
+                    target="_blank"
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: "15px",
+                      }}
+                    >
+                      {city}
+                    </Typography>
+                  </a>
+                ))}
+              </Box>
+            ))}
             {/* <Typography
                 sx={{
                   fontSize: "15px",

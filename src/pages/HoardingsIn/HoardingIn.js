@@ -19,12 +19,12 @@ import comingsoon from "../../assets/images/comingsoon.png";
 import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
   const { param } = useParams();
+  const params = param.split("-");
 
   const [DATA, setDATA] = useState(null);
   const [ProductId, setProductId] = useState("");
 
   useEffect(() => {
-    const params = param.split("-");
     console.log(params);
     getProductsByState(params[params.length - 1]).then((res) => {
       console.log(res);
@@ -591,7 +591,7 @@ const HoardingIn = () => {
                   >
                     {/* {DATA?.desc} */}
                     Elevate your brand recall and broaden your reach with
-                    strategically placed hoardings in heelo. Positioned in
+                    strategically placed hoardings in {params[params.length - 1]}. Positioned in
                     high-traffic zones with substantial footfall, these
                     promotional materials guarantee significant visibility among
                     bystanders, pedestrians, and travelers.

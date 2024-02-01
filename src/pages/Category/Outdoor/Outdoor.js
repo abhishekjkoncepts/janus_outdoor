@@ -526,19 +526,19 @@ export default function Outdoor() {
                                   UNIPOLE
                                 </MenuItem>
                                 <MenuItem
-                                  value={"Outdoor"}
+                                  value={"Billboard"}
                                   sx={{ color: "#000" }}
                                 >
                                   BILLBOARD
                                 </MenuItem>
                                 <MenuItem
-                                  value={"Outdoor"}
+                                  value={"Digital Billboard"}
                                   sx={{ color: "#000" }}
                                 >
                                   DIGITAL BILLBOARD
                                 </MenuItem>
                                 <MenuItem
-                                  value={"Outdoor"}
+                                  value={"Dooh"}
                                   sx={{ color: "#000" }}
                                 >
                                   DOOH
@@ -625,7 +625,7 @@ export default function Outdoor() {
           >
             {products &&
               products
-                .filter((item) => item?.category === "Outdoor")
+                .filter((item) => item?.category === "Outdoor Advertising")
                 .reverse()
                 .map((item) => (
                   <Cards

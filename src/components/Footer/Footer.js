@@ -36,7 +36,7 @@ const Footer = () => {
         container
         sx={{
           backgroundColor: "#C02222",
-          height: { xs: "200px", sm: "200px", md: "498px", lg: "498px" },
+          height: { xs: "200px", sm: "200px", md: "500px", lg: "500px" },
         }}
       >
         <Grid
@@ -115,6 +115,7 @@ const Footer = () => {
                 },
                 alignItems: "center",
                 marginTop: { xs: "10px", sm: "10px", md: "15px", lg: "15px" },
+                flexDirection:"column"
               }}
             >
               {/* <Link to="/contact-us/" style={{ textDecoration:"none"}}>   */}
@@ -122,16 +123,16 @@ const Footer = () => {
                 sx={{
                   backgroundColor: "#fff",
                   height: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
-                  width: { xs: "100px", sm: "100px", md: "160px", lg: "160px" },
+                  width: { xs: "120px", sm: "120px", md: "160px", lg: "160px" },
                   borderRadius: "30px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   marginBottom: {
-                    xs: "30px",
-                    sm: "30px",
-                    md: "50px",
-                    lg: "50px",
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "10px",
                   },
                   marginTop: {
                     xs: "20px",
@@ -139,6 +140,7 @@ const Footer = () => {
                     md: "20px",
                     lg: "20px",
                   },
+                  cursor:"pointer"
                 }}
                 onClick={() => navigate("/contact-us/")}
               >
@@ -162,6 +164,51 @@ const Footer = () => {
                
               </Box>
               {/* </Link> */}
+              <Box
+                sx={{
+                  backgroundColor: "#000",
+                  height: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
+                  width: { xs: "120px", sm: "120px", md: "160px", lg: "160px" },
+                  borderRadius: "30px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginBottom: {
+                    xs: "30px",
+                    sm: "30px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginTop: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "15px",
+                    lg: "15px",
+                  },
+                  cursor:"pointer"
+                }}
+                onClick={() => navigate("/all-outdoor/")}
+              >
+                
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "12px",
+                      sm: "12px",
+                      md: "16px",
+                      lg: "16px",
+                    },
+                    fontWeight: "600",
+                    color: "#fff",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                >
+                  ALL HOARDINGS
+                </Typography>
+                
+               
+              </Box>
+
 
             
             </Box>

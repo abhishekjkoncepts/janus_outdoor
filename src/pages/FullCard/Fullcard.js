@@ -602,7 +602,7 @@ const Fullcard = () => {
                     >
                       {/* {DATA?.desc} */}
                       Elevate your brand recall and broaden your reach with
-                      strategically placed hoardings in {DATA?.city}. Positioned
+                      strategically placed hoardings in {DATA?.city.charAt(0).toUpperCase()+DATA?.city.slice(1) }. Positioned
                       in high-traffic zones with substantial footfall, these
                       promotional materials guarantee significant visibility
                       among bystanders, pedestrians, and travelers.
@@ -624,6 +624,7 @@ const Fullcard = () => {
                         md: "0px",
                         lg: "0px",
                       },
+                      pointer:"cursor"
                     }}
                   >
                     <Box
@@ -662,6 +663,7 @@ const Fullcard = () => {
                         },
                         backgroundColor: "#C02222",
                         borderRadius: "20px",
+                        pointer:"cursor"
                       }}
                       onClick={togglePopup}
                     >
@@ -679,6 +681,7 @@ const Fullcard = () => {
                           display: "flex",
                           justifyContent: "center",
                           alignitems: "center",
+                          
                         }}
                       >
                         ENQUIRY

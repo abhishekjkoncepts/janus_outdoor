@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useEffect } from "react";
 
+// REACT-HELMET
+import { Helmet } from "react-helmet";
+
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
 import Link from "@mui/material/Link";
@@ -19,6 +22,10 @@ const Allout = () => {
   }, []);
 
   return (
+    <>
+    <Helmet>
+        <title>All Outdoor</title>
+      </Helmet>
     <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "90px", lg: "90px" } }}>
       <Grid container>
         <Grid
@@ -37,11 +44,11 @@ const Allout = () => {
           lg={10.6}
           sx={{
             // backgroundColor: "grey",
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex",
-            flexDirection: "column",
-            paddingLeft: { xs: "5px", sm: "5px", md: "20%", lg: "20%" },
+            // alignItems: "center",
+            // justifyContent: "center",
+            // display: "flex",
+            // flexDirection: "column",
+            // paddingLeft: { xs: "5px", sm: "5px", md: "20%", lg: "20%" },
           }}
         >
           <Box>
@@ -73,7 +80,7 @@ const Allout = () => {
 
                 {stateDistricts[item].map((city, i) => (
                   <a
-                    href={`https://www.janusalive.com/outdoor-advertising-agency-in-${city.toLowerCase().replace(' ','-')}/`}
+                    href={`http://localhost:3001/outdoor-advertising-agency-in-${city.toLowerCase().replace(' ','-')}/`}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
@@ -115,6 +122,7 @@ const Allout = () => {
         ></Grid>
       </Grid>
     </Box>
+    </>
   );
 };
 

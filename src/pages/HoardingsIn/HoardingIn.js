@@ -9,6 +9,9 @@ import { getProductsByState } from "../../redux/actions/Home";
 // TOASTI-FY
 import { ToastContainer, toast } from "react-toastify";
 
+// REACT-HELMET
+import { Helmet } from "react-helmet";
+
 import Cards from "../Card/Cards";
 
 import Popupcomponent from "../PopUp/Popupcomponent";
@@ -22,11 +25,11 @@ import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
   const { param } = useParams();
   const params = param.split("in-")[1];
-  const name = Object.keys(stateDistricts).filter((item)=>{
-    const paramsString = item.toLowerCase().replaceAll(' ','-')
-    return params==paramsString
-  })
-  console.log("hello", name)
+  // const name = Object.keys(stateDistricts).filter((item)=>{
+  //   const paramsString = item.toLowerCase().replaceAll(' ','-')
+  //   return params==paramsString
+  // })
+  // console.log("hello", name)
 
   const [DATA, setDATA] = useState(null);
   const [ProductId, setProductId] = useState("");
@@ -60,6 +63,9 @@ const HoardingIn = () => {
 
   return DATA === null || DATA?.length === 0 ? (
     <>
+    <Helmet>
+        <title>Outdoor</title>
+      </Helmet>
       {isOpen && (
         <Popupcomponent
           ProductId={DATA === null || DATA?.length === 0 ? "n/a" : ProductId}
@@ -600,7 +606,7 @@ const HoardingIn = () => {
                   >
                     {/* {DATA?.desc} */}
                     Elevate your brand recall and broaden your reach with
-                    strategically placed hoardings in {name[0].trim()}. Positioned in
+                    strategically placed hoardings in {params.replaceAll('-',' ')}. Positioned in
                     high-traffic zones with substantial footfall, these
                     promotional materials guarantee significant visibility among
                     bystanders, pedestrians, and travelers.

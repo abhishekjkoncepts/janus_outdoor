@@ -17,9 +17,9 @@ import Cards from "../Card/Cards";
 import Popupcomponent from "../PopUp/Popupcomponent";
 import { states, stateDistricts } from "../../assets/json/statesCity";
 
-
 // IMAGES
-import comingsoon from "../../assets/images/comingsoon.png";
+// import comingsoon from "../../assets/images/comingsoon.png";
+import samOutdoor from "../../assets/images/samOutdoor.jpeg";
 
 import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
@@ -35,8 +35,8 @@ const HoardingIn = () => {
   const [ProductId, setProductId] = useState("");
 
   useEffect(() => {
-    console.log('STATE VALUE', params);
-    getProductsByState(params.replaceAll('-',' ')).then((res) => {
+    console.log("STATE VALUE", params);
+    getProductsByState(params.replaceAll("-", " ")).then((res) => {
       console.log(res);
       setDATA(res);
       setProductId(res._id);
@@ -59,12 +59,12 @@ const HoardingIn = () => {
     });
   };
 
-
-
   return DATA === null || DATA?.length === 0 ? (
     <>
-    <Helmet>
-        <title>Outdoor advertising agency in {params.replaceAll('-',' ')}</title>
+      <Helmet>
+        <title>
+          Outdoor advertising agency in {params.replaceAll("-", " ")}
+        </title>
       </Helmet>
       {isOpen && (
         <Popupcomponent
@@ -150,7 +150,7 @@ const HoardingIn = () => {
                     border: "2px solid red",
                   }}
                   alt="add_img1"
-                  src={comingsoon}
+                  src={samOutdoor}
                 />
               </Box>
             </Grid>
@@ -606,10 +606,11 @@ const HoardingIn = () => {
                   >
                     {/* {DATA?.desc} */}
                     Elevate your brand recall and broaden your reach with
-                    strategically placed hoardings in {params.replaceAll('-',' ')}. Positioned in
-                    high-traffic zones with substantial footfall, these
-                    promotional materials guarantee significant visibility among
-                    bystanders, pedestrians, and travelers.
+                    strategically placed hoardings in{" "}
+                    {params.replaceAll("-", " ")}. Positioned in high-traffic
+                    zones with substantial footfall, these promotional materials
+                    guarantee significant visibility among bystanders,
+                    pedestrians, and travelers.
                   </Typography>
                 </Box>
 
@@ -705,7 +706,7 @@ const HoardingIn = () => {
     </>
   ) : (
     // <p>{JSON.stringify(DATA)}</p>
-    <Box sx={{marginTop:"90px"}}>
+    <Box sx={{ marginTop: "90px" }}>
       <Grid container>
         <Grid
           item

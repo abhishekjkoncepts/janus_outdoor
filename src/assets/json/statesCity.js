@@ -753,7 +753,7 @@ export const states = [
   "Tamil Nadu",
   "Telangana",
   "Tripura",
-  "uttar Pradesh",
+  "Uttar Pradesh",
   "Uttarakhand",
   "West Bengal",
   "Andaman and Nicobar Islands",

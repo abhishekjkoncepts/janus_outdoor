@@ -19,7 +19,7 @@ import comingsoon from "../../assets/images/comingsoon.png";
 import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
   const { param } = useParams();
-  const params = param.split("-");
+  const params = param.split("in-");
 
   const [DATA, setDATA] = useState(null);
   const [ProductId, setProductId] = useState("");

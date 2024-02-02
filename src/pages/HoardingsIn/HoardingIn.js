@@ -65,6 +65,8 @@ const HoardingIn = () => {
         <title>
           Outdoor advertising agency in {params.replaceAll("-", " ")}
         </title>
+
+        <meta name="description" content={`Outdoor advertising agency in ${params.replaceAll("-", " ")}`} />
       </Helmet>
       {isOpen && (
         <Popupcomponent

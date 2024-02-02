@@ -12,6 +12,8 @@ import { ToastContainer, toast } from "react-toastify";
 import Cards from "../Card/Cards";
 
 import Popupcomponent from "../PopUp/Popupcomponent";
+import { states, stateDistricts } from "../../assets/json/statesCity";
+
 
 // IMAGES
 import comingsoon from "../../assets/images/comingsoon.png";
@@ -19,7 +21,12 @@ import comingsoon from "../../assets/images/comingsoon.png";
 import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
   const { param } = useParams();
-  const params = param.split("in-");
+  const params = param.split("in-")[1];
+  const name = Object.keys(stateDistricts).filter((item)=>{
+    const paramsString = item.toLowerCase().replaceAll(' ','-')
+    return params==paramsString
+  })
+  console.log("hello", name)
 
   const [DATA, setDATA] = useState(null);
   const [ProductId, setProductId] = useState("");
@@ -48,6 +55,8 @@ const HoardingIn = () => {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
+
+
 
   return DATA === null || DATA?.length === 0 ? (
     <>
@@ -591,7 +600,7 @@ const HoardingIn = () => {
                   >
                     {/* {DATA?.desc} */}
                     Elevate your brand recall and broaden your reach with
-                    strategically placed hoardings in {params[params.length - 1].replaceAll('-',' ')}. Positioned in
+                    strategically placed hoardings in {name[0].trim()}. Positioned in
                     high-traffic zones with substantial footfall, these
                     promotional materials guarantee significant visibility among
                     bystanders, pedestrians, and travelers.

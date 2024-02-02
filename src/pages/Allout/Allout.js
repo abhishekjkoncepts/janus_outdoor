@@ -80,7 +80,7 @@ const Allout = () => {
 
                 {stateDistricts[item].map((city, i) => (
                   <a
-                    href={`http://localhost:3001/outdoor-advertising-agency-in-${city.toLowerCase().replace(' ','-')}/`}
+                    href={`https://www.janusalive.com/outdoor-advertising-agency-in-${city.toLowerCase().replace(' ','-')}/`}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >

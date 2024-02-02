@@ -33,7 +33,7 @@ const HoardingIn = () => {
 
   useEffect(() => {
     console.log('STATE VALUE', params);
-    getProductsByState(params).then((res) => {
+    getProductsByState(params.replaceAll('-',' ')).then((res) => {
       console.log(res);
       setDATA(res);
       setProductId(res._id);

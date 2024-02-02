@@ -32,8 +32,8 @@ const HoardingIn = () => {
   const [ProductId, setProductId] = useState("");
 
   useEffect(() => {
-    console.log(params);
-    getProductsByState(params[params.length - 1]).then((res) => {
+    console.log('STATE VALUE', params);
+    getProductsByState(params).then((res) => {
       console.log(res);
       setDATA(res);
       setProductId(res._id);

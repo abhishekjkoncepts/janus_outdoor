@@ -1323,7 +1323,7 @@ export const stateDistricts = {
     "Unakoti",
     "West Tripura",
   ],
-  "uttar-pradesh": [
+  "Uttar Pradesh": [
     "Agra",
     "Aligarh",
     "Ambedkar Nagar",

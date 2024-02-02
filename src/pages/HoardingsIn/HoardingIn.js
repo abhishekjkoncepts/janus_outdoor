@@ -64,7 +64,7 @@ const HoardingIn = () => {
   return DATA === null || DATA?.length === 0 ? (
     <>
     <Helmet>
-        <title>Outdoor</title>
+        <title>Outdoor advertising agency in {params.replaceAll('-',' ')}</title>
       </Helmet>
       {isOpen && (
         <Popupcomponent

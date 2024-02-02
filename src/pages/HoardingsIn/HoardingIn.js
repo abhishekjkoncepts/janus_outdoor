@@ -591,7 +591,7 @@ const HoardingIn = () => {
                   >
                     {/* {DATA?.desc} */}
                     Elevate your brand recall and broaden your reach with
-                    strategically placed hoardings in {params[params.length - 1]}. Positioned in
+                    strategically placed hoardings in {params[params.length - 1].replaceAll('-',' ')}. Positioned in
                     high-traffic zones with substantial footfall, these
                     promotional materials guarantee significant visibility among
                     bystanders, pedestrians, and travelers.

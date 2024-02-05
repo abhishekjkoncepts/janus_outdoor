@@ -625,7 +625,7 @@ function Header(props) {
                     </Box>
 
                     {/* TRANSIT-MEDIA */}
-                    <Box sx={{}}>
+                    <Box sx={{ borderBottom: "1px solid #D3D3D3" }}>
                       <Link
                         to={"/transit-media-advertising-agency/"}
                         style={{ textDecoration: "none" }}
@@ -647,6 +647,32 @@ function Header(props) {
                           }}
                         >
                           Transit Media
+                        </Typography>
+                      </Link>
+                    </Box>
+                    {/* All Hoarding */}
+                    <Box sx={{}}>
+                      <Link
+                        to={"/all-outdoor/"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                            paddingTop: "7px",
+                          }}
+                        >
+                          All Hoardings
                         </Typography>
                       </Link>
                     </Box>

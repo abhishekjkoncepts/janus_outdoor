@@ -164,7 +164,7 @@ const Footer = () => {
                
               </Box>
               {/* </Link> */}
-              <Box
+              {/* <Box
                 sx={{
                   backgroundColor: "#000",
                   height: { xs: "30px", sm: "30px", md: "50px", lg: "50px" },
@@ -207,7 +207,7 @@ const Footer = () => {
                 </Typography>
                 
                
-              </Box>
+              </Box> */}
 
 
             

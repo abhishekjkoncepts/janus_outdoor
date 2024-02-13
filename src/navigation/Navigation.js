@@ -33,10 +33,12 @@ import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 import Individual from "../pages/Individual/Individual";
 import HoardingIn from "../pages/HoardingsIn/HoardingIn";
 
-
 // All Outdoor
 import Allout from "../pages/Allout/Allout";
-
+// import Allouttwo from "../pages/AllOutTwo/Allouttwo";
+import Alloutcities from "../pages/AllOutTwo/Alloutcities";
+import Alloutoptional from "../pages/Alloutoptional";
+import Alloutoptionalcities from "../pages/Alloutoptionalcities";
 
 const Navigation = () => {
   return (
@@ -46,7 +48,7 @@ const Navigation = () => {
         {/* PARENT-PAGES */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:param" element={<HoardingIn/>} />
+          <Route path="/:param" element={<HoardingIn />} />
           <Route path="/about-us/" element={<Aboutus />} />
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -70,19 +72,37 @@ const Navigation = () => {
             path="/transit-media-advertising-agency/"
             element={<Transitmedia />}
           />
-
+          <Route
+            path={"/:state-outdoor-hoarding-advertising-agencies"}
+            // path="/:param?"
+            element={<Alloutoptionalcities />}
+          />
           {/* FULl CArd */}
           <Route path="/:category?/:seotitle?" element={<Fullcard />} />
-          <Route
+          {/* <Route
             path="/seedetails/:category?/:seotitle"
             element={<Fullcard />}
-          />
+          /> */}
           {/* Individual */}
 
           <Route path="/info/:param1?/:param2?" element={<Individual />} />
 
           {/* All outdoor */}
-            <Route path="/all-outdoor/" element={<Allout/>} />
+          <Route path="/all-outdoor/" element={<Allout />} />
+
+          {/* All outdoor 2 */}
+
+          {/* <Route
+            path={'/outdoor-hoarding-advertising-agency-in-:state-in-out'}
+            // path="/:param?"
+            element={<Alloutcities />}
+          /> */}
+
+          <Route
+            path={"/outdoor-hoarding-advertising/"}
+            // path="/:param?"
+            element={<Alloutoptional />}
+          />
         </Routes>
       </Scrolltotop>
       <Footer />

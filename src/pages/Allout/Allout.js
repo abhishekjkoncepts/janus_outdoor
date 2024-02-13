@@ -56,6 +56,7 @@ const Allout = () => {
               <Box>
                 <a
                   href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item.toLowerCase().replaceAll(' ','-')}/`}
+                  // href={`localhost:3001//outdoor-advertising-agency-in-${item.toLowerCase().replaceAll(' ','-')}/`}
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >

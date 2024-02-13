@@ -479,7 +479,7 @@ function Header(props) {
                   onClose={handleCloseMenu}
                   MenuListProps={{ onMouseLeave: handleCloseMenu }}
                 >
-                  <Box sx={{ width: "210px", borderRadius: "0px" }}>
+                  <Box sx={{ width: "250px", borderRadius: "0px" }}>
                     {/* outdoor */}
                     <Box
                       sx={{
@@ -673,6 +673,33 @@ function Header(props) {
                           }}
                         >
                           All Hoardings
+                        </Typography>
+                      </Link>
+                    </Box>
+
+                     {/* All Hoarding */}
+                     <Box sx={{borderTop: "1px solid #D3D3D3"}}>
+                      <Link
+                        to={"/outdoor-hoarding-advertising/"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                            paddingTop: "7px",
+                          }}
+                        >
+                          All Hoardings Advertising
                         </Typography>
                       </Link>
                     </Box>

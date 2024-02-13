@@ -66,7 +66,13 @@ const HoardingIn = () => {
           Outdoor advertising agency in {params.replaceAll("-", " ")}
         </title>
 
-        <meta name="description" content={`Outdoor advertising agency in ${params.replaceAll("-", " ")}`} />
+        <meta
+          name="description"
+          content={`Outdoor advertising agency in ${params.replaceAll(
+            "-",
+            " "
+          )}`}
+        />
       </Helmet>
       {isOpen && (
         <Popupcomponent
@@ -612,7 +618,7 @@ const HoardingIn = () => {
                     {params.replaceAll("-", " ")}. Positioned in high-traffic
                     zones with substantial footfall, these promotional materials
                     guarantee significant visibility among bystanders,
-                    pedestrians, and travelers.
+                    pedestrians, and travelers. bbbbbbbb
                   </Typography>
                 </Box>
 
@@ -669,6 +675,7 @@ const HoardingIn = () => {
                       },
                       backgroundColor: "#C02222",
                       borderRadius: "20px",
+                      cursor:"pointer"
                     }}
                     onClick={togglePopup}
                   >

@@ -9,13 +9,6 @@ import sampleImg from "../assets/images/samponent.png";
 
 import "../pages/Alloutoptionalcities.css";
 
-import { enquirystates } from "../assets/json/enquirystates";
-
-import { Link } from "react-router-dom";
-
-// VIDEO
-import videotwo from "../assets/video/VideoWithoutText.mp4";
-
 const Alloutoptionalcities = () => {
   const { state } = useLocation();
   const { AllCities } = state;
@@ -39,7 +32,18 @@ const Alloutoptionalcities = () => {
           lg={10.6}
           // sx={{ backgroundColor: "green" }}
         >
-          <Grid container spacing="30">
+          <Grid
+            container
+            spacing="30"
+            sx={{
+              marginTop: {
+                xs: "50px",
+                sm: "50px",
+                md: "30px",
+                lg: "30px",
+              },
+            }}
+          >
             {AllCities.map((item) => (
               <Grid item xs={12} sm={12} md={4} lg={4}>
                 <a
@@ -56,14 +60,14 @@ const Alloutoptionalcities = () => {
                       display: "flex",
                       flexDirection: "column",
                       marginTop: {
-                        xs: "0px",
-                        sm: "0px",
+                        xs: "50px",
+                        sm: "50px",
                         md: "30px",
                         lg: "30px",
                       },
                       marginBottom: {
-                        xs: "0px",
-                        sm: "0px",
+                        xs: "20px",
+                        sm: "20px",
                         md: "30px",
                         lg: "30px",
                       },
@@ -2219,7 +2223,7 @@ const Alloutoptionalcities = () => {
                 },
               }}
             >
-             {AllCities.map((item) => (
+              {AllCities.map((item) => (
                 <a
                   href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item
                     .toLowerCase()
@@ -2262,14 +2266,14 @@ const Alloutoptionalcities = () => {
                           transform: "translateX(10px)", // Adjust the scale factor as needed
                         },
                         cursor: "pointer",
-                        textDecoration:"underline"
+                        textDecoration: "underline",
                       }}
                     >
                       <span>•</span> Outdoor Advertising agency in {item}
                     </Typography>
                   </Box>
-                  </a>
-                ))}
+                </a>
+              ))}
             </Box>
           </Box>
         </Grid>

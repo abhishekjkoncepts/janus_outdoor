@@ -14,33 +14,22 @@ const Alloutoptional = () => {
   const navigate = useNavigate();
   return (
     <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "90px", lg: "90px" } }}>
-      {/* {Object.keys(stateDistricts).map((item) => (
-        <Typography
-          sx={{
-            fontSize: "20px",
-            fontWeight: "600",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            // navigate(`/cities/outdoor-hoarding-advertising-agency-in-${item.toLowerCase().replaceAll(' ','-')}`);
-            navigate(
-              `/${item
-                .toLowerCase()
-                .replaceAll(" ", "-")}-outdoor-hoarding-advertising-agencies`,
-              { state: { AllCities: stateDistricts[item] } }
-            );
-          }}
-        >
-          {item}
-        </Typography>
-      ))} */}
 
-      <Grid container>
+      <Grid container >
         <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
         <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
-          <Grid container>
+          <Grid container sx={{
+               marginTop: {
+                    xs: "50px",
+                    sm: "50px",
+                    md: "30px",
+                    lg: "30px",
+                  },  
+          }}>
             {Object.keys(stateDistricts).map((item) => (
-              <Grid item xs={12} sm={12} md={4} lg={4}>
+              <Grid item xs={12} sm={12} md={4} lg={4}  sx={{
+               
+                }}>
                 <Box
                   sx={{
                     position: "relative",

@@ -1,8 +1,10 @@
+/* eslint-disable no-dupe-keys */
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 // CSS
 
 // MUI
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import "./Allouttwo.css";
 import { stateDistricts } from "../../assets/json/statesCity";
 

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Grid, Typography, Button, Box } from "@mui/material";

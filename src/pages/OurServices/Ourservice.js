@@ -3,26 +3,25 @@ import React, { useEffect } from "react";
 // MUI
 import {
   Grid,
-  Button,
   Typography,
-  Box,
-  InputLabel,
-  MenuItem,
-  CircularProgress,
-  FormControl,
-  Select,
+  Box
 } from "@mui/material";
-import Categorycarousel from "../Carousels/CategoryCarousel/Categorycarousel";
-import Ourservicecard from "../Card/OurServiceCard/Ourservicecard";
 
 // REACT_ROUTER_DOM
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 // REDUX
 import { useSelector } from "react-redux";
-// import { getProductsCategories } from "../../../redux/actions/Home";
 import { getProductsCategories } from "../../redux/actions/Home";
+
+// CARD
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea } from "@mui/material";
+
+// IMAGES
+import samoutdoor from "../../assets/images/samOutdoor.jpeg";
 
 const Ourservice = () => {
   const navigate = useNavigate();
@@ -104,79 +103,6 @@ const Ourservice = () => {
         ></Grid>
       </Grid>
 
-      {/* 
-      <Grid container>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          sx={{ backgroundColor: "red" }}
-        ></Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={10.6}
-          lg={10.6}
-          sx={{ backgroundColor: "yellow" }}
-        >
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              // marginTop: "0px",
-              // marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
-              backgroundColor:"orange"
-            }}
-          >
-            <Grid item xs={12} sm={12} md={12} lg={12}>
-            {productscategories ? (
-              productscategories.map((item) => (
-                <div>
-                  <Box
-
-                  >
-                    <Ourservicecard
-                      key={item.id} // Add a unique key for each mapped element
-                      data={item}
-                      onClick={() => {
-                        if (item.category === "Outdoor") {
-                          navigate("/outdoor-advertising-agency/");
-                        } else if (item.category === "Metro Branding") {
-                          navigate("/metro-advertising-agency/");
-                        } else if (item.category === "Airport Branding") {
-                          navigate("/airport-branding-advertising-agency/");
-                        } else if (item.category === "Transit Media") {
-                          navigate("/transit-media-advertising-agency/");
-                        } else if (item.category === "Mall Branding") {
-                          navigate("/mall-branding-advertising-agency/");
-                        } else if (item.category === "Inflight Branding") {
-                          navigate("/inflight-branding-advertising-agency/");
-                        }
-                      }}
-                    />
-                  </Box>
-                </div>
-              ))
-            ) : (
-              <Typography>No categories available</Typography>
-            )}
-            </Grid>
-          </Grid>
-
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={0.7}
-          lg={0.7}
-          sx={{ backgroundColor: "green" }}
-        ></Grid>
-      </Grid> */}
-
       <Grid container>
         <Grid
           item
@@ -186,6 +112,7 @@ const Ourservice = () => {
           lg={0.7}
           // sx={{ backgroundColor: "red" }}
         ></Grid>
+
         <Grid
           item
           xs={12}
@@ -196,45 +123,117 @@ const Ourservice = () => {
         >
           <Grid
             container
-            spacing={4}
-            sx={{
-              marginTop:  { xs: "0px", sm: "0px", md: "40px", lg: "40px" },
-              marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
-              display:"flex",
-              justifyContent:{xs:"center" , sm:"center" , md:"center"   , lg:"center"}
-            }}
+            // spacing={2}
           >
-            {productscategories ? (
+            {productscategories &&
               productscategories.map((item) => (
-                <div>
-                  <Box>
-                    <Ourservicecard
-                      key={item.id} // Add a unique key for each mapped element
-                      data={item}
-                      onClick={() => {
-                        if (item.category === "Outdoor Advertising") {
-                          navigate("/outdoor-advertising-agency/");
-                        } else if (item.category === "Metro Branding") {
-                          navigate("/metro-advertising-agency/");
-                        } else if (item.category === "Airport Branding") {
-                          navigate("/airport-branding-advertising-agency/");
-                        } else if (item.category === "Transit Media") {
-                          navigate("/transit-media-advertising-agency/");
-                        } else if (item.category === "Mall Branding") {
-                          navigate("/mall-branding-advertising-agency/");
-                        } else if (item.category === "Inflight Branding") {
-                          navigate("/inflight-branding-advertising-agency/");
-                        }
-                      }}
-                    />
-                  </Box>
-                </div>
-              ))
-            ) : (
-              <Typography>No categories available</Typography>
-            )}
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  sx={{
+                    paddingLeft: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingRight: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "40px",
+                      lg: "40px",
+                    },
+                    paddingBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}
+                >
+                  <Card
+                    variant="outlined"
+                    sx={{
+                      borderTopLeftRadius: "200px",
+                      borderTopRightRadius: "200px",
+                      borderRadius: "170px 170px 0 0",
+                      border: "2px solid #C02222",
+                      background:
+                        "linear-gradient(to bottom, #C02222 85%, #000)",
+                    }}
+                    onClick={() => {
+                      if (item.category === "Outdoor Advertising") {
+                        navigate("/outdoor-advertising-agency/");
+                      } else if (item.category === "Metro Branding") {
+                        navigate("/metro-advertising-agency/");
+                      } else if (item.category === "Airport Branding") {
+                        navigate("/airport-branding-advertising-agency/");
+                      } else if (item.category === "Transit Media") {
+                        navigate("/transit-media-advertising-agency/");
+                      } else if (item.category === "Mall Branding") {
+                        navigate("/mall-branding-advertising-agency/");
+                      } else if (item.category === "Inflight Branding") {
+                        navigate("/inflight-branding-advertising-agency/");
+                      }
+                    }}
+                  >
+                    <CardActionArea onClick={() => {}}>
+                      <Box>
+                        <CardMedia
+                          component="img"
+                          height="340"
+                          width="80"
+                          image={item?.img}
+                          alt="Main Image"
+                          sx={{
+                            borderTopLeftRadius: "150px",
+                            borderTopRightRadius: "150px",
+                          }}
+                        />
+                      </Box>
+                      <CardContent
+                        sx={{ height: "60px", marginBottom: "10px" }}
+                      >
+                        <Box>
+                          <Typography
+                            sx={{
+                              display: "-webkit-box",
+                              overflow: "hidden",
+                              WebkitBoxOrient: "vertical",
+                              WebkitLineClamp: 3,
+                              color: "#fff",
+                              fontSize: {
+                                xs: "20px",
+                                sm: "20px",
+                                md: "25px",
+                                lg: "25px",
+                              },
+                              fontWeight: "500",
+                              fontFamily: "Poppins, sans-serif",
+
+                              textAlign: "center",
+                            }}
+                          >
+                            {item?.category}
+                          </Typography>
+                        </Box>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+              ))}
           </Grid>
         </Grid>
+
         <Grid
           item
           xs={12}
@@ -243,6 +242,191 @@ const Ourservice = () => {
           lg={0.7}
           // sx={{ backgroundColor: "green" }}
         ></Grid>
+      </Grid>
+
+      <Grid container>
+        <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
+
+        <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
+          <Grid container>
+
+            <Grid item xs={12} sm={12} md={4} lg={4}
+                sx={{
+                    paddingLeft: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingRight: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "40px",
+                      lg: "40px",
+                    },
+                    paddingBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}>
+              <Box>
+                <Card
+                  variant="outlined"
+                  sx={{
+                    borderTopLeftRadius: "200px",
+                    borderTopRightRadius: "200px",
+                    borderRadius: "170px 170px 0 0",
+                    border: "2px solid #C02222",
+                    background: "linear-gradient(to bottom, #C02222 85%, #000)",
+                  }}
+                  onClick={() => 
+                  {
+                    navigate("/all-outdoor/")
+                  }}
+                >
+                  <CardActionArea onClick={() => {}}>
+                    <Box>
+                      <CardMedia
+                        component="img"
+                        height="340"
+                        width="80"
+                        image={samoutdoor}
+                        alt="Main Image"
+                        sx={{
+                          borderTopLeftRadius: "150px",
+                          borderTopRightRadius: "150px",
+                        }}
+                      />
+                    </Box>
+                    <CardContent sx={{ height: "60px", marginBottom: "10px" }}>
+                      <Box>
+                        <Typography
+                          sx={{
+                            display: "-webkit-box",
+                            overflow: "hidden",
+                            WebkitBoxOrient: "vertical",
+                            WebkitLineClamp: 3,
+                            color: "#fff",
+                            fontSize: {
+                              xs: "20px",
+                              sm: "20px",
+                              md: "25px",
+                              lg: "25px",
+                            },
+                            fontWeight: "500",
+                            fontFamily: "Poppins, sans-serif",
+
+                            textAlign: "center",
+                          }}
+                        >
+                          All Hoardings
+                        </Typography>
+                      </Box>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={4} lg={4}
+               sx={{
+                    paddingLeft: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingRight: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingTop: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "40px",
+                      lg: "40px",
+                    },
+                    paddingBottom: {
+                      xs: "20px",
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}>
+            
+              <Box>
+                <Card
+                  variant="outlined"
+                  sx={{
+                    borderTopLeftRadius: "200px",
+                    borderTopRightRadius: "200px",
+                    borderRadius: "170px 170px 0 0",
+                    border: "2px solid #C02222",
+                    background: "linear-gradient(to bottom, #C02222 85%, #000)",
+                  }}
+                  onClick={() => 
+                  {
+                    navigate("/outdoor-hoarding-advertising/")
+                  }}
+                >
+                  <CardActionArea onClick={() => {}}>
+                    <Box>
+                      <CardMedia
+                        component="img"
+                        height="340"
+                        width="80"
+                        image={samoutdoor}
+                        alt="Main Image"
+                        sx={{
+                          borderTopLeftRadius: "150px",
+                          borderTopRightRadius: "150px",
+                        }}
+                      />
+                    </Box>
+                    <CardContent sx={{ height: "60px", marginBottom: "10px" }}>
+                      <Box>
+                        <Typography
+                          sx={{
+                            display: "-webkit-box",
+                            overflow: "hidden",
+                            WebkitBoxOrient: "vertical",
+                            WebkitLineClamp: 3,
+                            color: "#fff",
+                            fontSize: {
+                              xs: "20px",
+                              sm: "20px",
+                              md: "25px",
+                              lg: "25px",
+                            },
+                            fontWeight: "500",
+                            fontFamily: "Poppins, sans-serif",
+
+                            textAlign: "center",
+                          }}
+                        >
+                          All Hoardings Advertising
+                        </Typography>
+                      </Box>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Box>
+            </Grid>
+
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
       </Grid>
     </>
   );

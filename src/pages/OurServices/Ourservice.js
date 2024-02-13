@@ -276,7 +276,8 @@ const Ourservice = () => {
                       md: "20px",
                       lg: "20px",
                     },
-                  }}>
+                  }}
+                  >
               <Box>
                 <Card
                   variant="outlined"

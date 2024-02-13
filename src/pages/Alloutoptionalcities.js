@@ -14,7 +14,7 @@ const Alloutoptionalcities = () => {
   const { AllCities } = state;
 
   return (
-    <Box style={{ marginTop: "90px" }}>
+    <Box sx={{ marginTop: { xs: "51px", sm: "51px", md: "90px", lg: "90px" } }}>
       <Grid container>
         <Grid
           item
@@ -32,21 +32,20 @@ const Alloutoptionalcities = () => {
           lg={10.6}
           // sx={{ backgroundColor: "green" }}
         >
-          <Grid
-            container
-            spacing="30"
-            sx={{
+          <Grid container 
+           sx={{
               marginTop: {
                 xs: "50px",
                 sm: "50px",
                 md: "30px",
                 lg: "30px",
               },
-            }}
-          >
+            }}>
+
             {AllCities.map((item) => (
-              <Grid item xs={12} sm={12} md={4} lg={4}>
-                <a
+              <Grid item xs={12} sm={12} md={4} lg={4} sx={{}}>
+
+              <a
                   href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item
                     .toLowerCase()
                     .replaceAll(" ", "-")}/`}
@@ -54,70 +53,60 @@ const Alloutoptionalcities = () => {
                   style={{ textDecoration: "none" }}
                   rel="noreferrer"
                 >
+                <Box
+                  sx={{
+                    position: "relative",
+                    display: "flex",
+                    flexDirection: "column",
+                    borderRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    marginBottom: "50px",
+                    marginRight: "20px",
+                    marginLeft: "20px",
+                    cursor: "pointer",
+                  }}
+
+                >
                   <Box
                     sx={{
-                      position: "relative",
+                      position: "absolute",
+                      top: "0",
+                      left: "0",
+                      height: "160px",
+                      width: "100%",
+                      backgroundColor: "black",
+                      opacity: "0.9",
+
                       display: "flex",
-                      flexDirection: "column",
-                      marginTop: {
-                        xs: "50px",
-                        sm: "50px",
-                        md: "30px",
-                        lg: "30px",
-                      },
-                      marginBottom: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "30px",
-                        lg: "30px",
-                      },
-                      marginRight: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      marginLeft: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "0px",
-                        lg: "0px",
-                      },
+                      justifyContent: "center",
+                      alignItems: "center",
+                      color: "#fff",
+                      fontWeight: "700",
+                      fontSize: "40px",
+                      fontFamily: "Poppins, sans-serif",
+
                     }}
                   >
-                    <Box
+                    <Typography
                       sx={{
-                        position: "absolute",
-                        top: "0",
-                        left: "0",
-                        height: "160px",
-                        width: "100%",
-                        backgroundColor: "black",
-                        opacity: "0.9",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
+                        fontSize: "20px",
+                        fontWeight: "600",
+                        cursor: "pointer",
                       }}
                     >
-                      <Typography
-                        sx={{
-                          fontSize: "25px",
-                          fontWeight: "600",
-                          cursor: "pointer",
-                          color: "#fff",
-                        }}
-                      >
-                        {item}
-                      </Typography>
-                    </Box>
-                    <img
-                      src={worldimg}
-                      style={{
-                        height: "160px",
-                        width: "100%",
-                      }}
-                    />
+                      {item}
+                    </Typography>
                   </Box>
+                  <img
+                    src={worldimg}
+                    style={{
+                      height: "160px",
+                      width: "100%",
+
+                    }}
+                  />
+                </Box>
                 </a>
               </Grid>
             ))}

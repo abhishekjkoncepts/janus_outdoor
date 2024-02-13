@@ -618,7 +618,7 @@ const HoardingIn = () => {
                     {params.replaceAll("-", " ")}. Positioned in high-traffic
                     zones with substantial footfall, these promotional materials
                     guarantee significant visibility among bystanders,
-                    pedestrians, and travelers. bbbbbbbb
+                    pedestrians, and travelers.
                   </Typography>
                 </Box>
 

@@ -149,12 +149,12 @@ const HoardingIn = () => {
                       lg: "20px",
                     },
                     display: "flex",
-                    borderRadius: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
+                    // borderRadius: {
+                    //   xs: "10px",
+                    //   sm: "10px",
+                    //   md: "10px",
+                    //   lg: "10px",
+                    // },
                     border: "2px solid red",
                   }}
                   alt="add_img1"

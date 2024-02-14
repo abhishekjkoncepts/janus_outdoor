@@ -286,8 +286,8 @@ const HoardingIn = () => {
                       marginTop: {
                         xs: "5px",
                         sm: "5px",
-                        md: "15px",
-                        lg: "15px",
+                        md: "25px",
+                        lg: "25px",
                       },
                       marginLeft: {
                         xs: "10px",
@@ -298,7 +298,7 @@ const HoardingIn = () => {
                     }}
                   >
                     {/* {DATA?.address} */}
-                    Outdoor advertising agency in {params.replaceAll("-", " ")}
+                    Outdoor advertising agency in {params.toUpperCse().replaceAll("-", " ")}
                   </Typography>
                 </Box>
 

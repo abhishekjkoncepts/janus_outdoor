@@ -298,7 +298,7 @@ const HoardingIn = () => {
                     }}
                   >
                     {/* {DATA?.address} */}
-                    Outdoor advertising agency in {params.toUpperCse().replaceAll("-", " ")}
+                    Outdoor advertising agency in {params.toUpperCase().replaceAll("-", " ")}
                   </Typography>
                 </Box>
 

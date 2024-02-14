@@ -105,62 +105,6 @@ const HoardingIn = () => {
               md={6}
               // sx={{ backgroundColor: "orange" }}
             >
-              {/* <Box sx={{  border: "2px solid red",}}>
-                <Box
-                  component="img"
-                  sx={{
-                    width: {
-                      // xs: "400px",
-                      xs: "100%",
-                      // sm: "400px",
-                      sm: "100%",
-                      md: "530px",
-                      lg: "530px",
-                    },
-                    height: {
-                      // xs: "300px",
-                      xs: "100%",
-                      // sm: "300px",
-                      md: "400px",
-                      lg: "400px",
-                    },
-                    paddingLeft: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "0px",
-                      lg: "0px",
-                    },
-                    paddingRight: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "0px",
-                      lg: "0px",
-                    },
-                    marginTop: {
-                      xs: "5px",
-                      sm: "5px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    marginBottom: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    display: "flex",
-                    borderRadius: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                  
-                  }}
-                  alt="add_img1"
-                  src={samOutdoor}
-                />
-              </Box> */}
 
               <Box
                   sx={{
@@ -182,8 +126,8 @@ const HoardingIn = () => {
                     component="img"
                     sx={{
                       width: {
-                        xs: "95%",
-                        sm: "95%",
+                        xs: "93%",
+                        sm: "93%",
                         md: "530px",
                         lg: "530px",
                       },

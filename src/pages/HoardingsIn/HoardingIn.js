@@ -126,8 +126,8 @@ const HoardingIn = () => {
                     component="img"
                     sx={{
                       width: {
-                        xs: "93%",
-                        sm: "93%",
+                        xs: "95%",
+                        sm: "95%",
                         md: "530px",
                         lg: "530px",
                       },

@@ -26,10 +26,10 @@ import { getProductDetails } from "../../redux/actions/Individual";
 
 const Fullcard = () => {
   const location = useLocation();
-  const {category, seotitle} = useParams();
+  const { category, seotitle } = useParams();
 
   const [DATA, setDATA] = useState(null);
-  const [ProductId, setProductId] = useState('');
+  const [ProductId, setProductId] = useState("");
 
   useEffect(() => {
     console.log(location);
@@ -66,7 +66,9 @@ const Fullcard = () => {
         <meta name="description" content={DATA?.seodesc} />
       </Helmet>
 
-      {isOpen && <Popupcomponent ProductId={ProductId} handleClose={togglePopup} />}
+      {isOpen && (
+        <Popupcomponent ProductId={ProductId} handleClose={togglePopup} />
+      )}
       <Box>
         <Grid container sx={{ marginTop: "65px" }}>
           <Grid
@@ -93,57 +95,62 @@ const Fullcard = () => {
                 md={6}
                 // sx={{ backgroundColor: "orange" }}
               >
-                <Box sx={{}}>
+                <Box
+                  sx={{
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "30px",
+                      lg: "30px",
+                    },
+                    marginBottom: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "30px",
+                      lg: "30px",
+                    },
+                  }}
+                >
                   <Box
                     component="img"
                     sx={{
                       width: {
-                        // xs: "400px",
-                        xs: "100%",
-                        // sm: "400px",
-                        sm: "100%",
+                        xs: "95%",
+                        sm: "95%",
                         md: "530px",
                         lg: "530px",
                       },
                       height: {
-                        // xs: "300px",
-                        xs: "100%",
-                        // sm: "300px",
+                        xs: "260px",
+                        sm: "260px",
                         md: "400px",
                         lg: "400px",
                       },
-                      paddingLeft: {
+                      marginLeft: {
                         xs: "10px",
                         sm: "10px",
                         md: "0px",
                         lg: "0px",
                       },
-                      paddingRight: {
+                      marginRight: {
                         xs: "10px",
                         sm: "10px",
                         md: "0px",
                         lg: "0px",
-                      },
-                      marginTop: {
-                        xs: "5px",
-                        sm: "5px",
-                        md: "20px",
-                        lg: "20px",
-                      },
-                      marginBottom: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "20px",
-                        lg: "20px",
                       },
                       display: "flex",
                       borderRadius: {
-                        xs: "10px",
-                        sm: "10px",
+                        xs: "15px",
+                        sm: "15px",
                         md: "10px",
                         lg: "10px",
                       },
-                      border: "2px solid red",
+                      border: {
+                        xs: "1px solid red",
+                        sm: "1px solid red",
+                        md: "1px solid red",
+                        lg: "1px solid red",
+                      },
                     }}
                     alt="add_img1"
                     src={DATA?.image}
@@ -602,10 +609,12 @@ const Fullcard = () => {
                     >
                       {/* {DATA?.desc} */}
                       Elevate your brand recall and broaden your reach with
-                      strategically placed hoardings in {DATA?.city.charAt(0).toUpperCase()+DATA?.city.slice(1) }. Positioned
-                      in high-traffic zones with substantial footfall, these
-                      promotional materials guarantee significant visibility
-                      among bystanders, pedestrians, and travelers.
+                      strategically placed hoardings in{" "}
+                      {DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)}
+                      . Positioned in high-traffic zones with substantial
+                      footfall, these promotional materials guarantee
+                      significant visibility among bystanders, pedestrians, and
+                      travelers.
                     </Typography>
                   </Box>
 
@@ -624,7 +633,7 @@ const Fullcard = () => {
                         md: "0px",
                         lg: "0px",
                       },
-                      pointer:"cursor"
+                      pointer: "cursor",
                     }}
                   >
                     <Box
@@ -663,7 +672,7 @@ const Fullcard = () => {
                         },
                         backgroundColor: "#C02222",
                         borderRadius: "20px",
-                        pointer:"cursor"
+                        pointer: "cursor",
                       }}
                       onClick={togglePopup}
                     >
@@ -681,7 +690,6 @@ const Fullcard = () => {
                           display: "flex",
                           justifyContent: "center",
                           alignitems: "center",
-                          
                         }}
                       >
                         ENQUIRY

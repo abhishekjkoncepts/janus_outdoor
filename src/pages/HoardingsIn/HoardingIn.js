@@ -105,7 +105,7 @@ const HoardingIn = () => {
               md={6}
               // sx={{ backgroundColor: "orange" }}
             >
-              <Box sx={{  border: "2px solid red",}}>
+              {/* <Box sx={{  border: "2px solid red",}}>
                 <Box
                   component="img"
                   sx={{
@@ -160,7 +160,69 @@ const HoardingIn = () => {
                   alt="add_img1"
                   src={samOutdoor}
                 />
-              </Box>
+              </Box> */}
+
+              <Box
+                  sx={{
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "30px",
+                      lg: "30px",
+                    },
+                    marginBottom: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "30px",
+                      lg: "30px",
+                    },
+                  }}
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "95%",
+                        sm: "95%",
+                        md: "530px",
+                        lg: "530px",
+                      },
+                      height: {
+                        xs: "260px",
+                        sm: "260px",
+                        md: "400px",
+                        lg: "400px",
+                      },
+                      marginLeft: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      marginRight: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      display: "flex",
+                      borderRadius: {
+                        xs: "15px",
+                        sm: "15px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      border: {
+                        xs: "1px solid red",
+                        sm: "1px solid red",
+                        md: "1px solid red",
+                        lg: "1px solid red",
+                      },
+                    }}
+                    alt="add_img1"
+                    src={samOutdoor}
+                  />
+                </Box>
             </Grid>
 
             <Grid

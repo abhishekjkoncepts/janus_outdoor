@@ -105,7 +105,7 @@ const HoardingIn = () => {
               md={6}
               // sx={{ backgroundColor: "orange" }}
             >
-              <Box sx={{}}>
+              <Box sx={{  border: "2px solid red",}}>
                 <Box
                   component="img"
                   sx={{
@@ -155,7 +155,7 @@ const HoardingIn = () => {
                       md: "10px",
                       lg: "10px",
                     },
-                    border: "2px solid red",
+                  
                   }}
                   alt="add_img1"
                   src={samOutdoor}

@@ -101,7 +101,7 @@ const Footer = () => {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Email-id: Janusalive09@gmail.com
+                Email-id: birender@januskoncepts.com
               </Typography>
             </Box>
             <Box

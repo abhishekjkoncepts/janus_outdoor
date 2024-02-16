@@ -3,11 +3,12 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { Grid, Typography, Button, Box } from "@mui/material";
 
-import worldimg from "../assets/images/OutdootAdvertising.jpeg";
+import worldimg from "../../../assets/images/OutdootAdvertising.jpeg";
 
-import sampleImg from "../assets/images/samponent.png";
+import sampleImg from "../../../assets/images/samponent.png";
 
-import "../pages/Alloutoptionalcities.css";
+import "./Alloutoptionalcities.css" 
+
 
 const Alloutoptionalcities = () => {
   const { state } = useLocation();

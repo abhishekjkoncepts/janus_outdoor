@@ -1,45 +1,56 @@
 import React from "react";
 
+import Container from "@mui/material";
 // MUI
-import {
-  Grid,
-  Button,
-  Typography,
-  Box,
-  InputLabel,
-  MenuItem,
-  CircularProgress,
-  FormControl,
-  Select,
-} from "@mui/material";
+import { Grid, Typography, Button, Box } from "@mui/material";
+import Fullpageadvertisement from "./FullPageAdvertisement/Fullpageadvertisement";
 
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea } from "@mui/material";
-
-import video from "../../src/assets/video/VideoWithText.mp4";
-
-import Media from "react-media";
 const Testing = () => {
   return (
-    <>
-      <Media
-        queries={{
-          small: "(max-height: 599px)" ,
-          medium: "(min-width: 600px) and (max-width: 1199px)",
-          large: "(min-width: 1200px)",
-        }}
-      >
-        <video
-          src={video}
-          autoPlay
-          loop
-          muted
-          style={{ width: "100%", height: "90%", objectFit: "cover" }}
-        />
-      </Media>
-    </>
+    <Box sx={{ marginTop: "90px" }}>
+      <Grid container spacing={3}>
+      <Grid item xs={12} sm={6} md={1} lg={1}></Grid>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
+          <Grid container>
+            <Grid item xs>
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <Typography>Hello</Typography>
+                <Typography>Hello</Typography>
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
+                <Typography>Hello</Typography> <Typography>Hello</Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Fullpageadvertisement/>
+        </Grid>
+        <Grid item xs={12} sm={6} md={1} lg={1}>
+
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 

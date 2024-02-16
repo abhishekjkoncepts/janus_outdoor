@@ -6,9 +6,10 @@ import { Grid, Typography, Button, Box } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
-import { stateDistricts } from "../assets/json/statesCity";
+import { stateDistricts } from "../../assets/json/statesCity";
 
-import worldimg from "../assets/images/OutdootAdvertising.jpeg";
+import worldimg from "../../assets/images/OutdootAdvertising.jpeg";
+
 
 const Alloutoptional = () => {
   const navigate = useNavigate();

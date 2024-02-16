@@ -27,6 +27,7 @@ import Transitmedia from "../pages/Category/TransitMedia/Transitmedia";
 
 //FULL-CARD
 import Fullcard from "../pages/FullCard/Fullcard";
+import Fullblog from "../pages/Blogs/FullBlog/Fullblog";
 
 // SCROLL-TO-TOP
 import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
@@ -37,8 +38,8 @@ import HoardingIn from "../pages/HoardingsIn/HoardingIn";
 import Allout from "../pages/Allout/Allout";
 // import Allouttwo from "../pages/AllOutTwo/Allouttwo";
 import Alloutcities from "../pages/AllOutTwo/Alloutcities";
-import Alloutoptional from "../pages/Alloutoptional";
-import Alloutoptionalcities from "../pages/Alloutoptionalcities";
+import Alloutoptional from "../pages/AllOutOptional/Alloutoptional";
+import Alloutoptionalcities from "../pages/AllOutOptional/Alloutoptionalcities/Alloutoptionalcities";
 
 const Navigation = () => {
   return (
@@ -51,8 +52,10 @@ const Navigation = () => {
           <Route path="/:param" element={<HoardingIn />} />
           <Route path="/about-us/" element={<Aboutus />} />
           <Route path="/contact-us/" element={<Contactus />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/" element={<Blogs />} />
           <Route path="/our-service" element={<Ourservice />} />
+
+          <Route path="/blog/:param?" element={<Fullblog />} />
 
           <Route path="/outdoor-advertising-agency/" element={<Outdoor />} />
           <Route path="/metro-advertising-agency/" element={<Metro />} />

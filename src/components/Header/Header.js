@@ -677,7 +677,7 @@ function Header(props) {
                       </Link>
                     </Box>
 
-                     {/* All Hoarding */}
+                     {/* All Hoarding Advertising */}
                      <Box sx={{borderTop: "1px solid #D3D3D3"}}>
                       <Link
                         to={"/outdoor-hoarding-advertising/"}
@@ -703,11 +703,31 @@ function Header(props) {
                         </Typography>
                       </Link>
                     </Box>
+
+                    
                   </Box>
                 </Menu>
               </Box>
 
               {/* Dropdown  ends*/}
+
+               {/* Blogs */}
+
+               <Box sx={{ paddingLeft: "30px" }}>
+                <Button component={Link} to="/blogs/">
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    BLOGS
+                  </Typography>
+                </Button>
+              </Box>
+
               <Box sx={{ paddingLeft: "30px" }}>
                 <Button component={Link} to="/contact-us/">
                   <Typography
@@ -722,6 +742,8 @@ function Header(props) {
                   </Typography>
                 </Button>
               </Box>
+
+             
             </Box>
           </Box>
         </Toolbar>

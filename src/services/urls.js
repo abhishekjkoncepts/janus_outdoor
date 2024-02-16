@@ -13,6 +13,8 @@ export const GET_STATE_CITY = getApiUrl('/api/statescity')
 
 export const GET_INDIVIDUAL_PRODUCT = getApiUrl('/api/products/url')
 
+export const GET_BLOGS = getApiUrl('/api/blog')
+
 
 
 

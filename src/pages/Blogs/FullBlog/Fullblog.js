@@ -306,7 +306,7 @@ const Fullblog = () => {
                       variant="outlined"
                       sx={{
                         borderTopLeftRadius: "150px",
-                        borderTopRightRadius: "150px",
+                        borderTopRightRadius: "151px",
                         borderRadius: "170px 170px 0 0",
                         border: "2px solid #C02222",
                         background:
@@ -318,6 +318,7 @@ const Fullblog = () => {
                           getBlogsById(item?._id);
                           navigate(`/blog/${item.engtitle}`);
                         }}
+
                       >
                         <Box>
                           <CardMedia

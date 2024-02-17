@@ -97,8 +97,8 @@ const Fullpageadvertisement = () => {
         paddingTop:{
           xs: "10px",
           sm: "10px",
-          md: "60px",
-          lg: "60px",
+          md: "0px",
+          lg: "0px",
         },
         paddinBottom:{
           xs: "10px",

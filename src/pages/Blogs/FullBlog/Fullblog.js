@@ -70,16 +70,16 @@ const Fullblog = () => {
           item
           xs={12}
           sm={12}
-          md={0.7}
-          lg={0.7}
+          md={0.6}
+          lg={0.6}
           // sx={{ backgroundColor: "orange" }}
         ></Grid>
         <Grid
           item
           xs={12}
           sm={12}
-          md={10.6}
-          lg={10.6}
+          md={8.5}
+          lg={8.5}
           // sx={{ backgroundColor: "aqua" }}
         >
           <Box
@@ -136,8 +136,8 @@ const Fullblog = () => {
           item
           xs={12}
           sm={12}
-          md={0.7}
-          lg={0.7}
+          md={2.9}
+          lg={2.9}
           // sx={{ backgroundColor: "green" }}
         ></Grid>
       </Grid>
@@ -225,7 +225,7 @@ const Fullblog = () => {
                 fontFamily: " 'Mukta', sans-serif",
 
                 fontWeight: "500",
-                textAlign: "justify",
+                // textAlign: "justify",
                 paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
                 paddingRight: {
                   xs: "10px",
@@ -242,7 +242,30 @@ const Fullblog = () => {
           {/* RELATED ARTICLE TITLE */}
 
           <Box>
-            <Typography>Related Blogs</Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "25px", sm: "25px", md: "30px", lg: "30px" },
+                backgroundColor: "#fff",
+                // fontFamily: "'Noto Sans', sans-serif",
+                fontFamily: " 'Mukta', sans-serif",
+                fontWeight: "700",
+                color: "#D2122E",
+                paddingBottom: {
+                  xs: "5px",
+                  sm: "5px",
+                  md: "30px",
+                  lg: "30px",
+                },
+                paddingLeft:{
+                  xs:"10px",
+                  sm:"10px",
+                  md:"0px",
+                  lg:"0px"
+                }
+              }}
+            >
+              Related Blogs
+            </Typography>
           </Box>
 
           {/* RELATED BLOGS */}
@@ -262,8 +285,8 @@ const Fullblog = () => {
                       marginBottom: {
                         xs: "0px",
                         sm: "0px",
-                        md: "10px",
-                        lg: "10px",
+                        md: "30px",
+                        lg: "30px",
                       },
                       paddingLeft: {
                         xs: "10px",

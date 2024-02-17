@@ -23,8 +23,6 @@ import { submitenquiry } from "../../redux/actions/Outdoor";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 const Contactus = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -32,7 +30,37 @@ const Contactus = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  const resetForm = () => {
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+    setCity("");
+  };
+
+  // const handleSubmit = () => {
+  //   submitContactDetails({
+  //     name: name,
+  //     email: email,
+  //     phone: Number(phone),
+  //     message: message,
+  //     city: city,
+  //   }).then(() => {
+  //     // Display a success message using Toastify
+  //     toast.success("Thanks, we will contact you soon");
+
+  //     resetForm();
+  //   });
+  // };
+
   const handleSubmit = () => {
+    // Check if required fields are not empty
+    if (!name || !email || !city || !phone || !message) {
+      // Display an error message using Toastify
+      toast.error("Please fill in all required fields");
+      return;
+    }
+
     submitContactDetails({
       name: name,
       email: email,
@@ -42,6 +70,8 @@ const Contactus = () => {
     }).then(() => {
       // Display a success message using Toastify
       toast.success("Thanks, we will contact you soon");
+
+      resetForm();
     });
   };
   return (
@@ -75,14 +105,24 @@ const Contactus = () => {
                   md: "0px",
                   lg: "0px",
                 },
-                display:"flex",
-                justifyContent:{ xs: "center", sm: "center", md: "flex-start", lg: "flex-start" },
+                display: "flex",
+                justifyContent: {
+                  xs: "center",
+                  sm: "center",
+                  md: "flex-start",
+                  lg: "flex-start",
+                },
               }}
             >
               <Box>
                 <Typography
                   sx={{
-                    fontSize: { xs: "40px", sm: "40px", md: "50px", lg: "50px" },
+                    fontSize: {
+                      xs: "40px",
+                      sm: "40px",
+                      md: "50px",
+                      lg: "50px",
+                    },
                     fontWeight: "700",
                     fontFamily: "Poppins, sans-serif",
                     color: "#C02222",
@@ -91,9 +131,9 @@ const Contactus = () => {
                   Contact Us
                 </Typography>
               </Box>
-              </Box>
+            </Box>
 
-              <Box>
+            <Box>
               <Box
                 sx={{
                   marginTop: { xs: "1px", sm: "1px", md: "10px", lg: "10px" },
@@ -108,7 +148,12 @@ const Contactus = () => {
               >
                 <Typography
                   sx={{
-                    fontSize:  { xs: "14px", sm: "14px", md: "15px", lg: "15px" },
+                    fontSize: {
+                      xs: "14px",
+                      sm: "14px",
+                      md: "15px",
+                      lg: "15px",
+                    },
                     fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
                   }}
@@ -215,7 +260,7 @@ const Contactus = () => {
                         color: "rgb(79, 74, 76)",
                       }}
                     >
-                     birender@januskoncepts.com
+                      birender@januskoncepts.com
                     </Typography>
                   </Box>
                 </Box>
@@ -457,61 +502,87 @@ const Contactus = () => {
 
               {/* Button */}
               <Grid container>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: {
-                  xs: "center",
-                  sm: "center",
-                  md: "flex-start",
-                  lg: "flex-start",
-                },
-                paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
-              }}
-            >
-              <Box
-                sx={{
-                  marginTop: { xs: "15px", sm: "15px", md: "20px", lg: "20px" },
-                  marginBottom: {
-                    xs: "5px",
-                    sm: "5px",
-                    md: "10px",
-                    lg: "10px",
-                  },
-                  display: "flex",
-                  justifyContent: {
-                    xs: "center",
-                    sm: "center",
-                    md: "center",
-                    lg: "center",
-                  },
-                  alignItems: "center",
-                  width: { xs: "100px", sm: "100px", md: "115px", lg: "115px" },
-                  height: { xs: "35px", sm: "35px", md: "40px", lg: "40px" },
-                  backgroundColor: "#C02222",
-                  borderRadius: "20px",
-                }}
-                onClick={handleSubmit}
-              >
-                <Typography
-                  sx={{
-                    fontSize: { xs: "12px", sm: "12px", md: "15px", lg: "15px" },
-                    fontFamily: "Poppins, sans-serif",
-                    fontWeight: "600",
-                    color: "white",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  Submit
-                </Typography>
-              </Box>
-            </Box>
-          </Grid>
-          <ToastContainer position="bottom-right" autoClose={3000} />
-        </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: {
+                        xs: "center",
+                        sm: "center",
+                        md: "flex-start",
+                        lg: "flex-start",
+                      },
+                      paddingLeft: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        marginTop: {
+                          xs: "15px",
+                          sm: "15px",
+                          md: "20px",
+                          lg: "20px",
+                        },
+                        marginBottom: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "10px",
+                          lg: "10px",
+                        },
+                        display: "flex",
+                        justifyContent: {
+                          xs: "center",
+                          sm: "center",
+                          md: "center",
+                          lg: "center",
+                        },
+                        alignItems: "center",
+                        width: {
+                          xs: "100px",
+                          sm: "100px",
+                          md: "115px",
+                          lg: "115px",
+                        },
+                        height: {
+                          xs: "35px",
+                          sm: "35px",
+                          md: "40px",
+                          lg: "40px",
+                        },
+                        backgroundColor: "#C02222",
+                        borderRadius: "20px",
+                      }}
+                      onClick={handleSubmit}
+                    >
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "12px",
+                            sm: "12px",
+                            md: "15px",
+                            lg: "15px",
+                          },
+                          fontFamily: "Poppins, sans-serif",
+                          fontWeight: "600",
+                          color: "white",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Submit
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Grid>
+                <ToastContainer position="top-center" autoClose={3000} toastStyle={{ top: "80px" }} />
+              </Grid>
             </Box>
           </Grid>
 

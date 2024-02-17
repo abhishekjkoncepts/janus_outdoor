@@ -25,12 +25,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./Popupcomponent.css";
 
-const Popupcomponent = ({ProductId, ...props}) => {
+const Popupcomponent = ({ ProductId, ...props }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   // const [ProductId, setProductId] = useState("");
+
+  const resetForm = () => {
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
 
   // const [DATA, setDATA] = useState(null);
 
@@ -307,71 +314,71 @@ const Popupcomponent = ({ProductId, ...props}) => {
               }}
             >
               {/* <Button
-                variant="contained"
-                disableRipple
-                disableElevation
-                endIcon={<SendIcon />}
-                sx={{
-                  // backgroundColor: "#C02222",
-                  bgcolor: "#C02222",
-                  width: "100%",
-                  "$:hover": { bgcolor: "green" },
-                }}
-                onClick={() => {
-                  console.log({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message,
-                  });
-                  submitenquiry({
-                    id: ProductId,
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message,
-                  });
-                }}
-              >
-                <Typography>SEND MESSAGE</Typography>
-              </Button> */}
-              {/* <Box
-                sx={{
-                  bgcolor: "#C02222",
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "35px",
-                  borderRadius: "5px",
-                }}
-                onClick={() => {
-                  console.log({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message,
-                  });
-                  submitenquiry({
-                    ProductId: ProductId,
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message,
-                  });
-                }}
-              >
-                <Typography
+                  variant="contained"
+                  disableRipple
+                  disableElevation
+                  endIcon={<SendIcon />}
                   sx={{
-                    color: "#fff",
-                    fontSize: "16px",
-                    fontWeight: "400",
-                    fontFamily: "Poppins, sans-serif",
+                    // backgroundColor: "#C02222",
+                    bgcolor: "#C02222",
+                    width: "100%",
+                    "$:hover": { bgcolor: "green" },
+                  }}
+                  onClick={() => {
+                    console.log({
+                      name: name,
+                      email: email,
+                      phone: phone,
+                      message: message,
+                    });
+                    submitenquiry({
+                      id: ProductId,
+                      name: name,
+                      email: email,
+                      phone: phone,
+                      message: message,
+                    });
                   }}
                 >
-                  SEND MESSAGE
-                </Typography>
-              </Box> */}
+                  <Typography>SEND MESSAGE</Typography>
+                </Button> */}
+              {/* <Box
+                  sx={{
+                    bgcolor: "#C02222",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "35px",
+                    borderRadius: "5px",
+                  }}
+                  onClick={() => {
+                    console.log({
+                      name: name,
+                      email: email,
+                      phone: phone,
+                      message: message,
+                    });
+                    submitenquiry({
+                      ProductId: ProductId,
+                      name: name,
+                      email: email,
+                      phone: phone,
+                      message: message,
+                    });
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontWeight: "400",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    SEND MESSAGE
+                  </Typography>
+                </Box> */}
               <Box
                 sx={{
                   bgcolor: "#C02222",
@@ -383,26 +390,36 @@ const Popupcomponent = ({ProductId, ...props}) => {
                   borderRadius: "5px",
                 }}
                 onClick={() => {
-                  console.log({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message,
-                  });
+                  if (
+                    name.trim() === "" ||
+                    email.trim() === "" ||
+                    phone.trim() === "" ||
+                    message.trim() === ""
+                  ) {
+                    // Display an error message or handle the empty form case as needed
+                    toast.error("Please fill in all required fields.", {
+                      position: toast.POSITION.TOP_RIGHT,
+                      autoClose: 2000,
+                    });
+                  } else {
+                    // Form is not empty, proceed with submission
+                    submitenquiry({
+                      ProductId: ProductId,
+                      name: name,
+                      email: email,
+                      phone: phone,
+                      message: message,
+                    });
 
-                  submitenquiry({
-                    ProductId: ProductId,
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message,
-                  });
+                    // Reset the form
+                    resetForm();
 
-                  // Add toast notification
-                  toast.success("Query sent successfully!", {
-                    position: toast.POSITION.TOP_RIGHT,
-                    autoClose: 2000, // Adjust the duration of the notification
-                  });
+                    // Add success toast notification
+                    toast.success("Thank you, Query sent successfully!", {
+                      position: toast.POSITION.TOP_RIGHT,
+                      autoClose: 2000,
+                    });
+                  }
                 }}
               >
                 <Typography
@@ -411,14 +428,15 @@ const Popupcomponent = ({ProductId, ...props}) => {
                     fontSize: "16px",
                     fontWeight: "400",
                     fontFamily: "Poppins, sans-serif",
+                    cursor: "pointer",
                   }}
                 >
                   SEND MESSAGE
                 </Typography>
               </Box>
               <ToastContainer
-                position="top-right"
-                autoClose={2000}
+                position="bottom-center"
+                autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick
@@ -521,7 +539,7 @@ const Popupcomponent = ({ProductId, ...props}) => {
                     fontFamily: "Poppins, sans-serif",
                   }}
                 >
-                  birender@janusalive.com
+                  birender@januskoncepts.com
                 </Typography>
               </Box>
             </Box>

@@ -690,6 +690,7 @@ const Fullcard = () => {
                           display: "flex",
                           justifyContent: "center",
                           alignitems: "center",
+                          cursor:"pointer"
                         }}
                       >
                         ENQUIRY

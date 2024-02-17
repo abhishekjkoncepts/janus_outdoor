@@ -378,6 +378,7 @@ const Fullblog = () => {
                               dangerouslySetInnerHTML={createMarkup(
                                 item.description
                               )}
+                              
                             />
                           </Box>
                         </CardContent>

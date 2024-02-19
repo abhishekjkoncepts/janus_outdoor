@@ -1,1218 +1,5 @@
-// import * as React from "react";
 
-// // MUI
-// import {
-//   Grid,
-//   Button,
-//   Typography,
-//   Box,
-//   InputLabel,
-//   MenuItem,
-//   CircularProgress,
-//   FormControl,
-//   Select,
-// } from "@mui/material";
-
-// // TYPE-ANIMATION
-// import { TypeAnimation } from "react-type-animation";
-
-// // CSS
-// import "./Inflightbranding.css";
-
-// // CARD
-// import Cards from "../../Card/Cards";
-
-// // REACT-HELMET
-// import { Helmet } from "react-helmet";
-
-// // JSON
-// import { states, stateDistricts } from "../../../assets/json/statesCity";
-
-// // REDUX
-// import { useSelector } from "react-redux";
-// import {
-//   getProducts,
-//   getProductsByState,
-// } from "../../../redux/actions/Outdoor";
-
-// // REACT-ROUTER_DOM
-// import { useNavigate } from "react-router-dom";
-
-// // BOOTSTRAP
-// import Dropdown from "react-bootstrap/Dropdown";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// export default function Inflightbranding() {
-//   const [state, setState] = React.useState(null);
-//   const [city, setCity] = React.useState("");
-//   const [type, setType] = React.useState("");
-//   const [loading, setLoading] = React.useState(false);
-
-//   const { products } = useSelector((state) => state.OutdoorReducer);
-
-//   const navigate = useNavigate();
-
-//   const handleChange = (event) => {
-//     console.log(event.target.value);
-//     setState(event.target.value);
-//   };
-
-//   const handleChange2 = (event) => {
-//     console.log(event.target.value);
-//     setCity(event.target.value);
-//   };
-//   const handleChange3 = (event) => {
-//     console.log(event.target.value);
-//     setType(event.target.value);
-//   };
-
-//   React.useEffect(() => {
-//     getProducts();
-//   }, []);
-
-//   // LOADER
-//   const handleSubmission = () => {
-//     setLoading(true);
-//     getProductsByState(state, city, type)
-//       .then(() => setLoading(false))
-//       .catch(() => setLoading(false));
-//   };
-
-//   return (
-//     <>
-//       <Helmet>
-//         <title>Inflight Branding</title>
-//       </Helmet>
-//       {/* VIDEO */}
-//       <Box
-//         sx={{
-//           marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" },
-//         }}
-//       >
-//         {/* VIDEO */}
-//         <Grid container>
-//           <Grid item xs={12} sm={12} md={12} lg={12}>
-//             <Box
-//               sx={{
-//                 position: "absolute",
-//                 width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
-//               }}
-//             >
-//               <video autoPlay muted width="100%" controls={false} loop={true}>
-//                 <source
-//                   src={require("../../../assets/video/VideoWithoutText.mp4")}
-//                 />
-//               </video>
-//             </Box>
-//           </Grid>
-//         </Grid>
-//       </Box>
-
-//       {/* TEXT ON VIDEO */}
-//       <Box
-//         sx={{
-//           display: "flex",
-//           flexDirection: "column",
-//         }}
-//       >
-//         <Grid
-//           container
-//           sx={{
-//             zIndex: "100",
-//             marginTop: {
-//               xs: "50px",
-//               sm: "50px",
-//               md: "200px",
-//               lg: "200px",
-//             },
-//           }}
-//         >
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={0.7}
-//             lg={0.7}
-//             // sx={{ backgroundColor: "blue" }}
-//           ></Grid>
-
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={10.6}
-//             lg={10.6}
-//             // sx={{ backgroundColor: "red" }}
-//           >
-//             <Box>
-//               <Box
-//                 sx={{
-//                   display: "flex",
-//                   flexDirection: "column",
-//                   justifyContent: "center",
-//                   alignItems: "center",
-//                 }}
-//               >
-//                 {/* TEXT 1 */}
-//                 <Box>
-//                   <Typography
-//                     sx={{
-//                       display: "flex",
-//                       fontSize: {
-//                         xs: "30px",
-//                         sm: "30px",
-//                         md: "70px",
-//                         lg: "70px",
-//                       },
-//                       fontWeight: {
-//                         xs: "500",
-//                         sm: "500",
-//                         md: "600",
-//                         lg: "600",
-//                       },
-//                       fontFamily: "Poppins, sans-serif",
-//                       color: "#fff",
-//                     }}
-//                   >
-//                     Inflight Advertising
-//                   </Typography>
-//                 </Box>
-//                 {/* TEXT 2 */}
-//                 <Box>
-//                   <Typography
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: {
-//                         xs: "center",
-//                         sm: "center",
-//                         md: "center",
-//                         lg: "center",
-//                       },
-//                       alignItems: {
-//                         xs: "center",
-//                         sm: "center",
-//                         md: "center",
-//                         lg: "center",
-//                       },
-//                       fontSize: {
-//                         xs: "12px",
-//                         sm: "12px",
-//                         md: "20px",
-//                         lg: "20px",
-//                       },
-//                       fontWeight: {
-//                         xs: "500",
-//                         sm: "500",
-//                         md: "500",
-//                         lg: "500",
-//                       },
-//                       fontFamily: "Poppins, sans-serif",
-//                       color: "#fff",
-//                       marginTop: "-5px",
-//                     }}
-//                   >
-//                     Outdoor Advertising Company
-//                   </Typography>
-//                 </Box>
-//               </Box>
-//             </Box>
-//           </Grid>
-
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={0.7}
-//             lg={0.7}
-//             // sx={{ backgroundColor: "green" }}
-//           ></Grid>
-//         </Grid>
-//       </Box>
-
-//       {/* DROP-DOWN GRID */}
-//       <Box
-//         sx={{
-//           marginTop: { xs: "80px", sm: "80px", md: "20px", lg: "20px" },
-//         }}
-//       >
-//         <Grid
-//           container
-//           sx={{
-//             // backgroundColor: { xs: "red",sm: "red"},
-//             height: "100%",
-//           }}
-//         >
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={3}
-//             lg={3}
-//             sx={
-//               {
-//                 // backgroundColor: "orange",
-//               }
-//             }
-//           ></Grid>
-
-//           {/* MUI DROPDOWN */}
-
-//           <Grid item xs={12} sm={12} md={6} lg={6}>
-//             <Grid container>
-//               <Grid item xs={12} sm={12} md={12} lg={12}>
-//                 <Box
-//                   sx={{
-//                     display: "flex",
-//                     flexDirection: {
-//                       xs: "column",
-//                       sm: "column",
-//                       md: "row",
-//                       lg: "row",
-//                     },
-//                     justifyContent: {
-//                       md: "space-between",
-//                       lg: "space-between",
-//                     },
-//                   }}
-//                 >
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: { xs: "center", sm: "center" },
-//                       alignItems: { xs: "center", sm: "center" },
-//                       marginTop: {
-//                         xs: "50px",
-//                         sm: "50px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                         color: "secondary",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "1px solid #000",
-//                           fontWeight: "300",
-//                         }}
-//                       >
-//                         State
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={state}
-//                         label="state"
-//                         onChange={handleChange}
-//                       >
-//                         {states.map((item, index) => (
-//                           <MenuItem value={item} sx={{ color: "#000" }}>
-//                             {item}
-//                           </MenuItem>
-//                         ))}
-//                       </Select>
-//                     </FormControl>
-//                   </Box>
-
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: { xs: "center", sm: "center" },
-//                       alignItems: { xs: "center", sm: "center" },
-//                       marginTop: {
-//                         xs: "70px",
-//                         sm: "70px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "2px solid #fff",
-//                           fontWeight: "300",
-//                         }}
-//                       >
-//                         City
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={city}
-//                         label="state"
-//                         onChange={handleChange2}
-//                       >
-//                         {state &&
-//                           stateDistricts[state]?.map((item) => (
-//                             <MenuItem value={item} sx={{ color: "#000" }}>
-//                               {item}
-//                             </MenuItem>
-//                           ))}
-//                       </Select>
-//                     </FormControl>
-//                   </Box>
-//                   {/* 
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: { xs: "center", sm: "center" },
-//                       alignItems: { xs: "center", sm: "center" },
-//                       marginTop: {
-//                         xs: "70px",
-//                         sm: "70px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "2px solid #fff",
-//                           fontWeight: "300",
-//                         }}
-//                       >
-//                         Type
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={type}
-//                         label="state"
-//                         onChange={handleChange3}
-//                       >
-//                         <MenuItem value={"Digital"} sx={{ color: "#000" }}>
-//                           Digital
-//                         </MenuItem>
-//                         <MenuItem value={"Unipole"} sx={{ color: "#000" }}>
-//                           Unipole
-//                         </MenuItem>
-//                         <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
-//                           Outdoor
-//                         </MenuItem>
-//                       </Select>
-//                     </FormControl>
-//                   </Box> */}
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: "center",
-//                       alignItems: "center",
-//                       marginTop: "40px",
-//                       marginTop: {
-//                         xs: "70px",
-//                         sm: "70px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     <Button
-//                       variant="contained"
-//                       sx={{
-//                         height: "55px",
-//                         marginTop: "0px",
-//                         marginLeft: "10px",
-//                         backgroundColor: "#fafafa",
-//                         color: "#000",
-//                         borderRadius: "30px",
-//                         width: "100px",
-//                       }}
-//                       onClick={() => {
-//                         getProductsByState(state, city, type);
-//                       }}
-//                     >
-//                       SUBMIT
-//                     </Button>
-//                   </Box>
-//                 </Box>
-//               </Grid>
-//             </Grid>
-//           </Grid>
-//         </Grid>
-//       </Box>
-
-//       <Box>
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={3}
-//           lg={3}
-//           // sx={{ backgroundColor: "orange" }}
-//         >
-//           {/* <Box
-//             sx={{
-//               display: "flex",
-//               justifyContent: "center",
-//               alignItems: "center",
-//               marginTop: "40px",
-//               marginTop: { xs: "70px", sm: "70px", md: "40px", lg: "40px" },
-//             }}
-//           >
-//             <Button
-//               variant="contained"
-//               sx={{
-//                 height: "55px",
-//                 marginTop: "0px",
-//                 marginLeft: "10px",
-//                 backgroundColor: "#fafafa",
-//                 color: "#000",
-//                 borderRadius: "30px",
-//                 width: "100px",
-//               }}
-//               onClick={() => {
-//                 getProductsByState(state, city, type);
-//               }}
-//             >
-//               SUBMIT
-//             </Button>
-//           </Box> */}
-//         </Grid>
-//       </Box>
-
-//       <Grid
-//         container
-//         sx={{
-//           marginTop: { xs: "30px", sm: "30px", md: "270px", lg: "270px" },
-//           marginBottom: "50px",
-//         }}
-//       >
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={0.7}
-//           lg={0.7}
-//           // sx={{ backgroundColor: "red" }}
-//         ></Grid>
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={10.6}
-//           lg={10.6}
-//           // sx={{ backgroundColor: "yellow" }}
-//         >
-//           <Grid container spacing={2}>
-//             {products &&
-//               products
-//                 .filter((item) => item?.category === "Inflight Branding")
-//                 .reverse()
-//                 .map((item) => (
-//                   <Cards
-//                     key={item.id} // Add a unique key for each mapped element
-//                     data={item}
-//                     onClick={() => {
-//                       navigate(
-//                         `/${
-//                           item?.urlcat?.toLowerCase()
-//                             ? item?.urlcat?.toLowerCase()
-//                             : item?.urlcat
-//                         }/${item?.url ? item?.url : item?.address}/`,
-//                         { state: { id: item._id } }
-//                       );
-//                       console.log("hello world");
-//                     }}
-//                   />
-//                 ))}
-//           </Grid>
-//         </Grid>
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={0.7}
-//           lg={0.7}
-//           // sx={{ backgroundColor: "green" }}
-//         ></Grid>
-//       </Grid>
-//     </>
-//   );
-// }
-
-// import * as React from "react";
-
-// // MUI
-// import {
-//   Grid,
-//   Button,
-//   Typography,
-//   Box,
-//   InputLabel,
-//   MenuItem,
-//   CircularProgress,
-//   FormControl,
-//   Select,
-// } from "@mui/material";
-
-// import { NativeSelect } from "@mui/material";
-
-// import { InputBase } from "@mui/material";
-
-// // TYPE-ANIMATION
-// import { TypeAnimation } from "react-type-animation";
-
-// // CSS
-// import "./Outdoor.css";
-
-// // CARD
-// import Cards from "../../Card/Cards";
-
-// // REACT-HELMET
-// import { Helmet } from "react-helmet";
-
-// // JSON
-// import { states, stateDistricts } from "../../../assets/json/statesCity";
-
-// // REDUX
-// import { useSelector } from "react-redux";
-// import {
-//   getProducts,
-//   getProductsByState,
-// } from "../../../redux/actions/Outdoor";
-
-// // REACT-ROUTER_DOM
-// import { useNavigate } from "react-router-dom";
-
-// // BOOTSTRAP
-// import Dropdown from "react-bootstrap/Dropdown";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// export default function Outdoor() {
-//   const [state, setState] = React.useState(null);
-//   const [city, setCity] = React.useState("");
-//   const [type, setType] = React.useState("");
-//   const [loading, setLoading] = React.useState(false);
-
-//   const { products } = useSelector((state) => state.OutdoorReducer);
-
-//   const navigate = useNavigate();
-
-//   const handleChange = (event) => {
-//     console.log(event.target.value);
-//     setState(event.target.value);
-//   };
-
-//   const handleChange2 = (event) => {
-//     console.log(event.target.value);
-//     setCity(event.target.value);
-//   };
-//   const handleChange3 = (event) => {
-//     console.log(event.target.value);
-//     setType(event.target.value);
-//   };
-
-//   React.useEffect(() => {
-//     getProducts();
-//   }, []);
-
-//   return (
-//     <>
-//       <Helmet>
-//         <title>Outdoor</title>
-//       </Helmet>
-//       {/* VIDEO */}
-//       <Box
-//         sx={{
-//           marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" },
-//         }}
-//       >
-//         {/* VIDEO */}
-//         <Grid container>
-//           <Grid item xs={12} sm={12} md={12} lg={12}>
-//             <Box
-//               sx={{
-//                 position: "absolute",
-//                 width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
-//               }}
-//             >
-//               <video autoPlay muted width="100%" controls={false} loop={true}>
-//                 <source
-//                   src={require("../../../assets/video/VideoWithoutText.mp4")}
-//                 />
-//               </video>
-//             </Box>
-//           </Grid>
-//         </Grid>
-//       </Box>
-
-//       {/* TEXT ON VIDEO */}
-//       <Box
-//         sx={{
-//           display: "flex",
-//           flexDirection: "column",
-//         }}
-//       >
-//         <Grid
-//           container
-//           sx={{
-//             zIndex: "100",
-//             marginTop: {
-//               xs: "50px",
-//               sm: "50px",
-//               md: "200px",
-//               lg: "200px",
-//             },
-//           }}
-//         >
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={0.7}
-//             lg={0.7}
-//             // sx={{ backgroundColor: "blue" }}
-//           ></Grid>
-
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={10.6}
-//             lg={10.6}
-//             // sx={{ backgroundColor: "red" }}
-//           >
-//             <Box>
-//               <Box
-//                 sx={{
-//                   display: "flex",
-//                   flexDirection: "column",
-//                   justifyContent: "center",
-//                   alignItems: "center",
-//                 }}
-//               >
-//                 {/* TEXT 1 */}
-//                 <Box>
-//                   <Typography
-//                     sx={{
-//                       display: "flex",
-//                       fontSize: {
-//                         xs: "30px",
-//                         sm: "30px",
-//                         md: "70px",
-//                         lg: "70px",
-//                       },
-//                       fontWeight: {
-//                         xs: "500",
-//                         sm: "500",
-//                         md: "600",
-//                         lg: "600",
-//                       },
-//                       fontFamily: "Poppins, sans-serif",
-//                       color: "#fff",
-//                     }}
-//                   >
-//                     Outdoor Advertising
-//                   </Typography>
-//                 </Box>
-//                 {/* TEXT 2 */}
-//                 <Box>
-//                   <Typography
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: {
-//                         xs: "center",
-//                         sm: "center",
-//                         md: "center",
-//                         lg: "center",
-//                       },
-//                       alignItems: {
-//                         xs: "center",
-//                         sm: "center",
-//                         md: "center",
-//                         lg: "center",
-//                       },
-//                       fontSize: {
-//                         xs: "12px",
-//                         sm: "12px",
-//                         md: "20px",
-//                         lg: "20px",
-//                       },
-//                       fontWeight: {
-//                         xs: "500",
-//                         sm: "500",
-//                         md: "500",
-//                         lg: "500",
-//                       },
-//                       fontFamily: "Poppins, sans-serif",
-//                       color: "#fff",
-//                       marginTop: "-5px",
-//                     }}
-//                   >
-//                     Outdoor Advertising Company
-//                   </Typography>
-//                 </Box>
-//               </Box>
-//             </Box>
-//           </Grid>
-
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={0.7}
-//             lg={0.7}
-//             // sx={{ backgroundColor: "green" }}
-//           ></Grid>
-//         </Grid>
-//       </Box>
-
-//       {/* DROP-DOWN GRID */}
-//       <Box
-//         sx={{
-//           marginTop: { xs: "80px", sm: "80px", md: "20px", lg: "20px" },
-//         }}
-//       >
-//         <Grid
-//           container
-//           sx={{
-//             // backgroundColor: { xs: "red",sm: "red"},
-//             height: "100%",
-//           }}
-//         >
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={3}
-//             lg={3}
-//             sx={
-//               {
-//                 // backgroundColor: "orange",
-//               }
-//             }
-//           ></Grid>
-
-//           {/* MUI DROPDOWN */}
-
-//           <Grid item xs={12} sm={12} md={6} lg={6}>
-//             <Grid
-//               container
-//               sx={{
-//                 backgroundColor: {
-//                   xs: "red",
-//                   sm: "red",
-//                   md: "#fff",
-//                   lg: "#fff",
-//                 },
-//               }}
-//             >
-//               <Grid item xs={12} sm={12} md={12} lg={12}>
-//                 <Box
-//                   sx={{
-//                     display: "flex",
-//                     flexDirection: {
-//                       xs: "column",
-//                       sm: "column",
-//                       md: "row",
-//                       lg: "row",
-//                     },
-//                     justifyContent: {
-//                       md: "space-between",
-//                       lg: "space-between",
-//                     },
-//                   }}
-//                 >
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: { xs: "center", sm: "center" },
-//                       alignItems: { xs: "center", sm: "center" },
-//                       marginTop: {
-//                         xs: "50px",
-//                         sm: "50px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     {/* <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                         color: "secondary",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "1px solid #000",
-//                           fontWeight: "300",
-//                         }}
-//                         disableAnimation={true}
-//                         // disabled={true}
-//                       >
-//                         State
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={state}
-//                         label="state"
-//                         onChange={handleChange}
-//                       >
-//                         {states.map((item, index) => (
-//                           <MenuItem value={item} sx={{ color: "#000" }}>
-//                             {item}
-//                           </MenuItem>
-//                         ))}
-//                       </Select>
-
-//                     </FormControl> */}
-
-//                     <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                         color: "secondary",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "1px solid #000",
-//                           fontWeight: "300",
-//                         }}
-//                         disableAnimation={true}
-//                         // disabled={true}
-//                       >
-//                         State
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={state}
-//                         label="state"
-//                         onChange={handleChange}
-
-//                       >
-
-//                         {states.map((item, index) => (
-//                           <MenuItem value={item} sx={{ color: "#000" }}>
-//                             {item}
-//                           </MenuItem>
-//                         ))}
-//                       </Select>
-//                     </FormControl>
-//                   </Box>
-
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: { xs: "center", sm: "center" },
-//                       alignItems: { xs: "center", sm: "center" },
-//                       marginTop: {
-//                         xs: "70px",
-//                         sm: "70px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "2px solid #fff",
-//                           fontWeight: "300",
-//                         }}
-//                       >
-//                         City
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={city}
-//                         label="state"
-//                         onChange={handleChange2}
-//                       >
-//                         {state &&
-//                           stateDistricts[state]?.map((item) => (
-//                             <MenuItem value={item} sx={{ color: "#000" }}>
-//                               {item}
-//                             </MenuItem>
-//                           ))}
-//                       </Select>
-//                     </FormControl>
-//                   </Box>
-
-//                   <Box
-//                     sx={{
-//                       display: "flex",
-//                       justifyContent: { xs: "center", sm: "center" },
-//                       alignItems: { xs: "center", sm: "center" },
-//                       marginTop: {
-//                         xs: "70px",
-//                         sm: "70px",
-//                         md: "0px",
-//                         lg: "0px",
-//                       },
-//                     }}
-//                   >
-//                     <FormControl
-//                       sx={{
-//                         width: {
-//                           xs: "300px",
-//                           sm: "300px",
-//                           md: "200px",
-//                           lg: "200px",
-//                         },
-//                         height: {
-//                           xs: "0px",
-//                           sm: "0px",
-//                           md: "55px",
-//                           lg: "55px",
-//                         },
-//                         backgroundColor: "#F0F0F0",
-//                         borderRadius: "30px",
-//                       }}
-//                     >
-//                       <InputLabel
-//                         sx={{
-//                           color: "#000",
-//                           // borderColor: "#fff",
-//                           borderWidth: "2px solid #fff",
-//                           fontWeight: "300",
-//                         }}
-//                       >
-//                         Type
-//                       </InputLabel>
-//                       <Select
-//                         labelId="demo-simple-select-helper-label"
-//                         id="demo-simple-select-helper"
-//                         value={type}
-//                         label="state"
-//                         onChange={handleChange3}
-//                       >
-//                         <MenuItem value={"Digital"} sx={{ color: "#000" }}>
-//                           Digital
-//                         </MenuItem>
-//                         <MenuItem value={"Unipole"} sx={{ color: "#000" }}>
-//                           Unipole
-//                         </MenuItem>
-//                         <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
-//                           Billboard
-//                         </MenuItem>
-//                         <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
-//                           Digital Billboard
-//                         </MenuItem>
-//                         <MenuItem value={"Outdoor"} sx={{ color: "#000" }}>
-//                           DOOH
-//                         </MenuItem>
-//                       </Select>
-//                     </FormControl>
-//                   </Box>
-//                 </Box>
-//               </Grid>
-//             </Grid>
-//           </Grid>
-//         </Grid>
-//       </Box>
-
-//       <Box>
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={3}
-//           lg={3}
-//           // sx={{ backgroundColor: "orange" }}
-//         >
-//           <Box
-//             sx={{
-//               display: "flex",
-//               justifyContent: "center",
-//               alignItems: "center",
-//               marginTop: "40px",
-//               marginTop: { xs: "70px", sm: "70px", md: "40px", lg: "40px" },
-//             }}
-//           >
-//             <Button
-//               variant="contained"
-//               sx={{
-//                 height: "55px",
-//                 marginTop: "0px",
-//                 marginLeft: "10px",
-//                 backgroundColor: "#fafafa",
-//                 color: "#000",
-//                 borderRadius: "30px",
-//                 width: "100px",
-//               }}
-//               onClick={() => {
-//                 getProductsByState(state, city, type);
-//               }}
-//             >
-//               SUBMIT
-//             </Button>
-//           </Box>
-//         </Grid>
-//       </Box>
-
-//       <Grid
-//         container
-//         sx={{
-//           marginTop: { xs: "30px", sm: "30px", md: "270px", lg: "209px" },
-//           // marginBottom: "50px",
-//           backgroundColor: { xs: "#E8E8E8", md: "", lg: "" },
-//         }}
-//       >
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={0.7}
-//           lg={0.7}
-//           // sx={{ backgroundColor: "red" }}
-//         ></Grid>
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={10.6}
-//           lg={10.6}
-//           // sx={{ backgroundColor: "yellow" }}
-//         >
-//           <Grid container spacing={2}>
-//             {products &&
-//               products
-//                 .filter((item) => item?.category === "Outdoor")
-//                 .reverse()
-//                 .map((item) => (
-//                   <Cards
-//                     key={item.id} // Add a unique key for each mapped element
-//                     data={item}
-//                     onClick={() => {
-//                       navigate(
-//                         `/${
-//                           item?.urlcat?.toLowerCase()
-//                             ? item?.urlcat?.toLowerCase()
-//                             : item?.urlcat
-//                         }/${item?.url ? item?.url : item?.address}/`,
-//                         { state: { id: item._id } }
-//                       );
-//                       console.log("hello world");
-//                     }}
-//                   />
-//                 ))}
-//           </Grid>
-//         </Grid>
-//         <Grid
-//           item
-//           xs={12}
-//           sm={12}
-//           md={0.7}
-//           lg={0.7}
-//           // sx={{ backgroundColor: "green" }}
-//         ></Grid>
-//       </Grid>
-//     </>
-//   );
-// }
-
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 
 // MUI
 import {
@@ -1227,13 +14,6 @@ import {
   Select,
 } from "@mui/material";
 
-import { NativeSelect } from "@mui/material";
-
-import { InputBase } from "@mui/material";
-
-// TYPE-ANIMATION
-import { TypeAnimation } from "react-type-animation";
-
 // CSS
 import "./Inflightbranding.css";
 
@@ -1243,10 +23,12 @@ import Cards from "../../Card/Cards";
 // REACT-HELMET
 import { Helmet } from "react-helmet";
 
-// JSON
-import { states, stateDistricts } from "../../../assets/json/statesCity";
 // VIDEO
 import videotwo from "../../../assets/video/VideoWithoutText.mp4";
+
+import { ToastContainer, toast } from "react-toastify";
+
+import Popupcomponent from "../../PopUp/Popupcomponent";
 
 // REDUX
 import { useSelector } from "react-redux";
@@ -1258,29 +40,50 @@ import {
 // REACT-ROUTER_DOM
 import { useNavigate } from "react-router-dom";
 
+import samOutdoor from "../../../assets/images/Categories_Images/inflight_branding.jpeg";
+
 // BOOTSTRAP
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../../../components/Footer/Footer";
+import store from "../../../redux/store";
+import types from "../../../redux/types";
+
+const { dispatch } = store;
 
 export default function Inflightbranding() {
-  const [state, setState] = React.useState(null);
-  const [city, setCity] = React.useState("");
+  // const [selectedState, setSelectedState] = React.useState(null);
   const [type, setType] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
+  const [STATE, setSTATE] = useState(null);
+  const [CITY, setCITY] = useState(null);
 
-  const { products } = useSelector((state) => state.OutdoorReducer);
+  const [ProductId, setProductId] = useState("");
+
+  const { products, allstates, selectedState, AllStateCities, selectedCity } =
+    useSelector((state) => state.OutdoorReducer);
 
   const navigate = useNavigate();
 
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setState(event.target.value);
+  const handleChange = async (event) => {
+    const item = allstates.filter((i) => i.state === event.target.value);
+    console.log(item);
+    setSTATE(item[0]?.state);
+    dispatch({
+      type: types.SELECT_STATE,
+      payload: item[0]?.state,
+    });
+    dispatch({
+      type: types.UPDATE_CITIES,
+      payload: item[0]?.city,
+    });
   };
 
   const handleChange2 = (event) => {
-    console.log(event.target.value);
-    setCity(event.target.value);
+    setCITY(event.target.value);
+    dispatch({
+      type: types.SELECT_CITY,
+      payload: event.target.value,
+    });
   };
   const handleChange3 = (event) => {
     console.log(event.target.value);
@@ -1291,12 +94,21 @@ export default function Inflightbranding() {
     getProducts();
   }, []);
 
+  // POP-UP
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <Helmet>
         <title>Inflight Branding</title>
       </Helmet>
-      {/* VIDEO */}
+      {/* VIDEO for Desktop */}
+
+      {/* VIDEO for mobile */}
       <Box
         sx={{
           marginTop: { xs: "51px", sm: "51px", md: "0px", lg: "0px" },
@@ -1304,8 +116,21 @@ export default function Inflightbranding() {
       >
         {/* VIDEO */}
         <Grid container>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <Box className="bgContainer">
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            // display={{ xs: "none", lg: "block" }}
+          >
+            {/* <Box className="bgContainer"> */}
+            <Box
+              sx={{
+                width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
+                height: { xs: "50vh", sm: "50vh", md: "100vh", lg: "100vh" },
+              }}
+            >
               <video
                 src={videotwo}
                 autoPlay
@@ -1348,8 +173,8 @@ export default function Inflightbranding() {
                     <Box
                       sx={{
                         marginTop: {
-                          xs: "100px",
-                          sm: "100px",
+                          xs: "50px",
+                          sm: "50px",
                           md: "100px",
                           lg: "100px",
                         },
@@ -1366,7 +191,7 @@ export default function Inflightbranding() {
                             display: "flex",
                             fontSize: {
                               xs: "0px",
-                              sm: "px",
+                              sm: "0px",
                               md: "70px",
                               lg: "70px",
                             },
@@ -1380,7 +205,7 @@ export default function Inflightbranding() {
                             color: "#fff",
                           }}
                         >
-                          Inflight Advertising
+                          Inflight Branding
                         </Typography>
                       </Box>
                       {/* for mobile */}
@@ -1389,8 +214,8 @@ export default function Inflightbranding() {
                           sx={{
                             display: "flex",
                             fontSize: {
-                              xs: "50px",
-                              sm: "50px",
+                              xs: "33px",
+                              sm: "33px",
                               md: "0px",
                               lg: "0px",
                             },
@@ -1408,9 +233,9 @@ export default function Inflightbranding() {
                             alignItems: "center",
                           }}
                         >
-                          Inflight
+                         Inflight Advertising Company
                         </Typography>
-                        <Typography
+                        {/* <Typography
                           sx={{
                             display: "flex",
                             fontSize: {
@@ -1432,11 +257,20 @@ export default function Inflightbranding() {
                           }}
                         >
                           Advertising
-                        </Typography>
+                        </Typography> */}
                       </Box>
 
                       {/* TEXT 2 */}
-                      <Box>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "10px",
+                            sm: "10px",
+                            md: "0px",
+                            lg: "0px",
+                          },
+                        }}
+                      >
                         <Typography
                           sx={{
                             display: "flex",
@@ -1453,8 +287,8 @@ export default function Inflightbranding() {
                               lg: "center",
                             },
                             fontSize: {
-                              xs: "12px",
-                              sm: "12px",
+                              xs: "15px",
+                              sm: "15px",
                               md: "20px",
                               lg: "20px",
                             },
@@ -1469,7 +303,7 @@ export default function Inflightbranding() {
                             marginTop: "-5px",
                           }}
                         >
-                          Inflight Advertising Company
+                          Inflight Branding Company
                         </Typography>
                       </Box>
                     </Box>
@@ -1508,20 +342,34 @@ export default function Inflightbranding() {
                           sx={{
                             display: "flex",
                             flexDirection: {
-                              xs: "column",
-                              sm: "column",
+                              xs: "row",
+                              sm: "row",
                               md: "row",
                               lg: "row",
                             },
                             justifyContent: {
                               md: "space-between",
                               lg: "space-between",
+                              xs: "space-between",
+                              sm: "space-between",
                             },
                             marginTop: {
                               xs: "30px",
                               sm: "30px",
                               md: "40px",
                               lg: "40px",
+                            },
+                            paddingLeft: {
+                              xs: "10px",
+                              sm: "10px",
+                              md: "0px",
+                              lg: "0px",
+                            },
+                            paddingRight: {
+                              xs: "10px",
+                              sm: "10px",
+                              md: "0px",
+                              lg: "0px",
                             },
                           }}
                         >
@@ -1541,14 +389,14 @@ export default function Inflightbranding() {
                             <FormControl
                               sx={{
                                 width: {
-                                  xs: "300px",
-                                  sm: "300px",
+                                  xs: "100px",
+                                  sm: "100px",
                                   md: "200px",
                                   lg: "200px",
                                 },
                                 height: {
-                                  xs: "0px",
-                                  sm: "0px",
+                                  xs: "40px",
+                                  sm: "40px",
                                   md: "55px",
                                   lg: "55px",
                                 },
@@ -1568,14 +416,17 @@ export default function Inflightbranding() {
                               <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
-                                value={state}
+                                value={selectedState}
                                 label="state"
                                 onChange={handleChange}
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
-                                {states.map((item, index) => (
-                                  <MenuItem value={item} sx={{ color: "#000" }}>
-                                    {item}
+                                {allstates?.map((item, index) => (
+                                  <MenuItem
+                                    value={item?.state}
+                                    sx={{ color: "#000" }}
+                                  >
+                                    {item?.state}
                                   </MenuItem>
                                 ))}
                               </Select>
@@ -1588,8 +439,8 @@ export default function Inflightbranding() {
                               justifyContent: { xs: "center", sm: "center" },
                               alignItems: { xs: "center", sm: "center" },
                               marginTop: {
-                                xs: "90px",
-                                sm: "90px",
+                                xs: "0px",
+                                sm: "0px",
                                 md: "0px",
                                 lg: "0px",
                               },
@@ -1598,14 +449,14 @@ export default function Inflightbranding() {
                             <FormControl
                               sx={{
                                 width: {
-                                  xs: "300px",
-                                  sm: "300px",
+                                  xs: "100px",
+                                  sm: "100px",
                                   md: "200px",
                                   lg: "200px",
                                 },
                                 height: {
-                                  xs: "0px",
-                                  sm: "0px",
+                                  xs: "40px",
+                                  sm: "40px",
                                   md: "55px",
                                   lg: "55px",
                                 },
@@ -1625,13 +476,13 @@ export default function Inflightbranding() {
                               <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
-                                value={city}
+                                value={CITY}
                                 label="state"
                                 onChange={handleChange2}
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
-                                {state &&
-                                  stateDistricts[state]?.map((item) => (
+                                {AllStateCities &&
+                                  AllStateCities?.map((item) => (
                                     <MenuItem
                                       value={item}
                                       sx={{ color: "#000" }}
@@ -1643,121 +494,41 @@ export default function Inflightbranding() {
                             </FormControl>
                           </Box>
 
-                          {/* <Box
+                          <Box
                             sx={{
                               display: "flex",
-                              justifyContent: { xs: "center", sm: "center" },
-                              alignItems: { xs: "center", sm: "center" },
-                              marginTop: {
-                                xs: "90px",
-                                sm: "90px",
-                                md: "0px",
-                                lg: "0px",
-                              },
+                              justifyContent: "center",
+                              alignItems: "center",
                             }}
                           >
-                            <FormControl
+                            <Button
+                              variant="contained"
                               sx={{
-                                width: {
-                                  xs: "300px",
-                                  sm: "300px",
-                                  md: "200px",
-                                  lg: "200px",
-                                },
-                                height: {
-                                  xs: "0px",
-                                  sm: "0px",
-                                  md: "55px",
-                                  lg: "55px",
-                                },
-                                borderRadius: "5px",
+                                height: "55px",
+                                marginTop: "0px",
+                                marginLeft: "10px",
+                                backgroundColor: "#fafafa",
+                                color: "#000",
+                                borderRadius: "30px",
+                                width: "100px",
+                              }}
+                              onClick={() => {
+                                console.log(
+                                  selectedState,
+                                  AllStateCities,
+                                  selectedCity
+                                );
+                                getProductsByState(
+                                  selectedState,
+                                  selectedCity,
+                                  type
+                                );
                               }}
                             >
-                              <InputLabel
-                                sx={{
-                                  color: "#000",
-                                  borderWidth: "2px solid #fff",
-                                  fontWeight: "300",
-                                }}
-                              >
-                                Type
-                              </InputLabel>
-                              <Select
-                                labelId="demo-simple-select-helper-label"
-                                id="demo-simple-select-helper"
-                                value={type}
-                                label="state"
-                                onChange={handleChange3}
-                                sx={{ backgroundColor: "#F0F0F0" }}
-                              >
-                                <MenuItem
-                                  value={"Digital"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  DIGITAL
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Unipole"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  UNIPOLE
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Outdoor"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  BILLBOARD
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Outdoor"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  DIGITAL BILLBOARD
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Outdoor"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  DOOH
-                                </MenuItem>
-                              </Select>
-                            </FormControl>
-                          </Box> */}
-                           <Box
-                          sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            marginTop: "40px",
-                            marginTop: {
-                              xs: "90px",
-                              sm: "90px",
-                              md: "0px",
-                              lg: "0px",
-                            },
-                          }}
-                        >
-                          <Button
-                            variant="contained"
-                            sx={{
-                              height: "55px",
-                              marginTop: "0px",
-                              marginLeft: "10px",
-                              backgroundColor: "#fafafa",
-                              color: "#000",
-                              borderRadius: "30px",
-                              width: "100px",
-                            }}
-                            onClick={() => {
-                              getProductsByState(state, city, type);
-                            }}
-                          >
-                            SUBMIT
-                          </Button>
+                              SUBMIT
+                            </Button>
+                          </Box>
                         </Box>
-                        </Box>
-                        {/* BUTTON */}
-                       
                       </Grid>
                     </Grid>
                   </Grid>
@@ -1768,6 +539,7 @@ export default function Inflightbranding() {
         </Grid>
       </Box>
 
+      {/* Products */}
       <Grid container>
         <Grid
           item
@@ -1788,13 +560,14 @@ export default function Inflightbranding() {
           <Grid
             container
             spacing={2}
-            sx={{ 
-              marginTop: "-50px", 
-              marginBottom: {xs:"30px" , sm:"30px" , md:"40px" , lg:"40px"} }}
+            sx={{
+              marginTop: { xs: "-20px", sm: "-20px", md: "-50px", lg: "-50px" },
+              marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
+            }}
           >
             {products &&
               products
-                .filter((item) => item?.category === "Inflight Branding")
+                .filter((item) => item?.category === "Metro Advertising")
                 .reverse()
                 .map((item) => (
                   <Cards
@@ -1813,6 +586,408 @@ export default function Inflightbranding() {
                     }}
                   />
                 ))}
+            {products &&
+              products.filter((item) => item?.category === "Metro Advertising")
+                .length === 0 && (
+                <Box>
+                  {isOpen && (
+                    <Popupcomponent
+                      ProductId={ProductId}
+                      handleClose={togglePopup}
+                    />
+                  )}
+                  <Grid container sx={{ marginTop: "65px" }}>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={12}
+                      md={0.7}
+                      lg={0.7}
+                      // sx={{ backgroundColor: "red" }}
+                    ></Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={12}
+                      md={10.6}
+                      lg={10.6}
+                      // sx={{ backgroundColor: "green" }}
+                    >
+                      <Grid container>
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          // sx={{ backgroundColor: "orange" }}
+                        >
+                          <Box
+                            sx={{
+                              marginTop: {
+                                xs: "10px",
+                                sm: "10px",
+                                md: "30px",
+                                lg: "30px",
+                              },
+                              marginBottom: {
+                                xs: "10px",
+                                sm: "10px",
+                                md: "30px",
+                                lg: "30px",
+                              },
+                            }}
+                          >
+                            <Box
+                              component="img"
+                              sx={{
+                                width: {
+                                  xs: "95%",
+                                  sm: "95%",
+                                  md: "530px",
+                                  lg: "530px",
+                                },
+                                height: {
+                                  xs: "260px",
+                                  sm: "260px",
+                                  md: "400px",
+                                  lg: "400px",
+                                },
+                                marginLeft: {
+                                  xs: "10px",
+                                  sm: "10px",
+                                  md: "0px",
+                                  lg: "0px",
+                                },
+                                marginRight: {
+                                  xs: "10px",
+                                  sm: "10px",
+                                  md: "0px",
+                                  lg: "0px",
+                                },
+                                display: "flex",
+                                borderRadius: {
+                                  xs: "15px",
+                                  sm: "15px",
+                                  md: "10px",
+                                  lg: "10px",
+                                },
+                                border: {
+                                  xs: "1px solid red",
+                                  sm: "1px solid red",
+                                  md: "1px solid red",
+                                  lg: "1px solid red",
+                                },
+                              }}
+                              alt="add_img1"
+                              src={samOutdoor}
+                            />
+                          </Box>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          // sx={{ backgroundColor: "grey" }}
+                        >
+                          <Box
+                            sx={{
+                              marginTop: {
+                                xs: "5px",
+                                sm: "5px",
+                                md: "20px",
+                                lg: "20px",
+                              },
+                              marginBottom: {
+                                xs: "5px",
+                                sm: "5px",
+                                md: "20px",
+                                lg: "20px",
+                              },
+                            }}
+                          >
+                            <Box>
+                              <Box>
+                                <Typography
+                                  sx={{
+                                    fontSize: {
+                                      xs: "17px",
+                                      sm: "17px",
+                                      md: "20px",
+                                      lg: "20px",
+                                    },
+                                    fontFamily: "Poppins, sans-serif",
+                                    fontWeight: {
+                                      xs: "500",
+                                      sm: "500",
+                                      md: "400",
+                                      lg: "400",
+                                    },
+                                    display: "flex",
+                                    alignContent: {
+                                      xs: "center",
+                                      sm: "center",
+                                      md: "flex-end",
+                                      lg: "flex-end",
+                                    },
+                                    alignItems: {
+                                      xs: "center",
+                                      sm: "center",
+                                      md: "flex-start",
+                                      lg: "flex-start",
+                                    },
+                                    justifyContent: {
+                                      xs: "flex-start",
+                                      sm: "flex-start",
+                                      md: "flex-start",
+                                      lg: "flex-start",
+                                    },
+                                    lineHeight: {
+                                      xs: "20px",
+                                      sm: "12px",
+                                      md: "12px",
+                                      lg: "12px",
+                                    },
+                                    marginTop: {
+                                      xs: "5px",
+                                      sm: "5px",
+                                      md: "30px",
+                                      lg: "30px",
+                                    },
+                                    color: "rgb(79, 74, 76)",
+                                    marginLeft: {
+                                      xs: "10px",
+                                      sm: "10px",
+                                      md: "0px",
+                                      lg: "0px",
+                                    },
+                                  }}
+                                >
+                                  {/* {DATA?.category.toUpperCase()} */}
+                                  {/* {DATA?.subcat} */}
+                                </Typography>
+                              </Box>
+
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xs: "25px",
+                                    sm: "25px",
+                                    md: "30px",
+                                    lg: "30px",
+                                  },
+                                  fontFamily: "Poppins, sans-serif",
+                                  fontWeight: {
+                                    xs: "500",
+                                    sm: "500",
+                                    md: "500",
+                                    lg: "500",
+                                  },
+                                  display: "flex",
+                                  alignContent: {
+                                    xs: "center",
+                                    sm: "center",
+                                    md: "flex-end",
+                                    lg: "flex-end",
+                                  },
+                                  alignItems: {
+                                    xs: "center",
+                                    sm: "center",
+                                    md: "flex-start",
+                                    lg: "flex-start",
+                                  },
+                                  justifyContent: {
+                                    xs: "flex-start",
+                                    sm: "flex-start",
+                                    md: "flex-start",
+                                    lg: "flex-start",
+                                  },
+                                  lineHeight: {
+                                    xs: "30px",
+                                    sm: "30px",
+                                    md: "34px",
+                                    lg: "34px",
+                                  },
+                                  marginTop: {
+                                    xs: "5px",
+                                    sm: "5px",
+                                    md: "25px",
+                                    lg: "25px",
+                                  },
+                                  marginLeft: {
+                                    xs: "10px",
+                                    sm: "10px",
+                                    md: "0px",
+                                    lg: "0px",
+                                  },
+                                }}
+                              >
+                                {/* {DATA?.address} */}
+                                {/* Outdoor advertising agency in {params.replaceAll("-", " ")} */}
+                                Inflight Advertising 
+                              </Typography>
+                            </Box>
+
+                            <Box
+                              sx={{
+                                marginTop: {
+                                  xs: "14px",
+                                  sm: "14px",
+                                  md: "10px",
+                                  lg: "10px",
+                                },
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xs: "15px",
+                                    sm: "15px",
+                                    md: "16px",
+                                    lg: "16px",
+                                  },
+                                  fontFamily: "Poppins, sans-serif",
+                                  fontWeight: "400",
+                                  display: "flex",
+                                  // textAlign: "justify",
+                                  alignContent: {
+                                    xs: "center",
+                                    sm: "center",
+                                    md: "flex-end",
+                                    lg: "flex-end",
+                                  },
+                                  alignItems: {
+                                    xs: "center",
+                                    sm: "center",
+                                    md: "flex-start",
+                                    lg: "flex-start",
+                                  },
+                                  justifyContent: {
+                                    xs: "center",
+                                    sm: "center",
+                                    md: "flex-start",
+                                    lg: "flex-start",
+                                  },
+                                  color: "rgb(55, 52, 53)",
+                                  paddingLeft: {
+                                    xs: "10px",
+                                    sm: "10px",
+                                    md: "0px",
+                                    lg: "0px",
+                                  },
+                                  color: "rgb(55, 52, 53)",
+                                  paddingRight: {
+                                    xs: "10px",
+                                    sm: "10px",
+                                    md: "0px",
+                                    lg: "0px",
+                                  },
+                                }}
+                              >
+                                {/* {DATA?.desc} */}
+                                Elevate your brand recall and broaden your reach
+                                with strategically placed hoardings in{" "}
+                                {/* {params.replaceAll("-", " ")}. Positioned in high-traffic */}
+                                . Positioned in high-traffic zones with
+                                substantial footfall, these promotional
+                                materials guarantee significant visibility among
+                                bystanders, pedestrians, and travelers.
+                              </Typography>
+                            </Box>
+
+                            <Box
+                              sx={{
+                                display: "flex",
+                                justifyContent: {
+                                  xs: "center",
+                                  sm: "center",
+                                  md: "flex-start",
+                                  lg: "flex-start",
+                                },
+                                paddingLeft: {
+                                  xs: "10px",
+                                  sm: "10px",
+                                  md: "0px",
+                                  lg: "0px",
+                                },
+                              }}
+                            >
+                              <Box
+                                sx={{
+                                  marginTop: {
+                                    xs: "15px",
+                                    sm: "15px",
+                                    md: "20px",
+                                    lg: "20px",
+                                  },
+                                  marginBottom: {
+                                    xs: "10px",
+                                    sm: "10px",
+                                    md: "20px",
+                                    lg: "20px",
+                                  },
+                                  display: "flex",
+                                  justifyContent: {
+                                    xs: "center",
+                                    sm: "center",
+                                    md: "center",
+                                    lg: "center",
+                                  },
+                                  alignItems: "center",
+                                  width: {
+                                    xs: "100px",
+                                    sm: "100px",
+                                    md: "115px",
+                                    lg: "115px",
+                                  },
+                                  height: {
+                                    xs: "40px",
+                                    sm: "40px",
+                                    md: "40px",
+                                    lg: "40px",
+                                  },
+                                  backgroundColor: "#C02222",
+                                  borderRadius: "20px",
+                                  cursor: "pointer",
+                                }}
+                                onClick={togglePopup}
+                              >
+                                <Typography
+                                  sx={{
+                                    fontSize: {
+                                      xs: "13px",
+                                      sm: "13px",
+                                      md: "15px",
+                                      lg: "15px",
+                                    },
+                                    fontFamily: "Poppins, sans-serif",
+                                    fontWeight: "600",
+                                    color: "white",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignitems: "center",
+                                  }}
+                                >
+                                  ENQUIRY
+                                </Typography>
+                              </Box>
+                            </Box>
+                          </Box>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={12}
+                      md={0.7}
+                      lg={0.7}
+                      // sx={{ backgroundColor: "yellow" }}
+                    ></Grid>
+                  </Grid>
+                </Box>
+              )}
           </Grid>
         </Grid>
         <Grid

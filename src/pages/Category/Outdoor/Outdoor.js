@@ -13,15 +13,6 @@ import {
   Select,
 } from "@mui/material";
 
-import { getStateAndCity } from "../../../redux/actions/Outdoor";
-
-import { NativeSelect } from "@mui/material";
-
-import { InputBase } from "@mui/material";
-
-// TYPE-ANIMATION
-import { TypeAnimation } from "react-type-animation";
-
 // CSS
 import "./Outdoor.css";
 
@@ -31,8 +22,6 @@ import Cards from "../../Card/Cards";
 // REACT-HELMET
 import { Helmet } from "react-helmet";
 
-// JSON
-import { states, stateDistricts } from "../../../assets/json/statesCity";
 // VIDEO
 import videotwo from "../../../assets/video/VideoWithoutText.mp4";
 
@@ -41,6 +30,7 @@ import { useSelector } from "react-redux";
 import {
   getProducts,
   getProductsByState,
+  getStateAndCity
 } from "../../../redux/actions/Outdoor";
 
 // REACT-ROUTER_DOM
@@ -94,6 +84,10 @@ export default function Outdoor() {
 
   React.useEffect(() => {
     getProducts();
+  }, []);
+
+  React.useEffect(() => {
+    getStateAndCity();
   }, []);
 
   return (

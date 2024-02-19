@@ -3,6 +3,7 @@ import types from "../types";
 const initialstate = {
   Blogs: null,
   SingleBlog: null,
+  Related: null,
 };
 
 export const BlogReducer = (state = initialstate, action) => {
@@ -19,6 +20,22 @@ export const BlogReducer = (state = initialstate, action) => {
         ...state,
         SingleBlog: blogsById,
       };
+      case types.GET_RELATED_BLOGS:
+        const related = action.payload;
+        console.log("relatedBlogReducer" , related );
+        return {
+          ...state,
+          Related: {
+            ...state.Related,
+            data: state.Related
+              ? [...state.Related.data, ...related?.data]
+              : [...related?.data],
+            page: related?.page,
+            total_pages: related?.total_pages,
+            total_data: related?.total_data,
+          },
+        };
+        // return state
     default:
       return state;
   }

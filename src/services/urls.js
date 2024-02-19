@@ -15,6 +15,8 @@ export const GET_INDIVIDUAL_PRODUCT = getApiUrl('/api/products/url')
 
 export const GET_BLOGS = getApiUrl('/api/blog')
 
+export const GET_TYPE = getApiUrl('/api/type')
+
 
 
 

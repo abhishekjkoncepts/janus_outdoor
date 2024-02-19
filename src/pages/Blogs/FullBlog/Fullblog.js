@@ -23,8 +23,9 @@ import LazyLoad from "react-lazyload";
 // Redux
 import { useSelector } from "react-redux";
 // REDUX
-import { getBlogs, getBlogsById } from "../../../redux/actions/Blog";
+import { getBlogs, getBlogsById , getRelatedBlogs } from "../../../redux/actions/Blog";
 import Fullpageadvertisement from "../../FullPageAdvertisement/Fullpageadvertisement";
+
 
 function createMarkup(htmlContent) {
   return { __html: htmlContent };
@@ -34,7 +35,7 @@ const Fullblog = () => {
   const { state } = useLocation();
   const { id } = state;
 
-  const { SingleBlog } = useSelector((state) => state.BlogReducer);
+  const { SingleBlog , Related} = useSelector((state) => state.BlogReducer);
 
   const navigate = useNavigate();
 
@@ -42,25 +43,26 @@ const Fullblog = () => {
 
   useEffect(() => {
     getBlogsById(id);
-    getBlogs();
+    // getBlogs();
+    getRelatedBlogs()
   }, []);
 
   // Pagination
 
-  // let handleScroll = useCallback(() => {
-  //   if (
-  //     window.innerHeight + document.documentElement.scrollTop ===
-  //     document.documentElement.offsetHeight
-  //   ) {
-  //     // When the user reaches the bottom of the page
-  //     getBlogs(ArticleId, RelatedArticles?.page + 1);
-  //   }
-  // }, [ArticleId, RelatedArticles]);
+  let handleScroll = useCallback(() => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop ===
+      document.documentElement.offsetHeight
+    ) {
+      // When the user reaches the bottom of the page
+      getRelatedBlogs(Related?.page + 1);
+    }
+  }, [ Related]);
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [handleScroll]);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <Box sx={{ marginTop: { xs: "60px", sm: "60px", md: "80px", lg: "80px" } }}>
@@ -271,8 +273,8 @@ const Fullblog = () => {
           {/* RELATED BLOGS */}
 
           <Grid container spacing={3}>
-            {Blogs &&
-              Blogs?.data?.map((item) => (
+            {Related &&
+              Related?.data?.map((item) => (
                 <Grid item xs={12} sm={12} md={4} lg={4}>
                   <Box
                     sx={{
@@ -389,6 +391,10 @@ const Fullblog = () => {
                 </Grid>
               ))}
           </Grid>
+          {/* <Typography>
+          {JSON.stringify(Related)}
+          </Typography> */}
+          
         </Grid>
 
         <Grid

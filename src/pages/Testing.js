@@ -39,6 +39,7 @@ const Testing = () => {
                 <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
                 <Typography>Hello</Typography> <Typography>Hello</Typography>{" "}
                 <Typography>Hello</Typography> <Typography>Hello</Typography>
+                <Typography>Hello</Typography> <Typography>Hello</Typography>
               </Box>
             </Grid>
           </Grid>

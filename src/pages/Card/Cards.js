@@ -88,6 +88,7 @@ const Cards = ({ data, onClick }) => {
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
                       // textAlign: "justify"
+                      textTransform: "capitalize",
                     }}
                   >
                     City : {data?.city}
@@ -104,7 +105,8 @@ const Cards = ({ data, onClick }) => {
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
                       // textAlign: "justify"
-                      marginBottom:"20px"
+                      marginBottom:"20px",
+                      textTransform: "capitalize",
                     }}
                   >
                     State : {data?.state}

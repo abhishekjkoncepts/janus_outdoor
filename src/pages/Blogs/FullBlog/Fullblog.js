@@ -272,7 +272,7 @@ const Fullblog = () => {
 
           <Grid container spacing={3}>
             {Blogs &&
-              Blogs.map((item) => (
+              Blogs?.data?.map((item) => (
                 <Grid item xs={12} sm={12} md={4} lg={4}>
                   <Box
                     sx={{

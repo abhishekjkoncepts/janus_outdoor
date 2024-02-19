@@ -541,7 +541,7 @@ export default function Outdoor() {
                                   value={"Dooh"}
                                   sx={{ color: "#000" }}
                                 >
-                                  DOOH
+                                  OOH
                                 </MenuItem>
                               </Select>
                             </FormControl>

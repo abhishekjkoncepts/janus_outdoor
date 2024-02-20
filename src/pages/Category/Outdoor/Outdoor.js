@@ -30,7 +30,8 @@ import { useSelector } from "react-redux";
 import {
   getProducts,
   getProductsByState,
-  getStateAndCity
+  getStateAndCity,
+  getType,
 } from "../../../redux/actions/Outdoor";
 
 // REACT-ROUTER_DOM
@@ -51,13 +52,19 @@ export default function Outdoor() {
   const [STATE, setSTATE] = useState(null);
   const [CITY, setCITY] = useState(null);
 
-  const { products, allstates, selectedState, AllStateCities, selectedCity } =
-    useSelector((state) => state.OutdoorReducer);
-
+  const {
+    products,
+    allstates,
+    selectedState,
+    AllStateCities,
+    selectedCity,
+    typedata,
+  } = useSelector((state) => state.OutdoorReducer);
+  console.log("djbckjdb", typedata);
   const navigate = useNavigate();
 
   const handleChange = async (event) => {
-    const item = allstates.filter(i => i.state === event.target.value);
+    const item = allstates.filter((i) => i.state === event.target.value);
     console.log(item);
     setSTATE(item[0]?.state);
     dispatch({
@@ -90,13 +97,16 @@ export default function Outdoor() {
     getStateAndCity();
   }, []);
 
+  React.useEffect(() => {
+    getType();
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>Outdoor</title>
       </Helmet>
       {/* VIDEO for Desktop */}
-
 
       {/* VIDEO for mobile */}
       <Box
@@ -115,10 +125,12 @@ export default function Outdoor() {
             // display={{ xs: "none", lg: "block" }}
           >
             {/* <Box className="bgContainer"> */}
-            <Box sx={{
-              width:{xs:"100%" , sm:"100%" , md:"100%" , lg:"100%"},
-              height:{xs:"50vh" , sm:"50vh" , md:"100vh" , lg:"100vh"}
-            }}>
+            <Box
+              sx={{
+                width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
+                height: { xs: "50vh", sm: "50vh", md: "100vh", lg: "100vh" },
+              }}
+            >
               <video
                 src={videotwo}
                 autoPlay
@@ -249,7 +261,16 @@ export default function Outdoor() {
                       </Box>
 
                       {/* TEXT 2 */}
-                      <Box sx={{marginTop:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"}}}>
+                      <Box
+                        sx={{
+                          marginTop: {
+                            xs: "10px",
+                            sm: "10px",
+                            md: "0px",
+                            lg: "0px",
+                          },
+                        }}
+                      >
                         <Typography
                           sx={{
                             display: "flex",
@@ -338,8 +359,18 @@ export default function Outdoor() {
                               md: "40px",
                               lg: "40px",
                             },
-                            paddingLeft:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"},
-                            paddingRight:{xs:"10px" , sm:"10px" , md:"0px" , lg:"0px"}
+                            paddingLeft: {
+                              xs: "10px",
+                              sm: "10px",
+                              md: "0px",
+                              lg: "0px",
+                            },
+                            paddingRight: {
+                              xs: "10px",
+                              sm: "10px",
+                              md: "0px",
+                              lg: "0px",
+                            },
                           }}
                         >
                           <Box
@@ -391,7 +422,10 @@ export default function Outdoor() {
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
                                 {allstates?.map((item, index) => (
-                                  <MenuItem value={item?.state} sx={{ color: "#000" }}>
+                                  <MenuItem
+                                    value={item?.state}
+                                    sx={{ color: "#000" }}
+                                  >
                                     {item?.state}
                                   </MenuItem>
                                 ))}
@@ -507,36 +541,18 @@ export default function Outdoor() {
                                 onChange={handleChange3}
                                 sx={{ backgroundColor: "#F0F0F0" }}
                               >
-                                <MenuItem
-                                  value={"Digital"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  DIGITAL
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Unipole"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  UNIPOLE
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Billboard"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  BILLBOARD
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Digital Billboard"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  DIGITAL BILLBOARD
-                                </MenuItem>
-                                <MenuItem
-                                  value={"Dooh"}
-                                  sx={{ color: "#000" }}
-                                >
-                                  OOH
-                                </MenuItem>
+                                {typedata &&
+                                  typedata?.map((item) => {
+                                    console.log("iteemmmm", item);
+                                    return (
+                                      <MenuItem
+                                        value={item.typevalue.toUpperCase()}
+                                        sx={{ color: "#000" }}
+                                      >
+                                        {item.typevalue.toUpperCase()}
+                                      </MenuItem>
+                                    );
+                                  })}
                               </Select>
                             </FormControl>
                           </Box>
@@ -573,19 +589,21 @@ export default function Outdoor() {
                                 AllStateCities,
                                 selectedCity
                               );
-                              getProductsByState(selectedState, selectedCity, type);
+                              getProductsByState(
+                                selectedState,
+                                selectedCity,
+                                type
+                              );
                             }}
                           >
                             SUBMIT
                           </Button>
                         </Box>
-
                       </Grid>
                     </Grid>
                   </Grid>
                 </Grid>
               </Box>
-              
             </Box>
           </Grid>
         </Grid>
@@ -613,7 +631,7 @@ export default function Outdoor() {
             container
             spacing={2}
             sx={{
-              marginTop: {xs:"-20px" , sm:"-20px" , md:"-50px"  , lg:"-50px"},
+              marginTop: { xs: "-20px", sm: "-20px", md: "-50px", lg: "-50px" },
               marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
             }}
           >

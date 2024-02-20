@@ -5,9 +5,10 @@ const intialstate = {
   state: null,
   city: null,
   allstates: null,
-  selectedState: '',
-  selectedCity: '',
+  selectedState: "",
+  selectedCity: "",
   AllStateCities: null,
+  typedata: null,
 };
 
 export const OutdoorReducer = (state = intialstate, action) => {
@@ -47,6 +48,12 @@ export const OutdoorReducer = (state = intialstate, action) => {
       return {
         ...state,
         AllStateCities: cities,
+      };
+    case types.GET_TYPE:
+      const typedata = action.payload;
+      return {
+        ...state,
+        typedata: typedata,
       };
     default:
       return state;

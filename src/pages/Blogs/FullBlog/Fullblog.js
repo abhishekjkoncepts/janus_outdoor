@@ -17,6 +17,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
+// CSS
+import "./Fullblog.css"
+
 // LAZY-LOAD
 import LazyLoad from "react-lazyload";
 
@@ -118,7 +121,7 @@ const Fullblog = () => {
               sx={{
                 color: "#D2122E",
                 fontSize: { xs: "25px", sm: "25px", md: "27px", lg: "27px" },
-                fontFamily: " 'Mukta', sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 fontWeight: "600",
                 // textAlign: "justify",
                 marginTop: { xs: "3px", sm: "3px", md: "0px", lg: "0px" },
@@ -224,7 +227,7 @@ const Fullblog = () => {
                 fontSize: { xs: "17px", sm: "17px", md: "19px", lg: "19px" },
                 backgroundColor: "#fff",
                 // fontFamily: "'Noto Sans', sans-serif",
-                fontFamily: " 'Mukta', sans-serif",
+                fontFamily: "Poppins, sans-serif",
 
                 fontWeight: "500",
                 // textAlign: "justify",
@@ -352,7 +355,7 @@ const Fullblog = () => {
                                   md: "19px",
                                   lg: "19px",
                                 },
-                                fontFamily: " 'Mukta', sans-serif",
+                                fontFamily: "Poppins, sans-serif",
                                 fontWeight: "600",
                                 // textAlign: "justify",
                                 wordSpacing: "1px",
@@ -375,7 +378,7 @@ const Fullblog = () => {
                                   lg: "16px",
                                 },
                                 fontWeight: "500",
-                                fontFamily: " 'Mukta', sans-serif",
+                                fontFamily: "Poppins, sans-serif",
                                 // textAlign: "justify"
                               }}
                               dangerouslySetInnerHTML={createMarkup(

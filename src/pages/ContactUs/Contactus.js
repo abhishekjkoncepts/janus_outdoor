@@ -17,11 +17,12 @@ import Gmail from "../../assets/images/email.png";
 
 // post
 import { submitContactDetails } from "../../redux/actions/Contactus";
-import { submitenquiry } from "../../redux/actions/Outdoor";
+import { getType, submitenquiry } from "../../redux/actions/Outdoor";
 
 // Toastify
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 
 const Contactus = () => {
   const [name, setName] = useState("");
@@ -579,6 +580,9 @@ const Contactus = () => {
                         Submit
                       </Typography>
                     </Box>
+                    {/* <Box>
+                      <Button onClick={getType}> get type</Button>
+                    </Box> */}
                   </Box>
                 </Grid>
                 <ToastContainer position="top-center" autoClose={3000} toastStyle={{ top: "80px" }} />

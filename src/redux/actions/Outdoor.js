@@ -6,7 +6,7 @@ import {
   GET_PRODUCTS_BY_STATE,
   POST_CUSTOMER_ENQUIRY,
   GET_STATE_CITY,
-  //  GET_PRODUCTS_CATEGORIES
+  GET_TYPE,
 } from "../../services/urls";
 import { apiGet, apiPost } from "../../services/api";
 
@@ -29,7 +29,7 @@ export async function getProductsByState(state, city, category = "") {
       ? `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}`
       : `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&type=${category}`;
   return apiGet(url).then((res) => {
-    console.log('PRODUCTS BY STATE', res);
+    console.log("PRODUCTS BY STATE", res);
     dispatch({
       type: types.GET_PRODUCTS_BY_STATE,
       payload: res,
@@ -54,6 +54,16 @@ export async function getStateAndCity(data3) {
     console.log(res);
     dispatch({
       type: types.GET_STATE_CITY,
+      payload: res,
+    });
+  });
+}
+
+export async function getType() {
+  return apiGet(GET_TYPE).then((res) => {
+    console.log("Get_type_response", res);
+    dispatch({
+      type: types.GET_TYPE,
       payload: res,
     });
   });

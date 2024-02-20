@@ -185,8 +185,8 @@ const Triumphs = () => {
                   paddingRight: {
                     xs: "20px",
                     sm: "20px",
-                    md: "15px",
-                    lg: "15px",
+                    md: "70px",
+                    lg: "70px",
                   },
                   marginTop: {
                     xs: "0px",
@@ -270,8 +270,8 @@ const Triumphs = () => {
                   paddingLeft: {
                     xs: "20px",
                     sm: "20px",
-                    md: "15px",
-                    lg: "15px",
+                    md: "70px",
+                    lg: "70px",
                   },
                   paddingRight: {
                     xs: "20px",
@@ -379,8 +379,8 @@ const Triumphs = () => {
                   paddingRight: {
                     xs: "20px",
                     sm: "20px",
-                    md: "15px",
-                    lg: "15px",
+                    md: "70px",
+                    lg: "70px",
                   },
                   marginTop: {
                     xs: "0px",
@@ -450,8 +450,8 @@ const Triumphs = () => {
                   paddingLeft: {
                     xs: "20px",
                     sm: "20px",
-                    md: "15px",
-                    lg: "15px",
+                    md: "70px",
+                    lg: "70px",
                   },
                   paddingRight: {
                     xs: "20px",

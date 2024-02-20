@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
+// CSS
+import "./Blogs.css"
 
 // CARD
 import Card from "@mui/material/Card";
@@ -129,7 +131,7 @@ const Blogs = () => {
                                       md: "19px",
                                       lg: "19px",
                                     },
-                                    fontFamily: " 'Mukta', sans-serif",
+                                    fontFamily: "Poppins, sans-serif",
                                     fontWeight: "600",
                                     // textAlign: "justify",
                                     wordSpacing: "1px",
@@ -152,7 +154,7 @@ const Blogs = () => {
                                       lg: "16px",
                                     },
                                     fontWeight: "500",
-                                    fontFamily: " 'Mukta', sans-serif",
+                                    fontFamily: "Poppins, sans-serif",
                                     // textAlign: "justify"
                                   }}
                                   dangerouslySetInnerHTML={createMarkup(

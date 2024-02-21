@@ -635,7 +635,7 @@ export default function Outdoor() {
               marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
             }}
           >
-            {products &&
+            {products && 
               products
                 .filter((item) => item?.category === "Outdoor Advertising")
                 .reverse()

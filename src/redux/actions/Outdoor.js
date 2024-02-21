@@ -22,12 +22,13 @@ export async function getProducts() {
   });
 }
 
-export async function getProductsByState(state, city, category = "") {
-  console.log(state, city, category);
+export async function getProductsByState(state, city, subcat = "") {
+  console.log(state, city, subcat);
+  state = city??state
   const url =
-    category === ""
-      ? `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}`
-      : `${GET_PRODUCTS_BY_STATE}?state=${state}&city=${city}&type=${category}`;
+    subcat === ""
+      ? `${GET_PRODUCTS_BY_STATE}?state=${state}`
+      : `${GET_PRODUCTS_BY_STATE}?state=${state}&subcat=${subcat}`;
   return apiGet(url).then((res) => {
     console.log("PRODUCTS BY STATE", res);
     dispatch({

@@ -11,6 +11,7 @@ const types = {
   GET_BLOG_BY_ID: "GET_BLOG_BY_ID",
   GET_RELATED_BLOGS: "GET_RELATED_BLOGS",
   GET_TYPE: "GET_TYPE",
+  GET_BLOG_ID : "GET_BLOG_ID"
 };
 
 export default types;

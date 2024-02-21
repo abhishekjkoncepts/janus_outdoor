@@ -4,7 +4,7 @@ import React, { useEffect, Suspense, lazy, useState, useCallback } from "react";
 import { Grid, Typography, Button, Box, Container } from "@mui/material";
 
 // REACT_ROUTER-DOM
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate , useParams } from "react-router-dom";
 
 // IMAGES
 import samimg from "../../../assets/images/samOutdoor.jpeg";
@@ -17,6 +17,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
+
 // CSS
 import "./Fullblog.css"
 
@@ -26,7 +27,7 @@ import LazyLoad from "react-lazyload";
 // Redux
 import { useSelector } from "react-redux";
 // REDUX
-import { getBlogs, getBlogsById , getRelatedBlogs } from "../../../redux/actions/Blog";
+import { getBlogs, getBlogsByTitle , getRelatedBlogs } from "../../../redux/actions/Blog";
 import Fullpageadvertisement from "../../FullPageAdvertisement/Fullpageadvertisement";
 
 
@@ -35,17 +36,23 @@ function createMarkup(htmlContent) {
 }
 
 const Fullblog = () => {
+  console.log("hi id"  )
   const { state } = useLocation();
-  const { id } = state;
+  console.log("state" , state)
+  // const { id } = state;
 
-  const { SingleBlog , Related} = useSelector((state) => state.BlogReducer);
+  const { param } = useParams();
+  // const blogData = await fetch
+  
+
+  const { SingleBlog , Related , blogid } = useSelector((state) => state.BlogReducer);
 
   const navigate = useNavigate();
 
   const { Blogs } = useSelector((state) => state.BlogReducer);
 
   useEffect(() => {
-    getBlogsById(id);
+    getBlogsByTitle(param);
     // getBlogs();
     getRelatedBlogs()
   }, []);
@@ -58,7 +65,9 @@ const Fullblog = () => {
       document.documentElement.offsetHeight
     ) {
       // When the user reaches the bottom of the page
-      getRelatedBlogs(Related?.page + 1);
+      if(Related?.page + 1 <= Related.total_pages){
+      getRelatedBlogs(Related?.page + 1 );
+    }
     }
   }, [ Related]);
 
@@ -320,8 +329,8 @@ const Fullblog = () => {
                     >
                       <CardActionArea
                         onClick={() => {
-                          getBlogsById(item?._id);
-                          navigate(`/blog/${item.engtitle}`);
+                          getBlogsByTitle(item?.engtitle);
+                          navigate(`/blog/${item?.engtitle}`);
                         }}
 
                       >

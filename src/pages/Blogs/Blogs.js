@@ -23,9 +23,13 @@ import { useNavigate } from "react-router-dom";
 import { getBlogs, getBlogsById } from "../../redux/actions/Blog";
 import { useSelector } from "react-redux";
 import Fullpageadvertisement from "../FullPageAdvertisement/Fullpageadvertisement";
+import store from "../../redux/store";
+import types from "../../redux/types";
 
 const Blogs = () => {
   const navigate = useNavigate();
+
+  const {dispatch} = store;
 
   const { Blogs } = useSelector((state) => state.BlogReducer);
 
@@ -98,7 +102,11 @@ const Blogs = () => {
                           <CardActionArea
                             onClick={() => {
                               // getBlogsById(item?._id);
-                              navigate(`/blog/${item.engtitle}`, {state: {id: item?._id}});
+                              dispatch({
+                                type: types.GET_BLOG_ID,
+                                payload :  item?._id
+                              })
+                              navigate(`/blog/${item?.engtitle}`, {state: {id: item?._id}});
                             }}
                           >
                             <Box>

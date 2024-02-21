@@ -4,6 +4,7 @@ const initialstate = {
   Blogs: null,
   SingleBlog: null,
   Related: null,
+  blogid: null,
 };
 
 export const BlogReducer = (state = initialstate, action) => {
@@ -35,6 +36,14 @@ export const BlogReducer = (state = initialstate, action) => {
             total_data: related?.total_data,
           },
         };
+        case types.GET_BLOG_ID:
+          const blogid = action.payload;
+          console.log("hello blog id" , blogid)
+          return {
+            ...state,
+            blogid: blogid,
+          };
+
         // return state
     default:
       return state;

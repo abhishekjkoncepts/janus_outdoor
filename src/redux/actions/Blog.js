@@ -40,3 +40,14 @@ export async function getRelatedBlogs(id, page = 1, pageSize = 3) {
     payload: responseJson,
   });
 }
+
+
+export async function getBlogsByTitle(param) {
+  return apiGet(`${GET_BLOGS}/seotitle/${param}`).then((res) => {
+    console.log("SINGLE BLOG", res);
+    dispatch({
+      type: types.GET_BLOG_BY_ID,
+      payload: res,
+    });
+  });
+}

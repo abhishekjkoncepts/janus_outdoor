@@ -22,6 +22,7 @@ import { getType, submitenquiry } from "../../redux/actions/Outdoor";
 // Toastify
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getBlogId } from "../../redux/actions/Blog";
 
 
 const Contactus = () => {
@@ -581,7 +582,7 @@ const Contactus = () => {
                       </Typography>
                     </Box>
                     {/* <Box>
-                      <Button onClick={getType}> get type</Button>
+                      <Button onClick={getBlogId}> get id</Button>
                     </Box> */}
                   </Box>
                 </Grid>

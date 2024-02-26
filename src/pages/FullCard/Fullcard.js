@@ -163,6 +163,7 @@ const Fullcard = () => {
                 xs={12}
                 sm={12}
                 md={6}
+                lg={6}
                 // sx={{ backgroundColor: "grey" }}
               >
                 <Box

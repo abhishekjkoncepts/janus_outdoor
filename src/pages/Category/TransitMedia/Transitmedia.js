@@ -565,7 +565,7 @@ export default function Transitmedia() {
           <Grid container spacing={3}>
               {products &&
                 products
-                  .filter((item) => item?.category === "Mall Branding")
+                  .filter((item) => item?.category === "Transit Media")
                   .reverse()
                   .map((item) => (
                     <Cards
@@ -590,7 +590,7 @@ export default function Transitmedia() {
             <Popupcomponent ProductId={ProductId} handleClose={togglePopup} />
           )}
           {!products ||
-            (products.filter((item) => item?.category === "Mall Branding")
+            (products.filter((item) => item?.category === "Transit Media")
               .length === 0 && (
               <Box>
                 <Grid

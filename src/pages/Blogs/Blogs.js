@@ -10,21 +10,18 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
-// json
-import { blogsdata } from "../../assets/json/Blogsdata";
-
-// IMAGES
-import janusAdver from "../../assets/images/JanusAdvertisement.jpeg";
-
 // REACT_ROUTER-DOM
 import { useNavigate } from "react-router-dom";
 
 // REDUX
 import { getBlogs, getBlogsById } from "../../redux/actions/Blog";
 import { useSelector } from "react-redux";
-import Fullpageadvertisement from "../FullPageAdvertisement/Fullpageadvertisement";
+
 import store from "../../redux/store";
 import types from "../../redux/types";
+
+// Advertisemnt
+import Fullpageadvertisement from "../FullPageAdvertisement/Fullpageadvertisement";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -54,7 +51,7 @@ const Blogs = () => {
               sm={12}
               md={9.5}
               lg={9.5}
-              // sx={{ backgroundColor: "yellow" }}
+              sx={{ backgroundColor: "yellow" }}
             >
               <Grid container spacing={2}>
                 {Blogs &&
@@ -192,93 +189,6 @@ const Blogs = () => {
                 }
               }
             >
-              {/* <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: {
-                    xs: "center",
-                    sm: "center",
-                    md: "flex-end",
-                    lg: "flex-end",
-                  },
-                  paddingLeft: {
-                    xs: "10px",
-                    sm: "10px",
-                    md: "20px",
-                    lg: "20px",
-                  },
-                  paddingRight: {
-                    xs: "10px",
-                    sm: "10px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                }}
-              >
-                <a
-                  href="https://www.januskoncepts.com"
-                  // href="https://www.youtube.com/uttaranchalwasi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Box
-                    sx={{
-                      backgroundColor: "#F0F0F0",
-
-                      marginTop: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      marginBottom: {
-                        xs: "40px",
-                        sm: "40px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                    }}
-                  >
-                    <Box>
-                      <Typography
-                        sx={{
-                          fontSize: {
-                            xs: "10px",
-                            sm: "10px",
-                            md: "9px",
-                            lg: "9px",
-                          },
-                          fontWeight: "600",
-                          textAlign: "center",
-                          color: "black",
-                        }}
-                      >
-                        ADVERTISEMENT
-                      </Typography>
-                    </Box>
-                    <Box
-                      component="img"
-                      sx={{
-                        width: {
-                          xs: "200px",
-                          sm: "200px",
-                          md: "100%",
-                          lg: "100%",
-                        },
-                        height: {
-                          xs: "200px",
-                          sm: "200px",
-                          md: "100%",
-                          lg: "100%",
-                        },
-                      }}
-                      alt="redTriangleArrow"
-                      src={janusAdver}
-                    />
-                  </Box>
-                </a>
-              </Box> */}
               <Fullpageadvertisement/>
             </Grid>
           </Grid>

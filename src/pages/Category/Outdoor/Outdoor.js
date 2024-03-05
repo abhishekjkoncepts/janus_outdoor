@@ -38,9 +38,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 // BOOTSTRAP
-import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "../../../components/Footer/Footer";
 import store from "../../../redux/store";
 import types from "../../../redux/types";
 

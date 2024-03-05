@@ -1,25 +1,21 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React, { useEffect } from "react";
+
+// css
+import "./Unipole.css";
 
 // REACT-HELMET
 import { Helmet } from "react-helmet";
 
 // MUI
 import { Grid, Typography, Box } from "@mui/material";
+
+// REDUX
 import { useSelector } from "react-redux";
-import { states, stateDistricts } from "../../assets/json/statesCity";
 
-import { getStateAndCity } from "../../redux/actions/Outdoor";
+// JSON
+import { stateDistricts } from "../../../assets/json/statesCity";
 
-import "./Allout.css";
-
-const Allout = () => {
-  const { allstates } = useSelector((state) => state.OutdoorReducer);
-
-  useEffect(() => {
-    getStateAndCity();
-  }, []);
-
+const Unipole = () => {
   return (
     <>
       <Helmet>
@@ -62,29 +58,29 @@ const Allout = () => {
                   md: "0px",
                   lg: "0px",
                 },
-                marginTop:{
-                  xs:"20px",
-                  sm:"20px",
-                  md:"0px",
-                  lg:"0px"
+                marginTop: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
                 },
-                marginBottom:{
-                  xs:"20px",
-                  sm:"20px",
-                  md:"0px",
-                  lg:"0px"
-                }
+                marginBottom: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
               }}
             >
               {Object.keys(stateDistricts).map((item, index) => (
                 <Box>
                   <a
-                    href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item
+                    href={`https://www.janusalive.com/unipole-advertising-agency-in-${item
                       .toLowerCase()
                       .replaceAll(" ", "-")}/`}
                     // href={`localhost:3001//outdoor-advertising-agency-in-${item.toLowerCase().replaceAll(' ','-')}/`}
                     target="_blank"
-                    style={{ textDecoration: "none" }}
+                    style={{ textDecoration: "none" }} rel="noreferrer"
                   >
                     <Typography
                       sx={{
@@ -111,7 +107,7 @@ const Allout = () => {
                         .toLowerCase()
                         .replace(" ", "-")}/`}
                       target="_blank"
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none" }} rel="noreferrer"
                     >
                       <Typography
                         sx={{
@@ -155,4 +151,4 @@ const Allout = () => {
   );
 };
 
-export default Allout;
+export default Unipole;

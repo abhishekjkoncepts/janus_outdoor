@@ -41,6 +41,15 @@ import Alloutcities from "../pages/AllOutTwo/Alloutcities";
 import Alloutoptional from "../pages/AllOutOptional/Alloutoptional";
 import Alloutoptionalcities from "../pages/AllOutOptional/Alloutoptionalcities/Alloutoptionalcities";
 
+// TYPES
+import Digital from "../pages/Types/Digital/Digital";
+import Unipole from "../pages/Types/Unipole/Unipole";
+import Billboard from "../pages/Types/Billboard/Billboard";
+import Digitalbillboard from "../pages/Types/DigitalBillboard/Digitalbillboard";
+import Ooh from "../pages/Types/Ooh/Ooh";
+
+// Types
+
 const Navigation = () => {
   return (
     <BrowserRouter>
@@ -54,9 +63,7 @@ const Navigation = () => {
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs/" element={<Blogs />} />
           <Route path="/our-service" element={<Ourservice />} />
-
           <Route path="/blog/:param?" element={<Fullblog />} />
-
           <Route path="/outdoor-advertising-agency/" element={<Outdoor />} />
           <Route path="/metro-advertising-agency/" element={<Metro />} />
           <Route
@@ -77,15 +84,11 @@ const Navigation = () => {
           />
           <Route
             path={"/:state-outdoor-hoarding-advertising-agencies"}
-            // path="/:param?"
             element={<Alloutoptionalcities />}
           />
           {/* FULl CArd */}
           <Route path="/:category?/:seotitle?" element={<Fullcard />} />
-          {/* <Route
-            path="/seedetails/:category?/:seotitle"
-            element={<Fullcard />}
-          /> */}
+
           {/* Individual */}
 
           <Route path="/info/:param1?/:param2?" element={<Individual />} />
@@ -93,19 +96,18 @@ const Navigation = () => {
           {/* All outdoor */}
           <Route path="/all-outdoor/" element={<Allout />} />
 
-          {/* All outdoor 2 */}
-
-          {/* <Route
-            path={'/outdoor-hoarding-advertising-agency-in-:state-in-out'}
-            // path="/:param?"
-            element={<Alloutcities />}
-          /> */}
-
+          {/* All Outdoor optional  */}
           <Route
             path={"/outdoor-hoarding-advertising/"}
-            // path="/:param?"
             element={<Alloutoptional />}
           />
+
+          {/* TYPEs */}
+          <Route path={"/digital/"} element={<Digital />} />
+          <Route path={"/unipole/"} element={<Unipole />} />
+          <Route path={"/billboard/"} element={<Billboard />} />
+          <Route path={"/digital-billboard/"} element={<Digitalbillboard />} />
+          <Route path={"/ooh/"} element={<Ooh />} />
         </Routes>
       </Scrolltotop>
       <Footer />

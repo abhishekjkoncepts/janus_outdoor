@@ -1,10 +1,9 @@
 import React from "react";
 
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 import { makeStyles } from "@mui/styles";
 
-import { Card, CardActions, CardContent } from "@mui/material";
 
 import JanusAdvertisement from "../../assets/images/JanusAdvertisement.jpeg";
 
@@ -26,52 +25,6 @@ const useStyles = makeStyles({
 const Fullpageadvertisement = () => {
   const classes = useStyles();
   return (
-    // <Card className={classes.root} elevation={15}>
-    //   <CardContent>
-    //     <Typography
-    //       className={classes.title}
-    //       color="textSecondary"
-    //       gutterBottom
-    //     >
-    //       Shopping Cart
-    //     </Typography>
-    //     <Typography variant="div" component="h1">
-    //       {" "}
-    //       Order Summary
-    //     </Typography>
-    //     <Typography variant="subtitle2">
-    //       <hr />
-    //     </Typography>
-    //     <Grid container>
-    //       <Grid item xs={11} sm={11} md={11} lg={11}>
-    //         <Typography variant="body1" component="div">
-    //           Shipping
-    //         </Typography>
-    //       </Grid>
-    //       <Grid item xs={1} sm={1} md={1} lg={1}>
-    //         <Typography variant="h6" component="div">
-    //           €0
-    //         </Typography>
-    //       </Grid>
-    //       <Grid item xs={11} sm={11} md={11} lg={11}>
-    //         <Typography variant="body1" component="div">
-    //           Total
-    //         </Typography>
-    //       </Grid>
-    //       <Grid item xs={1} sm={1} md={1} lg={1}>
-    //         <Typography variant="h6" component="div">
-    //           €0
-    //         </Typography>
-    //       </Grid>
-    //     </Grid>
-    //   </CardContent>
-
-    //   <CardActions>
-    //     <Button size="large" color="secondary">
-    //       BUY NOW ({1})
-    //     </Button>
-    //   </CardActions>
-    // </Card>
     <Box
       className={classes.root}
       sx={{

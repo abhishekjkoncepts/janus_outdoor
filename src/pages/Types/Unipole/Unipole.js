@@ -87,7 +87,7 @@ const Unipole = () => {
                         fontSize: {
                           xs: "30px",
                           sm: "30px",
-                          md: "40px",x``
+                          md: "40px",
                           lg: "40px",
                         },
                         fontFamily: "Poppins, sans-serif",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // MATERIAL-UI
-import { Typography, Grid, Box} from "@mui/material";
+import { Typography, Grid, Box } from "@mui/material";
 
 // REACT-ROUTER-DOM
 import { useParams } from "react-router-dom";
@@ -69,12 +69,12 @@ const HoardingIn = () => {
         /> */}
         <meta
           name="description"
-          content={`Elevate your brand recall and broaden your reach with strategically placed hoardings in ${params.replaceAll("-"," ")}. Positioned in high-traffic zones with substantial footfall, these promotional materials guarantee significant visibility among bystanders, pedestrians, and travelers. `}
+          content={`Elevate your brand recall and broaden your reach with strategically placed hoardings in ${params.replaceAll(
+            "-",
+            " "
+          )}. Positioned in high-traffic zones with substantial footfall, these promotional materials guarantee significant visibility among bystanders, pedestrians, and travelers. `}
         />
-
       </Helmet>
-
-
 
       {isOpen && (
         <Popupcomponent
@@ -107,68 +107,67 @@ const HoardingIn = () => {
               md={6}
               // sx={{ backgroundColor: "orange" }}
             >
-
               <Box
+                sx={{
+                  marginTop: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "30px",
+                    lg: "30px",
+                  },
+                  marginBottom: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "30px",
+                    lg: "30px",
+                  },
+                }}
+              >
+                <Box
+                  component="img"
                   sx={{
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "30px",
-                      lg: "30px",
+                    width: {
+                      xs: "95%",
+                      sm: "95%",
+                      md: "530px",
+                      lg: "530px",
                     },
-                    marginBottom: {
+                    height: {
+                      xs: "260px",
+                      sm: "260px",
+                      md: "400px",
+                      lg: "400px",
+                    },
+                    marginLeft: {
                       xs: "10px",
                       sm: "10px",
-                      md: "30px",
-                      lg: "30px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    marginRight: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    display: "flex",
+                    borderRadius: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                    border: {
+                      xs: "1px solid red",
+                      sm: "1px solid red",
+                      md: "1px solid red",
+                      lg: "1px solid red",
                     },
                   }}
-                >
-                  <Box
-                    component="img"
-                    sx={{
-                      width: {
-                        xs: "95%",
-                        sm: "95%",
-                        md: "530px",
-                        lg: "530px",
-                      },
-                      height: {
-                        xs: "260px",
-                        sm: "260px",
-                        md: "400px",
-                        lg: "400px",
-                      },
-                      marginLeft: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      marginRight: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      display: "flex",
-                      borderRadius: {
-                        xs: "15px",
-                        sm: "15px",
-                        md: "10px",
-                        lg: "10px",
-                      },
-                      border: {
-                        xs: "1px solid red",
-                        sm: "1px solid red",
-                        md: "1px solid red",
-                        lg: "1px solid red",
-                      },
-                    }}
-                    alt="add_img1"
-                    src={samOutdoor}
-                  />
-                </Box>
+                  alt="add_img1"
+                  src={samOutdoor}
+                />
+              </Box>
             </Grid>
 
             <Grid
@@ -310,7 +309,6 @@ const HoardingIn = () => {
                   </Typography>
                 </Box>
 
-
                 <Box
                   sx={{
                     marginTop: {
@@ -430,7 +428,7 @@ const HoardingIn = () => {
                       },
                       backgroundColor: "#C02222",
                       borderRadius: "20px",
-                      cursor:"pointer"
+                      cursor: "pointer",
                     }}
                     onClick={togglePopup}
                   >
@@ -470,7 +468,7 @@ const HoardingIn = () => {
     </>
   ) : (
     // <p>{JSON.stringify(DATA)}</p>
-    <Box sx={{ marginTop: "90px" }}>
+    <>
       <Grid container>
         <Grid
           item
@@ -486,37 +484,71 @@ const HoardingIn = () => {
           sm={12}
           md={10.6}
           lg={10.6}
-          // sx={{ backgroundColor: "yellow" }}
+          // sx={{ backgroundColor: "red" }}
         >
-          <Grid
-            container
-            spacing={2}
+          <Box
             sx={{
-              marginTop: { xs: "-20px", sm: "-20px", md: "-50px", lg: "-50px" },
-              marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
+              marginTop: "40px",
             }}
           >
-          <Typography>heelo outdoor</Typography>
-          
-            {DATA &&
-              DATA.map((item) => (
-                <Cards
-                  key={item.id} // Add a unique key for each mapped element
-                  data={item}
-                  onClick={() => {
-                    navigate(
-                      `/${
-                        item?.urlcat?.toLowerCase()
-                          ? item?.urlcat?.toLowerCase()
-                          : item?.urlcat
-                      }/${item?.url ? item?.url : item?.address}/`,
-                      { state: { id: item._id } }
-                    );
-                    console.log("hello world");
-                  }}
-                />
-              ))}
-          </Grid>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "25px",
+                  sm: "25px",
+                  md: "30px",
+                  lg: "30px",
+                },
+                fontFamily: "Poppins, sans-serif",
+                fontWeight: {
+                  xs: "500",
+                  sm: "500",
+                  md: "500",
+                  lg: "500",
+                },
+                display: "flex",
+                alignContent: {
+                  xs: "center",
+                  sm: "center",
+                  md: "flex-end",
+                  lg: "flex-end",
+                },
+                alignItems: {
+                  xs: "center",
+                  sm: "center",
+                  md: "flex-start",
+                  lg: "flex-start",
+                },
+                justifyContent: {
+                  xs: "flex-start",
+                  sm: "flex-start",
+                  md: "flex-start",
+                  lg: "flex-start",
+                },
+                lineHeight: {
+                  xs: "30px",
+                  sm: "30px",
+                  md: "34px",
+                  lg: "34px",
+                },
+                marginTop: {
+                  xs: "5px",
+                  sm: "5px",
+                  md: "25px",
+                  lg: "25px",
+                },
+                marginLeft: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "0px",
+                  lg: "0px",
+                },
+              }}
+            >
+              {/* {DATA?.address} */}
+              Outdoor advertising agency in {params.replaceAll("-", " ")}
+            </Typography>
+          </Box>
         </Grid>
         <Grid
           item
@@ -524,10 +556,77 @@ const HoardingIn = () => {
           sm={12}
           md={0.7}
           lg={0.7}
-          // sx={{ backgroundColor: "green" }}
+          // sx={{ backgroundColor: "red" }}
         ></Grid>
       </Grid>
-    </Box>
+
+      <Box sx={{ marginTop: "90px" }}>
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "red" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.6}
+            lg={10.6}
+            // sx={{ backgroundColor: "yellow" }}
+          >
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                marginTop: {
+                  xs: "-20px",
+                  sm: "-20px",
+                  md: "-50px",
+                  lg: "-50px",
+                },
+                marginBottom: {
+                  xs: "30px",
+                  sm: "30px",
+                  md: "40px",
+                  lg: "40px",
+                },
+              }}
+            >
+              {DATA &&
+                DATA.map((item) => (
+                  <Cards
+                    key={item.id} // Add a unique key for each mapped element
+                    data={item}
+                    onClick={() => {
+                      navigate(
+                        `/${
+                          item?.urlcat?.toLowerCase()
+                            ? item?.urlcat?.toLowerCase()
+                            : item?.urlcat
+                        }/${item?.url ? item?.url : item?.address}/`,
+                        { state: { id: item._id } }
+                      );
+                      console.log("hello world");
+                    }}
+                  />
+                ))}
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "green" }}
+          ></Grid>
+        </Grid>
+      </Box>
+    </>
   );
 };
 

@@ -47,7 +47,6 @@ import Unipole from "../pages/Types/Unipole/Unipole";
 import Billboard from "../pages/Types/Billboard/Billboard";
 import Digitalbillboard from "../pages/Types/DigitalBillboard/Digitalbillboard";
 import Ooh from "../pages/Types/Ooh/Ooh";
-import UnipoleHoardingsIn from "../pages/Types/TypesHoardingsIn/UnipoleHoardingsIn/UnipoleHoardingsIn";
 
 // Types
 
@@ -59,7 +58,7 @@ const Navigation = () => {
         {/* PARENT-PAGES */}
         <Routes>
           <Route path="/" element={<Home />} />
-          
+          <Route path="/:param" element={<HoardingIn />} />
           <Route path="/about-us/" element={<Aboutus />} />
           <Route path="/contact-us/" element={<Contactus />} />
           <Route path="/blogs/" element={<Blogs />} />
@@ -102,12 +101,6 @@ const Navigation = () => {
             path={"/outdoor-hoarding-advertising/"}
             element={<Alloutoptional />}
           />
-
-          {/* HoardingsIn */}
-          <Route path="/:param" element={<HoardingIn />} />
-
-          {/* unipoleHoardingsIn */}
-          {/* <Route path="/:param" element={<UnipoleHoardingsIn/>} /> */}
 
           {/* TYPEs */}
           <Route path={"/digital/"} element={<Digital />} />

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 // MATERIAL-UI
-import { Typography, Grid, Box} from "@mui/material";
+import { Typography, Grid, Box } from "@mui/material";
 
 // REACT-ROUTER-DOM
 import { useParams } from "react-router-dom";
-import { getProductsByState } from "../../redux/actions/Home";
+import { getProductsByState } from "../../../../redux/actions/Home";
 
 // TOASTI-FY
 import { ToastContainer, toast } from "react-toastify";
@@ -12,16 +12,17 @@ import { ToastContainer, toast } from "react-toastify";
 // REACT-HELMET
 import { Helmet } from "react-helmet";
 
-import Cards from "../Card/Cards";
+import Cards from "../../../Card/Cards";
 
-import Popupcomponent from "../PopUp/Popupcomponent";
-import { states, stateDistricts } from "../../assets/json/statesCity";
+import Popupcomponent from "../../../PopUp/Popupcomponent";
+import { states, stateDistricts } from "../../../../assets/json/statesCity";
 
 // IMAGES
-import samOutdoor from "../../assets/images/samOutdoor.jpeg";
+import samOutdoor from "../../../../assets/images/samOutdoor.jpeg";
 
 import { useNavigate } from "react-router-dom";
-const HoardingIn = () => {
+
+const UnipoleHoardingsIn = () => {
   const { param } = useParams();
   const params = param.split("in-")[1];
 
@@ -57,7 +58,7 @@ const HoardingIn = () => {
     <>
       <Helmet>
         <title>
-          Outdoor advertising agency in {params.replaceAll("-", " ")}
+          Unipole advertising agency in {params.replaceAll("-", " ")}
         </title>
 
         {/* <meta
@@ -69,12 +70,12 @@ const HoardingIn = () => {
         /> */}
         <meta
           name="description"
-          content={`Elevate your brand recall and broaden your reach with strategically placed hoardings in ${params.replaceAll("-"," ")}. Positioned in high-traffic zones with substantial footfall, these promotional materials guarantee significant visibility among bystanders, pedestrians, and travelers. `}
+          content={`Elevate your brand recall and broaden your reach with strategically placed hoardings in ${params.replaceAll(
+            "-",
+            " "
+          )}. Positioned in high-traffic zones with substantial footfall, these promotional materials guarantee significant visibility among bystanders, pedestrians, and travelers. `}
         />
-
       </Helmet>
-
-
 
       {isOpen && (
         <Popupcomponent
@@ -107,68 +108,67 @@ const HoardingIn = () => {
               md={6}
               // sx={{ backgroundColor: "orange" }}
             >
-
               <Box
+                sx={{
+                  marginTop: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "30px",
+                    lg: "30px",
+                  },
+                  marginBottom: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "30px",
+                    lg: "30px",
+                  },
+                }}
+              >
+                <Box
+                  component="img"
                   sx={{
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "30px",
-                      lg: "30px",
+                    width: {
+                      xs: "95%",
+                      sm: "95%",
+                      md: "530px",
+                      lg: "530px",
                     },
-                    marginBottom: {
+                    height: {
+                      xs: "260px",
+                      sm: "260px",
+                      md: "400px",
+                      lg: "400px",
+                    },
+                    marginLeft: {
                       xs: "10px",
                       sm: "10px",
-                      md: "30px",
-                      lg: "30px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    marginRight: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    display: "flex",
+                    borderRadius: {
+                      xs: "15px",
+                      sm: "15px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                    border: {
+                      xs: "1px solid red",
+                      sm: "1px solid red",
+                      md: "1px solid red",
+                      lg: "1px solid red",
                     },
                   }}
-                >
-                  <Box
-                    component="img"
-                    sx={{
-                      width: {
-                        xs: "95%",
-                        sm: "95%",
-                        md: "530px",
-                        lg: "530px",
-                      },
-                      height: {
-                        xs: "260px",
-                        sm: "260px",
-                        md: "400px",
-                        lg: "400px",
-                      },
-                      marginLeft: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      marginRight: {
-                        xs: "10px",
-                        sm: "10px",
-                        md: "0px",
-                        lg: "0px",
-                      },
-                      display: "flex",
-                      borderRadius: {
-                        xs: "15px",
-                        sm: "15px",
-                        md: "10px",
-                        lg: "10px",
-                      },
-                      border: {
-                        xs: "1px solid red",
-                        sm: "1px solid red",
-                        md: "1px solid red",
-                        lg: "1px solid red",
-                      },
-                    }}
-                    alt="add_img1"
-                    src={samOutdoor}
-                  />
-                </Box>
+                  alt="add_img1"
+                  src={samOutdoor}
+                />
+              </Box>
             </Grid>
 
             <Grid
@@ -306,10 +306,9 @@ const HoardingIn = () => {
                     }}
                   >
                     {/* {DATA?.address} */}
-                    Outdoor advertising agency in {params.replaceAll("-", " ")}
+                    Unipole advertising agency in {params.replaceAll("-", " ")}
                   </Typography>
                 </Box>
-
 
                 <Box
                   sx={{
@@ -430,7 +429,7 @@ const HoardingIn = () => {
                       },
                       backgroundColor: "#C02222",
                       borderRadius: "20px",
-                      cursor:"pointer"
+                      cursor: "pointer",
                     }}
                     onClick={togglePopup}
                   >
@@ -496,8 +495,6 @@ const HoardingIn = () => {
               marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
             }}
           >
-          <Typography>heelo outdoor</Typography>
-          
             {DATA &&
               DATA.map((item) => (
                 <Cards
@@ -531,4 +528,4 @@ const HoardingIn = () => {
   );
 };
 
-export default HoardingIn;
+export default UnipoleHoardingsIn;

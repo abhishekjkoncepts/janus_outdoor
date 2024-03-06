@@ -19,7 +19,7 @@ const Unipole = () => {
   return (
     <>
       <Helmet>
-        <title>All Outdoor</title>
+        <title>Unipole</title>
       </Helmet>
       <Box
         sx={{ marginTop: { xs: "51px", sm: "51px", md: "90px", lg: "90px" } }}
@@ -87,7 +87,7 @@ const Unipole = () => {
                         fontSize: {
                           xs: "30px",
                           sm: "30px",
-                          md: "40px",
+                          md: "40px",x``
                           lg: "40px",
                         },
                         fontFamily: "Poppins, sans-serif",

@@ -62,18 +62,18 @@ const Allout = () => {
                   md: "0px",
                   lg: "0px",
                 },
-                marginTop:{
-                  xs:"20px",
-                  sm:"20px",
-                  md:"0px",
-                  lg:"0px"
+                marginTop: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
                 },
-                marginBottom:{
-                  xs:"20px",
-                  sm:"20px",
-                  md:"0px",
-                  lg:"0px"
-                }
+                marginBottom: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
               }}
             >
               {Object.keys(stateDistricts).map((item, index) => (
@@ -82,7 +82,6 @@ const Allout = () => {
                     href={`https://www.janusalive.com/outdoor-advertising-agency-in-${item
                       .toLowerCase()
                       .replaceAll(" ", "-")}/`}
-                    // href={`localhost:3001//outdoor-advertising-agency-in-${item.toLowerCase().replaceAll(' ','-')}/`}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
@@ -132,13 +131,6 @@ const Allout = () => {
                   ))}
                 </Box>
               ))}
-              {/* <Typography
-                sx={{
-                  fontSize: "15px",
-                }}
-              >
-                {JSON.stringify(allstates && allstates?.map(item => item?.state))}
-            </Typography> */}
             </Box>
           </Grid>
           <Grid

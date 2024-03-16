@@ -51,7 +51,7 @@ const Blogs = () => {
               sm={12}
               md={9.5}
               lg={9.5}
-              sx={{ backgroundColor: "yellow" }}
+              // sx={{ backgroundColor: "yellow" }}
             >
               <Grid container spacing={2}>
                 {Blogs &&

@@ -20,7 +20,6 @@ import { states, stateDistricts } from "../../assets/json/statesCity";
 // IMAGES
 import samOutdoor from "../../assets/images/samOutdoor.jpeg";
 
-
 import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
   const { param } = useParams();
@@ -58,7 +57,7 @@ const HoardingIn = () => {
     <>
       <Helmet>
         <title>
-        Top Outdoor Advertising Agency in {params.replaceAll("-", " ")}
+          Top Outdoor Advertising Agency in {params.replaceAll("-", " ")}
         </title>
 
         {/* <meta
@@ -306,7 +305,8 @@ const HoardingIn = () => {
                     }}
                   >
                     {/* {DATA?.address} */}
-                    Outdoor advertising agency in {params.replaceAll("-", " ")}
+                    Top Outdoor Advertising Agency in{" "}
+                    {params.replaceAll("-", " ")}
                   </Typography>
                 </Box>
 
@@ -367,12 +367,16 @@ const HoardingIn = () => {
                     }}
                   >
                     {/* {DATA?.desc} */}
-                    Elevate your brand recall and broaden your reach with
+                    {/* Elevate your brand recall and broaden your reach with
                     strategically placed hoardings in{" "}
                     {params.replaceAll("-", " ")}. Positioned in high-traffic
                     zones with substantial footfall, these promotional materials
                     guarantee significant visibility among bystanders,
-                    pedestrians, and travelers.
+                    pedestrians, and travelers.  */}
+                    Elevate Your Brand with the Top
+                    Outdoor Advertising Agency in {" "}
+                    {params.replaceAll("-", " ")}. Discover Effective
+                    Outdoor Marketing Solutions. Contact Us Today.
                   </Typography>
                 </Box>
 

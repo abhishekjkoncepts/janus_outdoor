@@ -104,7 +104,7 @@ const Allout = () => {
                     </Typography>
                   </a>
 
-                  {stateDistricts[item].map((state, city, i) => (
+                  {stateDistricts[item].map(( city, i) => (
                     <a
                       href={`https://www.janusalive.com/outdoor-advertising-agency-in-${city
                         .toLowerCase()
@@ -125,7 +125,7 @@ const Allout = () => {
                           fontWeight: "600",
                         }}
                       >
-                        {city} , {state}
+                        {city}
                       </Typography>
                     </a>
                   ))}

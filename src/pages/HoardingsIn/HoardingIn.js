@@ -20,6 +20,7 @@ import { states, stateDistricts } from "../../assets/json/statesCity";
 // IMAGES
 import samOutdoor from "../../assets/images/samOutdoor.jpeg";
 
+
 import { useNavigate } from "react-router-dom";
 const HoardingIn = () => {
   const { param } = useParams();

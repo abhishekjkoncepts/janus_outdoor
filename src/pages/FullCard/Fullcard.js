@@ -608,14 +608,9 @@ const Fullcard = () => {
                         },
                       }}
                     >
-                      {/* {DATA?.desc} */}
-                      Elevate your brand recall and broaden your reach with
-                      strategically placed hoardings in{" "}
-                      {DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)}, ( {DATA?.state} ) 
-                      . Positioned in high-traffic zones with substantial
-                      footfall, these promotional materials guarantee
-                      significant visibility among bystanders, pedestrians, and
-                      travelers.
+                      Elevate Your Brand with the Top Outdoor Advertising Agency
+                      in{" "}{DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)} ( {DATA?.state} ). Discover Effective Outdoor Marketing
+                      Solutions. Contact Us Today.
                     </Typography>
                   </Box>
 
@@ -691,7 +686,7 @@ const Fullcard = () => {
                           display: "flex",
                           justifyContent: "center",
                           alignitems: "center",
-                          cursor:"pointer"
+                          cursor: "pointer",
                         }}
                       >
                         ENQUIRY

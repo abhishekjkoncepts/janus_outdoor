@@ -262,7 +262,6 @@ function Header(props) {
                     paddingTop: "5px",
                     paddingBottom: "5px",
                   }}
-                  
                 >
                   OUR SERVICES
                 </Typography>
@@ -408,7 +407,9 @@ function Header(props) {
                 marginTop: "30px",
               }}
             >
-              <Button component={Link} to="">
+              {/* <Button component={Link} to=""> */}
+
+              <Link to="" style={{textDecoration:"none"}}>
                 <Typography
                   sx={{
                     color: "#fff",
@@ -419,10 +420,12 @@ function Header(props) {
                 >
                   HOME
                 </Typography>
-              </Button>
+              </Link>
+              {/* </Button> */}
 
               <Box sx={{ paddingLeft: "30px" }}>
-                <Button component={Link} to="/about-us/">
+                {/* <Button component={Link} to="/about-us/"> */}
+                <Link to="/about-us/" style={{textDecoration:"none"}} >
                   <Typography
                     sx={{
                       color: "#fff",
@@ -433,11 +436,12 @@ function Header(props) {
                   >
                     ABOUT US
                   </Typography>
-                </Button>
+                  </Link>
+                {/* </Button> */}
               </Box>
 
               {/* Dropdown */}
-              <Box sx={{ paddingLeft: "30px", marginTop: "6px" }}>
+              <Box sx={{ paddingLeft: "30px", marginTop: "0px" }}>
                 <Box
                   sx={{ display: "flex", flexDirection: "row" }}
                   onClick={() => navigate("/our-service")}
@@ -677,8 +681,8 @@ function Header(props) {
                       </Link>
                     </Box>
 
-                     {/* All Hoarding Advertising */}
-                     <Box sx={{borderTop: "1px solid #D3D3D3"}}>
+                    {/* All Hoarding Advertising */}
+                    <Box sx={{ borderTop: "1px solid #D3D3D3" }}>
                       <Link
                         to={"/outdoor-hoarding-advertising/"}
                         style={{ textDecoration: "none" }}
@@ -703,18 +707,17 @@ function Header(props) {
                         </Typography>
                       </Link>
                     </Box>
-
-                    
                   </Box>
                 </Menu>
               </Box>
 
               {/* Dropdown  ends*/}
 
-               {/* Blogs */}
+              {/* Blogs */}
 
-               <Box sx={{ paddingLeft: "30px" }}>
-                <Button component={Link} to="/blogs/">
+              <Box sx={{ paddingLeft: "30px" }}  >
+                {/* <Button component={Link} to="/blogs/"> */}
+                <Link to="/blogs/" style={{textDecoration:"none"}} >
                   <Typography
                     sx={{
                       color: "#fff",
@@ -725,11 +728,13 @@ function Header(props) {
                   >
                     BLOGS
                   </Typography>
-                </Button>
+                  </Link>
+                {/* </Button> */}
               </Box>
 
               <Box sx={{ paddingLeft: "30px" }}>
-                <Button component={Link} to="/contact-us/">
+                {/* <Button component={Link} to="/contact-us/"> */}
+                <Link to="/contact-us/" style={{textDecoration:"none"}} >
                   <Typography
                     sx={{
                       color: "#fff",
@@ -737,13 +742,13 @@ function Header(props) {
                       fontWeight: "500",
                       fontFamily: "Poppins, sans-serif",
                     }}
+                    
                   >
                     CONTACT US
                   </Typography>
-                </Button>
+                  </Link>
+                {/* </Button> */}
               </Box>
-
-             
             </Box>
           </Box>
         </Toolbar>

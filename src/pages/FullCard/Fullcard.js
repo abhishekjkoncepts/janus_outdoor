@@ -608,9 +608,14 @@ const Fullcard = () => {
                         },
                       }}
                     >
-                      Elevate Your Brand with the Top Outdoor Advertising Agency
-                      in{" "}{DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)} ( {DATA?.state} ). Discover Effective Outdoor Marketing
-                      Solutions. Contact Us Today.
+                      {/* {DATA?.desc} */}
+                      Elevate your brand recall and broaden your reach with
+                      strategically placed hoardings in{" "}
+                      {DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)}, ( {DATA?.state} ) 
+                      . Positioned in high-traffic zones with substantial
+                      footfall, these promotional materials guarantee
+                      significant visibility among bystanders, pedestrians, and
+                      travelers.
                     </Typography>
                   </Box>
 

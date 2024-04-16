@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 
 // MUI
-import {
-  Grid,
-  Typography,
-  Box
-} from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 
 // REACT_ROUTER_DOM
 import { useNavigate } from "react-router-dom";
@@ -20,6 +16,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 
+// Helmet
+import Helmet from "react-helmet";
+
 // IMAGES
 import samoutdoor from "../../assets/images/samOutdoor.jpeg";
 
@@ -32,6 +31,15 @@ const Ourservice = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Where Outdoor Advertising Reaches New Heights</title>
+        <meta
+          name="description"
+          content={
+            "Trust Peak Promotions for innovative outdoor advertising that maximizes visibility and engagement. Let us take your marketing efforts to new heights, leaving a lasting impression on your audience"
+          }
+        />
+      </Helmet>
       {/* our services text */}
       <Grid container>
         <Grid
@@ -249,35 +257,39 @@ const Ourservice = () => {
 
         <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
           <Grid container>
-
-            <Grid item xs={12} sm={12} md={4} lg={4}
-                sx={{
-                    paddingLeft: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    paddingRight: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    paddingTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "40px",
-                      lg: "40px",
-                    },
-                    paddingBottom: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}
-                  >
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={4}
+              lg={4}
+              sx={{
+                paddingLeft: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                paddingRight: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                paddingTop: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "40px",
+                  lg: "40px",
+                },
+                paddingBottom: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                },
+              }}
+            >
               <Box>
                 <Card
                   variant="outlined"
@@ -288,9 +300,8 @@ const Ourservice = () => {
                     border: "2px solid #C02222",
                     background: "linear-gradient(to bottom, #C02222 85%, #000)",
                   }}
-                  onClick={() => 
-                  {
-                    navigate("/all-outdoor/")
+                  onClick={() => {
+                    navigate("/all-outdoor/");
                   }}
                 >
                   <CardActionArea onClick={() => {}}>
@@ -337,34 +348,39 @@ const Ourservice = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={4} lg={4}
-               sx={{
-                    paddingLeft: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    paddingRight: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    paddingTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "40px",
-                      lg: "40px",
-                    },
-                    paddingBottom: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}>
-            
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={4}
+              lg={4}
+              sx={{
+                paddingLeft: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                paddingRight: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                paddingTop: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "40px",
+                  lg: "40px",
+                },
+                paddingBottom: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                },
+              }}
+            >
               <Box>
                 <Card
                   variant="outlined"
@@ -375,9 +391,8 @@ const Ourservice = () => {
                     border: "2px solid #C02222",
                     background: "linear-gradient(to bottom, #C02222 85%, #000)",
                   }}
-                  onClick={() => 
-                  {
-                    navigate("/outdoor-hoarding-advertising/")
+                  onClick={() => {
+                    navigate("/outdoor-hoarding-advertising/");
                   }}
                 >
                   <CardActionArea onClick={() => {}}>
@@ -423,7 +438,6 @@ const Ourservice = () => {
                 </Card>
               </Box>
             </Grid>
-
           </Grid>
         </Grid>
 

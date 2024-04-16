@@ -611,7 +611,7 @@ const Fullcard = () => {
                       {/* {DATA?.desc} */}
                       Elevate your brand recall and broaden your reach with
                       strategically placed hoardings in{" "}
-                      {DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)}, ( {DATA?.state} ) 
+                      {DATA?.city.charAt(0).toUpperCase() + DATA?.city.slice(1)}, ( {DATA?.state.charAt(0).toUpperCase() + DATA?.state.slice(1)} ) 
                       . Positioned in high-traffic zones with substantial
                       footfall, these promotional materials guarantee
                       significant visibility among bystanders, pedestrians, and

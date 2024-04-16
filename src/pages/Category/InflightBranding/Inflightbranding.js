@@ -99,7 +99,13 @@ export default function Inflightbranding() {
   return (
     <>
       <Helmet>
-        <title>Inflight Branding</title>
+        <title>AirMark Ads: Inflight Branding experts</title>
+        <meta
+          name="description"
+          content={
+            "Fly high with AirMark Ads, your inflight branding experts. Elevate your brand's visibility and captivate passengers worldwide with our strategic solutions"
+          }
+        />
       </Helmet>
       {/* VIDEO for Desktop */}
 

@@ -22,8 +22,14 @@ const Allout = () => {
 
   return (
     <>
-      <Helmet>
-        <title>All Outdoor</title>
+     <Helmet>
+        <title>Prime Hoarding: Maximizing Outdoor Exposure</title>
+        <meta
+          name="description"
+          content={
+            "Prime Hoarding: Elevating Outdoor Exposure with Billboard Advertisement Solutions. Reach new heights of visibility and engagement in the outdoor landscape."
+          }
+        />
       </Helmet>
       <Box
         sx={{ marginTop: { xs: "51px", sm: "51px", md: "90px", lg: "90px" } }}

@@ -23,7 +23,7 @@ import { getType, submitenquiry } from "../../redux/actions/Outdoor";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { getBlogId } from "../../redux/actions/Blog";
-
+import { Helmet } from "react-helmet";
 
 const Contactus = () => {
   const [name, setName] = useState("");
@@ -78,6 +78,16 @@ const Contactus = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>ReachOut Hoarding: Your Best Outdoor Advertising Partner</title>
+        <meta
+          name="description"
+          content={
+            "Contact Reach Out Hoarding for top-notch outdoor hoarding advertising partner. Let us amplify your brand's visibility and impact on the streets"
+          }
+        />
+      </Helmet>
+
       <Box
         sx={{ marginTop: { xs: "51px", sm: "51px", md: "66px", lg: "66px" } }}
       >

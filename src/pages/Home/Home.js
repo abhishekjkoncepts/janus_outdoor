@@ -31,12 +31,12 @@ const Home = () => {
     <>
       <Helmet>
         <title>
-          JanusAlive India's Largest Outdoor Advertising Agency In India
+        JanusAlive is the India's largest advertising agency 
         </title>
         <meta
           name="description"
           content={
-            "Boost your brand visibility with JanusAlive, India's premier outdoor advertising agency. Elevate your reach and impact through strategic outdoor campaigns"
+            "Discover the power of JanusAlive, India's largest advertising agency. Elevate your brand's reach with our innovative solutions and unparalleled expertise."
           }
         />
       </Helmet>

@@ -99,7 +99,13 @@ export default function Metro() {
   return (
     <>
       <Helmet>
-        <title>Metro Advertising</title>
+        <title>Your Metro Advertising Experts - janusalive</title>
+        <meta
+          name="description"
+          content={
+            "JanusAlive: Unlock the potential of metro advertising with our expert team. Reach diverse audiences effectively and maximize your brand's impact."
+          }
+        />
       </Helmet>
       {/* VIDEO for Desktop */}
 

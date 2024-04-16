@@ -99,7 +99,13 @@ export default function Transitmedia() {
   return (
     <>
       <Helmet>
-        <title>Transit Media Branding</title>
+        <title>TransitAds: Your Premier Transit Media Advertising Agency</title>
+        <meta
+          name="description"
+          content={
+            "TransitAds specializes in dynamic transit media advertising, driving brand visibility and engagement with strategic placements and innovative solutions"
+          }
+        />
       </Helmet>
       {/* VIDEO for Desktop */}
 
@@ -200,7 +206,7 @@ export default function Transitmedia() {
                             color: "#fff",
                           }}
                         >
-                         Transit Media Advertising
+                          Transit Media Advertising
                         </Typography>
                       </Box>
                       {/* for mobile */}
@@ -228,7 +234,7 @@ export default function Transitmedia() {
                             alignItems: "center",
                           }}
                         >
-                       Transit Media Advertising
+                          Transit Media Advertising
                         </Typography>
                         {/* <Typography
                           sx={{
@@ -298,7 +304,7 @@ export default function Transitmedia() {
                             marginTop: "-5px",
                           }}
                         >
-                         Transit Media Advertising Company
+                          Transit Media Advertising Company
                         </Typography>
                       </Box>
                     </Box>
@@ -563,28 +569,27 @@ export default function Transitmedia() {
           // sx={{ backgroundColor: "yellow" }}
         >
           <Grid container spacing={3}>
-              {products &&
-                products
-                  .filter((item) => item?.category === "Transit Media")
-                  .reverse()
-                  .map((item) => (
-                    <Cards
-                      key={item.id}
-                      data={item}
-                      onClick={() => {
-                        navigate(
-                          `/${
-                            item?.urlcat?.toLowerCase()
-                              ? item?.urlcat?.toLowerCase()
-                              : item?.urlcat
-                          }/${item?.url ? item?.url : item?.address}/`,
-                          { state: { id: item._id } }
-                        );
-                        console.log("hello world");
-                      }}
-                    />
-                  ))}
-
+            {products &&
+              products
+                .filter((item) => item?.category === "Transit Media")
+                .reverse()
+                .map((item) => (
+                  <Cards
+                    key={item.id}
+                    data={item}
+                    onClick={() => {
+                      navigate(
+                        `/${
+                          item?.urlcat?.toLowerCase()
+                            ? item?.urlcat?.toLowerCase()
+                            : item?.urlcat
+                        }/${item?.url ? item?.url : item?.address}/`,
+                        { state: { id: item._id } }
+                      );
+                      console.log("hello world");
+                    }}
+                  />
+                ))}
           </Grid>
           {isOpen && (
             <Popupcomponent ProductId={ProductId} handleClose={togglePopup} />
@@ -596,7 +601,7 @@ export default function Transitmedia() {
                 <Grid
                   container
                   sx={{
-                    marginTop:{
+                    marginTop: {
                       xs: "20px",
                       sm: "20px",
                       md: "40px",

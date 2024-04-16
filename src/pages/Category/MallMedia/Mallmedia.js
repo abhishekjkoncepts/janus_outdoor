@@ -98,8 +98,14 @@ export default function Mallmedia() {
 
   return (
     <>
-      <Helmet>
-        <title>Mall Branding</title>
+       <Helmet>
+        <title>Mall Branding agency: Your Premier Choice</title>
+        <meta
+          name="description"
+          content={
+            "Boost your mall's visibility with MallFame. Expert mall branding agency driving foot traffic and engaging shoppers with innovative solutions."
+          }
+        />
       </Helmet>
       {/* VIDEO for Desktop */}
 

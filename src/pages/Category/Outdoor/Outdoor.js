@@ -102,7 +102,13 @@ export default function Outdoor() {
   return (
     <>
       <Helmet>
-        <title>Outdoor</title>
+        <title>Where Outdoor Advertising Reaches New Heights</title>
+        <meta
+          name="description"
+          content={
+            "Trust Peak Promotions for innovative outdoor advertising that maximizes visibility and engagement. Let us take your marketing efforts to new heights, leaving a lasting impression on your audience"
+          }
+        />
       </Helmet>
       {/* VIDEO for Desktop */}
 
@@ -633,7 +639,7 @@ export default function Outdoor() {
               marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
             }}
           >
-            {products && 
+            {products &&
               products
                 .filter((item) => item?.category === "Outdoor Advertising")
                 .reverse()
@@ -650,7 +656,7 @@ export default function Outdoor() {
                         }/${item?.url ? item?.url : item?.address}/`,
                         { state: { id: item._id } }
                       );
-                      console.log("hello world");
+                      console.log("hello world state");
                     }}
                   />
                 ))}

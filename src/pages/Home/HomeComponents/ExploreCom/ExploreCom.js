@@ -438,12 +438,12 @@ const ExploreCom = () => {
                   },
                 }}
               >
-                <a
+                {/* <a
                   href="https://www.janusalive.com/outdoor-advertising-agency-in-Banglore"
                   target="_blank"
                   style={{ textDecoration: "none" }}
                   rel="noreferrer"
-                >
+                > */}
                   <Box
                     component="img"
                     sx={{
@@ -486,7 +486,7 @@ const ExploreCom = () => {
                     alt="janusLogo"
                     src={banglore}
                   />
-                </a>
+                {/* </a> */}
 
                 <Box
                   sx={{

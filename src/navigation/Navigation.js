@@ -65,7 +65,7 @@ const Navigation = () => {
           <Route path="/our-service" element={<Ourservice />} />
           <Route path="/blog/:param?" element={<Fullblog />} />
           {/* <Route path="/outdoor-advertising-agency/" element={<Outdoor />} /> */}
-          <Route path="/outdoor-advertising-agency/:param?" element={<Outdoor />} />
+          <Route path="/outdoor-advertising-agency/" element={<Outdoor />} />
           <Route path="/metro-advertising-agency/" element={<Metro />} />
           <Route
             path="/airport-branding-advertising-agency/"

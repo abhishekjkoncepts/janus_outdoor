@@ -3,7 +3,7 @@ const { createWriteStream } = require("fs");
 const path = require("path");
 
 // Create a sitemap stream instance
-const sitemap = new SitemapStream({ hostname: "http://www.example.com" });
+const sitemap = new SitemapStream({ hostname: "http://www.janusalive.com" });
 
 // Specify the path to output the sitemap
 const writeStream = createWriteStream(

@@ -140,7 +140,7 @@ export default function Outdoor() {
                 autoPlay
                 loop
                 muted
-                style={{ width: "100%", height: "90%", objectFit: "cover" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
               {/* <Box className="container"> */}
               <Box

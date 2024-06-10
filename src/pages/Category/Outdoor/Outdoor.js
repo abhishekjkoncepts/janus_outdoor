@@ -151,7 +151,7 @@ export default function Outdoor() {
                   justifyContent: "center",
                   alignItems: "center",
                   textAlign: "center",
-                  top: { xs: "50px", sm: "50px", md: "50px", lg: "50px" },
+                  top: { xs: "50px", sm: "50px", md: "150px", lg: "150px" },
                   width: "100%",
                 }}
               >

@@ -40,7 +40,7 @@ const Outdooradvertising = () => {
             <Box
               sx={{
                 width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
-                height: { xs: "50vh", sm: "50vh", md: "60vh", lg: "60vh" },
+                height: { xs: "30vh", sm: "30vh", md: "60vh", lg: "60vh" },
               }}
             >
               <video
@@ -147,7 +147,7 @@ const Outdooradvertising = () => {
                             alignItems: "center",
                           }}
                         >
-                          Outdoor Advertising
+                          Outdoor<br/> Advertising
                         </Typography>
                       </Box>
                     </Box>
@@ -192,10 +192,10 @@ const Outdooradvertising = () => {
           >
             <Box
               sx={{
-                marginTop: { xs: "30px", sm: "30px", md: "30px", lg: "30px" },
+                marginTop: { xs: "20px", sm: "20px", md: "30px", lg: "30px" },
                 marginBottom: {
-                  xs: "10px",
-                  sm: "10px",
+                  xs: "20px",
+                  sm: "20px",
                   md: "30px",
                   lg: "30px",
                 },
@@ -323,6 +323,7 @@ const Outdooradvertising = () => {
                       borderTopRightRadius: "10px",
                       borderTopLeftRadius: "10px",
                       cursor: "pointer",
+                      marginBottom:{xs:"10px"},
                       transition: "transform 0.2s ease-in-out",
                       "&:hover": {
                         transform: "scale(1.05)",
@@ -398,6 +399,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
+                      marginBottom:{xs:"10px"},
                       cursor: "pointer",
                     }}
                   >
@@ -470,6 +472,7 @@ const Outdooradvertising = () => {
                         transform: "scale(1.05)",
                       },
                       cursor: "pointer",
+                      marginBottom:{xs:"10px"},
                     }}
                   >
                     <Box
@@ -569,6 +572,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
+                      marginBottom:{xs:"10px"},
                     }}
                   >
                     <Box
@@ -639,6 +643,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
+                      marginBottom:{xs:"10px"},
                     }}
                   >
                     <Box
@@ -944,6 +949,7 @@ const Outdooradvertising = () => {
                     md: "0px",
                     lg: "0px",
                   },
+                 
                 }}
               >
                 <Typography
@@ -1092,8 +1098,8 @@ const Outdooradvertising = () => {
                   lg: "0px",
                 },
                 marginBottom: {
-                  xs: "0px",
-                  sm: "0px",
+                  xs: "20px",
+                  sm: "20px",
                   md: "30px",
                   lg: "30px",
                 },

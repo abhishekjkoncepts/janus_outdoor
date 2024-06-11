@@ -147,7 +147,8 @@ const Outdooradvertising = () => {
                             alignItems: "center",
                           }}
                         >
-                          Outdoor<br/> Advertising
+                          Outdoor
+                          <br /> Advertising
                         </Typography>
                       </Box>
                     </Box>
@@ -222,17 +223,11 @@ const Outdooradvertising = () => {
 
               <Box
                 sx={{
-                  paddingLeft: {
-                    xs: "10px",
-                    sm: "10px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  paddingRight: {
-                    xs: "10px",
-                    sm: "10px",
-                    md: "0px",
-                    lg: "0px",
+                  marginTop: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "10px",
+                    lg: "10px",
                   },
                 }}
               >
@@ -248,18 +243,20 @@ const Outdooradvertising = () => {
                     fontWeight: "600",
                     fontFamily: "Poppins, sans-serif",
                     textAlign: {
-                      xs: "left",
-                      sm: "left",
+                      xs: "center",
+                      sm: "center",
                       md: "center",
                       lg: "center",
                     },
                   }}
                 >
-                  Propel your brand's presence across cities with our  dynamic
-                  outdoor solutions, <br />
+                  Propel your brand's presence across cities with our dynamic
+                  outdoor solutions,
+                  <br />
                   delivering impactful, creative advertising excellence
                   seamlessly.
                 </Typography>
+
                 <Box>
                   <Typography
                     sx={{
@@ -275,10 +272,9 @@ const Outdooradvertising = () => {
                       textAlign: "center",
                     }}
                   >
-                    Propel your brand's presence across <br />
-                    cities with our  dynamic outdoor solutions,
-                    <br /> delivering impactful, creative advertising excellence
-                    seamlessly.
+                    Propel your brand's presence across cities with our  dynamic
+                    outdoor solutions, delivering impactful, <br />
+                    creative advertising excellence seamlessly.
                   </Typography>
                 </Box>
               </Box>
@@ -323,7 +319,7 @@ const Outdooradvertising = () => {
                       borderTopRightRadius: "10px",
                       borderTopLeftRadius: "10px",
                       cursor: "pointer",
-                      marginBottom:{xs:"10px"},
+                      marginBottom: { xs: "10px" },
                       transition: "transform 0.2s ease-in-out",
                       "&:hover": {
                         transform: "scale(1.05)",
@@ -399,7 +395,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
-                      marginBottom:{xs:"10px"},
+                      marginBottom: { xs: "10px" },
                       cursor: "pointer",
                     }}
                   >
@@ -472,7 +468,7 @@ const Outdooradvertising = () => {
                         transform: "scale(1.05)",
                       },
                       cursor: "pointer",
-                      marginBottom:{xs:"10px"},
+                      marginBottom: { xs: "10px" },
                     }}
                   >
                     <Box
@@ -527,15 +523,16 @@ const Outdooradvertising = () => {
             marginTop: {
               xs: "",
               sm: "",
-              md: "30px",
-              lg: "30px",
+              md: "0px",
+              lg: "0px",
             },
             marginBottom: {
               xs: "",
               sm: "",
-              md: "30px",
-              lg: "30px",
+              md: "0px",
+              lg: "0px",
             },
+            // backgroundColor: "orange",
           }}
         >
           <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
@@ -572,7 +569,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
-                      marginBottom:{xs:"10px"},
+                      marginBottom: { xs: "10px" },
                     }}
                   >
                     <Box
@@ -643,7 +640,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
-                      marginBottom:{xs:"10px"},
+                      marginBottom: { xs: "10px" },
                     }}
                   >
                     <Box
@@ -714,6 +711,7 @@ const Outdooradvertising = () => {
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
+                      marginBottom: { xs: "10px" },
                     }}
                   >
                     <Box
@@ -761,7 +759,24 @@ const Outdooradvertising = () => {
           <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
         </Grid>
 
-        <Grid container>
+        {/* blackBox */}
+        <Grid
+          container
+          sx={{
+            marginTop: {
+              xs: "20px",
+              sm: "20px",
+              md: "30px",
+              lg: "30px",
+            },
+            marginBottom: {
+              xs: "0px",
+              sm: "0px",
+              md: "0px",
+              lg: "0px",
+            },
+          }}
+        >
           <Grid
             item
             xs={12}
@@ -777,312 +792,134 @@ const Outdooradvertising = () => {
             sm={12}
             md={10.6}
             lg={10.6}
-            // sx={{ backgroundColor: "green" }}
+            sx={
+              {
+                // backgroundColor: "green",
+              }
+            }
           >
             <Box
               sx={{
-                position: "relative",
+                height: "100%",
+                width: "100%",
+                backgroundColor: "#000",
                 display: "flex",
+                justifyContent: "center",
                 flexDirection: "column",
-                marginTop: {
-                  xs: "50px",
-                  sm: "50px",
-                  md: "10px",
-                  lg: "10px",
-                },
-                marginBottom: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "50px",
-                  lg: "50px",
-                },
               }}
             >
               <Box
                 sx={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  backgroundColor: "black",
-                  opacity: "0.9",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  marginTop: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "30px",
+                    lg: "30px",
+                  },
                 }}
               >
-                <Box
+                <Typography
                   sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
+                    textAlign: "center",
+                    fontSize: {
+                      xs: "21px",
+                      sm: "21px",
+                      md: "33px",
+                      lg: "33px",
+                    },
+                    fontWeight: {
+                      xs: "400",
+                      sm: "400",
+                      md: "600",
+                      lg: "600",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    color: "white",
                   }}
                 >
-                  <Box sx={{}}>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "0px",
-                          sm: "0px",
-                          md: "40px",
-                          lg: "40px",
-                        },
-                        fontWeight: {
-                          xs: "0",
-                          sm: "0",
-                          md: "600",
-                          lg: "600",
-                        },
-                        fontFamily: "Poppins, sans-serif",
-                        color: "#fff",
-                        opacity: "0.9",
-                        marginTop: {
-                          md: "-20px",
-                          lg: "-20px",
-                        },
-                      }}
-                    >
-                      About Outdoor Advertising
-                    </Typography>
-                  </Box>
-
-                  <Box
-                    sx={{
-                      width: {
-                        xs: "",
-                        sm: "",
-                        md: "1000px",
-                        lg: "1000px",
-                      },
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "0px",
-                          sm: "0px",
-                          md: "14px",
-                          lg: "14px",
-                        },
-                        fontWeight: {
-                          xs: "0",
-                          sm: "0",
-                          md: "300",
-                          lg: "300",
-                        },
-                        fontFamily: "Poppins, sans-serif",
-                        color: "#fff",
-                        textAlign: "center",
-                        opacity: "0.9",
-                      }}
-                    >
-                      Outdoor advertising refers to the promotion of brands,
-                      products, or services within the outdoor environment. It
-                      involves strategically placing advertisements, signage,
-                      digital displays, and other promotional materials in
-                      high-traffic areas such as terminals, gates, baggage claim
-                      areas, and outdoor spaces. With millions of travelers
-                      passing through outdoors each day, outdoor advertising
-                      offers a unique opportunity to reach a captive and diverse
-                      audience. The visually appealing and immersive nature of
-                      outdoor advertising creates brand awareness, enhances
-                      visibility, and delivers impactful messages to travelers,
-                      making it an effective marketing channel for businesses
-                      looking to capture the attention of a highly engaged
-                      audience.
-                    </Typography>
-                  </Box>
-                </Box>
+                  About Outdoor Advertising
+                </Typography>
               </Box>
-              <Box
-                component="img"
-                sx={{
-                  height: {
-                    xs: "0px",
-                    sm: "0px",
-                    md: "260px",
-                    lg: "260px",
-                  },
-                  width: {
-                    xs: "0px",
-                    sm: "0px",
-                    md: "100%",
-                    lg: "100%",
-                  },
-                }}
-                src={sampleImg}
-              />
-            </Box>
 
-            {/* About Outdoor Services in India */}
-            <Box>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: {
-                    xs: "center",
-                    sm: "center",
-                    md: "flex-start",
-                    lg: "flex-start",
-                  },
-                  alignItems: {
-                    xs: "center",
-                    sm: "center",
-                    md: "none",
-                    lg: "none",
-                  },
-                  paddingLeft: {
-                    xs: "20px",
-                    sm: "20px",
-                    md: "0px",
-                    lg: "0px",
-                  },
-                  paddingRight: {
-                    xs: "20px",
-                    sm: "20px",
-                    md: "0px",
-                    lg: "0px",
-                  },
                   marginTop: {
-                    xs: "-40px",
-                    sm: "-40px",
-                    md: "0px",
-                    lg: "0px",
+                    xs: "10px",
+                    sm: "10px",
+                    md: "5px",
+                    lg: "5px",
                   },
-                 
+                  marginBottom: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "30px",
+                    lg: "30px",
+                  },
                 }}
               >
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "30px",
-                      lg: "30px",
+                      xs: "12px",
+                      sm: "12px",
+                      md: "14px",
+                      lg: "14px",
                     },
                     fontWeight: {
-                      xs: "600",
-                      sm: "600",
-                      md: "700",
-                      lg: "700",
+                      xs: "500",
+                      sm: "500",
+                      md: "300",
+                      lg: "300",
+                    },
+                    paddingLeft: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                    paddingRight: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "20px",
+                      lg: "20px",
                     },
                     fontFamily: "Poppins, sans-serif",
-                    color: "#000",
-                    marginTop: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "30px",
-                      lg: "30px",
-                    },
-                    alignItems: {
-                      xs: "center",
-                      sm: "center",
-                      md: "none",
-                      lg: "none",
-                    },
+                    color: "#fff",
+                    textAlign: "center",
                   }}
                 >
-                  About Outdoor Services in India
+                  Outdoor advertising refers to the promotion of brands,
+                  products, or services within the outdoor environment. It
+                  involves strategically placing advertisements, signage,
+                  digital displays, and other promotional materials in
+                  high-traffic areas such as terminals, gates, baggage claim
+                  areas, and outdoor spaces. With millions of travelers passing
+                  through outdoors each day, outdoor advertising offers a unique
+                  opportunity to reach a captive and diverse audience. The
+                  visually appealing and immersive nature of outdoor advertising
+                  creates brand awareness, enhances visibility, and delivers
+                  impactful messages to travelers, making it an effective
+                  marketing channel for businesses looking to capture the
+                  attention of a highly engaged audience.
                 </Typography>
               </Box>
-              <Box
-                sx={{
-                  paddingLeft: {
-                    xs: "20px",
-                    sm: "20px",
-                    md: "40px",
-                    lg: "40px",
-                  },
-                }}
-              >
-                <Box>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "16px",
-                        lg: "16px",
-                      },
-                      fontWeight: {
-                        xs: "500",
-                        sm: "500",
-                        md: "500",
-                        lg: "500",
-                      },
-                      fontFamily: "Poppins, sans-serif",
-                      color: "rgb(33, 37, 41)",
-                      marginTop: {
-                        xs: "20px",
-                        sm: "20px",
-                        md: "30px",
-                        lg: "30px",
-                      },
-                    }}
-                  >
-                    <span>•</span> Outdoor Advertising Company in India
-                  </Typography>
-                </Box>
-                <Box>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "16px",
-                        lg: "16px",
-                      },
-                      fontWeight: {
-                        xs: "500",
-                        sm: "500",
-                        md: "500",
-                        lg: "500",
-                      },
-                      fontFamily: "Poppins, sans-serif",
-                      color: "rgb(33, 37, 41)",
-                      marginTop: {
-                        xs: "3px",
-                        sm: "3px",
-                        md: "3px",
-                        lg: "3px",
-                      },
-                    }}
-                  >
-                    <span>•</span> Outdoor Magazine Advertising
-                  </Typography>
-                </Box>
-                <Box>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "16px",
-                        lg: "16px",
-                      },
-                      fontWeight: {
-                        xs: "500",
-                        sm: "500",
-                        md: "500",
-                        lg: "500",
-                      },
-                      fontFamily: "Poppins, sans-serif",
-                      color: "rgb(33, 37, 41)",
-                      marginTop: {
-                        xs: "3px",
-                        sm: "3px",
-                        md: "3px",
-                        lg: "3px",
-                      },
-                    }}
-                  >
-                    <span>•</span> Outdoor Advertising Costs
-                  </Typography>
-                </Box>
-              </Box>
             </Box>
+          </Grid>
 
-            {/* Why outdoor Advertising Drive up the sales */}
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "red" }}
+          ></Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
+          <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
+            {/* About Outdoor Services in India */}
             <Box
               sx={{
                 paddingLeft: {
@@ -1097,46 +934,316 @@ const Outdooradvertising = () => {
                   md: "0px",
                   lg: "0px",
                 },
-                marginBottom: {
+                marginTop: {
                   xs: "20px",
                   sm: "20px",
                   md: "30px",
                   lg: "30px",
                 },
+                // backgroundColor:"red"
               }}
             >
-              <Box>
-                <Typography
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "21px",
+                    sm: "21px",
+                    md: "33px",
+                    lg: "33px",
+                  },
+                  fontWeight: {
+                    xs: "600",
+                    sm: "600",
+                    md: "700",
+                    lg: "700",
+                  },
+                  fontFamily: "Poppins, sans-serif",
+                  color: "#000",
+                  textAlign: {
+                    xs: "left",
+                    sm: "left",
+                    md: "none",
+                    lg: "none",
+                  },
+                }}
+              >
+                About Outdoor Services in India
+              </Typography>
+            </Box>
+
+            {/* para */}
+            <Box
+              sx={{
+                paddingLeft: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
+                paddingRight: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
+                marginTop: {
+                  xs: "5px",
+                  sm: "5px",
+                  md: "10px",
+                  lg: "10px",
+                },
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "14px",
+                    sm: "14px",
+                    md: "16px",
+                    lg: "16px",
+                  },
+                  fontWeight: {
+                    xs: "500",
+                    sm: "500",
+                    md: "500",
+                    lg: "500",
+                  },
+                  fontFamily: "Poppins, sans-serif",
+                  color: "#000",
+                  textAlign: {
+                    xs: "left",
+                    sm: "left",
+                    md: "none",
+                    lg: "none",
+                  },
+                }}
+              >
+                Outdoor services in India include billboard advertising, street
+                furniture maintenance, and public art installations. These
+                services enhance public spaces and promote businesses,
+                contributing to urban beautification and community engagement.
+                They also play a key role in marketing strategies, increasing
+                visibility and consumer interest.
+              </Typography>
+            </Box>
+
+            {/* 3 bullet points */}
+            <Box
+              sx={{
+                paddingLeft: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
+                paddingRight: {
+                  xs: "20px",
+                  sm: "20px",
+                  md: "0px",
+                  lg: "0px",
+                },
+                marginLeft: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                marginTop: {
+                  xs: "5px",
+                  sm: "5px",
+                  md: "20px",
+                  lg: "20px",
+                },
+              }}
+            >
+              {/* Outdoor Advertising Company in India */}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={bulletArrow}
                   sx={{
-                    fontSize: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "30px",
-                      lg: "30px",
+                    height: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "15px",
+                      lg: "15px",
                     },
-                    fontWeight: {
-                      xs: "0",
-                      sm: "0",
-                      md: "700",
-                      lg: "700",
-                    },
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#000",
-                    marginTop: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "30px",
-                      lg: "30px",
+                    width: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "13px",
+                      lg: "13px",
                     },
                   }}
-                ></Typography>
+                />
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "30px",
-                      lg: "30px",
+                      xs: "14px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "16px",
+                    },
+                    fontWeight: {
+                      xs: "500",
+                      sm: "500",
+                      md: "500",
+                      lg: "500",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    color: "rgb(33, 37, 41)",
+                  }}
+                >
+                  &nbsp;Outdoor Advertising Company in India
+                </Typography>
+              </Box>
+
+              {/* Outdoor Magazine Advertising */}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  marginTop:{
+                    xs:"5px",
+                    sm:"5px",
+                    md:"10px",
+                    lg:"10px"
+                  }
+                }}
+              >
+                <Box
+                  component="img"
+                  src={bulletArrow}
+                  sx={{
+                    height: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    width: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "13px",
+                      lg: "13px",
+                    },
+                  }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "14px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "16px",
+                    },
+                    fontWeight: {
+                      xs: "500",
+                      sm: "500",
+                      md: "500",
+                      lg: "500",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    color: "rgb(33, 37, 41)",
+                  }}
+                >
+                  &nbsp;Outdoor Magazine Advertising
+                </Typography>
+              </Box>
+              {/* Outdoor Advertising Costs */}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  marginTop:{
+                    xs:"5px",
+                    sm:"5px",
+                    md:"10px",
+                    lg:"10px"
+                  }
+                }}
+              >
+                <Box
+                  component="img"
+                  src={bulletArrow}
+                  sx={{
+                    height: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    width: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "13px",
+                      lg: "13px",
+                    },
+                  }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "14px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "16px",
+                    },
+                    fontWeight: {
+                      xs: "500",
+                      sm: "500",
+                      md: "500",
+                      lg: "500",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    color: "rgb(33, 37, 41)",
+                  }}
+                >
+                  &nbsp;Outdoor Advertising Costs
+                </Typography>
+              </Box>
+            </Box>
+
+            {/* Why outdoor Advertising Drive up the sales */}
+            <Box>
+              {/* title */}
+              <Box
+                sx={{
+                  paddingLeft: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  paddingRight: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginTop: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "21px",
+                      sm: "21px",
+                      md: "33px",
+                      lg: "33px",
                     },
                     fontWeight: {
                       xs: "600",
@@ -1146,15 +1253,9 @@ const Outdooradvertising = () => {
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#000",
-                    marginTop: {
-                      xs: "0px",
-                      sm: "0px",
-                      md: "30px",
-                      lg: "30px",
-                    },
-                    alignItems: {
-                      xs: "center",
-                      sm: "center",
+                    textAlign: {
+                      xs: "left",
+                      sm: "left",
                       md: "none",
                       lg: "none",
                     },
@@ -1164,29 +1265,45 @@ const Outdooradvertising = () => {
                 </Typography>
               </Box>
 
-              <Box>
+              {/* para */}
+              <Box
+                sx={{
+                  paddingLeft: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  paddingRight: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginTop: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                }}
+              >
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "15px",
-                      sm: "15px",
+                      xs: "14px",
+                      sm: "14px",
                       md: "16px",
                       lg: "16px",
                     },
                     fontWeight: {
-                      xs: "400",
-                      sm: "400",
+                      xs: "500",
+                      sm: "500",
                       md: "500",
                       lg: "500",
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#000",
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "10px",
-                      lg: "10px",
-                    },
                   }}
                 >
                   Outdoor advertising is an effective strategy that can drive up
@@ -1202,28 +1319,42 @@ const Outdooradvertising = () => {
                 </Typography>
               </Box>
 
+              {/* 2nd bullet points */}
               <Box
                 sx={{
                   paddingLeft: {
                     xs: "20px",
                     sm: "20px",
-                    md: "40px",
-                    lg: "40px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  paddingRight: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  marginLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "20px",
+                    lg: "20px",
                   },
                 }}
               >
+                {/* 1 */}
                 <Box>
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "14px",
+                        sm: "14px",
                         md: "16px",
                         lg: "16px",
                       },
                       fontWeight: {
-                        xs: "400",
-                        sm: "40 0",
+                        xs: "500",
+                        sm: "500",
                         md: "500",
                         lg: "500",
                       },
@@ -1250,33 +1381,22 @@ const Outdooradvertising = () => {
                         width: {
                           xs: "10px",
                           sm: "10px",
-                          md: "15px",
-                          lg: "15px",
+                          md: "13px",
+                          lg: "13px",
                         },
-                        marginLeft: "-20px",
                       }}
                     />
                     <span
                       style={{
-                        fontSize: {
-                          xs: "15px",
-                          sm: "15px",
-                          md: "16px",
-                          lg: "16px",
-                        },
-                        fontWeight: {
-                          xs: "400",
-                          sm: "400",
-                          md: "500",
-                          lg: "500",
-                        },
+                        fontSize:"17px",
+                        fontWeight:"600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
                     >
-                      {" "}High Visibility :&nbsp;
+                      &nbsp;High Visibility :&nbsp;
                     </span>
-                    outdoors are bustling hubs with a high influx of passengers,
+                    Outdoors are bustling hubs with a high influx of passengers,
                     including business travelers, tourists, and other
                     individuals. outdoor advertising allows businesses to
                     capture the attention of a captive and diverse audience,
@@ -1284,18 +1404,19 @@ const Outdooradvertising = () => {
                     services.
                   </Typography>
                 </Box>
+                {/* 2 */}
                 <Box>
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "14px",
+                        sm: "14px",
                         md: "16px",
                         lg: "16px",
                       },
                       fontWeight: {
-                        xs: "400",
-                        sm: "40 0",
+                        xs: "500",
+                        sm: "500",
                         md: "500",
                         lg: "500",
                       },
@@ -1309,7 +1430,7 @@ const Outdooradvertising = () => {
                       },
                     }}
                   >
-                  <Box
+                    <Box
                       component="img"
                       src={bulletArrow}
                       sx={{
@@ -1322,31 +1443,20 @@ const Outdooradvertising = () => {
                         width: {
                           xs: "10px",
                           sm: "10px",
-                          md: "15px",
-                          lg: "15px",
+                          md: "13px",
+                          lg: "13px",
                         },
-                        marginLeft: "-20px",
                       }}
                     />
                     <span
                       style={{
-                        fontSize: {
-                          xs: "15px",
-                          sm: "15px",
-                          md: "16px",
-                          lg: "16px",
-                        },
-                        fontWeight: {
-                          xs: "400",
-                          sm: "400",
-                          md: "500",
-                          lg: "500",
-                        },
+                        fontSize:"17px",
+                        fontWeight:"600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
                     >
-                     {" "}Targeted Audience :&nbsp;
+                      &nbsp;Targeted Audience :&nbsp;
                     </span>
                     The audience at outdoors consists of individuals who are
                     likely to have disposable income and a higher propensity to
@@ -1355,18 +1465,19 @@ const Outdooradvertising = () => {
                     likelihood of driving sales.
                   </Typography>
                 </Box>
+                {/* 3 */}
                 <Box>
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "14px",
+                        sm: "14px",
                         md: "16px",
                         lg: "16px",
                       },
                       fontWeight: {
-                        xs: "400",
-                        sm: "40 0",
+                        xs: "500",
+                        sm: "500",
                         md: "500",
                         lg: "500",
                       },
@@ -1380,7 +1491,7 @@ const Outdooradvertising = () => {
                       },
                     }}
                   >
-                   <Box
+                    <Box
                       component="img"
                       src={bulletArrow}
                       sx={{
@@ -1393,31 +1504,20 @@ const Outdooradvertising = () => {
                         width: {
                           xs: "10px",
                           sm: "10px",
-                          md: "15px",
-                          lg: "15px",
+                          md: "13px",
+                          lg: "13px",
                         },
-                        marginLeft: "-20px",
                       }}
                     />
                     <span
                       style={{
-                        fontSize: {
-                          xs: "15px",
-                          sm: "15px",
-                          md: "16px",
-                          lg: "16px",
-                        },
-                        fontWeight: {
-                          xs: "400",
-                          sm: "400",
-                          md: "500",
-                          lg: "500",
-                        },
+                        fontSize:"17px",
+                        fontWeight:"600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
                     >
-                      {" "}Extented Dwell Time :&nbsp;
+                      &nbsp;Extented Dwell Time :&nbsp;
                     </span>
                     Passengers often spend considerable time at outdoors,
                     waiting for flights, clearing security checks, or collecting
@@ -1427,19 +1527,19 @@ const Outdooradvertising = () => {
                     purchase decisions.
                   </Typography>
                 </Box>
-
+                {/* 4 */}
                 <Box>
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "14px",
+                        sm: "14px",
                         md: "16px",
                         lg: "16px",
                       },
                       fontWeight: {
-                        xs: "400",
-                        sm: "40 0",
+                        xs: "500",
+                        sm: "500",
                         md: "500",
                         lg: "500",
                       },
@@ -1453,7 +1553,7 @@ const Outdooradvertising = () => {
                       },
                     }}
                   >
-                  <Box
+                    <Box
                       component="img"
                       src={bulletArrow}
                       sx={{
@@ -1466,31 +1566,20 @@ const Outdooradvertising = () => {
                         width: {
                           xs: "10px",
                           sm: "10px",
-                          md: "15px",
-                          lg: "15px",
+                          md: "13px",
+                          lg: "13px",
                         },
-                        marginLeft: "-20px",
                       }}
                     />
                     <span
                       style={{
-                        fontSize: {
-                          xs: "15px",
-                          sm: "15px",
-                          md: "16px",
-                          lg: "16px",
-                        },
-                        fontWeight: {
-                          xs: "400",
-                          sm: "400",
-                          md: "500",
-                          lg: "500",
-                        },
+                        fontSize:"17px",
+                        fontWeight:"600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
                     >
-                      {" "}Positive Brand Association :
+                      &nbsp;Positive Brand Association :
                     </span>
                     &nbsp;Associating a brand with outdoors and airlines can
                     create a positive image and enhance brand credibility.
@@ -1499,18 +1588,19 @@ const Outdooradvertising = () => {
                     loyalty and higher sales.
                   </Typography>
                 </Box>
+                {/* 5 */}
                 <Box>
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "14px",
+                        sm: "14px",
                         md: "16px",
                         lg: "16px",
                       },
                       fontWeight: {
-                        xs: "400",
-                        sm: "40 0",
+                        xs: "500",
+                        sm: "500",
                         md: "500",
                         lg: "500",
                       },
@@ -1524,7 +1614,7 @@ const Outdooradvertising = () => {
                       },
                     }}
                   >
-                   <Box
+                    <Box
                       component="img"
                       src={bulletArrow}
                       sx={{
@@ -1537,33 +1627,22 @@ const Outdooradvertising = () => {
                         width: {
                           xs: "10px",
                           sm: "10px",
-                          md: "15px",
-                          lg: "15px",
+                          md: "13px",
+                          lg: "13px",
                         },
-                        marginLeft: "-20px",
                       }}
                     />
                     <span
                       style={{
-                        fontSize: {
-                          xs: "15px",
-                          sm: "15px",
-                          md: "16px",
-                          lg: "16px",
-                        },
-                        fontWeight: {
-                          xs: "400",
-                          sm: "400",
-                          md: "500",
-                          lg: "500",
-                        },
+                        fontSize:"17px",
+                        fontWeight:"600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
                     >
-                      {" "}Multiple Touchpoints: :&nbsp;
+                      &nbsp;Multiple Touchpoints: :&nbsp;
                     </span>
-                    outdoors offer numerous advertising touchpoints, including
+                    Outdoors offer numerous advertising touchpoints, including
                     digital displays, billboards, baggage claim areas, lounges,
                     boarding gates, and even airline interiors. By strategically
                     placing advertisements across these touchpoints, businesses
@@ -1574,29 +1653,51 @@ const Outdooradvertising = () => {
                 </Box>
               </Box>
 
-              <Box>
+              {/* para */}
+              <Box
+                sx={{
+                  marginTop: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "25px",
+                    lg: "25px",
+                  },
+                  marginBottom: {
+                    xs: "15px",
+                    sm: "15px",
+                    md: "30px",
+                    lg: "30px",
+                  },
+                  paddingLeft: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                  paddingRight: {
+                    xs: "20px",
+                    sm: "20px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+              >
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: "15px",
-                      sm: "15px",
+                      xs: "14px",
+                      sm: "14px",
                       md: "16px",
                       lg: "16px",
                     },
                     fontWeight: {
-                      xs: "400",
-                      sm: "400",
+                      xs: "500",
+                      sm: "500",
                       md: "500",
                       lg: "500",
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#000",
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "20px",
-                      lg: "20px",
-                    },
                   }}
                 >
                   To leverage the benefits of outdoor advertising, businesses
@@ -1613,14 +1714,7 @@ const Outdooradvertising = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.7}
-            lg={0.7}
-            // sx={{ backgroundColor: "red" }}
-          ></Grid>
+          <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
         </Grid>
       </Box>
     </>

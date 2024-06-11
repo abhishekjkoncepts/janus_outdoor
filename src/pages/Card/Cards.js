@@ -25,9 +25,9 @@ const Cards = ({ data, onClick }) => {
           <Card
             variant="outlined"
             sx={{
-              borderTopLeftRadius: "150px",
-              borderTopRightRadius: "150px",
-              borderRadius: "170px 170px 0 0",
+              // borderTopLeftRadius: "150px",
+              // borderTopRightRadius: "150px",
+              // borderRadius: "170px 170px 0 0",
               border: "2px solid #C02222",
               background: "linear-gradient(to bottom, #C02222 85%, #000)",
             }}
@@ -40,13 +40,13 @@ const Cards = ({ data, onClick }) => {
               <Box>
                 <CardMedia
                   component="img"
-                  height="340"
+                  height="210"
                   width="80"
                   image={data?.image}
                   alt="Main Image"
                   sx={{
-                    borderTopLeftRadius: "150px",
-                    borderTopRightRadius: "150px",
+                    // borderTopLeftRadius: "150px",
+                    // borderTopRightRadius: "150px",
                   }}
                 />
               </Box>

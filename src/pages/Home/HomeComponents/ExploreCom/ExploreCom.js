@@ -179,7 +179,6 @@ const ExploreCom = () => {
                 }
               }
             >
-              {/* <Link href="https://www.janusalive.com/outdoor-advertising-agency-in-Delhi"> */}
                 <Box
                   sx={{
                     position: "relative",
@@ -211,12 +210,7 @@ const ExploreCom = () => {
                     },
                   }}
                 >
-                  <a
-                    href="https://www.janusalive.com/outdoor-advertising-agency-in-Delhi"
-                    target="_blank"
-                    style={{ textDecoration: "none" }}
-                    rel="noreferrer"
-                  >
+                 
                     <Box
                       component="img"
                       sx={{
@@ -241,7 +235,6 @@ const ExploreCom = () => {
                       alt="Delhi"
                       src={delhi}
                     />
-                  </a>
 
                   <Box
                     sx={{
@@ -293,7 +286,6 @@ const ExploreCom = () => {
                     </Box>
                   </Box>
                 </Box>
-              {/* </Link> */}
             </Grid>
             {/* MUMBAI---------------------------- */}
             <Grid
@@ -438,12 +430,7 @@ const ExploreCom = () => {
                   },
                 }}
               >
-                {/* <a
-                  href="https://www.janusalive.com/outdoor-advertising-agency-in-Banglore"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                  rel="noreferrer"
-                > */}
+
                   <Box
                     component="img"
                     sx={{

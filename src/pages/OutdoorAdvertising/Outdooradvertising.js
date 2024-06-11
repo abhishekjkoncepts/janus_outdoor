@@ -296,6 +296,7 @@ const Outdooradvertising = () => {
           <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
           <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
             <Grid container>
+              {/* DIGITAL */}
               <Grid
                 item
                 xs={12}
@@ -309,64 +310,65 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-              <Link to="/outdoor-advertising-agency/" style={{textDecoration:"none"}}>
-                <Box
-                  sx={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                >
+                <Link to="/digital/" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      height: "160px",
-                      width: "100%",
-                      backgroundColor: "black",
-                      opacity: "0.8",
-
+                      position: "relative",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "40px",
-                      fontFamily: "Poppins, sans-serif",
+                      flexDirection: "column",
+                      borderRadius: "10px",
+                      borderTopRightRadius: "10px",
+                      borderTopLeftRadius: "10px",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        height: "160px",
+                        width: "100%",
+                        backgroundColor: "black",
+                        opacity: "0.8",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#fff",
+                        fontWeight: "700",
+                        fontSize: "40px",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      DIGITAL
-                    </Typography>
-                  </Box>
+                      <Typography
+                        sx={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                          textAlign: "center",
+                        }}
+                      >
+                        DIGITAL
+                      </Typography>
+                    </Box>
 
-                  <img
-                    src={worldimg}
-                    style={{
-                      height: "160px",
-                      width: "100%",
-                    }}
-                  />
-                </Box>
-                </Link>   
+                    <img
+                      src={worldimg}
+                      style={{
+                        height: "160px",
+                        width: "100%",
+                      }}
+                    />
+                  </Box>
+                </Link>
               </Grid>
 
+              {/* UNIPOLE */}
               <Grid
                 item
                 xs={12}
@@ -380,63 +382,64 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-               <Link to="/metro-advertising-agency/" style={{textDecoration:"none"}}>
-                <Box
-                  sx={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                    cursor: "pointer",
-                  }}
-                >
+                <Link to="/unipole/" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      height: "160px",
-                      width: "100%",
-                      backgroundColor: "black",
-                      opacity: "0.8",
-
+                      position: "relative",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "40px",
-                      fontFamily: "Poppins, sans-serif",
+                      flexDirection: "column",
+                      borderRadius: "10px",
+                      borderTopRightRadius: "10px",
+                      borderTopLeftRadius: "10px",
+                      transition: "transform 0.2s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
+                      cursor: "pointer",
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        height: "160px",
+                        width: "100%",
+                        backgroundColor: "black",
+                        opacity: "0.8",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#fff",
+                        fontWeight: "700",
+                        fontSize: "40px",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                    UNIPOLE
-                    </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                          textAlign: "center",
+                        }}
+                      >
+                        UNIPOLE
+                      </Typography>
+                    </Box>
+                    <img
+                      src={worldimg}
+                      style={{
+                        height: "160px",
+                        width: "100%",
+                      }}
+                    />
                   </Box>
-                  <img
-                    src={worldimg}
-                    style={{
-                      height: "160px",
-                      width: "100%",
-                    }}
-                  />
-                </Box>
                 </Link>
               </Grid>
 
+              {/* BILLBOARD */}
               <Grid
                 item
                 xs={12}
@@ -450,59 +453,61 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  sx={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                    cursor: "pointer",
-                  }}
-                >
+                <Link to="/billboard/" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      height: "160px",
-                      width: "100%",
-                      backgroundColor: "black",
-                      opacity: "0.8",
-
+                      position: "relative",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "40px",
-                      fontFamily: "Poppins, sans-serif",
+                      flexDirection: "column",
+                      borderRadius: "10px",
+                      borderTopRightRadius: "10px",
+                      borderTopLeftRadius: "10px",
+                      transition: "transform 0.2s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
+                      cursor: "pointer",
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        height: "160px",
+                        width: "100%",
+                        backgroundColor: "black",
+                        opacity: "0.8",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#fff",
+                        fontWeight: "700",
+                        fontSize: "40px",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                    BILLBOARD
-                    </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                          textAlign: "center",
+                        }}
+                      >
+                        BILLBOARD
+                      </Typography>
+                    </Box>
+                    <img
+                      src={worldimg}
+                      style={{
+                        height: "160px",
+                        width: "100%",
+                      }}
+                    />
                   </Box>
-                  <img
-                    src={worldimg}
-                    style={{
-                      height: "160px",
-                      width: "100%",
-                    }}
-                  />
-                </Box>
+                </Link>
               </Grid>
             </Grid>
           </Grid>
@@ -530,6 +535,7 @@ const Outdooradvertising = () => {
           <Grid item xs={12} sm={12} md={0.7} lg={0.7}></Grid>
           <Grid item xs={12} sm={12} md={10.6} lg={10.6}>
             <Grid container>
+              {/* DIGITAL BILLBOARD */}
               <Grid
                 item
                 xs={12}
@@ -543,60 +549,66 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  sx={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                  }}
+                <Link
+                  to="/digital-billboard/"
+                  style={{ textDecoration: "none" }}
                 >
                   <Box
                     sx={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      height: "160px",
-                      width: "100%",
-                      backgroundColor: "black",
-                      opacity: "0.8",
-
+                      position: "relative",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "40px",
-                      fontFamily: "Poppins, sans-serif",
+                      flexDirection: "column",
+                      borderRadius: "10px",
+                      borderTopRightRadius: "10px",
+                      borderTopLeftRadius: "10px",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        height: "160px",
+                        width: "100%",
+                        backgroundColor: "black",
+                        opacity: "0.8",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#fff",
+                        fontWeight: "700",
+                        fontSize: "40px",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      DIGITAL BILLBOARD
-                    </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                          textAlign: "center",
+                        }}
+                      >
+                        DIGITAL BILLBOARD
+                      </Typography>
+                    </Box>
+                    <img
+                      src={worldimg}
+                      style={{
+                        height: "160px",
+                        width: "100%",
+                      }}
+                    />
                   </Box>
-                  <img
-                    src={worldimg}
-                    style={{
-                      height: "160px",
-                      width: "100%",
-                    }}
-                  />
-                </Box>
+                </Link>
               </Grid>
+              {/* OOH */}
               <Grid
                 item
                 xs={12}
@@ -610,60 +622,63 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  sx={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                >
+                <Link to="/ooh/">
                   <Box
                     sx={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      height: "160px",
-                      width: "100%",
-                      backgroundColor: "black",
-                      opacity: "0.8",
-
+                      position: "relative",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "40px",
-                      fontFamily: "Poppins, sans-serif",
+                      flexDirection: "column",
+                      borderRadius: "10px",
+                      borderTopRightRadius: "10px",
+                      borderTopLeftRadius: "10px",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        height: "160px",
+                        width: "100%",
+                        backgroundColor: "black",
+                        opacity: "0.8",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#fff",
+                        fontWeight: "700",
+                        fontSize: "40px",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                    OOH
-                    </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                          textAlign: "center",
+                        }}
+                      >
+                        OOH
+                      </Typography>
+                    </Box>
+                    <img
+                      src={worldimg}
+                      style={{
+                        height: "160px",
+                        width: "100%",
+                      }}
+                    />
                   </Box>
-                  <img
-                    src={worldimg}
-                    style={{
-                      height: "160px",
-                      width: "100%",
-                    }}
-                  />
-                </Box>
+                </Link>
               </Grid>
+              {/* BUS ADVERTSING */}
               <Grid
                 item
                 xs={12}
@@ -677,59 +692,61 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  sx={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                >
+                <Link to="/bus-advertising/">
                   <Box
                     sx={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      height: "160px",
-                      width: "100%",
-                      backgroundColor: "black",
-                      opacity: "0.8",
-
+                      position: "relative",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "40px",
-                      fontFamily: "Poppins, sans-serif",
+                      flexDirection: "column",
+                      borderRadius: "10px",
+                      borderTopRightRadius: "10px",
+                      borderTopLeftRadius: "10px",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
                     }}
                   >
-                    <Typography
+                    <Box
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: "600",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        height: "160px",
+                        width: "100%",
+                        backgroundColor: "black",
+                        opacity: "0.8",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        color: "#fff",
+                        fontWeight: "700",
+                        fontSize: "40px",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                     BUS ADVERTISING
-                    </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                          textAlign: "center",
+                        }}
+                      >
+                        BUS ADVERTISING
+                      </Typography>
+                    </Box>
+                    <img
+                      src={worldimg}
+                      style={{
+                        height: "160px",
+                        width: "100%",
+                      }}
+                    />
                   </Box>
-                  <img
-                    src={worldimg}
-                    style={{
-                      height: "160px",
-                      width: "100%",
-                    }}
-                  />
-                </Box>
+                </Link>
               </Grid>
             </Grid>
           </Grid>

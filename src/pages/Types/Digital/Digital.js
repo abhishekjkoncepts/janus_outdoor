@@ -132,7 +132,7 @@ export default function Unipole() {
             <Box
               sx={{
                 width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
-                height: { xs: "50vh", sm: "50vh", md: "100vh", lg: "100vh" },
+                height: { xs: "50vh", sm: "50vh", md: "60vh", lg: "60vh" },
               }}
             >
               <video
@@ -151,7 +151,7 @@ export default function Unipole() {
                   justifyContent: "center",
                   alignItems: "center",
                   textAlign: "center",
-                  top: { xs: "50px", sm: "50px", md: "150px", lg: "150px" },
+                  top: { xs: "50px", sm: "50px", md: "80px", lg: "80px" },
                   width: "100%",
                 }}
               >

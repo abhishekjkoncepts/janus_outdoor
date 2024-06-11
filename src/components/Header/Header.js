@@ -511,12 +511,12 @@ function Header(props) {
                             paddingBottom: "5px",
                           }}
                         >
-                          Outdoor Ad
+                          Outdoor Advertisement
                         </Typography>
                       </Link>
                     </Box>
-                    {/* outdoor */}
-                    <Box
+                    {/* outdoor ADVERTISMENT */}
+                    {/* <Box
                       sx={{
                         marginTop: "5px",
                         borderBottom: "1px solid #D3D3D3",
@@ -545,7 +545,7 @@ function Header(props) {
                           Outdoor Advertising
                         </Typography>
                       </Link>
-                    </Box>
+                    </Box> */}
 
                     {/* metro*/}
                     <Box sx={{ borderBottom: "1px solid #D3D3D3" }}>

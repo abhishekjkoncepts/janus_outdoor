@@ -309,7 +309,7 @@ const Outdooradvertising = () => {
                   alignItems: "center",
                 }}
               >
-              <Link to="/digital/" style={{textDecoration:"none"}}>
+              <Link to="/outdoor-advertising-agency/" style={{textDecoration:"none"}}>
                 <Box
                   sx={{
                     position: "relative",
@@ -352,8 +352,7 @@ const Outdooradvertising = () => {
                         textAlign: "center",
                       }}
                     >
-                      OUTDOOR <br />
-                      ADVERTISING
+                      DIGITAL
                     </Typography>
                   </Box>
 
@@ -424,8 +423,7 @@ const Outdooradvertising = () => {
                         textAlign: "center",
                       }}
                     >
-                      METRO <br />
-                      ADVERTISING
+                    UNIPOLE
                     </Typography>
                   </Box>
                   <img
@@ -438,6 +436,7 @@ const Outdooradvertising = () => {
                 </Box>
                 </Link>
               </Grid>
+
               <Grid
                 item
                 xs={12}
@@ -493,9 +492,7 @@ const Outdooradvertising = () => {
                         textAlign: "center",
                       }}
                     >
-                      AIRPORT
-                      <br />
-                      ADVERTISING
+                    BILLBOARD
                     </Typography>
                   </Box>
                   <img
@@ -588,9 +585,7 @@ const Outdooradvertising = () => {
                         textAlign: "center",
                       }}
                     >
-                      MALL
-                      <br />
-                      ADVERTISING
+                      DIGITAL BILLBOARD
                     </Typography>
                   </Box>
                   <img
@@ -657,9 +652,7 @@ const Outdooradvertising = () => {
                         textAlign: "center",
                       }}
                     >
-                      INFLIGHT
-                      <br />
-                      ADVERTISING
+                    OOH
                     </Typography>
                   </Box>
                   <img
@@ -726,9 +719,7 @@ const Outdooradvertising = () => {
                         textAlign: "center",
                       }}
                     >
-                      TRANSIT
-                      <br />
-                      ADVERTISING
+                     BUS ADVERTISING
                     </Typography>
                   </Box>
                   <img

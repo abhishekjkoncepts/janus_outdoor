@@ -484,6 +484,37 @@ function Header(props) {
                   MenuListProps={{ onMouseLeave: handleCloseMenu }}
                 >
                   <Box sx={{ width: "250px", borderRadius: "0px" }}>
+                  {/* outdoor Advertising */}
+                  <Box
+                      sx={{
+                        marginTop: "5px",
+                        borderBottom: "1px solid #D3D3D3",
+                      }}
+                    >
+                      <Link
+                        to={"/outdoor-advertising/"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography
+                          sx={{
+                            marginLeft: "20px",
+                            paddingTop: "1px",
+                            paddingBottom: "1px",
+                            color: "#000",
+                            "&:hover": {
+                              color: "red",
+                              cursor: "pointer",
+                            },
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            fontFamily: "Poppins, sans-serif",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          Outdoor Ad
+                        </Typography>
+                      </Link>
+                    </Box>
                     {/* outdoor */}
                     <Box
                       sx={{

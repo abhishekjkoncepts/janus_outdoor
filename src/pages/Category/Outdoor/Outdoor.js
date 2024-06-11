@@ -179,8 +179,8 @@ export default function Outdoor() {
                         marginTop: {
                           xs: "50px",
                           sm: "50px",
-                          md: "100px",
-                          lg: "100px",
+                          md: "50px",
+                          lg: "50px",
                         },
                         display: "flex",
                         flexDirection: "column",
@@ -635,7 +635,7 @@ export default function Outdoor() {
             container
             spacing={2}
             sx={{
-              marginTop: { xs: "-20px", sm: "-20px", md: "-50px", lg: "-50px" },
+              marginTop: { xs: "-20px", sm: "-20px", md: "-50px", lg: "-20px" },
               marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
             }}
           >

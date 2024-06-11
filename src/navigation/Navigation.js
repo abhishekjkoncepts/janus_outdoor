@@ -47,6 +47,7 @@ import Unipole from "../pages/Types/Unipole/Unipole";
 import Billboard from "../pages/Types/Billboard/Billboard";
 import Digitalbillboard from "../pages/Types/DigitalBillboard/Digitalbillboard";
 import Ooh from "../pages/Types/Ooh/Ooh";
+import Outdooradvertising from "../pages/OutdoorAdvertising/Outdooradvertising";
 
 // Types
 
@@ -97,6 +98,9 @@ const Navigation = () => {
           {/* All outdoor */}
           <Route path="/all-outdoor/" element={<Allout />} />
 
+          {/* outdoor adversting */}
+          <Route path={"/outdoor-advertising/"} element={<Outdooradvertising/>} />
+
           {/* All Outdoor optional  */}
           <Route
             path={"/outdoor-hoarding-advertising/"}
@@ -109,6 +113,7 @@ const Navigation = () => {
           <Route path={"/billboard/"} element={<Billboard />} />
           <Route path={"/digital-billboard/"} element={<Digitalbillboard />} />
           <Route path={"/ooh/"} element={<Ooh />} />
+          {/* ------------------------- */}
         </Routes>
       </Scrolltotop>
       <Footer />

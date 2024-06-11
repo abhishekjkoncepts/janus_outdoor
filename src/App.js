@@ -16,6 +16,7 @@ import store from "./redux/store";
 import TriumphIconsCaro from "./pages/Carousels/TriumphIconsCaro/TriumphIconsCaro";
 // import Categorycarousel from "./pages/Carousels/CategoryCarousel/Categorycarousel";
 import HoardingIn from "./pages/HoardingsIn/HoardingIn";
+import Outdooradvertising from "./pages/OutdoorAdvertising/Outdooradvertising";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         {/* <Testing/> */}
         {/* <TriumphIconsCaro/> */}
         {/* <Testing/>   */}
+        {/* <Outdooradvertising/> */}
       </Box>
     </Provider>
   );

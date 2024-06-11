@@ -173,11 +173,9 @@ const ExploreCom = () => {
               sm={12}
               md={4}
               lg={4}
-              sx={
-                {
-                  // backgroundColor: "blue",
-                }
-              }
+              sx={{
+                // backgroundColor:"red", 
+              }}
             >
                 <Box
                   sx={{
@@ -253,7 +251,7 @@ const ExploreCom = () => {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        Delhi
+                        {/* Delhi */}
                       </Typography>
                       <Box
                         sx={{
@@ -271,7 +269,7 @@ const ExploreCom = () => {
                             fontFamily: "Poppins, sans-serif",
                           }}
                         >
-                          {/* 2493 + */} Medias
+                          {/* 2493 + */} DELHI
                         </Typography>
                         <Typography
                           sx={{
@@ -308,7 +306,6 @@ const ExploreCom = () => {
                   //  paddingTop:"20px", paddingRight:"20px", paddingBottom:"20px"
                 }}
               >
-                {/* <Link href="https://www.janusalive.com/outdoor-advertising-agency-in-Mumbai"> */}
                   <Box
                     component="img"
                     sx={{
@@ -371,7 +368,7 @@ const ExploreCom = () => {
                         fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      Mumbai
+                      {/* Mumbai */}
                     </Typography>
                     <Box
                       sx={{
@@ -389,7 +386,7 @@ const ExploreCom = () => {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        {/* 1716 + */} Medias
+                        {/* 1716 + */} Mumbai
                       </Typography>
                       <Typography
                         sx={{
@@ -407,7 +404,6 @@ const ExploreCom = () => {
             </Grid>
 
             {/* BANGLORE-------------------------- */}
-
             <Grid
               item
               xs={12}
@@ -492,7 +488,7 @@ const ExploreCom = () => {
                         fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      Banglore
+                      {/* Banglore */}
                     </Typography>
                     <Box
                       sx={{
@@ -510,7 +506,7 @@ const ExploreCom = () => {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        {/* 960 + */} Medias
+                        {/* 960 + */} Banglore
                       </Typography>
                       <Typography
                         sx={{
@@ -635,7 +631,7 @@ const ExploreCom = () => {
                         fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      Pune
+                      {/* Pune */}
                     </Typography>
                     <Box
                       sx={{
@@ -653,7 +649,7 @@ const ExploreCom = () => {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        {/* 429 + */} Medias
+                        {/* 429 + */} PUNE
                       </Typography>
                       <Typography
                         sx={{
@@ -743,7 +739,7 @@ const ExploreCom = () => {
                         fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      Hyderabad
+                      {/* Hyderabad */}
                     </Typography>
                     <Box
                       sx={{
@@ -761,7 +757,7 @@ const ExploreCom = () => {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        {/* 897+{" "} */} Medias
+                        {/* 897+{" "} */} Hyderabad
                       </Typography>
                       <Typography
                         sx={{
@@ -867,7 +863,7 @@ const ExploreCom = () => {
                         fontFamily: "Poppins, sans-serif",
                       }}
                     >
-                      Chennai
+                      {/* Chennai */}
                     </Typography>
                     <Box
                       sx={{
@@ -885,7 +881,7 @@ const ExploreCom = () => {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        {/* 482+{" "} */} Medias
+                        {/* 482+{" "} */} Chennai
                       </Typography>
                       <Typography
                         sx={{

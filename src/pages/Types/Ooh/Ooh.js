@@ -132,7 +132,7 @@ export default function Billboard() {
             <Box
               sx={{
                 width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
-                height: { xs: "50vh", sm: "50vh", md: "60vh", lg: "60vh" },
+                height: { xs: "30vh", sm: "30vh", md: "60vh", lg: "60vh" },
               }}
             >
               <video
@@ -218,8 +218,8 @@ export default function Billboard() {
                           sx={{
                             display: "flex",
                             fontSize: {
-                              xs: "33px",
-                              sm: "33px",
+                              xs: "40px",
+                              sm: "40px",
                               md: "0px",
                               lg: "0px",
                             },
@@ -350,7 +350,7 @@ export default function Billboard() {
             container
             spacing={2}
             sx={{
-              marginTop: { xs: "-20px", sm: "-20px", md: "-50px", lg: "-20px" },
+              marginTop: { xs: "20px", sm: "20px", md: "-50px", lg: "-20px" },
               marginBottom: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
             }}
           >

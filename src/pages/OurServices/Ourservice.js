@@ -171,16 +171,16 @@ const Ourservice = () => {
                   <Card
                     variant="outlined"
                     sx={{
-                      borderTopLeftRadius: "200px",
-                      borderTopRightRadius: "200px",
-                      borderRadius: "170px 170px 0 0",
+                      // borderTopLeftRadius: "200px",
+                      // borderTopRightRadius: "200px",
+                      // borderRadius: "170px 170px 0 0",
                       border: "2px solid #C02222",
                       background:
                         "linear-gradient(to bottom, #C02222 85%, #000)",
                     }}
                     onClick={() => {
                       if (item.category === "Outdoor Advertising") {
-                        navigate("/outdoor-advertising-agency/");
+                        navigate("/outdoor-advertising/");
                       } else if (item.category === "Metro Branding") {
                         navigate("/metro-advertising-agency/");
                       } else if (item.category === "Airport Branding") {
@@ -203,8 +203,8 @@ const Ourservice = () => {
                           image={item?.img}
                           alt="Main Image"
                           sx={{
-                            borderTopLeftRadius: "150px",
-                            borderTopRightRadius: "150px",
+                            // borderTopLeftRadius: "150px",
+                            // borderTopRightRadius: "150px",
                           }}
                         />
                       </Box>
@@ -222,8 +222,8 @@ const Ourservice = () => {
                               fontSize: {
                                 xs: "20px",
                                 sm: "20px",
-                                md: "25px",
-                                lg: "25px",
+                                md: "20px",
+                                lg: "20px",
                               },
                               fontWeight: "500",
                               fontFamily: "Poppins, sans-serif",
@@ -294,9 +294,9 @@ const Ourservice = () => {
                 <Card
                   variant="outlined"
                   sx={{
-                    borderTopLeftRadius: "200px",
-                    borderTopRightRadius: "200px",
-                    borderRadius: "170px 170px 0 0",
+                    // borderTopLeftRadius: "200px",
+                    // borderTopRightRadius: "200px",
+                    // borderRadius: "170px 170px 0 0",
                     border: "2px solid #C02222",
                     background: "linear-gradient(to bottom, #C02222 85%, #000)",
                   }}
@@ -313,8 +313,8 @@ const Ourservice = () => {
                         image={samoutdoor}
                         alt="Main Image"
                         sx={{
-                          borderTopLeftRadius: "150px",
-                          borderTopRightRadius: "150px",
+                          // borderTopLeftRadius: "150px",
+                          // borderTopRightRadius: "150px",
                         }}
                       />
                     </Box>
@@ -330,8 +330,8 @@ const Ourservice = () => {
                             fontSize: {
                               xs: "20px",
                               sm: "20px",
-                              md: "25px",
-                              lg: "25px",
+                              md: "20px",
+                              lg: "20px",
                             },
                             fontWeight: "500",
                             fontFamily: "Poppins, sans-serif",
@@ -385,9 +385,9 @@ const Ourservice = () => {
                 <Card
                   variant="outlined"
                   sx={{
-                    borderTopLeftRadius: "200px",
-                    borderTopRightRadius: "200px",
-                    borderRadius: "170px 170px 0 0",
+                    // borderTopLeftRadius: "200px",
+                    // borderTopRightRadius: "200px",
+                    // borderRadius: "170px 170px 0 0",
                     border: "2px solid #C02222",
                     background: "linear-gradient(to bottom, #C02222 85%, #000)",
                   }}
@@ -404,8 +404,8 @@ const Ourservice = () => {
                         image={samoutdoor}
                         alt="Main Image"
                         sx={{
-                          borderTopLeftRadius: "150px",
-                          borderTopRightRadius: "150px",
+                          // borderTopLeftRadius: "150px",
+                          // borderTopRightRadius: "150px",
                         }}
                       />
                     </Box>
@@ -421,8 +421,8 @@ const Ourservice = () => {
                             fontSize: {
                               xs: "20px",
                               sm: "20px",
-                              md: "25px",
-                              lg: "25px",
+                              md: "20px",
+                              lg: "20px",
                             },
                             fontWeight: "500",
                             fontFamily: "Poppins, sans-serif",

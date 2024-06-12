@@ -16,7 +16,6 @@ import ExploreCom from "./HomeComponents/ExploreCom/ExploreCom";
 import ExperienceCom from "./HomeComponents/ExperienceCom/ExperienceCom";
 import HoardingPlacedCom from "./HomeComponents/HoardingPlacedCom/HoardingPlacedCom";
 import Weseethingscom from "./HomeComponents/WeSeeThingsCom/Weseethingscom";
-import Weseethingsrevcom from "./HomeComponents/WeSeeThingsRevCom/Weseethingsrevcom";
 
 // CSS
 import "./Home.css";
@@ -65,7 +64,6 @@ const Home = () => {
 
         {/* WE SEE THINGS DIFFERENTLY */}
         <Weseethingscom />
-        <Weseethingsrevcom />
 
         {/* OUR SERVICES - CATEGORIES */}
         <OurServicesCom />

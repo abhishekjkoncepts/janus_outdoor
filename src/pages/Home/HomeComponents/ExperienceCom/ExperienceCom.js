@@ -101,12 +101,12 @@ const ExperienceCom = () => {
                   sx={{
                     color: "#fff",
                     fontSize: {
-                      xs: "12px",
-                      sm: "12px",
+                      xs: "14px",
+                      sm: "14px",
                       md: "0px",
                       lg: "0px",
                     },
-                    fontWeight: "400",
+                    fontWeight: "500",
                     fontFamily: "Poppins, sans-serif",
                     textAlign: "center",
                   }}

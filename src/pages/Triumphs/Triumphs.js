@@ -116,8 +116,8 @@ const Triumphs = () => {
                   sx={{
                     color: "#000",
                     fontSize: {
-                      xs: "12px",
-                      sm: "12px",
+                      xs: "14px",
+                      sm: "14px",
                       md: "0px",
                       lg: "0px",
                     },

@@ -208,8 +208,8 @@ const Outdooradvertising = () => {
                     fontSize: {
                       xs: "21px",
                       sm: "21px",
-                      md: "36px",
-                      lg: "36px",
+                      md: "33px",
+                      lg: "33px",
                     },
                     fontWeight: "600",
                     fontFamily: "Poppins, sans-serif",
@@ -872,20 +872,25 @@ const Outdooradvertising = () => {
                       lg: "300",
                     },
                     paddingLeft: {
-                      xs: "10px",
-                      sm: "10px",
+                      xs: "20px",
+                      sm: "20px",
                       md: "20px",
                       lg: "20px",
                     },
                     paddingRight: {
-                      xs: "10px",
-                      sm: "10px",
+                      xs: "20px",
+                      sm: "20px",
                       md: "20px",
                       lg: "20px",
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#fff",
-                    textAlign: "center",
+                    textAlign: {
+                      lg: "center",
+                      md: "center",
+                      sm: "justify",
+                      xs: "justify",
+                    },
                   }}
                 >
                   Outdoor advertising refers to the promotion of brands,
@@ -1110,12 +1115,12 @@ const Outdooradvertising = () => {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  marginTop:{
-                    xs:"5px",
-                    sm:"5px",
-                    md:"10px",
-                    lg:"10px"
-                  }
+                  marginTop: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "10px",
+                    lg: "10px",
+                  },
                 }}
               >
                 <Box
@@ -1163,12 +1168,12 @@ const Outdooradvertising = () => {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  marginTop:{
-                    xs:"5px",
-                    sm:"5px",
-                    md:"10px",
-                    lg:"10px"
-                  }
+                  marginTop: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "10px",
+                    lg: "10px",
+                  },
                 }}
               >
                 <Box
@@ -1388,8 +1393,8 @@ const Outdooradvertising = () => {
                     />
                     <span
                       style={{
-                        fontSize:"17px",
-                        fontWeight:"600",
+                        fontSize: "17px",
+                        fontWeight: "600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
@@ -1450,8 +1455,8 @@ const Outdooradvertising = () => {
                     />
                     <span
                       style={{
-                        fontSize:"17px",
-                        fontWeight:"600",
+                        fontSize: "17px",
+                        fontWeight: "600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
@@ -1511,8 +1516,8 @@ const Outdooradvertising = () => {
                     />
                     <span
                       style={{
-                        fontSize:"17px",
-                        fontWeight:"600",
+                        fontSize: "17px",
+                        fontWeight: "600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
@@ -1573,8 +1578,8 @@ const Outdooradvertising = () => {
                     />
                     <span
                       style={{
-                        fontSize:"17px",
-                        fontWeight:"600",
+                        fontSize: "17px",
+                        fontWeight: "600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
@@ -1634,8 +1639,8 @@ const Outdooradvertising = () => {
                     />
                     <span
                       style={{
-                        fontSize:"17px",
-                        fontWeight:"600",
+                        fontSize: "17px",
+                        fontWeight: "600",
                         fontFamily: "Poppins, sans-serif",
                         color: "#000",
                       }}
@@ -1698,6 +1703,12 @@ const Outdooradvertising = () => {
                     },
                     fontFamily: "Poppins, sans-serif",
                     color: "#000",
+                    textAlign: {
+                      lg: "left",
+                      md: "left",
+                      sm: "justify",
+                      xs: "justify",
+                    },
                   }}
                 >
                   To leverage the benefits of outdoor advertising, businesses

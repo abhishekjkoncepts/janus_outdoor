@@ -515,10 +515,10 @@ const Cardcarousel = () => {
 
   var settings = {
     // dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -592,7 +592,7 @@ const Cardcarousel = () => {
                         marginLeft:{xs:"0px" , sm:"0px" , md:"20px" , lg:"20px"},
                         maxWidth: "350px",
                         maxHeight: 700,
-                        borderRadius: "190px 190px 0 0",
+                        // borderRadius: "190px 190px 0 0",
                         border: "2px solid #C02222",
                         background:
                           "linear-gradient(to bottom, #C02222 85%, #000)",
